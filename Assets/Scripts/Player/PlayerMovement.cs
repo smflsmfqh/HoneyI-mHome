@@ -171,6 +171,9 @@ public class PlayerMovement : MonoBehaviour
             case MoveMode.Sprint:
                 {
                     _currentSpeed = (_moveSpeed + _sprintSpeed) * _hangoverMultiplier;
+                    // 앉기를 뗀 직후 바로 Sprint로 들어와도 서 있는 높이로 복원
+                    _collider.height = _standHeight;
+                    _collider.center = _prevColliderCenter;
                     _sprintDuration -= Time.fixedDeltaTime;
 
                     if (_sprintDuration <= 0)
