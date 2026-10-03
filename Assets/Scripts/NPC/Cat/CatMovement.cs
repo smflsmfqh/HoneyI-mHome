@@ -87,6 +87,7 @@ public class CatMovement : MonoBehaviour
     private Coroutine _meowCo;
     private bool _isTutorialCat;
     private bool _externallyPaused;
+    private Vector3 _home; // 배회 기준점 (스폰 위치)
 
     public void MarkAsTutorialCat() => _isTutorialCat = true;
 
@@ -110,6 +111,7 @@ public class CatMovement : MonoBehaviour
 
     private void Start()
     {
+        _home = transform.position;
         Setup();
         SetWanderTarget();
         if (_player != null)
@@ -250,7 +252,7 @@ public class CatMovement : MonoBehaviour
         int maxCount = 10;
         for (int i = 0; i < maxCount; i++)
         {
-            Vector3 randomPos = transform.position + Random.insideUnitSphere * _wanderRadius;
+            Vector3 randomPos = _home + Random.insideUnitSphere * _wanderRadius;
             if (
                 _agent.isOnNavMesh
                 && NavMesh.SamplePosition(

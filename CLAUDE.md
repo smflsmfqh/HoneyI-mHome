@@ -143,7 +143,7 @@ Assets/
 | 패트롤러 | NavMeshAgent 경로 왕복 | 쉬움 | 패턴 예측, 안전지대 |
 | 러너 | 빠른 속도 직선/곡선 | 어려움 | 구르기(LCtrl), 매대 밑 숨기(F) |
 
-**SpawnManager**: 스폰 포인트 7~10개 사전 배치 → 매 플레이마다 N명 무작위 활성화 (초기값: 러너 1 + 패트롤러 3~4). NPC 태그는 `"NPC"` 통일 (ProximityFeedbackSystem 수집용).
+**SpawnManager**: 스폰 포인트 7~10개 사전 배치 → 매 플레이마다 N명 무작위 활성화 (초기값: 러너 1 + 패트롤러 3~4). 사람 NPC 프리팹 태그는 `Npc` (`NPC`는 태그가 아니라 레이어 이름). 근접 경고 대상 수집에는 태그를 쓰지 않는다 — 아래 코딩 주의사항 참고.
 
 ### 체력 시스템 (HealthSystem)
 
@@ -250,7 +250,8 @@ intensity = 1 - clamp((minDist - panicRadius) / (dangerRadius - panicRadius), 0,
 ## 코딩 주의사항
 
 - **입력은 InputReader에서만**: 게임플레이 스크립트가 `Keyboard.current` / `Mouse.current` 직접 참조 금지. `InputReader` C# 이벤트 구독으로 처리.
-- **NPC 태그 통일**: 모든 NPC 오브젝트 태그는 `"NPC"` — `ProximityFeedbackSystem`이 `FindGameObjectsWithTag("NPC")`로 수집.
+- **NPC 태그·레이어 구분**: 사람 NPC 태그는 `Npc`, 레이어는 `NPC`. 프로젝트에 `"NPC"` 태그는 정의되어 있지 않으므로 `FindGameObjectsWithTag("NPC")`는 `UnityException`을 던지고, `CompareTag("NPC")`도 "Tag is not defined" 에러를 낸다. 고양이·차량 프리팹의 `Danger` 태그는 에디터 구분용이며 코드에서 참조하지 않는다.
+- **근접 경고 대상은 자체 등록**: `ProximityFeedback`은 태그 검색을 하지 않는다. 위험 오브젝트가 스스로 `RegisterDanger` / `UnregisterDanger`를 호출한다 (현재 `CatMovement`·`CarMovement`의 `Start`/`OnDestroy`). 스크립트 실행 순서에 의존하지 않기 위함. 풀링(`SetActive` 재사용) 대상에 적용할 때는 `OnEnable`/`OnDisable`에서 등록·해제할 것. 자세한 배경은 `Docs/proximity-danger-registration.md`.
 - **컷씬 일시정지**: `Time.timeScale = 0` 사용 시 UI Animator의 `Update Mode`를 `Unscaled Time`으로 설정.
 - **수치는 밸런스 시작값**: GDD의 체력/구르기 무적/카메라 거리 등 모든 수치는 플레이테스트 후 조정 대상.
 - **ProximityFeedbackSystem 채널 독립**: 채널(카메라/파티클/사운드) 간 직접 참조 없이 intensity float만 구독. 채널 추가/제거가 자유로워야 함.
