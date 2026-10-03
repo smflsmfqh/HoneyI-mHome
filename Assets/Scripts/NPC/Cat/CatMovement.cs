@@ -117,8 +117,16 @@ public class CatMovement : MonoBehaviour
             _playerMovement = _player.GetComponent<PlayerMovement>();
             _proximity = _player.GetComponent<ProximityFeedback>();
         }
+        if (_proximity != null)
+            _proximity.RegisterDanger(transform);
         if (_audioSource != null && _meowClips != null && _meowClips.Length > 0)
             StartMeowLoop();
+    }
+
+    private void OnDestroy()
+    {
+        if (_proximity != null)
+            _proximity.UnregisterDanger(transform);
     }
 
     private void Update()

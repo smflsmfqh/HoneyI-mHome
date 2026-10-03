@@ -51,6 +51,8 @@ public class CarMovement : MonoBehaviour
         var player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
             _proximity = player.GetComponent<ProximityFeedback>();
+        if (_proximity != null)
+            _proximity.RegisterDanger(transform);
 
         if (_audioSource != null)
         {
@@ -64,6 +66,12 @@ public class CarMovement : MonoBehaviour
 
         if (_path != null && !_initialized)
             InitializeMovement();
+    }
+
+    private void OnDestroy()
+    {
+        if (_proximity != null)
+            _proximity.UnregisterDanger(transform);
     }
 
     public void SetHornClip(AudioClip clip)

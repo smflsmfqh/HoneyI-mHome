@@ -22,13 +22,12 @@ public class ProximityFeedback : MonoBehaviour
 
     private readonly List<Transform> _dangers = new();
 
-    private void Start()
+    public void RegisterDanger(Transform t)
     {
-        foreach (var go in GameObject.FindGameObjectsWithTag("Danger"))
-            _dangers.Add(go.transform);
+        if (t == null || _dangers.Contains(t))
+            return;
+        _dangers.Add(t);
     }
-
-    public void RegisterDanger(Transform t) => _dangers.Add(t);
 
     public void UnregisterDanger(Transform t) => _dangers.Remove(t);
 
@@ -54,8 +53,15 @@ public class ProximityFeedback : MonoBehaviour
         float minDistSq = float.MaxValue;
         Vector3 myPos = transform.position;
 
-        foreach (var t in _dangers)
+        for (int i = _dangers.Count - 1; i >= 0; i--)
         {
+            Transform t = _dangers[i];
+            if (t == null) // Unregister 없이 파괴된 경우
+            {
+                _dangers.RemoveAt(i);
+                continue;
+            }
+
             float dSq = (myPos - t.position).sqrMagnitude;
             if (dSq < minDistSq)
                 minDistSq = dSq;
