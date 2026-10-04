@@ -78,7 +78,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _player: {fileID: 0}
-  _recycleDistance: 30
-  _minNpcsPerZone: 15
+  _visualData: {fileID: 0}
+  _minNpcsPerZone: 5
+  _maxNpcsPerZone: 8
   _patrolPercent: 0.7
-  _targetCount: 15

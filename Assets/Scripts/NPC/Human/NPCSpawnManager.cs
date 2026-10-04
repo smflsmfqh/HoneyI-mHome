@@ -21,19 +21,13 @@ public class NPCSpawnManager : MonoBehaviour
     private Dictionary<NPCSpawnZone, List<NPCMovement>> _zoneActives = new();
 
     [SerializeField]
-    private int _minNpcsPerZone = 15;
-    private int _maxNPCsPerZone;
+    private int _minNpcsPerZone = 5;
+
+    [SerializeField]
+    private int _maxNpcsPerZone = 8;
 
     [SerializeField]
     private float _patrolPercent = 0.7f;
-
-    private void Awake()
-    {
-        if (_npcPrefabs == null || _npcPrefabs.Count == 0)
-            return;
-
-        _maxNPCsPerZone = _npcPrefabs.Count;
-    }
 
     private void Start()
     {
@@ -49,11 +43,11 @@ public class NPCSpawnManager : MonoBehaviour
         if (_npcPrefabs == null || _npcPrefabs.Count == 0)
             return;
         var pool = new Queue<NPCMovement>();
-        int npcsPerZone = Random.Range(_minNpcsPerZone, _maxNPCsPerZone);
+        int npcsPerZone = Random.Range(_minNpcsPerZone, _maxNpcsPerZone + 1);
 
         for (int i = 0; i < npcsPerZone; i++)
         {
-            var prefab = _npcPrefabs[i % _npcPrefabs.Count];
+            var prefab = _npcPrefabs[Random.Range(0, _npcPrefabs.Count)];
             var npc = Instantiate(prefab);
             npc.gameObject.SetActive(false);
             pool.Enqueue(npc);

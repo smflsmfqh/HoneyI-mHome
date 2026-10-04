@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump Field")]
     [SerializeField]
-    private float _jumpForce = 2.5f;
+    private float _jumpForce = 2.2f;
     private readonly HashSet<Collider> _groundContacts = new();
     private bool _isGrounded => _groundContacts.Count > 0;
 
@@ -117,6 +117,15 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _rb.interpolation = RigidbodyInterpolation.Interpolate;
         _collider = GetComponent<CapsuleCollider>();
+        foreach (var c in GetComponentsInChildren<Collider>(true))
+            if (c != _collider && !c.isTrigger)
+                Physics.IgnoreCollision(_collider, c);
+        _collider.sharedMaterial = new PhysicsMaterial("PlayerNoFriction")
+        {
+            dynamicFriction = 0f,
+            staticFriction = 0f,
+            frictionCombine = PhysicsMaterialCombine.Minimum,
+        };
         _animator = GetComponent<Animator>();
         _playerController = GetComponent<PlayerController>();
 
