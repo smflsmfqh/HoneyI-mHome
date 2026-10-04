@@ -68,6 +68,7 @@ public class CatMovement : MonoBehaviour
     [Header("NavMesh 영역 설정")]
     private NavMeshAgent _agent;
     private Animator _animator;
+    private CatHeadDamage _headDamage;
 
     private enum State
     {
@@ -102,6 +103,7 @@ public class CatMovement : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
+        _headDamage = GetComponentInChildren<CatHeadDamage>(true);
         if (_audioSource != null)
         {
             _audioSource.spatialBlend = 0f;
@@ -296,7 +298,15 @@ public class CatMovement : MonoBehaviour
 
         float clipLength = _animator.GetCurrentAnimatorStateInfo(0).length;
 
-        yield return new WaitForSeconds(clipLength);
+        yield return new WaitForSeconds(clipLength * 0.5f);
+        if (
+            _headDamage != null
+            && _player != null
+            && Vector3.Distance(transform.position, _player.transform.position) <= _attackRadius
+        )
+            _headDamage.TryDamage(_player);
+
+        yield return new WaitForSeconds(clipLength * 0.5f);
 
         _agent.isStopped = false;
         _currentAnim = string.Empty;

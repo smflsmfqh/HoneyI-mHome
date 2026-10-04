@@ -18,7 +18,7 @@ public class NPCSpawnZone : MonoBehaviour
 
     private void Awake()
     {
-        GetCollider();
+        GetCollider().isTrigger = true;
     }
 
     public bool TryGetRandomPoint(int areaMask, out Vector3 result, int maxAttempts = 10)

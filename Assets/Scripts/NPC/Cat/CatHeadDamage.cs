@@ -18,11 +18,12 @@ public class CatHeadDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Time.time - _lastDamageTime < _damageCooldown)
-            return;
+        TryDamage(other.GetComponent<PlayerHealth>());
+    }
 
-        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-        if (playerHealth == null)
+    public void TryDamage(PlayerHealth playerHealth)
+    {
+        if (playerHealth == null || Time.time - _lastDamageTime < _damageCooldown)
             return;
 
         _lastDamageTime = Time.time;
