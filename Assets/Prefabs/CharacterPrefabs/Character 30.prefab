@@ -403,6 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3289844267448899471}
   - component: {fileID: 3394868601746068184}
+  - component: {fileID: 6510029926453147295}
   m_Layer: 9
   m_Name: LeftSole
   m_TagString: Untagged
@@ -446,6 +447,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17, y: 0.05, z: 0.31}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6510029926453147295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134610301415129848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b9d6839a1f44e42a942b6f9c715bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FootStompCollider
+  _cause: 0
+  _damage: 25
+  _audioSource: {fileID: 0}
+  _footstepClip: {fileID: 0}
+  _hearRadius: 6
 --- !u!1 &2153215056242903237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310152930715593961}
   - component: {fileID: 6789491077104110191}
+  - component: {fileID: 6250484953755073908}
   m_Layer: 9
   m_Name: RightSole
   m_TagString: Untagged
@@ -2059,6 +2078,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17, y: 0.05, z: 0.31}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6250484953755073908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4141183964104790416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b9d6839a1f44e42a942b6f9c715bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FootStompCollider
+  _cause: 0
+  _damage: 25
+  _audioSource: {fileID: 0}
+  _footstepClip: {fileID: 0}
+  _hearRadius: 6
 --- !u!1 &4152073484672170132
 GameObject:
   m_ObjectHideFlags: 0

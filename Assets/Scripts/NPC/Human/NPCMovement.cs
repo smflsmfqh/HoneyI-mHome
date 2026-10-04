@@ -59,6 +59,8 @@ public class NPCMovement : MonoBehaviour
     private float _animVert;
     private float _currentWaitTime;
 
+    public float MoveBlend => _animVert;
+
     private static readonly int k_HorID = Animator.StringToHash("Hor");
     private static readonly int k_VertID = Animator.StringToHash("Vert");
     private static readonly int k_StateID = Animator.StringToHash("State");

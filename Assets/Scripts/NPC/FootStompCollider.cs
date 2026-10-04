@@ -20,9 +20,12 @@ public class FootStompCollider : MonoBehaviour
 
     private Transform _playerTransform;
     private ProximityFeedback _proximity;
+    private NPCMovement _npc;
 
     private void Start()
     {
+        _npc = GetComponent<NPCMovement>();
+
         var player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
@@ -53,7 +56,8 @@ public class FootStompCollider : MonoBehaviour
         float panicRadius = _proximity != null ? _proximity.PanicRadius : 1f;
         float dist = Vector3.Distance(transform.position, _playerTransform.position);
         float t = Mathf.Clamp01((dist - panicRadius) / (_hearRadius - panicRadius));
-        _audioSource.volume = 1f - t;
+        float moveBlend = _npc != null ? _npc.MoveBlend : 1f;
+        _audioSource.volume = (1f - t) * moveBlend;
     }
 
     private void OnTriggerEnter(Collider other)
