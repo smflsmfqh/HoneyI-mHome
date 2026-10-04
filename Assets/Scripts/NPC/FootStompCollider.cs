@@ -36,7 +36,7 @@ public class FootStompCollider : MonoBehaviour
         if (_audioSource != null && _footstepClip != null)
         {
             _audioSource.clip = _footstepClip;
-            _audioSource.spatialBlend = 0f;
+            SpatialAudio.ApplyDirectionalOnly(_audioSource);
             _audioSource.loop = true;
             _audioSource.volume = 0f;
             _audioSource.Play();

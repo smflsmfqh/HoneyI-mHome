@@ -166,8 +166,8 @@ intensity = 1 - clamp((minDist - panicRadius) / (dangerRadius - panicRadius), 0,
 
 | 파라미터 | 기본값 |
 |---------|--------|
-| dangerRadius | 8m |
-| panicRadius | 2m |
+| dangerRadius | 4m |
+| panicRadius | 1m |
 | 카메라 흔들림 maxShake | 0.08 |
 | 카메라 흔들림 frequency | 18 |
 | 파티클 maxEmissionRate | 40 |

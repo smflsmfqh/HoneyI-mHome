@@ -106,7 +106,7 @@ public class CatMovement : MonoBehaviour
         _headDamage = GetComponentInChildren<CatHeadDamage>(true);
         if (_audioSource != null)
         {
-            _audioSource.spatialBlend = 0f;
+            SpatialAudio.ApplyDirectionalOnly(_audioSource);
             _audioSource.volume = 0f;
         }
     }

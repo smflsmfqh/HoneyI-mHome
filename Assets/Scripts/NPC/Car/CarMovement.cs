@@ -59,7 +59,7 @@ public class CarMovement : MonoBehaviour
             if (_hornSound != null)
                 _audioSource.clip = _hornSound;
             _audioSource.loop = true;
-            _audioSource.spatialBlend = 0f;
+            SpatialAudio.ApplyDirectionalOnly(_audioSource);
             _audioSource.volume = 0f;
             _audioSource.Stop();
         }
@@ -82,7 +82,7 @@ public class CarMovement : MonoBehaviour
         {
             audio.clip = clip;
             audio.loop = true;
-            audio.spatialBlend = 0f;
+            SpatialAudio.ApplyDirectionalOnly(audio);
             audio.volume = 0f;
             _audioSource = audio;
         }
