@@ -135,7 +135,6 @@ public class NPCMovement : MonoBehaviour
         SetNextRandomDestination();
 
         _agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
-        _agent.avoidancePriority = Random.Range(0, 100);
         _agent.baseOffset += _type == NpcType.Runner ? 0.02f : 0f;
     }
 
