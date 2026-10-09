@@ -78,6 +78,8 @@ public class GameManager : MonoBehaviour
         _missionMessageUI?.ClearQueue();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        // 체력 사망은 PlayerController.HandleDied에서도 끄지만, 분노·미션 실패 게임오버는 여기서만 끔
+        _playerHealth.GetComponent<UnityEngine.InputSystem.PlayerInput>()?.DeactivateInput();
 
         foreach (var cat in FindObjectsByType<CatMovement>(FindObjectsSortMode.None))
             cat.SetExternalPause(true);
