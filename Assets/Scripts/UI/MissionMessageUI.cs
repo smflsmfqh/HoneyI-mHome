@@ -65,8 +65,8 @@ public class MissionMessageUI : MonoBehaviour
     public void ClearQueue()
     {
         _queue.Clear();
+        // Dispose는 해당 루프의 finally가 담당 — 같은 프레임의 Enqueue가 새 루프를 시작할 수 있도록 필드만 비움
         _slideCts?.Cancel();
-        _slideCts?.Dispose();
         _slideCts = null;
         _currentMsgKey = null;
         _panel.anchoredPosition = new Vector2(-_panelWidth, _panel.anchoredPosition.y);
@@ -104,7 +104,6 @@ public class MissionMessageUI : MonoBehaviour
         StringTableManager.Instance.OnLanguageChanged -= HandleLanguageChanged;
 
         _slideCts?.Cancel();
-        _slideCts?.Dispose();
         _slideCts = null;
     }
 
@@ -196,11 +195,7 @@ public class MissionMessageUI : MonoBehaviour
         while (temp.Count > 0)
             _queue.Enqueue(temp.Dequeue());
 
-        if (_slideCts == null)
-        {
-            _slideCts = new CancellationTokenSource();
-            ProcessQueueAsync(_slideCts.Token).Forget();
-        }
+        StartLoopIfIdle();
     }
 
     // 여러 메시지를 순서대로 한 번에 큐 맨 앞에 삽입 (연속 호출 시 순서 역전 방지)
@@ -223,25 +218,27 @@ public class MissionMessageUI : MonoBehaviour
         while (temp.Count > 0)
             _queue.Enqueue(temp.Dequeue());
 
-        if (_slideCts == null)
-        {
-            _slideCts = new CancellationTokenSource();
-            ProcessQueueAsync(_slideCts.Token).Forget();
-        }
+        StartLoopIfIdle();
     }
 
     private void Enqueue(MessageData data)
     {
         _queue.Enqueue(data);
-        if (_slideCts == null)
-        {
-            _slideCts = new CancellationTokenSource();
-            ProcessQueueAsync(_slideCts.Token).Forget();
-        }
+        StartLoopIfIdle();
     }
 
-    private async UniTaskVoid ProcessQueueAsync(CancellationToken ct)
+    private void StartLoopIfIdle()
     {
+        if (_slideCts != null)
+            return;
+        var cts = new CancellationTokenSource();
+        _slideCts = cts;
+        ProcessQueueAsync(cts).Forget();
+    }
+
+    private async UniTaskVoid ProcessQueueAsync(CancellationTokenSource cts)
+    {
+        var ct = cts.Token;
         try
         {
             while (_queue.Count > 0)
@@ -275,8 +272,10 @@ public class MissionMessageUI : MonoBehaviour
         catch (OperationCanceledException) { }
         finally
         {
-            _slideCts?.Dispose();
-            _slideCts = null;
+            // 자기 CTS만 정리 — 취소된 루프의 finally는 다음 프레임에 실행되므로, 그사이 시작된 새 루프의 CTS를 건드리지 않도록
+            if (_slideCts == cts)
+                _slideCts = null;
+            cts.Dispose();
         }
     }
 
