@@ -32,7 +32,8 @@ public class MissionCheckListUI : MonoBehaviour
 
     private void OnEnable()
     {
-        MissionManager.Instance.OnMissionCompleted += HandleMissionCompleted;
+        if (MissionManager.Instance != null)
+            MissionManager.Instance.OnMissionCompleted += HandleMissionCompleted;
         if (_playerController != null)
             _playerController.OnMissionTogglePressed += ToggleList;
         if (_missionMessageUI != null)
@@ -41,7 +42,8 @@ public class MissionCheckListUI : MonoBehaviour
 
     private void OnDisable()
     {
-        MissionManager.Instance.OnMissionCompleted -= HandleMissionCompleted;
+        if (MissionManager.Instance != null)
+            MissionManager.Instance.OnMissionCompleted -= HandleMissionCompleted;
         if (_playerController != null)
             _playerController.OnMissionTogglePressed -= ToggleList;
         if (_missionMessageUI != null)
