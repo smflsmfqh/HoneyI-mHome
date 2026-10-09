@@ -177,27 +177,6 @@ public class MissionMessageUI : MonoBehaviour
         Enqueue(new MessageData(csvKey, null, onSlidedIn, displayDuration));
     }
 
-    // 현재 표시 중인 메시지는 유지하고, 대기 중인 메시지들 맨 앞에 삽입
-    public void EnqueueFrontTutorialMessage(
-        string csvKey,
-        System.Action onSlidedIn = null,
-        float displayDuration = 3f
-    )
-    {
-        var (message, _) = StringTableManager.Instance.GetMessage(csvKey);
-        if (string.IsNullOrEmpty(message))
-            return;
-
-        var newData = new MessageData(csvKey, null, onSlidedIn, displayDuration);
-        var temp = new Queue<MessageData>(_queue);
-        _queue.Clear();
-        _queue.Enqueue(newData);
-        while (temp.Count > 0)
-            _queue.Enqueue(temp.Dequeue());
-
-        StartLoopIfIdle();
-    }
-
     // 여러 메시지를 순서대로 한 번에 큐 맨 앞에 삽입 (연속 호출 시 순서 역전 방지)
     public void EnqueueFrontTutorialMessages(params string[] csvKeys)
     {
