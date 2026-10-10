@@ -60,6 +60,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
+        // 게임오버·클리어 뒤에는 자동 회복 중지
+        if (GameManager.Instance != null && GameManager.Instance.IsGameEnded)
+            return;
+
         _healthTimer += Time.deltaTime;
 
         if (_healthTimer >= _healthInterval)
@@ -78,7 +82,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead || _isInvincible || _tutorialInvincible)
             return;
-        // 미션 실패 게임오버는 timeScale을 유지하므로 사람·차·고양이 피해를 여기서 일괄 차단
+        // 게임오버·클리어 뒤에는 사람·차·고양이 피해를 일괄 차단
         if (GameManager.Instance != null && GameManager.Instance.IsGameEnded)
             return;
 

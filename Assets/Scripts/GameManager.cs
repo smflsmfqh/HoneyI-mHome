@@ -77,8 +77,8 @@ public class GameManager : MonoBehaviour
     public void GameOver(CauseDeath cause)
     {
         IsGameEnded = true;
-        if (cause == CauseDeath.Anger)
-            Time.timeScale = 0f;
+        // 원인과 관계없이 게임 시간을 정지 (결과 화면 UI는 unscaled로 동작)
+        Time.timeScale = 0f;
 
         _angerSystem.Pause();
         MissionManager.Instance.PauseMissionAssignment();
