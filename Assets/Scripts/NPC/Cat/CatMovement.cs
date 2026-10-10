@@ -92,6 +92,8 @@ public class CatMovement : MonoBehaviour
 
     public void MarkAsTutorialCat() => _isTutorialCat = true;
 
+    public bool IsExternallyPaused => _externallyPaused;
+
     public void SetExternalPause(bool paused)
     {
         _externallyPaused = paused;
@@ -308,7 +310,8 @@ public class CatMovement : MonoBehaviour
 
         yield return new WaitForSeconds(clipLength * 0.5f);
 
-        _agent.isStopped = false;
+        // 공격 도중 걸린 외부 일시정지(게임오버·튜토리얼)를 풀지 않도록
+        _agent.isStopped = _externallyPaused;
         _currentAnim = string.Empty;
         _isAttacking = false;
     }
