@@ -80,7 +80,8 @@ public class FollowCamera : MonoBehaviour
 
         
 
-        if (!_isReacting)
+        // 일시정지·결과 화면(timeScale 0)에서는 휠 줌 무시 — 휠은 PlayerInput을 거치지 않아 입력 비활성화로 막히지 않음
+        if (!_isReacting && Time.timeScale > 0f)
         {
             _currentDistance -= ReadScrollDelta() * _scrollSensitivity;
             _currentDistance = Mathf.Clamp(
