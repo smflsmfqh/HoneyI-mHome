@@ -24,8 +24,9 @@ public class HangoverEffect : MonoBehaviour
     {
         if (_particle != null)
         {
+            // 게임 시간과 함께 멈추도록 scaled 시간 사용 (예전 튜토리얼의 timeScale 정지용 unscaled 설정 제거)
             var main = _particle.main;
-            main.useUnscaledTime = true;
+            main.useUnscaledTime = false;
             _particle.Play();
         }
 
@@ -61,7 +62,7 @@ public class HangoverEffect : MonoBehaviour
             return;
 
         // 0~1 사인 파형으로 _Transparency 깜빡임
-        float t = Mathf.Sin(Time.unscaledTime * _flickerSpeed) * 0.5f + 0.5f;
+        float t = Mathf.Sin(Time.time * _flickerSpeed) * 0.5f + 0.5f;
         _ghostMatInstance.SetFloat("_Transparency", t);
     }
 
