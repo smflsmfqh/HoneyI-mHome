@@ -31,6 +31,7 @@
 *.opendb
 *.VC.db
 sysinfo.txt
+mono_crash.*
 ExportedObj/
 GeneratedAssets/
 
@@ -38,6 +39,7 @@ GeneratedAssets/
 # IDE / 에디터 설정 파일
 # =============================================================
 .vscode/
+.vs/
 .idea/
 *.code-workspace
 *.sublime-project
@@ -76,16 +78,7 @@ Desktop.ini
 #     private 저장소에서만 관리할 것
 # =============================================================
 
-# 에셋 전용 보조 폴더
-MiniGameProject/Assets/minigame-project-assets-smflsmfqh/
-
-# SimplePoly City (유료)
-MiniGameProject/Assets/SimplePoly City - Low Poly Assets/
-MiniGameProject/Assets/SimplePoly City - Low Poly Assets.meta
-
-# ithappy 에셋 (무료이나 재배포 방지 차원에서 제외)
-MiniGameProject/Assets/ithappy/
-MiniGameProject/Assets/ithappy.meta
+# 에셋 폴더는 별도 저장소(하위 모듈 Assets/minigame-project-assets-smflsmfqh)로 관리
 
 # 포트폴리오용 플레이 캡처 (로컬 보관)
 /Captures/
