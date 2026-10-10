@@ -239,7 +239,10 @@ public class MissionMessageUI : MonoBehaviour
                 AudioManager.Instance?.PlaySFX(_slideInSound);
                 await SlideAsync(-_panelWidth, 10f, _currentSlideDuration, ct);
                 OnSlidedIn?.Invoke(data.Item);
+                // 구독자가 ClearQueue를 호출했다면 이 회차의 나머지(표시 통지 등)를 실행하지 않음
+                ct.ThrowIfCancellationRequested();
                 data.OnSlidedInCallback?.Invoke();
+                ct.ThrowIfCancellationRequested();
                 if (data.Item != null)
                     MissionManager.Instance?.NotifyMissionDisplayed(data.Item);
                 float waitTime = data.DisplayDuration > 0 ? data.DisplayDuration : _displayDuration;
