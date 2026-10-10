@@ -19,6 +19,10 @@ public class AudioManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        // 일시정지·결과 화면에서 AudioListener.pause로 월드 소리를 멈춰도 BGM·UI 효과음은 계속 재생
+        _bgmSource.ignoreListenerPause = true;
+        _sfxSource.ignoreListenerPause = true;
     }
 
     public void PlayBGM(AudioClip clip)

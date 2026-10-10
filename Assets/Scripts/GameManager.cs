@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         _playerInput = _playerHealth.GetComponent<UnityEngine.InputSystem.PlayerInput>();
+        // AudioListener.pause는 전역 상태라 씬을 넘어 남을 수 있으므로 시작 시 초기화
+        SetGameTimeStopped(false);
         Application.targetFrameRate = 60;
         _score = 0;
 
@@ -78,7 +80,7 @@ public class GameManager : MonoBehaviour
     {
         IsGameEnded = true;
         // 원인과 관계없이 게임 시간을 정지 (결과 화면 UI는 unscaled로 동작)
-        Time.timeScale = 0f;
+        SetGameTimeStopped(true);
 
         _angerSystem.Pause();
         MissionManager.Instance.PauseMissionAssignment();
@@ -98,7 +100,7 @@ public class GameManager : MonoBehaviour
     public void GameClear()
     {
         IsGameEnded = true;
-        Time.timeScale = 0f;
+        SetGameTimeStopped(true);
         MissionManager.Instance.PauseMissionAssignment();
         _missionMessageUI?.ClearQueue();
         Cursor.lockState = CursorLockMode.None;
@@ -110,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToTitle()
     {
-        Time.timeScale = 1f;
+        SetGameTimeStopped(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         SceneManager.LoadScene("TitleScene");
@@ -118,7 +120,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1f;
+        SetGameTimeStopped(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         PlayerPrefs.SetInt("SkipTutorial", 1);
@@ -126,10 +128,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    // 게임 시간과 월드 소리를 함께 정지·재개 (BGM·UI 효과음은 AudioManager에서 ignoreListenerPause)
+    private void SetGameTimeStopped(bool stopped)
+    {
+        Time.timeScale = stopped ? 0f : 1f;
+        AudioListener.pause = stopped;
+    }
+
     public void TogglePause()
     {
         _isPaused = !_isPaused;
-        Time.timeScale = _isPaused ? 0f : 1f;
+        SetGameTimeStopped(_isPaused);
         Cursor.lockState = _isPaused ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = _isPaused;
 
