@@ -78,6 +78,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead || _isInvincible || _tutorialInvincible)
             return;
+        // 미션 실패 게임오버는 timeScale을 유지하므로 사람·차·고양이 피해를 여기서 일괄 차단
+        if (GameManager.Instance != null && GameManager.Instance.IsGameEnded)
+            return;
 
         _currentHealth -= damage;
         AudioManager.Instance?.PlaySFX(_damageSound);

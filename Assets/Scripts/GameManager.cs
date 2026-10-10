@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 
     private bool _isPaused;
     private float _playTime;
+
+    // 게임오버·클리어 이후 true — 결과 화면에서 추가 피해·중복 게임오버를 막는 데 사용
+    public bool IsGameEnded { get; private set; }
     public float PlayTime => _playTime;
 
     [SerializeField]
@@ -73,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(CauseDeath cause)
     {
+        IsGameEnded = true;
         if (cause == CauseDeath.Anger)
             Time.timeScale = 0f;
 
@@ -93,6 +97,7 @@ public class GameManager : MonoBehaviour
 
     public void GameClear()
     {
+        IsGameEnded = true;
         Time.timeScale = 0f;
         MissionManager.Instance.PauseMissionAssignment();
         _missionMessageUI?.ClearQueue();
