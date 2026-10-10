@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _isCrouching = false;
 
     private Vector3 _prevColliderCenter;
+    private bool? _crouchShapeApplied; // 마지막으로 적용한 콜라이더 형태 (null = 아직 적용 전)
 
     [Header("Sprint Field")]
     [SerializeField]
@@ -139,6 +140,29 @@ public class PlayerMovement : MonoBehaviour
         Yaw = transform.eulerAngles.y;
     }
 
+    // 형태가 바뀔 때만 콜라이더를 갱신 — Roll은 호출하지 않으므로 직전 형태를 유지
+    private void ApplyColliderShape(bool crouched)
+    {
+        if (_crouchShapeApplied == crouched)
+            return;
+        _crouchShapeApplied = crouched;
+
+        if (crouched)
+        {
+            _collider.height = _crouchHeight;
+            _collider.center = new Vector3(
+                _prevColliderCenter.x,
+                _prevColliderCenter.y - (_standHeight - _crouchHeight) / 2f,
+                _prevColliderCenter.z
+            );
+        }
+        else
+        {
+            _collider.height = _standHeight;
+            _collider.center = _prevColliderCenter;
+        }
+    }
+
     private void Start()
     {
         OnSprintChanged?.Invoke(_sprintDuration / _sprintTotalTime);
@@ -167,8 +191,7 @@ public class PlayerMovement : MonoBehaviour
             case MoveMode.Move:
                 {
                     _currentSpeed = _moveSpeed * _hangoverMultiplier;
-                    _collider.height = _standHeight;
-                    _collider.center = _prevColliderCenter;
+                    ApplyColliderShape(crouched: false);
 
                     _sprintDuration += Time.fixedDeltaTime;
                     if (_sprintDuration >= _sprintTotalTime)
@@ -181,8 +204,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     _currentSpeed = (_moveSpeed + _sprintSpeed) * _hangoverMultiplier;
                     // 앉기를 뗀 직후 바로 Sprint로 들어와도 서 있는 높이로 복원
-                    _collider.height = _standHeight;
-                    _collider.center = _prevColliderCenter;
+                    ApplyColliderShape(crouched: false);
                     _sprintDuration -= Time.fixedDeltaTime;
 
                     if (_sprintDuration <= 0)
@@ -204,12 +226,7 @@ public class PlayerMovement : MonoBehaviour
             case MoveMode.Crouch:
                 {
                     _currentSpeed = _crouchSpeed * _hangoverMultiplier;
-                    _collider.height = _crouchHeight;
-                    _collider.center = new Vector3(
-                        _prevColliderCenter.x,
-                        _prevColliderCenter.y - (_standHeight - _crouchHeight) / 2f,
-                        _prevColliderCenter.z
-                    );
+                    ApplyColliderShape(crouched: true);
                 }
                 break;
         }
