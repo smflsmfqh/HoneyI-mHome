@@ -290,22 +290,16 @@ public class TutorialManager : MonoBehaviour
 
         var cat = Instantiate(_catPrefab, origin, Quaternion.identity);
         cat.MarkAsTutorialCat();
-        cat.SetPlayer(_player);
+        cat.SetPlayer(_player); // 근접 경고 등록·해제는 CatMovement가 Start/OnDestroy에서 직접 처리
 
-        var proximity = _player.GetComponent<ProximityFeedback>();
-        proximity?.RegisterDanger(cat.transform);
-
-        StartCoroutine(DestroyCatAfter(cat, proximity));
+        StartCoroutine(DestroyCatAfter(cat));
     }
 
-    private IEnumerator DestroyCatAfter(CatMovement cat, ProximityFeedback proximity)
+    private IEnumerator DestroyCatAfter(CatMovement cat)
     {
         yield return new WaitForSeconds(_catLifetime);
         if (cat != null)
-        {
-            proximity?.UnregisterDanger(cat.transform);
             Destroy(cat.gameObject);
-        }
         _pressCZone?.SetActive(false);
     }
 
