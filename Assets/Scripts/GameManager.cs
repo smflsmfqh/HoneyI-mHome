@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private PlayerHealth _playerHealth;
 
+    private UnityEngine.InputSystem.PlayerInput _playerInput;
+
     [SerializeField]
     private AngerSystem _angerSystem;
 
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+        _playerInput = _playerHealth.GetComponent<UnityEngine.InputSystem.PlayerInput>();
         Application.targetFrameRate = 60;
         _score = 0;
 
@@ -79,7 +82,8 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         // 체력 사망은 PlayerController.HandleDied에서도 끄지만, 분노·미션 실패 게임오버는 여기서만 끔
-        _playerHealth.GetComponent<UnityEngine.InputSystem.PlayerInput>()?.DeactivateInput();
+        if (_playerInput != null)
+            _playerInput.DeactivateInput();
 
         foreach (var cat in FindObjectsByType<CatMovement>(FindObjectsSortMode.None))
             cat.SetExternalPause(true);
@@ -94,7 +98,8 @@ public class GameManager : MonoBehaviour
         _missionMessageUI?.ClearQueue();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        _playerHealth.GetComponent<UnityEngine.InputSystem.PlayerInput>()?.DeactivateInput();
+        if (_playerInput != null)
+            _playerInput.DeactivateInput();
         UIManager.Instance.ShowGameClear(Mathf.RoundToInt(_playTime));
     }
 
@@ -123,15 +128,16 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = _isPaused ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = _isPaused;
 
-        var playerInput = _playerHealth.GetComponent<UnityEngine.InputSystem.PlayerInput>();
         if (_isPaused)
         {
-            playerInput?.DeactivateInput();
+            if (_playerInput != null)
+                _playerInput.DeactivateInput();
             UIManager.Instance.ShowPause();
         }
         else
         {
-            playerInput?.ActivateInput();
+            if (_playerInput != null)
+                _playerInput.ActivateInput();
             UIManager.Instance.HidePause();
         }
     }
