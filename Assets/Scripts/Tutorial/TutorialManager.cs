@@ -65,6 +65,7 @@ public class TutorialManager : MonoBehaviour
     private bool _energyDrinkCollected;
     private CancellationTokenSource _mainCts; // 튜토리얼 본편 또는 스킵 흐름
     private CancellationTokenSource _catCts;
+    private CatMovement _tutorialCat;
 
     private NPCMovement[] _pausedNPCs;
     private CatMovement[] _pausedCats;
@@ -315,6 +316,7 @@ public class TutorialManager : MonoBehaviour
             origin = hit.position;
 
         var cat = Instantiate(_catPrefab, origin, Quaternion.identity);
+        _tutorialCat = cat;
         cat.MarkAsTutorialCat();
         cat.SetPlayer(_player); // 근접 경고 등록·해제는 CatMovement가 Start/OnDestroy에서 직접 처리
 
@@ -425,6 +427,11 @@ public class TutorialManager : MonoBehaviour
         _skipTextZone?.SetActive(false);
         _keyInfoTextZone?.SetActive(false);
         _pressCZone?.SetActive(false);
+
+        // 고양이 수명 전에 스킵하면 제거 타이머가 비활성화로 취소되므로 여기서 직접 제거
+        if (_tutorialCat != null)
+            Destroy(_tutorialCat.gameObject);
+
         gameObject.SetActive(false);
     }
 }

@@ -36,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
     public void SetTutorialInvincible(bool invincible) => _tutorialInvincible = invincible;
 
     private CancellationTokenSource _invincibleCts;
+    private float _invincibleEndTime; // Time.time 기준 무적 종료 시각
     private Animator _animator;
     private static readonly int IS_DEAD_ID = Animator.StringToHash("IsDead");
     private CauseDeath _pendingCause;
@@ -146,6 +147,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void SetInvincible(float sec, string source = "unknown")
     {
+        // 무적이 겹치면 더 늦게 끝나는 쪽을 유지 (짧은 구르기 무적이 긴 아이템 무적을 끊지 않도록)
+        float endTime = Time.time + sec;
+        if (_isInvincible && endTime <= _invincibleEndTime)
+            return;
+        _invincibleEndTime = endTime;
+
         _invincibleCts?.Cancel();
         _invincibleCts?.Dispose();
         _invincibleCts = new CancellationTokenSource();

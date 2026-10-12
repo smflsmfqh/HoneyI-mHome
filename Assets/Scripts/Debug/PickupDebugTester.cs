@@ -1,6 +1,7 @@
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 // 에디터 전용: 잠긴 선택 미션(꽃) 옆에서 E 픽업 대상 선택을 바로 확인하기 위한 테스트 도구.
 // 숫자 9를 누르면 개미를 꽃 바로 옆(0.3m)에 옮기고, 그보다 먼 곳(0.6m)에 음식을 떨어뜨린다.
@@ -19,8 +20,16 @@ public class PickupDebugTester : MonoBehaviour
 
     private ItemData _foodData;
 
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    // RuntimeInitializeOnLoadMethod는 플레이 시작 때 한 번만 불리므로,
+    // 타이틀 → 게임 씬 전환과 재시작에도 생성되도록 씬 로드마다 확인한다
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Bootstrap()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded; // 도메인 리로드를 끈 경우 중복 구독 방지
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // 게임 씬에서만 생성 (타이틀 씬 제외)
         if (FindAnyObjectByType<MissionManager>() == null)

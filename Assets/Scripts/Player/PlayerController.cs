@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement _pm;
     private PlayerInput _pi;
 
-    private readonly Collider[] _interactHits = new Collider[16];
+    // 바닥·건물·트리거 구역까지 함께 잡히므로 아이템이 잘려 나가지 않도록 넉넉하게 잡는다
+    private readonly Collider[] _interactHits = new Collider[64];
 
     private readonly Dictionary<EffectParticleType, CancellationTokenSource> _particleCts = new();
 
