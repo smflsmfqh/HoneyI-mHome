@@ -61,9 +61,9 @@ public class NPCMovement : MonoBehaviour
 
     public float MoveBlend => _animVert;
 
-    private static readonly int k_HorID = Animator.StringToHash("Hor");
-    private static readonly int k_VertID = Animator.StringToHash("Vert");
-    private static readonly int k_StateID = Animator.StringToHash("State");
+    private static readonly int HOR_ID = Animator.StringToHash("Hor");
+    private static readonly int VERT_ID = Animator.StringToHash("Vert");
+    private static readonly int STATE_ID = Animator.StringToHash("State");
 
     private void Awake()
     {
@@ -235,9 +235,9 @@ public class NPCMovement : MonoBehaviour
         var moving = !_agent.isStopped && _agent.velocity.sqrMagnitude > 0.01f;
         _animVert = Mathf.MoveTowards(_animVert, moving ? 1f : 0f, Time.deltaTime * 4.5f);
 
-        _animator.SetFloat(k_HorID, 0f);
-        _animator.SetFloat(k_VertID, _animVert);
-        _animator.SetFloat(k_StateID, _type == NpcType.Runner ? 1f : 0f);
+        _animator.SetFloat(HOR_ID, 0f);
+        _animator.SetFloat(VERT_ID, _animVert);
+        _animator.SetFloat(STATE_ID, _type == NpcType.Runner ? 1f : 0f);
     }
 
     private bool HasArrived()

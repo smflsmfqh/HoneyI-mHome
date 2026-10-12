@@ -20,7 +20,7 @@ public class HangoverEffect : MonoBehaviour
     private PlayerMovement _playerMovement;
     private bool _active = false;
 
-    private static readonly int k_TransparencyID = Shader.PropertyToID("_Transparency");
+    private static readonly int TRANSPARENCY_ID = Shader.PropertyToID("_Transparency");
 
     private void Start()
     {
@@ -65,7 +65,7 @@ public class HangoverEffect : MonoBehaviour
 
         // 0~1 사인 파형으로 _Transparency 깜빡임
         float t = Mathf.Sin(Time.time * _flickerSpeed) * 0.5f + 0.5f;
-        _ghostMatInstance.SetFloat(k_TransparencyID, t);
+        _ghostMatInstance.SetFloat(TRANSPARENCY_ID, t);
     }
 
     private void OnDestroy()

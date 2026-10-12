@@ -89,11 +89,11 @@ public class CatMovement : MonoBehaviour
     private bool _hasDestination = false;
     private int _currentAnim; // 0 = 강제 재생 필요
 
-    private static readonly int k_EatID = Animator.StringToHash("Eat");
-    private static readonly int k_RunID = Animator.StringToHash("Run");
-    private static readonly int k_IdleID = Animator.StringToHash("Idle_A");
-    private static readonly int k_WalkID = Animator.StringToHash("Walk");
-    private static readonly int k_IsFoundID = Animator.StringToHash("isFound");
+    private static readonly int EAT_ID = Animator.StringToHash("Eat");
+    private static readonly int RUN_ID = Animator.StringToHash("Run");
+    private static readonly int IDLE_ID = Animator.StringToHash("Idle_A");
+    private static readonly int WALK_ID = Animator.StringToHash("Walk");
+    private static readonly int IS_FOUND_ID = Animator.StringToHash("isFound");
     private CancellationTokenSource _meowCts;
     private bool _isTutorialCat;
     private bool _externallyPaused;
@@ -321,7 +321,7 @@ public class CatMovement : MonoBehaviour
             _isAttacking = true;
             _agent.isStopped = true;
 
-            _animator.Play(k_EatID);
+            _animator.Play(EAT_ID);
             await UniTask.Yield(PlayerLoopTiming.Update, ct);
 
             float clipLength = _animator.GetCurrentAnimatorStateInfo(0).length;
@@ -352,20 +352,20 @@ public class CatMovement : MonoBehaviour
         int targetMove;
         if (_state == State.Chase)
         {
-            targetMove = k_RunID;
+            targetMove = RUN_ID;
         }
         else if (_isWaiting || _agent.velocity.magnitude < 0.1f)
         {
-            targetMove = k_IdleID;
+            targetMove = IDLE_ID;
         }
         else
-            targetMove = k_WalkID;
+            targetMove = WALK_ID;
 
         if (_currentAnim != targetMove)
         {
             _currentAnim = targetMove;
             _animator.Play(targetMove);
-            _animator.SetBool(k_IsFoundID, _isFound);
+            _animator.SetBool(IS_FOUND_ID, _isFound);
         }
     }
 

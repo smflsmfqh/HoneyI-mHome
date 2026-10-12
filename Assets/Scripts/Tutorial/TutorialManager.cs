@@ -70,8 +70,8 @@ public class TutorialManager : MonoBehaviour
     private CatMovement[] _pausedCats;
     private CarMovement[] _pausedCars;
 
-    private static readonly float FastSlide = 4f / 60f;
-    private static readonly float NormalSlide = 0.3f;
+    private static readonly float FAST_SLIDE = 4f / 60f;
+    private static readonly float NORMAL_SLIDE = 0.3f;
 
     private void Awake()
     {
@@ -79,7 +79,7 @@ public class TutorialManager : MonoBehaviour
         _skipTextZone?.transform.parent?.gameObject.SetActive(true);
         _skipTextZone?.SetActive(true);
         _keyInfoTextZone?.SetActive(true);
-        _messageUI?.SetSlideDuration(FastSlide);
+        _messageUI?.SetSlideDuration(FAST_SLIDE);
 
         // 화살표 파티클: 약국 진입 전까지 꺼둠
         if (_arrowParticle != null)
@@ -379,7 +379,7 @@ public class TutorialManager : MonoBehaviour
     private void ResumeGame(bool resumeTimers = false)
     {
         _active = false;
-        _messageUI?.SetSlideDuration(NormalSlide);
+        _messageUI?.SetSlideDuration(NORMAL_SLIDE);
 
         if (_pausedNPCs != null)
             foreach (var npc in _pausedNPCs)

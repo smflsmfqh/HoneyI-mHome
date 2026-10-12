@@ -2,11 +2,13 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    private float k_maxHealth = 100f;
+    [FormerlySerializedAs("k_maxHealth")]
+    private float _maxHealth = 100f;
     private float _currentHealth;
 
     [SerializeField]
@@ -35,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
 
     private CancellationTokenSource _invincibleCts;
     private Animator _animator;
-    private static readonly int k_IsDeadID = Animator.StringToHash("IsDead");
+    private static readonly int IS_DEAD_ID = Animator.StringToHash("IsDead");
     private CauseDeath _pendingCause;
 
     // --- 이벤트 관련 필드 ---
@@ -52,12 +54,12 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = false;
         _healthTimer = 0f;
-        _currentHealth = k_maxHealth;
+        _currentHealth = _maxHealth;
     }
 
     private void Start()
     {
-        OnHealthChanged?.Invoke(_currentHealth / k_maxHealth);
+        OnHealthChanged?.Invoke(_currentHealth / _maxHealth);
     }
 
     private void OnDisable()
@@ -81,11 +83,11 @@ public class PlayerHealth : MonoBehaviour
         {
             _healthTimer = 0f;
             _currentHealth += _addedHealth;
-            if (_currentHealth >= k_maxHealth)
+            if (_currentHealth >= _maxHealth)
             {
-                _currentHealth = k_maxHealth;
+                _currentHealth = _maxHealth;
             }
-            OnHealthChanged?.Invoke(_currentHealth / k_maxHealth);
+            OnHealthChanged?.Invoke(_currentHealth / _maxHealth);
         }
     }
 
@@ -105,7 +107,7 @@ public class PlayerHealth : MonoBehaviour
         {
             _currentHealth = 0f;
         }
-        OnHealthChanged?.Invoke(_currentHealth / k_maxHealth);
+        OnHealthChanged?.Invoke(_currentHealth / _maxHealth);
 
         if (_currentHealth <= 0f)
         {
@@ -135,11 +137,11 @@ public class PlayerHealth : MonoBehaviour
             return;
         var prevH = _currentHealth;
         _currentHealth += amount;
-        if (_currentHealth >= k_maxHealth)
+        if (_currentHealth >= _maxHealth)
         {
-            _currentHealth = k_maxHealth;
+            _currentHealth = _maxHealth;
         }
-        OnHealthChanged?.Invoke(_currentHealth / k_maxHealth);
+        OnHealthChanged?.Invoke(_currentHealth / _maxHealth);
     }
 
     public void SetInvincible(float sec, string source = "unknown")
@@ -167,7 +169,7 @@ public class PlayerHealth : MonoBehaviour
             return;
         _pendingCause = cause;
         isDead = true;
-        _animator?.SetBool(k_IsDeadID, isDead);
+        _animator?.SetBool(IS_DEAD_ID, isDead);
 
         _followCamera?.TriggerReactionCut(2f);
         _playerMovement?.SetFaceDead();

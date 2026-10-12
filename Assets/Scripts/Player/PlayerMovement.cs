@@ -27,13 +27,13 @@ public class PlayerMovement : MonoBehaviour
     private int _currentFace; // 0 = 아직 재생 전
 
     // 표정 레이어(1) 상태
-    private static readonly int k_FaceBlinkID = Animator.StringToHash("Eyes_Blink");
-    private static readonly int k_FaceCryID = Animator.StringToHash("Eyes_Cry");
-    private static readonly int k_FaceDeadID = Animator.StringToHash("Eyes_Dead");
-    private static readonly int k_FaceHappyID = Animator.StringToHash("Eyes_Happy");
-    private static readonly int k_FaceShrinkID = Animator.StringToHash("Eyes_Shrink");
-    private static readonly int k_FaceExcitedID = Animator.StringToHash("Eyes_Excited");
-    private static readonly int k_FaceTraumaID = Animator.StringToHash("Eyes_Trauma");
+    private static readonly int FACE_BLINK_ID = Animator.StringToHash("Eyes_Blink");
+    private static readonly int FACE_CRY_ID = Animator.StringToHash("Eyes_Cry");
+    private static readonly int FACE_DEAD_ID = Animator.StringToHash("Eyes_Dead");
+    private static readonly int FACE_HAPPY_ID = Animator.StringToHash("Eyes_Happy");
+    private static readonly int FACE_SHRINK_ID = Animator.StringToHash("Eyes_Shrink");
+    private static readonly int FACE_EXCITED_ID = Animator.StringToHash("Eyes_Excited");
+    private static readonly int FACE_TRAUMA_ID = Animator.StringToHash("Eyes_Trauma");
 
     [Header("Movement Speed")]
     [SerializeField]
@@ -114,10 +114,10 @@ public class PlayerMovement : MonoBehaviour
     private float _lastSprintRatio = -1f;
     private float _lastRollRatio = -1f;
 
-    private static readonly int k_SpeedID = Animator.StringToHash("Speed");
-    private static readonly int k_IsGroundedID = Animator.StringToHash("IsGrounded");
-    private static readonly int k_IsRollingID = Animator.StringToHash("IsRolling");
-    private static readonly int k_IsCrouchingID = Animator.StringToHash("isCrouching");
+    private static readonly int SPEED_ID = Animator.StringToHash("Speed");
+    private static readonly int IS_GROUNDED_ID = Animator.StringToHash("IsGrounded");
+    private static readonly int IS_ROLLING_ID = Animator.StringToHash("IsRolling");
+    private static readonly int IS_CROUCHING_ID = Animator.StringToHash("isCrouching");
 
     // --- 이벤트 관련 필드 ---
     public event Action<float> OnSprintChanged;
@@ -321,10 +321,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         float horizSpeed = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.z).magnitude;
-        _animator.SetFloat(k_SpeedID, horizSpeed);
-        _animator.SetBool(k_IsGroundedID, _isGrounded);
-        _animator.SetBool(k_IsRollingID, _isRolling);
-        _animator.SetBool(k_IsCrouchingID, _isCrouching);
+        _animator.SetFloat(SPEED_ID, horizSpeed);
+        _animator.SetBool(IS_GROUNDED_ID, _isGrounded);
+        _animator.SetBool(IS_ROLLING_ID, _isRolling);
+        _animator.SetBool(IS_CROUCHING_ID, _isCrouching);
     }
 
     private void RaiseSprintChanged()
@@ -353,19 +353,19 @@ public class PlayerMovement : MonoBehaviour
         _animator.Play(stateHash, 1);
     }
 
-    public void ResetFace() => PlayFace(k_FaceBlinkID);
+    public void ResetFace() => PlayFace(FACE_BLINK_ID);
 
-    public void SetFaceDamaged() => PlayFace(k_FaceCryID);
+    public void SetFaceDamaged() => PlayFace(FACE_CRY_ID);
 
-    public void SetFaceDead() => PlayFace(k_FaceDeadID);
+    public void SetFaceDead() => PlayFace(FACE_DEAD_ID);
 
-    public void SetFaceHappy() => PlayFace(k_FaceHappyID);
+    public void SetFaceHappy() => PlayFace(FACE_HAPPY_ID);
 
-    public void SetFaceShrink() => PlayFace(k_FaceShrinkID);
+    public void SetFaceShrink() => PlayFace(FACE_SHRINK_ID);
 
-    public void SetFaceExcited() => PlayFace(k_FaceExcitedID);
+    public void SetFaceExcited() => PlayFace(FACE_EXCITED_ID);
 
-    public void SetFaceTrauma() => PlayFace(k_FaceTraumaID);
+    public void SetFaceTrauma() => PlayFace(FACE_TRAUMA_ID);
 
     private void OnMove(InputValue value)
     {
