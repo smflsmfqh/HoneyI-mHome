@@ -109,8 +109,12 @@ public class FollowCamera : MonoBehaviour
             transform.rotation = fullRot;
         }
 
-        Vector3 shakeOffset = Random.insideUnitCircle * (_maxShakeAmount * _shakeIntensity);
-        transform.position += shakeOffset;
+        // 흔들림은 deltaTime이 아니라 매 프레임 난수라 timeScale 0에서도 계속되므로 직접 막는다 (일시정지·게임오버·클리어)
+        if (Time.timeScale > 0f)
+        {
+            Vector3 shakeOffset = Random.insideUnitCircle * (_maxShakeAmount * _shakeIntensity);
+            transform.position += shakeOffset;
+        }
     }
 
     public void TriggerReactionCut(float holdDuration = 0.8f)
