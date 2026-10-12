@@ -140,15 +140,8 @@ public class CatMovement : MonoBehaviour
 
     private void OnDisable()
     {
-        CancelCts(ref _attackCts);
-        CancelCts(ref _meowCts);
-    }
-
-    private static void CancelCts(ref CancellationTokenSource cts)
-    {
-        cts?.Cancel();
-        cts?.Dispose();
-        cts = null;
+        CtsUtility.Cancel(ref _attackCts);
+        CtsUtility.Cancel(ref _meowCts);
     }
 
     private void OnDestroy()
@@ -309,9 +302,7 @@ public class CatMovement : MonoBehaviour
             return;
 
         _lastAttackTime = Time.time;
-        CancelCts(ref _attackCts);
-        _attackCts = new CancellationTokenSource();
-        AttackAsync(_attackCts.Token).Forget();
+        AttackAsync(CtsUtility.Renew(ref _attackCts)).Forget();
     }
 
     private async UniTaskVoid AttackAsync(CancellationToken ct)
@@ -381,9 +372,7 @@ public class CatMovement : MonoBehaviour
 
     private void StartMeowLoop()
     {
-        CancelCts(ref _meowCts);
-        _meowCts = new CancellationTokenSource();
-        MeowLoopAsync(_meowCts.Token).Forget();
+        MeowLoopAsync(CtsUtility.Renew(ref _meowCts)).Forget();
     }
 
     private async UniTaskVoid MeowLoopAsync(CancellationToken ct)

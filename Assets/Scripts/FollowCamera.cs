@@ -134,17 +134,12 @@ public class FollowCamera : MonoBehaviour
     {
         if (_isReacting)
             return;
-        _reactionCts?.Cancel();
-        _reactionCts?.Dispose();
-        _reactionCts = new CancellationTokenSource();
-        ReactionCutAsync(holdDuration, _reactionCts.Token).Forget();
+        ReactionCutAsync(holdDuration, CtsUtility.Renew(ref _reactionCts)).Forget();
     }
 
     public void CancelReaction()
     {
-        _reactionCts?.Cancel();
-        _reactionCts?.Dispose();
-        _reactionCts = null;
+        CtsUtility.Cancel(ref _reactionCts);
 
         _activeOffset = _offset.normalized * _currentDistance;
         _useLookAt = false;

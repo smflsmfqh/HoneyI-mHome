@@ -98,22 +98,13 @@ public class TutorialManager : MonoBehaviour
         _skipAction.performed -= OnSkipPerformed;
         _skipAction.Disable();
 
-        CancelCts(ref _mainCts);
-        CancelCts(ref _catCts);
-    }
-
-    private static void CancelCts(ref CancellationTokenSource cts)
-    {
-        cts?.Cancel();
-        cts?.Dispose();
-        cts = null;
+        CtsUtility.Cancel(ref _mainCts);
+        CtsUtility.Cancel(ref _catCts);
     }
 
     private void StartMainFlow(Func<CancellationToken, UniTaskVoid> flow)
     {
-        CancelCts(ref _mainCts);
-        _mainCts = new CancellationTokenSource();
-        flow(_mainCts.Token).Forget();
+        flow(CtsUtility.Renew(ref _mainCts)).Forget();
     }
 
     private void OnSkipPerformed(InputAction.CallbackContext ctx)
@@ -320,9 +311,7 @@ public class TutorialManager : MonoBehaviour
         cat.MarkAsTutorialCat();
         cat.SetPlayer(_player); // 근접 경고 등록·해제는 CatMovement가 Start/OnDestroy에서 직접 처리
 
-        CancelCts(ref _catCts);
-        _catCts = new CancellationTokenSource();
-        DestroyCatAfterAsync(cat, _catCts.Token).Forget();
+        DestroyCatAfterAsync(cat, CtsUtility.Renew(ref _catCts)).Forget();
     }
 
     private async UniTaskVoid DestroyCatAfterAsync(CatMovement cat, CancellationToken ct)
@@ -339,7 +328,7 @@ public class TutorialManager : MonoBehaviour
 
     public void Skip()
     {
-        CancelCts(ref _mainCts);
+        CtsUtility.Cancel(ref _mainCts);
 
         if (MissionManager.Instance != null)
         {

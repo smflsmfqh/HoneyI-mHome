@@ -17,17 +17,22 @@ public class MissionSeedWindow : EditorWindow
         EditorGUILayout.LabelField("마지막 판 시드", hasLast ? last.ToString() : "-");
         EditorGUILayout.Space();
 
-        enabled = EditorGUILayout.Toggle("시드 덮어쓰기", enabled);
-        using (new EditorGUI.DisabledScope(!enabled))
+        bool newEnabled = EditorGUILayout.Toggle("시드 덮어쓰기", enabled);
+        int newValue = value;
+        using (new EditorGUI.DisabledScope(!newEnabled))
         {
-            value = EditorGUILayout.IntField("시드", value);
+            newValue = EditorGUILayout.IntField("시드", newValue);
             using (new EditorGUI.DisabledScope(!hasLast))
                 if (GUILayout.Button("마지막 판 시드 넣기"))
-                    value = last;
+                    newValue = last;
         }
 
-        EditorPrefs.SetBool(MissionManager.SEED_OVERRIDE_ENABLED_KEY, enabled);
-        EditorPrefs.SetInt(MissionManager.SEED_OVERRIDE_VALUE_KEY, value);
+        // OnInspectorUpdate가 초당 약 10번 다시 그리므로 값이 바뀐 경우에만 저장
+        if (newEnabled != enabled)
+            EditorPrefs.SetBool(MissionManager.SEED_OVERRIDE_ENABLED_KEY, newEnabled);
+        if (newValue != value)
+            EditorPrefs.SetInt(MissionManager.SEED_OVERRIDE_VALUE_KEY, newValue);
+        enabled = newEnabled;
 
         EditorGUILayout.HelpBox(
             enabled

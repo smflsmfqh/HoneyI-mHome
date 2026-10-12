@@ -76,9 +76,7 @@ public class ShopBuilding : MonoBehaviour
             MissionManager.Instance.OnMissionDisplayed -= HandleMissionDisplayed;
         }
 
-        _cooldownCts?.Cancel();
-        _cooldownCts?.Dispose();
-        _cooldownCts = null;
+        CtsUtility.Cancel(ref _cooldownCts);
     }
 
     private void HandleMissionAssigned(ItemData data)
@@ -141,11 +139,8 @@ public class ShopBuilding : MonoBehaviour
         if (TryGetComponent(out MinimapMarker marker))
             MinimapUI.Instance?.StopPingMarker(marker);
 
-        _cooldownCts?.Cancel();
-        _cooldownCts?.Dispose();
-        _cooldownCts = new CancellationTokenSource();
         float cooldown = selected.category == ItemCategory.Mission ? _cooldown : _foodCooldown;
-        CooldownAsync(cooldown, selected, _cooldownCts.Token).Forget();
+        CooldownAsync(cooldown, selected, CtsUtility.Renew(ref _cooldownCts)).Forget();
     }
 
     private async UniTaskVoid CooldownAsync(float cooldown, ItemData dropped, CancellationToken ct)

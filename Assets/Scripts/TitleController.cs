@@ -2,7 +2,6 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
@@ -167,43 +166,29 @@ public class TitleController : MonoBehaviour
         vp.prepareCompleted -= OnVideoPrepared;
         float duration = (float)vp.clip.length;
         vp.Play();
-        CancelVideoWait();
-        _videoCts = new CancellationTokenSource();
-        WaitForVideoEndAsync(duration, _videoCts.Token).Forget();
+        WaitForVideoEndAsync(duration, CtsUtility.Renew(ref _videoCts)).Forget();
     }
 
-    // 타이틀에는 PlayerInput이 없으므로 볼륨 창 닫기는 독립 액션으로 받는다
-    [SerializeField]
-    private InputAction _closeVolumeAction = new InputAction(
-        name: "CloseVolumeSettings",
-        type: InputActionType.Button,
-        binding: "<Keyboard>/escape"
-    );
+    private VolumeSettingsUI _volumeSettingsUI;
 
     private void OnEnable()
     {
-        _closeVolumeAction.performed += OnCloseVolumePerformed;
-        _closeVolumeAction.Enable();
+        if (_volumeSettingsUI == null && _volumeSettingsPanel != null)
+            _volumeSettingsUI = _volumeSettingsPanel.GetComponentInChildren<VolumeSettingsUI>(true);
+        if (_volumeSettingsUI != null)
+            _volumeSettingsUI.CloseRequested += HideVolumeSettings;
     }
 
     private void OnDisable()
     {
-        _closeVolumeAction.performed -= OnCloseVolumePerformed;
-        _closeVolumeAction.Disable();
+        if (_volumeSettingsUI != null)
+            _volumeSettingsUI.CloseRequested -= HideVolumeSettings;
         CancelVideoWait();
-    }
-
-    private void OnCloseVolumePerformed(InputAction.CallbackContext ctx)
-    {
-        if (_volumeSettingsPanel != null && _volumeSettingsPanel.activeSelf)
-            HideVolumeSettings();
     }
 
     private void CancelVideoWait()
     {
-        _videoCts?.Cancel();
-        _videoCts?.Dispose();
-        _videoCts = null;
+        CtsUtility.Cancel(ref _videoCts);
     }
 
     private async UniTaskVoid WaitForVideoEndAsync(float clipDuration, CancellationToken ct)

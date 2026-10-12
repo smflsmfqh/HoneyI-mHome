@@ -79,8 +79,7 @@ public class MissionItem : MonoBehaviour, IInteractive
     {
         if (IsPooled && LifeTime > 0f)
         {
-            _lifeTimerCts = new CancellationTokenSource();
-            AutoDeactivateAsync(_lifeTimerCts.Token).Forget();
+            AutoDeactivateAsync(CtsUtility.Renew(ref _lifeTimerCts)).Forget();
         }
 
         if (
@@ -93,9 +92,7 @@ public class MissionItem : MonoBehaviour, IInteractive
 
     private void OnDisable()
     {
-        _lifeTimerCts?.Cancel();
-        _lifeTimerCts?.Dispose();
-        _lifeTimerCts = null;
+        CtsUtility.Cancel(ref _lifeTimerCts);
 
         if (
             _itemData != null

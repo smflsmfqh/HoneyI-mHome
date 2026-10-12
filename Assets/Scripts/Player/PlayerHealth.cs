@@ -65,9 +65,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnDisable()
     {
-        _invincibleCts?.Cancel();
-        _invincibleCts?.Dispose();
-        _invincibleCts = null;
+        CtsUtility.Cancel(ref _invincibleCts);
     }
 
     private void Update()
@@ -153,10 +151,7 @@ public class PlayerHealth : MonoBehaviour
             return;
         _invincibleEndTime = endTime;
 
-        _invincibleCts?.Cancel();
-        _invincibleCts?.Dispose();
-        _invincibleCts = new CancellationTokenSource();
-        InvincibleAsync(sec, _invincibleCts.Token).Forget();
+        InvincibleAsync(sec, CtsUtility.Renew(ref _invincibleCts)).Forget();
     }
 
     private async UniTaskVoid InvincibleAsync(float sec, CancellationToken ct)

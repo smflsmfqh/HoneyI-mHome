@@ -195,15 +195,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDisable()
     {
-        CancelCts(ref _rollCts);
-        CancelCts(ref _speedBoostCts);
-    }
-
-    private static void CancelCts(ref CancellationTokenSource cts)
-    {
-        cts?.Cancel();
-        cts?.Dispose();
-        cts = null;
+        CtsUtility.Cancel(ref _rollCts);
+        CtsUtility.Cancel(ref _speedBoostCts);
     }
 
     private void FixedUpdate()
@@ -420,16 +413,14 @@ public class PlayerMovement : MonoBehaviour
                 ? (transform.forward * _inputDir.y + transform.right * _inputDir.x).normalized
                 : transform.forward;
         _playerController?.PlayRollSound();
-        CancelCts(ref _rollCts);
-        _rollCts = new CancellationTokenSource();
-        RollAsync(_rollCts.Token).Forget();
+        RollAsync(CtsUtility.Renew(ref _rollCts)).Forget();
     }
 
     public void CancelRoll()
     {
         if (!_isRolling)
             return;
-        CancelCts(ref _rollCts);
+        CtsUtility.Cancel(ref _rollCts);
         _isRolling = false;
     }
 
@@ -496,9 +487,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetSpeedBoost(float speed, float sec)
     {
-        CancelCts(ref _speedBoostCts);
-        _speedBoostCts = new CancellationTokenSource();
-        SpeedBoostAsync(speed, sec, _speedBoostCts.Token).Forget();
+        SpeedBoostAsync(speed, sec, CtsUtility.Renew(ref _speedBoostCts)).Forget();
     }
 
     private async UniTaskVoid SpeedBoostAsync(float speed, float sec, CancellationToken ct)

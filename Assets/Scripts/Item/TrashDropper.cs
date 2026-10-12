@@ -53,15 +53,12 @@ public class TrashDropper : MonoBehaviour
             return;
         }
 
-        _dropCts = new CancellationTokenSource();
-        DropLoopAsync(_dropCts.Token).Forget();
+        DropLoopAsync(CtsUtility.Renew(ref _dropCts)).Forget();
     }
 
     private void OnDisable()
     {
-        _dropCts?.Cancel();
-        _dropCts?.Dispose();
-        _dropCts = null;
+        CtsUtility.Cancel(ref _dropCts);
     }
 
     private async UniTaskVoid DropLoopAsync(CancellationToken ct)

@@ -38,15 +38,12 @@ public class CrosswalkWaitZone : MonoBehaviour
     private void Start()
     {
         GetComponent<BoxCollider>().isTrigger = true;
-        _cycleCts = new CancellationTokenSource();
-        CycleAsync(_cycleCts.Token).Forget();
+        CycleAsync(CtsUtility.Renew(ref _cycleCts)).Forget();
     }
 
     private void OnDisable()
     {
-        _cycleCts?.Cancel();
-        _cycleCts?.Dispose();
-        _cycleCts = null;
+        CtsUtility.Cancel(ref _cycleCts);
     }
 
     private async UniTaskVoid CycleAsync(CancellationToken ct)

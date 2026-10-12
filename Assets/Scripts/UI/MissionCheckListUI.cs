@@ -49,9 +49,7 @@ public class MissionCheckListUI : MonoBehaviour
         if (_missionMessageUI != null)
             _missionMessageUI.OnSlidedIn -= HandleSlidedIn;
 
-        _peekCts?.Cancel();
-        _peekCts?.Dispose();
-        _peekCts = null;
+        CtsUtility.Cancel(ref _peekCts);
     }
 
     // 미션 메시지가 슬라이딩 인 될 때 항목 추가 + 리스트 잠깐 표시
@@ -80,10 +78,7 @@ public class MissionCheckListUI : MonoBehaviour
 
     public void Peek()
     {
-        _peekCts?.Cancel();
-        _peekCts?.Dispose();
-        _peekCts = new CancellationTokenSource();
-        PeekAsync(_peekCts.Token).Forget();
+        PeekAsync(CtsUtility.Renew(ref _peekCts)).Forget();
     }
 
     private void ToggleList()

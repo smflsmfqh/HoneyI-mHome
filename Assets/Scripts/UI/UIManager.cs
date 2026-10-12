@@ -3,7 +3,6 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -206,40 +205,28 @@ public class UIManager : MonoBehaviour
         AudioManager.Instance?.PlaySFX(_buttonClickSound);
     }
 
-    // 일시정지 중에는 PlayerInput이 꺼져 있으므로 볼륨 창 닫기는 독립 액션으로 받는다
-    [SerializeField]
-    private InputAction _closeVolumeAction = new InputAction(
-        name: "CloseVolumeSettings",
-        type: InputActionType.Button,
-        binding: "<Keyboard>/escape"
-    );
-
     private CancellationTokenSource _hiddenVideoCts;
+
+    private VolumeSettingsUI _volumeSettingsUI;
 
     private void OnEnable()
     {
-        _closeVolumeAction.performed += OnCloseVolumePerformed;
-        _closeVolumeAction.Enable();
+        if (_volumeSettingsUI == null && _volumeSettingsPanel != null)
+            _volumeSettingsUI = _volumeSettingsPanel.GetComponentInChildren<VolumeSettingsUI>(true);
+        if (_volumeSettingsUI != null)
+            _volumeSettingsUI.CloseRequested += HideVolumeSettings;
     }
 
     private void OnDisable()
     {
-        _closeVolumeAction.performed -= OnCloseVolumePerformed;
-        _closeVolumeAction.Disable();
+        if (_volumeSettingsUI != null)
+            _volumeSettingsUI.CloseRequested -= HideVolumeSettings;
         CancelHiddenVideo();
-    }
-
-    private void OnCloseVolumePerformed(InputAction.CallbackContext ctx)
-    {
-        if (IsVolumeSettingsOpen)
-            HideVolumeSettings();
     }
 
     private void CancelHiddenVideo()
     {
-        _hiddenVideoCts?.Cancel();
-        _hiddenVideoCts?.Dispose();
-        _hiddenVideoCts = null;
+        CtsUtility.Cancel(ref _hiddenVideoCts);
     }
 
     private void OnDestroy()
@@ -303,9 +290,7 @@ public class UIManager : MonoBehaviour
             && _hiddenVideoPlayer.clip != null
         )
         {
-            CancelHiddenVideo();
-            _hiddenVideoCts = new CancellationTokenSource();
-            PlayHiddenVideoThenClearAsync(angerSeconds, _hiddenVideoCts.Token).Forget();
+            PlayHiddenVideoThenClearAsync(angerSeconds, CtsUtility.Renew(ref _hiddenVideoCts)).Forget();
         }
         else
         {
@@ -425,9 +410,6 @@ public class UIManager : MonoBehaviour
         HideVolumeSettings();
         SetPanel(_pausePanel, false);
     }
-
-    public bool IsVolumeSettingsOpen =>
-        _volumeSettingsPanel != null && _volumeSettingsPanel.activeSelf;
 
     public void ShowVolumeSettings() => SetPanel(_volumeSettingsPanel, true);
 
