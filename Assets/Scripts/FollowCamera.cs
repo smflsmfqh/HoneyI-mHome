@@ -43,21 +43,30 @@ public class FollowCamera : MonoBehaviour
     private float _maxZoomOut = 2.5f;
 
     [Tooltip(
-        "New Input System의 Mouse.scroll은 노치당 값이 레거시 Input.GetAxis(\"Mouse ScrollWheel\")보다 " +
+        "휠(Zoom 액션, <Mouse>/scroll/y) 값은 노치당 값이 레거시 Input.GetAxis(\"Mouse ScrollWheel\")보다 " +
         "훨씬 큰 단위(Windows 기준 노치당 약 ±120)로 들어온다. 이전 _scrollSensitivity 값이 그대로 쓰이도록 " +
         "같은 스케일(노치당 대략 ±0.1)로 나눠주는 계수 — 실제 플레이 체감이 이전과 다르면 여기서 조정."
     )]
     [SerializeField]
     private float _scrollUnitScale = 1200f;
 
+    private InputAction _zoomAction;
+
     public void SetShakeIntensity(float intensity) => _shakeIntensity = intensity;
+
+    private void Start()
+    {
+        // PlayerInput이 OnEnable에서 액션 사본을 만든 뒤에 가져와야 DeactivateInput이 줌에도 적용된다
+        if (_player != null && _player.TryGetComponent<PlayerInput>(out var playerInput))
+            _zoomAction = playerInput.actions.FindAction("Zoom");
+    }
 
     private float ReadScrollDelta()
     {
-        if (Mouse.current == null || _scrollUnitScale == 0f)
+        if (_zoomAction == null || _scrollUnitScale == 0f)
             return 0f;
 
-        return Mouse.current.scroll.ReadValue().y / _scrollUnitScale;
+        return _zoomAction.ReadValue<float>() / _scrollUnitScale;
     }
 
     private void Awake()
@@ -85,10 +94,8 @@ public class FollowCamera : MonoBehaviour
         if (_player == null)
             return;
 
-        
-
-        // 일시정지·결과 화면(timeScale 0)에서는 휠 줌 무시 — 휠은 PlayerInput을 거치지 않아 입력 비활성화로 막히지 않음
-        if (!_isReacting && Time.timeScale > 0f)
+        // 일시정지·결과 화면에서는 GameManager가 PlayerInput을 꺼서 Zoom 액션 값도 0이 된다
+        if (!_isReacting)
         {
             _currentDistance -= ReadScrollDelta() * _scrollSensitivity;
             _currentDistance = Mathf.Clamp(

@@ -206,11 +206,33 @@ public class UIManager : MonoBehaviour
         AudioManager.Instance?.PlaySFX(_buttonClickSound);
     }
 
+    // 일시정지 중에는 PlayerInput이 꺼져 있으므로 볼륨 창 닫기는 독립 액션으로 받는다
+    [SerializeField]
+    private InputAction _closeVolumeAction = new InputAction(
+        name: "CloseVolumeSettings",
+        type: InputActionType.Button,
+        binding: "<Keyboard>/escape"
+    );
+
     private CancellationTokenSource _hiddenVideoCts;
+
+    private void OnEnable()
+    {
+        _closeVolumeAction.performed += OnCloseVolumePerformed;
+        _closeVolumeAction.Enable();
+    }
 
     private void OnDisable()
     {
+        _closeVolumeAction.performed -= OnCloseVolumePerformed;
+        _closeVolumeAction.Disable();
         CancelHiddenVideo();
+    }
+
+    private void OnCloseVolumePerformed(InputAction.CallbackContext ctx)
+    {
+        if (IsVolumeSettingsOpen)
+            HideVolumeSettings();
     }
 
     private void CancelHiddenVideo()
@@ -384,12 +406,6 @@ public class UIManager : MonoBehaviour
                 .Instance.GetMessage("GAMECLEAR_TAGLINE")
                 .message;
 
-    }
-
-    private void Update()
-    {
-        if (IsVolumeSettingsOpen && Keyboard.current.escapeKey.wasPressedThisFrame)
-            HideVolumeSettings();
     }
 
     public void ShowHUD()

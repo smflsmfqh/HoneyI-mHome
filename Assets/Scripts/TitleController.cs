@@ -95,13 +95,6 @@ public class TitleController : MonoBehaviour
         AudioManager.Instance?.PlayBGM(_titleBGM);
     }
 
-    private void Update()
-    {
-        if (_volumeSettingsPanel != null && _volumeSettingsPanel.activeSelf &&
-            Keyboard.current.escapeKey.wasPressedThisFrame)
-            HideVolumeSettings();
-    }
-
     private void ShowVolumeSettings()
     {
         if (_volumeSettingsPanel != null) _volumeSettingsPanel.SetActive(true);
@@ -179,9 +172,31 @@ public class TitleController : MonoBehaviour
         WaitForVideoEndAsync(duration, _videoCts.Token).Forget();
     }
 
+    // 타이틀에는 PlayerInput이 없으므로 볼륨 창 닫기는 독립 액션으로 받는다
+    [SerializeField]
+    private InputAction _closeVolumeAction = new InputAction(
+        name: "CloseVolumeSettings",
+        type: InputActionType.Button,
+        binding: "<Keyboard>/escape"
+    );
+
+    private void OnEnable()
+    {
+        _closeVolumeAction.performed += OnCloseVolumePerformed;
+        _closeVolumeAction.Enable();
+    }
+
     private void OnDisable()
     {
+        _closeVolumeAction.performed -= OnCloseVolumePerformed;
+        _closeVolumeAction.Disable();
         CancelVideoWait();
+    }
+
+    private void OnCloseVolumePerformed(InputAction.CallbackContext ctx)
+    {
+        if (_volumeSettingsPanel != null && _volumeSettingsPanel.activeSelf)
+            HideVolumeSettings();
     }
 
     private void CancelVideoWait()
