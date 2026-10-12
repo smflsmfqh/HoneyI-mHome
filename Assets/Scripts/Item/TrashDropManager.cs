@@ -26,6 +26,12 @@ public class TrashDropManager : MonoBehaviour
     public void SpawnItem(ItemData data, Vector3 position)
     {
         MissionItem item = GetOrCreate(data);
+        if (item == null)
+        {
+            Debug.LogWarning($"[TrashDropManager] {data.dropPrefab.name}에 MissionItem이 없어 드롭하지 않습니다.");
+            return;
+        }
+
         var rot = Quaternion.Euler(data.spawnRotation);
         item.transform.SetPositionAndRotation(position, rot);
         item.gameObject.SetActive(true);

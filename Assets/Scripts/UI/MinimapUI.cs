@@ -137,6 +137,15 @@ public class MinimapUI : MonoBehaviour
         _icons[marker] = rt;
     }
 
+    // 등록 뒤에 colorOverride가 바뀐 마커의 아이콘 색을 다시 적용
+    public void RefreshColor(MinimapMarker marker)
+    {
+        if (marker.iconSprite != null || !_icons.TryGetValue(marker, out var rt) || rt == null)
+            return;
+
+        rt.GetComponent<Image>().color = ResolveColor(marker);
+    }
+
     public void Unregister(MinimapMarker marker)
     {
         // LateUpdate 순회 중에는 즉시 제거하지 않고 대기열에 추가

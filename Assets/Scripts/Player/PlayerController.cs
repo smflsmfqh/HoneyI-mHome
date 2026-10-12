@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement _pm;
     private PlayerInput _pi;
 
+    private readonly Collider[] _interactHits = new Collider[16];
+
     private Dictionary<EffectParticleType, Coroutine> _particleCorutine =
         new Dictionary<EffectParticleType, Coroutine>();
 
@@ -61,15 +63,25 @@ public class PlayerController : MonoBehaviour
         if (!value.isPressed)
             return;
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, 1f);
-        foreach (var hit in hits)
+        // 픽업 가능한 후보 중 가장 가까운 것 하나만 줍는다
+        int count = Physics.OverlapSphereNonAlloc(transform.position, 1f, _interactHits);
+        IInteractive closest = null;
+        float closestSqr = float.MaxValue;
+        for (int i = 0; i < count; i++)
         {
-            if (hit.TryGetComponent<IInteractive>(out var item))
+            var hit = _interactHits[i];
+            if (!hit.TryGetComponent<IInteractive>(out var item) || !item.CanInteract)
+                continue;
+
+            float sqr = (hit.transform.position - transform.position).sqrMagnitude;
+            if (sqr < closestSqr)
             {
-                item.Interact(this);
-                break;
+                closestSqr = sqr;
+                closest = item;
             }
         }
+
+        closest?.Interact(this);
     }
 
     private void OnMissionToggle(InputValue value)

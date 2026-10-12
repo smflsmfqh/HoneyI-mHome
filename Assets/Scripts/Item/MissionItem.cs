@@ -68,6 +68,8 @@ public class MissionItem : MonoBehaviour, IInteractive
             ItemCategory.Optional => Color.yellow,
             _ => Color.magenta,
         };
+        // AddComponent 시점의 OnEnable에서 기본 색으로 이미 등록됐으므로 다시 칠한다
+        MinimapUI.Instance?.RefreshColor(_minimapMarker);
 
         if (_itemData.category == ItemCategory.Optional)
             _minimapMarker.enabled = false;
@@ -136,13 +138,14 @@ public class MissionItem : MonoBehaviour, IInteractive
         catch (OperationCanceledException) { }
     }
 
+    // Optional 미션은 독백(선택 미션 해제) 이후에만 픽업 가능
+    public bool CanInteract =>
+        _itemData.category != ItemCategory.Optional
+        || MissionManager.Instance.IsOptionalUnlocked;
+
     public void Interact(PlayerController player)
     {
-        // Optional 미션은 독백(선택 미션 해제) 이후에만 픽업 가능
-        if (
-            _itemData.category == ItemCategory.Optional
-            && !MissionManager.Instance.IsOptionalUnlocked
-        )
+        if (!CanInteract)
             return;
 
         player.PlayPickupSound();

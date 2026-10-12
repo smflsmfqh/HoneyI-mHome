@@ -43,6 +43,7 @@ public class ShopBuilding : MonoBehaviour
     public float ItemCoolDown => _cooldown;
 
     private List<ItemData> _remainingItems = new();
+    private readonly List<ItemData> _dropCandidates = new();
     private Vector3 _spawnPos;
     private CancellationTokenSource _cooldownCts;
 
@@ -112,16 +113,18 @@ public class ShopBuilding : MonoBehaviour
         if (_remainingItems.Count == 0)
             return;
 
-        ItemData selected = _remainingItems[UnityEngine.Random.Range(0, _remainingItems.Count)];
+        // 아직 부여되지 않은 미션 아이템은 후보에서 빼고 뽑는다
+        _dropCandidates.Clear();
+        foreach (var item in _remainingItems)
+        {
+            if (IsDroppable(item))
+                _dropCandidates.Add(item);
+        }
 
-        if (
-            selected.category == ItemCategory.Mission
-            && (
-                MissionManager.Instance == null
-                || !MissionManager.Instance.IsMissionAssigned(selected.itemName)
-            )
-        )
+        if (_dropCandidates.Count == 0)
             return;
+
+        ItemData selected = _dropCandidates[UnityEngine.Random.Range(0, _dropCandidates.Count)];
 
         _remainingItems.Remove(selected);
 
@@ -181,17 +184,20 @@ public class ShopBuilding : MonoBehaviour
     {
         foreach (var item in _remainingItems)
         {
-            if (item.category != ItemCategory.Mission)
-                return true;
-
-            if (
-                MissionManager.Instance != null
-                && MissionManager.Instance.IsMissionAssigned(item.itemName)
-            )
+            if (IsDroppable(item))
                 return true;
         }
 
         return false;
+    }
+
+    private static bool IsDroppable(ItemData item)
+    {
+        if (item.category != ItemCategory.Mission)
+            return true;
+
+        return MissionManager.Instance != null
+            && MissionManager.Instance.IsMissionAssigned(item.itemName);
     }
 
     private void PlayParticle()

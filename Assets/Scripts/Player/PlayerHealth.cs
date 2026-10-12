@@ -60,6 +60,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
+        if (isDead)
+            return;
         // 게임오버·클리어 뒤에는 자동 회복 중지
         if (GameManager.Instance != null && GameManager.Instance.IsGameEnded)
             return;
@@ -120,6 +122,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(int amount)
     {
+        if (isDead)
+            return;
         var prevH = _currentHealth;
         _currentHealth += amount;
         if (_currentHealth >= k_maxHealth)
