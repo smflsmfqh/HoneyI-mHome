@@ -98,6 +98,16 @@ public class PlayerMovement : MonoBehaviour
     private Coroutine _speedCo;
     private float _hangoverMultiplier = 1f;
     private readonly List<Vector3> _contactNormals = new();
+    private readonly ContactPoint[] _contactBuffer = new ContactPoint[8];
+
+    // 값이 바뀔 때만 이벤트를 보내기 위한 직전 전송값 (-1 = 아직 전송 전)
+    private float _lastSprintRatio = -1f;
+    private float _lastRollRatio = -1f;
+
+    private static readonly int k_SpeedID = Animator.StringToHash("Speed");
+    private static readonly int k_IsGroundedID = Animator.StringToHash("IsGrounded");
+    private static readonly int k_IsRollingID = Animator.StringToHash("IsRolling");
+    private static readonly int k_IsCrouchingID = Animator.StringToHash("isCrouching");
 
     // --- 이벤트 관련 필드 ---
     public event Action<float> OnSprintChanged;
@@ -112,6 +122,8 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrounded => _isGrounded;
 
     public Vector2 InputDir => _inputDir;
+    public float SprintRatio => _sprintDuration / _sprintTotalTime;
+    public float RollRatio => Mathf.Clamp01((Time.time - _lastRollTime) / _rollCoolDown);
 
     private void Awake()
     {
@@ -165,9 +177,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        OnSprintChanged?.Invoke(_sprintDuration / _sprintTotalTime);
+        RaiseSprintChanged();
         OnSprintActive?.Invoke(_isSprint);
-        OnRollChanged?.Invoke(1f);
+        RaiseRollChanged(1f);
         OnRollActive?.Invoke(false);
     }
 
@@ -197,7 +209,7 @@ public class PlayerMovement : MonoBehaviour
                     if (_sprintDuration >= _sprintTotalTime)
                         _sprintDuration = _sprintTotalTime;
 
-                    OnSprintChanged?.Invoke(_sprintDuration / _sprintTotalTime);
+                    RaiseSprintChanged();
                 }
                 break;
             case MoveMode.Sprint:
@@ -213,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
                         _sprintDuration = 0f;
                         OnSprintActive?.Invoke(_isSprint);
                     }
-                    OnSprintChanged?.Invoke(_sprintDuration / _sprintTotalTime);
+                    RaiseSprintChanged();
                 }
                 break;
             case MoveMode.Roll:
@@ -231,8 +243,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-        float rollRatio = Mathf.Clamp01((Time.time - _lastRollTime) / _rollCoolDown);
-        OnRollChanged?.Invoke(rollRatio);
+        RaiseRollChanged(RollRatio);
 
         if (_isSpeedBoost)
         {
@@ -246,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
                     _isSprint = false;
                     _sprintDuration = 0f;
                 }
-                OnSprintChanged?.Invoke(_sprintDuration / _sprintTotalTime);
+                RaiseSprintChanged();
             }
         }
 
@@ -287,10 +298,27 @@ public class PlayerMovement : MonoBehaviour
         }
 
         float horizSpeed = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.z).magnitude;
-        _animator.SetFloat("Speed", horizSpeed);
-        _animator.SetBool("IsGrounded", _isGrounded);
-        _animator.SetBool("IsRolling", _isRolling);
-        _animator.SetBool("isCrouching", _isCrouching);
+        _animator.SetFloat(k_SpeedID, horizSpeed);
+        _animator.SetBool(k_IsGroundedID, _isGrounded);
+        _animator.SetBool(k_IsRollingID, _isRolling);
+        _animator.SetBool(k_IsCrouchingID, _isCrouching);
+    }
+
+    private void RaiseSprintChanged()
+    {
+        float ratio = SprintRatio;
+        if (Mathf.Approximately(ratio, _lastSprintRatio))
+            return;
+        _lastSprintRatio = ratio;
+        OnSprintChanged?.Invoke(ratio);
+    }
+
+    private void RaiseRollChanged(float ratio)
+    {
+        if (Mathf.Approximately(ratio, _lastRollRatio))
+            return;
+        _lastRollRatio = ratio;
+        OnRollChanged?.Invoke(ratio);
     }
 
     public void PlayFace(string stateName)
@@ -405,10 +433,11 @@ public class PlayerMovement : MonoBehaviour
     {
         // 속도 부스트 중 벽면 노멀 수집 (바닥 제외)
         if (!_isSpeedBoost) return;
-        foreach (var contact in collision.contacts)
+        int count = collision.GetContacts(_contactBuffer);
+        for (int i = 0; i < count; i++)
         {
-            if (contact.normal.y < 0.7f)
-                _contactNormals.Add(contact.normal);
+            if (_contactBuffer[i].normal.y < 0.7f)
+                _contactNormals.Add(_contactBuffer[i].normal);
         }
     }
 
@@ -424,9 +453,10 @@ public class PlayerMovement : MonoBehaviour
             return false;
         }
 
-        foreach (var c in collision.contacts)
+        int count = collision.GetContacts(_contactBuffer);
+        for (int i = 0; i < count; i++)
         {
-            if (c.normal.y > yNormal)
+            if (_contactBuffer[i].normal.y > yNormal)
                 return true;
         }
 

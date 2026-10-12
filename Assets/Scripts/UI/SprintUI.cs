@@ -23,6 +23,8 @@ public class SprintUI : MonoBehaviour
     {
         _playerMovement.OnSprintChanged += UpdateCircleBar;
         _playerMovement.OnSprintActive += UpdateSprintActive;
+        // 이벤트는 값이 바뀔 때만 오므로, 꺼져 있던 동안의 값을 켜질 때 한 번 맞춘다
+        UpdateCircleBar(_playerMovement.SprintRatio);
     }
 
     private void OnDisable()

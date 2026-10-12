@@ -20,6 +20,8 @@ public class HangoverEffect : MonoBehaviour
     private PlayerMovement _playerMovement;
     private bool _active = false;
 
+    private static readonly int k_TransparencyID = Shader.PropertyToID("_Transparency");
+
     private void Start()
     {
         if (_particle != null)
@@ -32,7 +34,7 @@ public class HangoverEffect : MonoBehaviour
 
         if (_hangoverMaterial != null)
         {
-            // 공유 머티리얼이 아닌 인스턴스를 사용
+            // 고스트 머티리얼만 인스턴스로 만들고, 원본은 sharedMaterials로 다뤄 복제본이 생기지 않게 한다
             _ghostMatInstance = new Material(_hangoverMaterial);
 
             _renderers = GetComponentsInChildren<Renderer>();
@@ -40,11 +42,11 @@ public class HangoverEffect : MonoBehaviour
 
             for (int i = 0; i < _renderers.Length; i++)
             {
-                _originalMaterials[i] = _renderers[i].materials;
+                _originalMaterials[i] = _renderers[i].sharedMaterials;
                 var mats = new Material[_originalMaterials[i].Length + 1];
                 _originalMaterials[i].CopyTo(mats, 0);
                 mats[mats.Length - 1] = _ghostMatInstance;
-                _renderers[i].materials = mats;
+                _renderers[i].sharedMaterials = mats;
             }
 
             _active = true;
@@ -63,7 +65,7 @@ public class HangoverEffect : MonoBehaviour
 
         // 0~1 사인 파형으로 _Transparency 깜빡임
         float t = Mathf.Sin(Time.time * _flickerSpeed) * 0.5f + 0.5f;
-        _ghostMatInstance.SetFloat("_Transparency", t);
+        _ghostMatInstance.SetFloat(k_TransparencyID, t);
     }
 
     private void OnDestroy()
@@ -77,7 +79,7 @@ public class HangoverEffect : MonoBehaviour
 
     private void HandleMissionCompleted(ItemData item)
     {
-        if (item == null || item.itemName.ToUpper() != "ENERGYDRINK")
+        if (item == null || !string.Equals(item.itemName, "ENERGYDRINK", System.StringComparison.OrdinalIgnoreCase))
             return;
 
         _active = false;
@@ -93,7 +95,7 @@ public class HangoverEffect : MonoBehaviour
             for (int i = 0; i < _renderers.Length; i++)
             {
                 if (_renderers[i] != null)
-                    _renderers[i].materials = _originalMaterials[i];
+                    _renderers[i].sharedMaterials = _originalMaterials[i];
             }
         }
 
