@@ -29,10 +29,16 @@ public class PickupDebugTester : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    // 에디터에서 게임 씬을 바로 플레이하면 첫 씬에는 sceneLoaded가 오지 않으므로 여기서도 확인
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    private static void CreateForFirstScene() => TryCreate();
+
+    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode) => TryCreate();
+
+    private static void TryCreate()
     {
-        // 게임 씬에서만 생성 (타이틀 씬 제외)
-        if (FindAnyObjectByType<MissionManager>() == null)
+        // 게임 씬에서만, 한 개만 생성 (타이틀 씬 제외)
+        if (FindAnyObjectByType<MissionManager>() == null || FindAnyObjectByType<PickupDebugTester>() != null)
             return;
 
         new GameObject("[Debug] PickupDebugTester").AddComponent<PickupDebugTester>();
