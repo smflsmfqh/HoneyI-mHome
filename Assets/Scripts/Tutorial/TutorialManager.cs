@@ -1,7 +1,10 @@
-using System.Collections;
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -60,7 +63,8 @@ public class TutorialManager : MonoBehaviour
     private bool _firstMissionDisplayed;
     private bool _pharmacyEntered;
     private bool _energyDrinkCollected;
-    private Coroutine _mainCo;
+    private CancellationTokenSource _mainCts; // 튜토리얼 본편 또는 스킵 흐름
+    private CancellationTokenSource _catCts;
 
     private NPCMovement[] _pausedNPCs;
     private CatMovement[] _pausedCats;
@@ -92,6 +96,23 @@ public class TutorialManager : MonoBehaviour
     {
         _skipAction.performed -= OnSkipPerformed;
         _skipAction.Disable();
+
+        CancelCts(ref _mainCts);
+        CancelCts(ref _catCts);
+    }
+
+    private static void CancelCts(ref CancellationTokenSource cts)
+    {
+        cts?.Cancel();
+        cts?.Dispose();
+        cts = null;
+    }
+
+    private void StartMainFlow(Func<CancellationToken, UniTaskVoid> flow)
+    {
+        CancelCts(ref _mainCts);
+        _mainCts = new CancellationTokenSource();
+        flow(_mainCts.Token).Forget();
     }
 
     private void OnSkipPerformed(InputAction.CallbackContext ctx)
@@ -133,7 +154,7 @@ public class TutorialManager : MonoBehaviour
             return;
         }
 
-        _mainCo = StartCoroutine(RunTutorial());
+        StartMainFlow(RunTutorialAsync);
     }
 
     private void Update()
@@ -159,78 +180,83 @@ public class TutorialManager : MonoBehaviour
             _arrowParticle.transform.rotation = Quaternion.LookRotation(dir.normalized);
     }
 
-    private IEnumerator RunTutorial()
+    private async UniTaskVoid RunTutorialAsync(CancellationToken ct)
     {
-        // 1. anger_0/1/2 메시지가 모두 큐잉될 때까지 대기
-        yield return new WaitUntil(() => _angerSystem == null || _angerSystem.IntroQueued);
-
-        // 1-1. 이동·카메라·조작 안내 (이동 감지 전에 방법 먼저 알려주기)
-        yield return EnqueueAndWait("TUT_WASD");
-        yield return EnqueueAndWait("TUT_MOUSE");
-        yield return EnqueueAndWait("TUT_CONTROLS");
-
-        // 2. 분노 메시지 큐잉 이후부터 스피어 이탈을 유효한 트리거로 인정
-        Vector3 startPos = _player != null ? _player.transform.position : Vector3.zero;
-        float radius =
-            _movementZone != null
-                ? _movementZone.radius * _movementZone.transform.lossyScale.x
-                : 3f;
-        yield return new WaitUntil(() =>
-            _player != null && Vector3.Distance(_player.transform.position, startPos) >= radius
-        );
-
-        // 3. TUT_CAT_WARNING 슬라이드인 시점에 고양이 스폰 + C키 안내 UI 활성화
-        bool catDone = false;
-        _messageUI.EnqueueTutorialMessage(
-            "TUT_CAT_WARNING",
-            () =>
-            {
-                SpawnTutorialCat();
-                _pressCZone?.SetActive(true);
-                catDone = true;
-            }
-        );
-        yield return new WaitUntil(() => catDone);
-
-        // 5. 고양이 처리 시간 대기 후 게임 재개 + 첫 미션(약국) 할당
-        yield return new WaitForSeconds(_catLifetime);
-        ResumeGame();
-
-        // 미션 할당 직후 픽업 콜백 등록 — step 7 대기 중 픽업해도 놓치지 않음
-        MissionManager.Instance.OnMissionCompleted += OnEnergyDrinkCollected;
-
-        // 6. 약국 미션 메시지가 화면에 표시될 때까지 대기
-        MissionManager.Instance.OnMissionDisplayed += OnFirstMissionDisplayed;
-        yield return new WaitUntil(() => _firstMissionDisplayed);
-
-        // 7. 지도 + 방향 화살표 설명 (약국 콜라이더 진입 전 + 아이템 미픽업 상태인 경우만)
-        if (!_pharmacyEntered && !_energyDrinkCollected)
+        try
         {
-            yield return EnqueueAndWait("TUT_MAP");
+            // 1. anger_0/1/2 메시지가 모두 큐잉될 때까지 대기
+            await UniTask.WaitUntil(() => _angerSystem == null || _angerSystem.IntroQueued, cancellationToken: ct);
 
-            // TUT_MAP 대기 중 약국 진입 또는 아이템 픽업이 일어났을 수 있으므로 재검사
+            // 1-1. 이동·카메라·조작 안내 (이동 감지 전에 방법 먼저 알려주기)
+            await EnqueueAndWait("TUT_WASD", ct);
+            await EnqueueAndWait("TUT_MOUSE", ct);
+            await EnqueueAndWait("TUT_CONTROLS", ct);
+
+            // 2. 분노 메시지 큐잉 이후부터 스피어 이탈을 유효한 트리거로 인정
+            Vector3 startPos = _player != null ? _player.transform.position : Vector3.zero;
+            float radius =
+                _movementZone != null
+                    ? _movementZone.radius * _movementZone.transform.lossyScale.x
+                    : 3f;
+            await UniTask.WaitUntil(
+                () => _player != null && Vector3.Distance(_player.transform.position, startPos) >= radius,
+                cancellationToken: ct
+            );
+
+            // 3. TUT_CAT_WARNING 슬라이드인 시점에 고양이 스폰 + C키 안내 UI 활성화
+            bool catDone = false;
+            _messageUI.EnqueueTutorialMessage(
+                "TUT_CAT_WARNING",
+                () =>
+                {
+                    SpawnTutorialCat();
+                    _pressCZone?.SetActive(true);
+                    catDone = true;
+                }
+            );
+            await UniTask.WaitUntil(() => catDone, cancellationToken: ct);
+
+            // 5. 고양이 처리 시간 대기 후 게임 재개 + 첫 미션(약국) 할당
+            await UniTask.Delay(TimeSpan.FromSeconds(_catLifetime), DelayType.DeltaTime, cancellationToken: ct);
+            ResumeGame();
+
+            // 미션 할당 직후 픽업 콜백 등록 — step 7 대기 중 픽업해도 놓치지 않음
+            MissionManager.Instance.OnMissionCompleted += OnEnergyDrinkCollected;
+
+            // 6. 약국 미션 메시지가 화면에 표시될 때까지 대기
+            MissionManager.Instance.OnMissionDisplayed += OnFirstMissionDisplayed;
+            await UniTask.WaitUntil(() => _firstMissionDisplayed, cancellationToken: ct);
+
+            // 7. 지도 + 방향 화살표 설명 (약국 콜라이더 진입 전 + 아이템 미픽업 상태인 경우만)
             if (!_pharmacyEntered && !_energyDrinkCollected)
             {
-                if (_arrowParticle != null)
+                await EnqueueAndWait("TUT_MAP", ct);
+
+                // TUT_MAP 대기 중 약국 진입 또는 아이템 픽업이 일어났을 수 있으므로 재검사
+                if (!_pharmacyEntered && !_energyDrinkCollected)
                 {
-                    _arrowParticle.gameObject.SetActive(true);
-                    _arrowParticle.Play(true);
+                    if (_arrowParticle != null)
+                    {
+                        _arrowParticle.gameObject.SetActive(true);
+                        _arrowParticle.Play(true);
+                    }
+
+                    await EnqueueAndWait("TUT_ARROW", ct);
                 }
-
-                yield return EnqueueAndWait("TUT_ARROW");
             }
+
+            // 8. 약국 숙취해소제 픽업 대기
+            await UniTask.WaitUntil(() => _energyDrinkCollected, cancellationToken: ct);
+
+            // 9. 픽업 완료 후 미션 목표 안내
+            await EnqueueAndWait("TUT_GOAL", ct);
+
+            // 10. 다음 미션 즉시 할당
+            MissionManager.Instance?.ForceAssignNext();
+
+            Finalize();
         }
-
-        // 8. 약국 숙취해소제 픽업 대기
-        yield return new WaitUntil(() => _energyDrinkCollected);
-
-        // 9. 픽업 완료 후 미션 목표 안내
-        yield return EnqueueAndWait("TUT_GOAL");
-
-        // 10. 다음 미션 즉시 할당
-        MissionManager.Instance?.ForceAssignNext();
-
-        Finalize();
+        catch (OperationCanceledException) { }
     }
 
     // 약국 앞 콜라이더 진입 — 약국 미션이 표시된 후에만 아이템 튜토리얼 출력
@@ -269,11 +295,11 @@ public class TutorialManager : MonoBehaviour
             MissionManager.Instance.OnMissionCompleted -= OnEnergyDrinkCollected;
     }
 
-    private IEnumerator EnqueueAndWait(string csvKey)
+    private async UniTask EnqueueAndWait(string csvKey, CancellationToken ct)
     {
         bool done = false;
         _messageUI.EnqueueTutorialMessage(csvKey, () => done = true);
-        yield return new WaitUntil(() => done);
+        await UniTask.WaitUntil(() => done, cancellationToken: ct);
     }
 
     private void SpawnTutorialCat()
@@ -292,21 +318,26 @@ public class TutorialManager : MonoBehaviour
         cat.MarkAsTutorialCat();
         cat.SetPlayer(_player); // 근접 경고 등록·해제는 CatMovement가 Start/OnDestroy에서 직접 처리
 
-        StartCoroutine(DestroyCatAfter(cat));
+        CancelCts(ref _catCts);
+        _catCts = new CancellationTokenSource();
+        DestroyCatAfterAsync(cat, _catCts.Token).Forget();
     }
 
-    private IEnumerator DestroyCatAfter(CatMovement cat)
+    private async UniTaskVoid DestroyCatAfterAsync(CatMovement cat, CancellationToken ct)
     {
-        yield return new WaitForSeconds(_catLifetime);
-        if (cat != null)
-            Destroy(cat.gameObject);
-        _pressCZone?.SetActive(false);
+        try
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(_catLifetime), DelayType.DeltaTime, cancellationToken: ct);
+            if (cat != null)
+                Destroy(cat.gameObject);
+            _pressCZone?.SetActive(false);
+        }
+        catch (OperationCanceledException) { }
     }
 
     public void Skip()
     {
-        if (_mainCo != null)
-            StopCoroutine(_mainCo);
+        CancelCts(ref _mainCts);
 
         if (MissionManager.Instance != null)
         {
@@ -329,15 +360,19 @@ public class TutorialManager : MonoBehaviour
         _skipTextZone?.SetActive(false);
         _keyInfoTextZone?.SetActive(false);
 
-        _mainCo = StartCoroutine(RunSkip());
+        StartMainFlow(RunSkipAsync);
     }
 
-    private IEnumerator RunSkip()
+    private async UniTaskVoid RunSkipAsync(CancellationToken ct)
     {
-        // 타이머 포함해서 즉시 게임 재개
-        ResumeGame(resumeTimers: true);
-        yield return EnqueueAndWait("TUT_GOAL");
-        Finalize(resumeTimers: false);
+        try
+        {
+            // 타이머 포함해서 즉시 게임 재개
+            ResumeGame(resumeTimers: true);
+            await EnqueueAndWait("TUT_GOAL", ct);
+            Finalize(resumeTimers: false);
+        }
+        catch (OperationCanceledException) { }
     }
 
     // NPC/차/고양이 재개 + 플레이어 무적 해제 + 약국 미션 메시지 표시

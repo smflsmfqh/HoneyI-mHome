@@ -1,4 +1,6 @@
-using System.Collections;
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -45,6 +47,7 @@ public class TitleController : MonoBehaviour
     [SerializeField] private Button _quitButton;
 
     private bool _sceneLoading = false;
+    private CancellationTokenSource _videoCts;
 
     private void Awake()
     {
@@ -171,21 +174,39 @@ public class TitleController : MonoBehaviour
         vp.prepareCompleted -= OnVideoPrepared;
         float duration = (float)vp.clip.length;
         vp.Play();
-        StartCoroutine(WaitForVideoEnd(duration));
+        CancelVideoWait();
+        _videoCts = new CancellationTokenSource();
+        WaitForVideoEndAsync(duration, _videoCts.Token).Forget();
     }
 
-    private IEnumerator WaitForVideoEnd(float clipDuration)
+    private void OnDisable()
     {
-        // 타임스탬프 버그로 clip.length가 0 반환할 경우 최소 5초 보장
-        float waitTime = Mathf.Max(clipDuration, 5f);
-        yield return new WaitForSeconds(waitTime);
-        LoadGameScene();
+        CancelVideoWait();
+    }
+
+    private void CancelVideoWait()
+    {
+        _videoCts?.Cancel();
+        _videoCts?.Dispose();
+        _videoCts = null;
+    }
+
+    private async UniTaskVoid WaitForVideoEndAsync(float clipDuration, CancellationToken ct)
+    {
+        try
+        {
+            // 타임스탬프 버그로 clip.length가 0 반환할 경우 최소 5초 보장
+            float waitTime = Mathf.Max(clipDuration, 5f);
+            await UniTask.Delay(TimeSpan.FromSeconds(waitTime), DelayType.DeltaTime, cancellationToken: ct);
+            LoadGameScene();
+        }
+        catch (OperationCanceledException) { }
     }
 
     private void SkipVideo()
     {
         PlayButtonSound();
-        StopAllCoroutines();
+        CancelVideoWait();
         if (_videoPlayer != null)
             _videoPlayer.Stop();
 

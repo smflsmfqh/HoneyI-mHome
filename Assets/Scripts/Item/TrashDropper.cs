@@ -1,5 +1,8 @@
-using System.Collections;
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class TrashDropper : MonoBehaviour
 {
@@ -34,6 +37,8 @@ public class TrashDropper : MonoBehaviour
     [SerializeField]
     private int _maxRetries = 15;
 
+    private CancellationTokenSource _dropCts;
+
     private void Start()
     {
         if (_dropTable == null || _dropTable.Length == 0)
@@ -48,17 +53,29 @@ public class TrashDropper : MonoBehaviour
             return;
         }
 
-        StartCoroutine(DropLoop());
+        _dropCts = new CancellationTokenSource();
+        DropLoopAsync(_dropCts.Token).Forget();
     }
 
-    private IEnumerator DropLoop()
+    private void OnDisable()
     {
-        while (true)
+        _dropCts?.Cancel();
+        _dropCts?.Dispose();
+        _dropCts = null;
+    }
+
+    private async UniTaskVoid DropLoopAsync(CancellationToken ct)
+    {
+        try
         {
-            float wait = Random.Range(_intervalMin, _intervalMax);
-            yield return new WaitForSeconds(wait);
-            TrySpawn();
+            while (true)
+            {
+                float wait = Random.Range(_intervalMin, _intervalMax);
+                await UniTask.Delay(TimeSpan.FromSeconds(wait), DelayType.DeltaTime, cancellationToken: ct);
+                TrySpawn();
+            }
         }
+        catch (OperationCanceledException) { }
     }
 
     private void TrySpawn()

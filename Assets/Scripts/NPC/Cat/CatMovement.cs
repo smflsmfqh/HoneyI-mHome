@@ -1,7 +1,10 @@
-using System.Collections;
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Animator))]
@@ -45,7 +48,7 @@ public class CatMovement : MonoBehaviour
     private float _lastAttackTime = -999f;
 
     private bool _isAttacking = false;
-    private Coroutine _attackCo;
+    private CancellationTokenSource _attackCts;
 
     private Vector3 _lastSetDestination;
     private const float DESTINATION_UPDATE_DIST_SQ = 0.25f; // 0.5m 이상 이동 시 재계산
@@ -91,7 +94,7 @@ public class CatMovement : MonoBehaviour
     private static readonly int k_IdleID = Animator.StringToHash("Idle_A");
     private static readonly int k_WalkID = Animator.StringToHash("Walk");
     private static readonly int k_IsFoundID = Animator.StringToHash("isFound");
-    private Coroutine _meowCo;
+    private CancellationTokenSource _meowCts;
     private bool _isTutorialCat;
     private bool _externallyPaused;
     private Vector3 _home; // 배회 기준점 (스폰 위치)
@@ -133,6 +136,19 @@ public class CatMovement : MonoBehaviour
             _proximity.RegisterDanger(transform);
         if (_audioSource != null && _meowClips != null && _meowClips.Length > 0)
             StartMeowLoop();
+    }
+
+    private void OnDisable()
+    {
+        CancelCts(ref _attackCts);
+        CancelCts(ref _meowCts);
+    }
+
+    private static void CancelCts(ref CancellationTokenSource cts)
+    {
+        cts?.Cancel();
+        cts?.Dispose();
+        cts = null;
     }
 
     private void OnDestroy()
@@ -293,33 +309,39 @@ public class CatMovement : MonoBehaviour
             return;
 
         _lastAttackTime = Time.time;
-        _attackCo = StartCoroutine(AttackRoutine());
+        CancelCts(ref _attackCts);
+        _attackCts = new CancellationTokenSource();
+        AttackAsync(_attackCts.Token).Forget();
     }
 
-    private IEnumerator AttackRoutine()
+    private async UniTaskVoid AttackAsync(CancellationToken ct)
     {
-        _isAttacking = true;
-        _agent.isStopped = true;
+        try
+        {
+            _isAttacking = true;
+            _agent.isStopped = true;
 
-        _animator.Play(k_EatID);
-        yield return null;
+            _animator.Play(k_EatID);
+            await UniTask.Yield(PlayerLoopTiming.Update, ct);
 
-        float clipLength = _animator.GetCurrentAnimatorStateInfo(0).length;
+            float clipLength = _animator.GetCurrentAnimatorStateInfo(0).length;
 
-        yield return new WaitForSeconds(clipLength * 0.5f);
-        if (
-            _headDamage != null
-            && _player != null
-            && Vector3.Distance(transform.position, _player.transform.position) <= _attackRadius
-        )
-            _headDamage.TryDamage(_player);
+            await UniTask.Delay(TimeSpan.FromSeconds(clipLength * 0.5f), DelayType.DeltaTime, cancellationToken: ct);
+            if (
+                _headDamage != null
+                && _player != null
+                && Vector3.Distance(transform.position, _player.transform.position) <= _attackRadius
+            )
+                _headDamage.TryDamage(_player);
 
-        yield return new WaitForSeconds(clipLength * 0.5f);
+            await UniTask.Delay(TimeSpan.FromSeconds(clipLength * 0.5f), DelayType.DeltaTime, cancellationToken: ct);
 
-        // 공격 도중 걸린 외부 일시정지(게임오버·튜토리얼)를 풀지 않도록
-        _agent.isStopped = _externallyPaused;
-        _currentAnim = 0;
-        _isAttacking = false;
+            // 공격 도중 걸린 외부 일시정지(게임오버·튜토리얼)를 풀지 않도록
+            _agent.isStopped = _externallyPaused;
+            _currentAnim = 0;
+            _isAttacking = false;
+        }
+        catch (OperationCanceledException) { }
     }
 
     private void UpdateAnimation()
@@ -359,19 +381,24 @@ public class CatMovement : MonoBehaviour
 
     private void StartMeowLoop()
     {
-        if (_meowCo != null)
-            StopCoroutine(_meowCo);
-        _meowCo = StartCoroutine(MeowLoop());
+        CancelCts(ref _meowCts);
+        _meowCts = new CancellationTokenSource();
+        MeowLoopAsync(_meowCts.Token).Forget();
     }
 
-    private IEnumerator MeowLoop()
+    private async UniTaskVoid MeowLoopAsync(CancellationToken ct)
     {
-        while (true)
+        try
         {
-            yield return new WaitForSeconds(Random.Range(_meowIntervalMin, _meowIntervalMax));
-            var clip = _meowClips[Random.Range(0, _meowClips.Length)];
-            _audioSource.PlayOneShot(clip);
+            while (true)
+            {
+                float wait = Random.Range(_meowIntervalMin, _meowIntervalMax);
+                await UniTask.Delay(TimeSpan.FromSeconds(wait), DelayType.DeltaTime, cancellationToken: ct);
+                var clip = _meowClips[Random.Range(0, _meowClips.Length)];
+                _audioSource.PlayOneShot(clip);
+            }
         }
+        catch (OperationCanceledException) { }
     }
 
     private void OnDrawGizmosSelected()

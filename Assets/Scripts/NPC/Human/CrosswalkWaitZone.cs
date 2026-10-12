@@ -1,5 +1,7 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -31,31 +33,47 @@ public class CrosswalkWaitZone : MonoBehaviour
 
     private SignalState _signal;
     private readonly List<NPCMovement> _waitingNPCs = new();
+    private CancellationTokenSource _cycleCts;
 
     private void Start()
     {
         GetComponent<BoxCollider>().isTrigger = true;
-        StartCoroutine(CycleRoutine());
+        _cycleCts = new CancellationTokenSource();
+        CycleAsync(_cycleCts.Token).Forget();
     }
 
-    private IEnumerator CycleRoutine()
+    private void OnDisable()
     {
-        if (_startWithPedestrianGreen)
-        {
-            SetSignal(SignalState.PedestrianGreen);
-            yield return new WaitForSeconds(_pedestrianGreenDuration);
-        }
-
-        while (true)
-        {
-            SetSignal(SignalState.CarGreen);
-            yield return new WaitForSeconds(_carGreenDuration);
-
-            SetSignal(SignalState.PedestrianGreen);
-            ReleaseAllNPCs();
-            yield return new WaitForSeconds(_pedestrianGreenDuration);
-        }
+        _cycleCts?.Cancel();
+        _cycleCts?.Dispose();
+        _cycleCts = null;
     }
+
+    private async UniTaskVoid CycleAsync(CancellationToken ct)
+    {
+        try
+        {
+            if (_startWithPedestrianGreen)
+            {
+                SetSignal(SignalState.PedestrianGreen);
+                await WaitSeconds(_pedestrianGreenDuration, ct);
+            }
+
+            while (true)
+            {
+                SetSignal(SignalState.CarGreen);
+                await WaitSeconds(_carGreenDuration, ct);
+
+                SetSignal(SignalState.PedestrianGreen);
+                ReleaseAllNPCs();
+                await WaitSeconds(_pedestrianGreenDuration, ct);
+            }
+        }
+        catch (OperationCanceledException) { }
+    }
+
+    private static UniTask WaitSeconds(float sec, CancellationToken ct) =>
+        UniTask.Delay(TimeSpan.FromSeconds(sec), DelayType.DeltaTime, cancellationToken: ct);
 
     private void SetSignal(SignalState next)
     {

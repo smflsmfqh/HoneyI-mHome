@@ -1,4 +1,6 @@
-using System.Collections;
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -204,6 +206,20 @@ public class UIManager : MonoBehaviour
         AudioManager.Instance?.PlaySFX(_buttonClickSound);
     }
 
+    private CancellationTokenSource _hiddenVideoCts;
+
+    private void OnDisable()
+    {
+        CancelHiddenVideo();
+    }
+
+    private void CancelHiddenVideo()
+    {
+        _hiddenVideoCts?.Cancel();
+        _hiddenVideoCts?.Dispose();
+        _hiddenVideoCts = null;
+    }
+
     private void OnDestroy()
     {
         if (MissionManager.Instance != null)
@@ -265,7 +281,9 @@ public class UIManager : MonoBehaviour
             && _hiddenVideoPlayer.clip != null
         )
         {
-            StartCoroutine(PlayHiddenVideoThenClear(angerSeconds));
+            CancelHiddenVideo();
+            _hiddenVideoCts = new CancellationTokenSource();
+            PlayHiddenVideoThenClearAsync(angerSeconds, _hiddenVideoCts.Token).Forget();
         }
         else
         {
@@ -273,69 +291,73 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayHiddenVideoThenClear(int angerSeconds)
+    private async UniTaskVoid PlayHiddenVideoThenClearAsync(int angerSeconds, CancellationToken ct)
     {
-        // 1. 화면 서서히 암전 (1.2초)
-        if (_blackFadePanel != null && _blackFadeCanvasGroup != null)
+        try
         {
-            SetPanel(_blackFadePanel, true);
-            _blackFadeCanvasGroup.alpha = 0f;
-            float elapsed = 0f;
-            const float FADE_DURATION = 1.2f;
-            while (elapsed < FADE_DURATION)
+            // 1. 화면 서서히 암전 (1.2초)
+            if (_blackFadePanel != null && _blackFadeCanvasGroup != null)
             {
-                elapsed += Time.unscaledDeltaTime;
-                _blackFadeCanvasGroup.alpha = Mathf.Clamp01(elapsed / FADE_DURATION);
-                yield return null;
+                SetPanel(_blackFadePanel, true);
+                _blackFadeCanvasGroup.alpha = 0f;
+                float elapsed = 0f;
+                const float FADE_DURATION = 1.2f;
+                while (elapsed < FADE_DURATION)
+                {
+                    elapsed += Time.unscaledDeltaTime;
+                    _blackFadeCanvasGroup.alpha = Mathf.Clamp01(elapsed / FADE_DURATION);
+                    await UniTask.Yield(PlayerLoopTiming.Update, ct);
+                }
+                _blackFadeCanvasGroup.alpha = 1f;
             }
-            _blackFadeCanvasGroup.alpha = 1f;
-        }
 
-        // 2. 비디오 패널 준비 (암전 상태에서 백그라운드 Prepare)
-        SetPanel(_hudPanel, false);
-        SetPanel(_hiddenVideoPanel, true);
-        AudioManager.Instance?.PlayBGM(_clearBGM);
+            // 2. 비디오 패널 준비 (암전 상태에서 백그라운드 Prepare)
+            SetPanel(_hudPanel, false);
+            SetPanel(_hiddenVideoPanel, true);
+            AudioManager.Instance?.PlayBGM(_clearBGM);
 
-        _hiddenVideoPlayer.Prepare();
+            _hiddenVideoPlayer.Prepare();
 
-        // Prepare 타임아웃 5초
-        float prepElapsed = 0f;
-        while (!_hiddenVideoPlayer.isPrepared && prepElapsed < 5f)
-        {
-            prepElapsed += Time.unscaledDeltaTime;
-            yield return null;
-        }
-
-        // 3. 암전 페이드 아웃 (0.5초) 하면서 영상 공개
-        if (_blackFadePanel != null && _blackFadeCanvasGroup != null)
-        {
-            float elapsed = 0f;
-            const float FADE_OUT_DURATION = 0.5f;
-            while (elapsed < FADE_OUT_DURATION)
+            // Prepare 타임아웃 5초
+            float prepElapsed = 0f;
+            while (!_hiddenVideoPlayer.isPrepared && prepElapsed < 5f)
             {
-                elapsed += Time.unscaledDeltaTime;
-                _blackFadeCanvasGroup.alpha = Mathf.Clamp01(1f - elapsed / FADE_OUT_DURATION);
-                yield return null;
+                prepElapsed += Time.unscaledDeltaTime;
+                await UniTask.Yield(PlayerLoopTiming.Update, ct);
             }
-            _blackFadeCanvasGroup.alpha = 0f;
-            SetPanel(_blackFadePanel, false);
-        }
 
-        if (_hiddenVideoPlayer.isPrepared)
-        {
-            float duration = (float)_hiddenVideoPlayer.clip.length;
-            _hiddenVideoPlayer.Play();
-            yield return new WaitForSecondsRealtime(duration);
-        }
+            // 3. 암전 페이드 아웃 (0.5초) 하면서 영상 공개
+            if (_blackFadePanel != null && _blackFadeCanvasGroup != null)
+            {
+                float elapsed = 0f;
+                const float FADE_OUT_DURATION = 0.5f;
+                while (elapsed < FADE_OUT_DURATION)
+                {
+                    elapsed += Time.unscaledDeltaTime;
+                    _blackFadeCanvasGroup.alpha = Mathf.Clamp01(1f - elapsed / FADE_OUT_DURATION);
+                    await UniTask.Yield(PlayerLoopTiming.Update, ct);
+                }
+                _blackFadeCanvasGroup.alpha = 0f;
+                SetPanel(_blackFadePanel, false);
+            }
 
-        _hiddenVideoPlayer.Stop();
-        SetPanel(_hiddenVideoPanel, false);
-        ShowClearPanel(angerSeconds);
+            if (_hiddenVideoPlayer.isPrepared)
+            {
+                float duration = (float)_hiddenVideoPlayer.clip.length;
+                _hiddenVideoPlayer.Play();
+                await UniTask.Delay(TimeSpan.FromSeconds(duration), DelayType.Realtime, cancellationToken: ct);
+            }
+
+            _hiddenVideoPlayer.Stop();
+            SetPanel(_hiddenVideoPanel, false);
+            ShowClearPanel(angerSeconds);
+        }
+        catch (OperationCanceledException) { }
     }
 
     private void SkipHiddenVideo()
     {
-        StopAllCoroutines();
+        CancelHiddenVideo();
         _hiddenVideoPlayer.Stop();
         SetPanel(_hiddenVideoPanel, false);
         SetPanel(_blackFadePanel, false);
