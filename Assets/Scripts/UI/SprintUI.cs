@@ -14,7 +14,7 @@ public class SprintUI : MonoBehaviour
 
     [SerializeField]
     private float _inactiveAlpha = 0.3f;
-    private const float _activeAlpha = 1f;
+    private const float ACTIVE_ALPHA = 1f;
 
     private bool _isSprinting;
     private bool _isFull;
@@ -53,7 +53,7 @@ public class SprintUI : MonoBehaviour
 
     private void ApplyAlpha()
     {
-        float a = (_isSprinting || _isFull) ? _activeAlpha : _inactiveAlpha;
+        float a = (_isSprinting || _isFull) ? ACTIVE_ALPHA : _inactiveAlpha;
 
         Color fillColor = _fillImage.color;
         Color backColor = _backgroundImage.color;

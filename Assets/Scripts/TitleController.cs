@@ -81,7 +81,7 @@ public class TitleController : MonoBehaviour
         if (_volumeSettingsPanel != null) _volumeSettingsPanel.SetActive(false);
 
         // 저장된 언어로 초기 이미지 설정
-        Language savedLang = (Language)PlayerPrefs.GetInt(PrefKeys.Language, (int)Language.En);
+        Language savedLang = (Language)PlayerPrefs.GetInt(PrefKeys.LANGUAGE, (int)Language.En);
         StringTableManager.Instance.SetLanguage(savedLang);
         UpdateImages(savedLang);
 
@@ -126,7 +126,7 @@ public class TitleController : MonoBehaviour
     private void SelectLanguage(Language language)
     {
         PlayButtonSound();
-        PlayerPrefs.SetInt(PrefKeys.Language, (int)language);
+        PlayerPrefs.SetInt(PrefKeys.LANGUAGE, (int)language);
         PlayerPrefs.Save();
         StringTableManager.Instance.SetLanguage(language);
         UpdateImages(language);

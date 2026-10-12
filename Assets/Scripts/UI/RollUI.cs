@@ -14,7 +14,7 @@ public class RollUI : MonoBehaviour
 
     [SerializeField]
     private float _inactiveAlpha = 0.3f;
-    private const float _activeAlpha = 1f;
+    private const float ACTIVE_ALPHA = 1f;
     private bool _isRolling;
 
     private void OnEnable()
@@ -48,8 +48,8 @@ public class RollUI : MonoBehaviour
         Color fillColor = _fillImage.color;
         Color backColor = _backgroundImage.color;
 
-        fillColor.a = isReady ? _activeAlpha : _inactiveAlpha;
-        backColor.a = isReady ? _activeAlpha : _inactiveAlpha;
+        fillColor.a = isReady ? ACTIVE_ALPHA : _inactiveAlpha;
+        backColor.a = isReady ? ACTIVE_ALPHA : _inactiveAlpha;
 
         _fillImage.color = fillColor;
         _backgroundImage.color = backColor;

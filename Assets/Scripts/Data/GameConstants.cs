@@ -2,15 +2,15 @@
 // PlayerPrefs 키 값은 기존 저장 데이터와 호환되도록 바꾸지 않는다.
 public static class PrefKeys
 {
-    public const string Language = "SelectedLanguage";
-    public const string SkipTutorial = "SkipTutorial";
-    public const string BGMVolume = "Vol_BGM";
-    public const string SFXVolume = "Vol_SFX";
+    public const string LANGUAGE = "SelectedLanguage";
+    public const string SKIP_TUTORIAL = "SkipTutorial";
+    public const string BGM_VOLUME = "Vol_BGM";
+    public const string SFX_VOLUME = "Vol_SFX";
 }
 
 public static class SceneNames
 {
-    public const string Title = "TitleScene";
+    public const string TITLE = "TitleScene";
 }
 
 // AudioMixer에 Expose한 파라미터 이름
@@ -22,5 +22,5 @@ public static class MixerParams
 
 public static class ItemNames
 {
-    public const string EnergyDrink = "ENERGYDRINK";
+    public const string ENERGY_DRINK = "ENERGYDRINK";
 }

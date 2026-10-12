@@ -19,8 +19,8 @@ public class VolumeSettingsManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        BGMVolume = PlayerPrefs.GetFloat(PrefKeys.BGMVolume, 1f);
-        SFXVolume = PlayerPrefs.GetFloat(PrefKeys.SFXVolume, 1f);
+        BGMVolume = PlayerPrefs.GetFloat(PrefKeys.BGM_VOLUME, 1f);
+        SFXVolume = PlayerPrefs.GetFloat(PrefKeys.SFX_VOLUME, 1f);
     }
 
     private void Start()
@@ -35,14 +35,14 @@ public class VolumeSettingsManager : MonoBehaviour
     public void SetBGMVolume(float value)
     {
         BGMVolume = Mathf.Clamp01(value);
-        PlayerPrefs.SetFloat(PrefKeys.BGMVolume, BGMVolume);
+        PlayerPrefs.SetFloat(PrefKeys.BGM_VOLUME, BGMVolume);
         _mixer?.SetFloat(MixerParams.BGM, LinearToDb(BGMVolume));
     }
 
     public void SetSFXVolume(float value)
     {
         SFXVolume = Mathf.Clamp01(value);
-        PlayerPrefs.SetFloat(PrefKeys.SFXVolume, SFXVolume);
+        PlayerPrefs.SetFloat(PrefKeys.SFX_VOLUME, SFXVolume);
         _mixer?.SetFloat(MixerParams.SFX, LinearToDb(SFXVolume));
     }
 }

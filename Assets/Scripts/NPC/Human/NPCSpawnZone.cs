@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public class NPCSpawnZone : MonoBehaviour
 {
     private BoxCollider _collider;
-    private const float _maxDistance = 2f;
+    private const float MAX_DISTANCE = 2f;
 
     private BoxCollider GetCollider()
     {
@@ -33,7 +33,7 @@ public class NPCSpawnZone : MonoBehaviour
                 Random.Range(bounds.min.z, bounds.max.z)
             );
 
-            if (NavMesh.SamplePosition(candidate, out NavMeshHit hit, _maxDistance, areaMask))
+            if (NavMesh.SamplePosition(candidate, out NavMeshHit hit, MAX_DISTANCE, areaMask))
             {
                 result = hit.position;
                 return true;

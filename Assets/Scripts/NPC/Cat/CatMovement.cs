@@ -48,7 +48,7 @@ public class CatMovement : MonoBehaviour
     private Coroutine _attackCo;
 
     private Vector3 _lastSetDestination;
-    private const float k_DestinationUpdateDistSq = 0.25f; // 0.5m 이상 이동 시 재계산
+    private const float DESTINATION_UPDATE_DIST_SQ = 0.25f; // 0.5m 이상 이동 시 재계산
 
     [Header("야옹 소리")]
     [SerializeField]
@@ -217,7 +217,7 @@ public class CatMovement : MonoBehaviour
             return;
 
         Vector3 playerPos = _player.transform.position;
-        if ((playerPos - _lastSetDestination).sqrMagnitude >= k_DestinationUpdateDistSq)
+        if ((playerPos - _lastSetDestination).sqrMagnitude >= DESTINATION_UPDATE_DIST_SQ)
         {
             _agent.SetDestination(playerPos);
             _lastSetDestination = playerPos;

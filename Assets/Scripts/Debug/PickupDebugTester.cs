@@ -7,9 +7,9 @@ using UnityEngine.InputSystem;
 // 이 상태에서 E를 눌러 음식이 주워지면 정상 (잠긴 꽃이 더 가까워도 건너뛰어야 함).
 public class PickupDebugTester : MonoBehaviour
 {
-    private const string k_FoodDataPath = "Assets/Scriptables/Item/Toast.asset";
-    private const float k_PlayerOffset = 0.3f;
-    private const float k_FoodOffset = 0.9f;
+    private const string FOOD_DATA_PATH = "Assets/Scriptables/Item/Toast.asset";
+    private const float PLAYER_OFFSET = 0.3f;
+    private const float FOOD_OFFSET = 0.9f;
 
     private readonly InputAction _setupAction = new InputAction(
         name: "DebugPickupSetup",
@@ -31,7 +31,7 @@ public class PickupDebugTester : MonoBehaviour
 
     private void Awake()
     {
-        _foodData = UnityEditor.AssetDatabase.LoadAssetAtPath<ItemData>(k_FoodDataPath);
+        _foodData = UnityEditor.AssetDatabase.LoadAssetAtPath<ItemData>(FOOD_DATA_PATH);
     }
 
     private void OnEnable()
@@ -57,7 +57,7 @@ public class PickupDebugTester : MonoBehaviour
 
         if (_foodData == null || TrashDropManager.Instance == null)
         {
-            Debug.LogWarning($"[PickupDebugTester] 음식 데이터({k_FoodDataPath}) 또는 TrashDropManager가 없습니다.");
+            Debug.LogWarning($"[PickupDebugTester] 음식 데이터({FOOD_DATA_PATH}) 또는 TrashDropManager가 없습니다.");
             return;
         }
 
@@ -70,15 +70,15 @@ public class PickupDebugTester : MonoBehaviour
         dir.y = 0f;
         dir = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector3.forward;
 
-        Teleport(player, GroundPoint(flowerPos + dir * k_PlayerOffset, flowerPos.y));
+        Teleport(player, GroundPoint(flowerPos + dir * PLAYER_OFFSET, flowerPos.y));
 
-        Vector3 foodPos = GroundPoint(flowerPos + dir * k_FoodOffset, flowerPos.y);
+        Vector3 foodPos = GroundPoint(flowerPos + dir * FOOD_OFFSET, flowerPos.y);
         foodPos.y += _foodData.spawnHeightOffset;
         TrashDropManager.Instance.SpawnItem(_foodData, foodPos);
 
         Debug.Log(
-            $"[PickupDebugTester] 꽃 {k_PlayerOffset}m / {_foodData.itemName} "
-                + $"{k_FoodOffset - k_PlayerOffset}m 거리에 배치. E를 누르면 {_foodData.itemName}이 주워져야 합니다."
+            $"[PickupDebugTester] 꽃 {PLAYER_OFFSET}m / {_foodData.itemName} "
+                + $"{FOOD_OFFSET - PLAYER_OFFSET}m 거리에 배치. E를 누르면 {_foodData.itemName}이 주워져야 합니다."
         );
     }
 

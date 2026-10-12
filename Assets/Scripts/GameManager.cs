@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
         _score = 0;
 
-        if (PlayerPrefs.HasKey(PrefKeys.Language))
-            _language = (Language)PlayerPrefs.GetInt(PrefKeys.Language);
+        if (PlayerPrefs.HasKey(PrefKeys.LANGUAGE))
+            _language = (Language)PlayerPrefs.GetInt(PrefKeys.LANGUAGE);
         StringTableManager.Instance.SetLanguage(_language);
     }
 
@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
         SetGameTimeStopped(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        SceneManager.LoadScene(SceneNames.Title);
+        SceneManager.LoadScene(SceneNames.TITLE);
     }
 
     public void Restart()
@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
         SetGameTimeStopped(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        PlayerPrefs.SetInt(PrefKeys.SkipTutorial, 1);
+        PlayerPrefs.SetInt(PrefKeys.SKIP_TUTORIAL, 1);
         PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

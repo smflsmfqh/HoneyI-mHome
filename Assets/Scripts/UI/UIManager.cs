@@ -281,11 +281,11 @@ public class UIManager : MonoBehaviour
             SetPanel(_blackFadePanel, true);
             _blackFadeCanvasGroup.alpha = 0f;
             float elapsed = 0f;
-            const float fadeDuration = 1.2f;
-            while (elapsed < fadeDuration)
+            const float FADE_DURATION = 1.2f;
+            while (elapsed < FADE_DURATION)
             {
                 elapsed += Time.unscaledDeltaTime;
-                _blackFadeCanvasGroup.alpha = Mathf.Clamp01(elapsed / fadeDuration);
+                _blackFadeCanvasGroup.alpha = Mathf.Clamp01(elapsed / FADE_DURATION);
                 yield return null;
             }
             _blackFadeCanvasGroup.alpha = 1f;
@@ -310,11 +310,11 @@ public class UIManager : MonoBehaviour
         if (_blackFadePanel != null && _blackFadeCanvasGroup != null)
         {
             float elapsed = 0f;
-            const float fadeOutDuration = 0.5f;
-            while (elapsed < fadeOutDuration)
+            const float FADE_OUT_DURATION = 0.5f;
+            while (elapsed < FADE_OUT_DURATION)
             {
                 elapsed += Time.unscaledDeltaTime;
-                _blackFadeCanvasGroup.alpha = Mathf.Clamp01(1f - elapsed / fadeOutDuration);
+                _blackFadeCanvasGroup.alpha = Mathf.Clamp01(1f - elapsed / FADE_OUT_DURATION);
                 yield return null;
             }
             _blackFadeCanvasGroup.alpha = 0f;

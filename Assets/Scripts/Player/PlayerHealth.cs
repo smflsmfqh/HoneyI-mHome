@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private AudioClip _damageSound;
 
-    private const float k_damageInvincibleTime = 0.7f;
+    private const float DAMAGE_INVINCIBLE_TIME = 0.7f;
     public bool isDead = false;
     private bool _isInvincible = false;
     public bool IsInvincible => _isInvincible;
@@ -91,7 +91,7 @@ public class PlayerHealth : MonoBehaviour
 
         _currentHealth -= damage;
         AudioManager.Instance?.PlaySFX(_damageSound);
-        SetInvincible(k_damageInvincibleTime, "damage");
+        SetInvincible(DAMAGE_INVINCIBLE_TIME, "damage");
 
         if (_currentHealth <= 0)
         {

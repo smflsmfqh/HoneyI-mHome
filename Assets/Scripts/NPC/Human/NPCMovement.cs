@@ -42,8 +42,8 @@ public class NPCMovement : MonoBehaviour
 
     // --- Stuck 판별 필드 ---
     private float _stuckTimer;
-    private const float k_stuckThreshold = 1.5f;
-    private const float k_stuckSpeedSq = 0.01f;
+    private const float STUCK_THRESHOLD = 1.5f;
+    private const float STUCK_SPEED_SQ = 0.01f;
 
     // -----------------------
 
@@ -218,12 +218,12 @@ public class NPCMovement : MonoBehaviour
             return;
         }
 
-        if (_agent.velocity.sqrMagnitude < k_stuckSpeedSq)
+        if (_agent.velocity.sqrMagnitude < STUCK_SPEED_SQ)
             _stuckTimer += Time.deltaTime;
         else
             _stuckTimer = 0f;
 
-        if (_stuckTimer >= k_stuckThreshold)
+        if (_stuckTimer >= STUCK_THRESHOLD)
         {
             _stuckTimer = 0f;
             SetNextRandomDestination();
