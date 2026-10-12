@@ -41,12 +41,13 @@ public static class MissionPoolBuilder
             randomTimes?.Count ?? 0
         );
 
-        var pool = new List<(T item, float time)>();
+        // isBonus: 시각 값(float.MaxValue)으로 추측하지 않고 보너스 여부를 직접 들고 다닌다
+        var pool = new List<(T item, float time, bool isBonus)>();
 
         // 고정 미션
         int fixedCount = Math.Min(fixedItems?.Count ?? 0, fixedTimes?.Count ?? 0);
         for (int i = 0; i < fixedCount; i++)
-            pool.Add((fixedItems[i], fixedTimes[i]));
+            pool.Add((fixedItems[i], fixedTimes[i], false));
 
         // randomTimes를 Fisher-Yates로 셔플
         var timeSlots = new List<float>(randomTimes ?? Array.Empty<float>());
@@ -72,7 +73,7 @@ public static class MissionPoolBuilder
             // 시각 슬롯이 모자라면 0초 (CollectWarnings에서 경고)
             float unlockTime = timeSlotIdx < timeSlots.Count ? timeSlots[timeSlotIdx++] : 0f;
             int picked = rng.Next(0, candidates.Count);
-            pool.Add((candidates[picked], unlockTime));
+            pool.Add((candidates[picked], unlockTime, false));
 
             // 보너스 그룹의 탈락 후보 수집
             if (i == bonusGroupIdx && candidates.Count > 1)
@@ -84,24 +85,21 @@ public static class MissionPoolBuilder
         }
 
         // 보너스 아이템을 풀 끝에 추가 (unlockTime = float.MaxValue → 트리거 전까지 미부여)
-        int bonusIdx = -1;
         if (bonusItem != null)
-        {
-            bonusIdx = pool.Count;
-            pool.Add((bonusItem, float.MaxValue));
-        }
+            pool.Add((bonusItem, float.MaxValue, true));
 
-        // unlockTime 기준 정렬 (보너스는 항상 맨 뒤)
-        pool.Sort((a, b) => a.time.CompareTo(b.time));
+        // unlockTime 기준 정렬 (보너스는 시각과 관계없이 항상 맨 뒤)
+        pool.Sort((a, b) => a.isBonus != b.isBonus ? a.isBonus.CompareTo(b.isBonus) : a.time.CompareTo(b.time));
 
         // 정렬 후 보너스 인덱스 재탐색
+        int bonusIdx = -1;
         var items = new T[pool.Count];
         var unlockTimes = new float[pool.Count];
         for (int i = 0; i < pool.Count; i++)
         {
             items[i] = pool[i].item;
             unlockTimes[i] = pool[i].time;
-            if (pool[i].time >= float.MaxValue)
+            if (pool[i].isBonus)
                 bonusIdx = i;
         }
 

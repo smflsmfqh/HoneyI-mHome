@@ -250,4 +250,29 @@ public class MissionPoolBuilderTests
         Assert.AreEqual(-1, pool.BonusIndex);
         Assert.IsEmpty(pool.Warnings);
     }
+
+    [Test]
+    public void FixedMissionWithInfiniteTime_IsNotMistakenForBonus()
+    {
+        // 디자이너가 "자동 부여 안 함" 의미로 무한대 시각을 넣어도 보너스로 오인하지 않아야 한다
+        var fixedTimes = new[] { 20f, float.PositiveInfinity };
+        foreach (int seed in Seeds)
+        {
+            var pool = MissionPoolBuilder.Build(
+                FixedItems,
+                fixedTimes,
+                RandomGroups,
+                RandomTimes,
+                BONUS_GROUP_COUNT,
+                new Random(seed)
+            );
+
+            Assert.AreEqual(pool.Items.Length - 1, pool.BonusIndex, $"seed {seed}: 보너스는 맨 뒤");
+            Assert.AreNotEqual(FixedItems[1], pool.Items[pool.BonusIndex], $"seed {seed}");
+            Assert.IsTrue(
+                RandomGroups.Take(BONUS_GROUP_COUNT).Any(g => g.Contains(pool.Items[pool.BonusIndex])),
+                $"seed {seed}: 보너스는 앞 그룹의 탈락 후보"
+            );
+        }
+    }
 }

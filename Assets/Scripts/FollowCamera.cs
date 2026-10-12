@@ -84,9 +84,8 @@ public class FollowCamera : MonoBehaviour
 
     private void OnDisable()
     {
-        _reactionCts?.Cancel();
-        _reactionCts?.Dispose();
-        _reactionCts = null;
+        // 작업만 취소하면 _isReacting이 true로 남아 다시 켜졌을 때 줌·리액션이 막히므로 상태까지 되돌린다
+        CancelReaction();
     }
 
     private void LateUpdate()

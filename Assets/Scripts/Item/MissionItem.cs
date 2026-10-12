@@ -140,8 +140,11 @@ public class MissionItem : MonoBehaviour, IInteractive
 
     // Optional 미션은 독백(선택 미션 해제) 이후에만 픽업 가능
     public bool CanInteract =>
-        _itemData.category != ItemCategory.Optional
-        || MissionManager.Instance.IsOptionalUnlocked;
+        _itemData != null
+        && (
+            _itemData.category != ItemCategory.Optional
+            || (MissionManager.Instance != null && MissionManager.Instance.IsOptionalUnlocked)
+        );
 
     public void Interact(PlayerController player)
     {
