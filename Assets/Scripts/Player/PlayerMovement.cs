@@ -1,6 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _isRolling = false;
     private float _lastRollTime = -999f;
     private Vector3 _rollDirection;
-    private Coroutine _rollCoroutine;
+    private CancellationTokenSource _rollCts;
 
     [SerializeField]
     private float _rollSpeed = 2f;
@@ -104,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
     private float _boostSpeed;
     private MoveMode _mode = MoveMode.Move;
     private bool _isSpeedBoost = false;
-    private Coroutine _speedCo;
+    private CancellationTokenSource _speedBoostCts;
     private float _hangoverMultiplier = 1f;
     private readonly List<Vector3> _contactNormals = new();
     private readonly ContactPoint[] _contactBuffer = new ContactPoint[8];
@@ -190,6 +191,19 @@ public class PlayerMovement : MonoBehaviour
         OnSprintActive?.Invoke(_isSprint);
         RaiseRollChanged(1f);
         OnRollActive?.Invoke(false);
+    }
+
+    private void OnDisable()
+    {
+        CancelCts(ref _rollCts);
+        CancelCts(ref _speedBoostCts);
+    }
+
+    private static void CancelCts(ref CancellationTokenSource cts)
+    {
+        cts?.Cancel();
+        cts?.Dispose();
+        cts = null;
     }
 
     private void FixedUpdate()
@@ -406,30 +420,33 @@ public class PlayerMovement : MonoBehaviour
                 ? (transform.forward * _inputDir.y + transform.right * _inputDir.x).normalized
                 : transform.forward;
         _playerController?.PlayRollSound();
-        _rollCoroutine = StartCoroutine(RollCoroutine());
+        CancelCts(ref _rollCts);
+        _rollCts = new CancellationTokenSource();
+        RollAsync(_rollCts.Token).Forget();
     }
 
     public void CancelRoll()
     {
-        if (_rollCoroutine == null)
+        if (!_isRolling)
             return;
-        StopCoroutine(_rollCoroutine);
-        _rollCoroutine = null;
+        CancelCts(ref _rollCts);
         _isRolling = false;
     }
 
-    private IEnumerator RollCoroutine()
+    private async UniTaskVoid RollAsync(CancellationToken ct)
     {
         _isRolling = true;
         OnRollActive?.Invoke(true);
         _lastRollTime = Time.time;
         _playerHealth.SetInvincible(_rollDuration, "roll");
 
-        yield return new WaitForSeconds(_rollDuration);
-
-        _rollCoroutine = null;
-        _isRolling = false;
-        OnRollActive?.Invoke(false);
+        try
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(_rollDuration), DelayType.DeltaTime, cancellationToken: ct);
+            _isRolling = false;
+            OnRollActive?.Invoke(false);
+        }
+        catch (OperationCanceledException) { }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -479,19 +496,21 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetSpeedBoost(float speed, float sec)
     {
-        if (_speedCo != null)
-            StopCoroutine(_speedCo);
-
-        _speedCo = StartCoroutine(SpeedBoostCoroutine(speed, sec));
+        CancelCts(ref _speedBoostCts);
+        _speedBoostCts = new CancellationTokenSource();
+        SpeedBoostAsync(speed, sec, _speedBoostCts.Token).Forget();
     }
 
-    private IEnumerator SpeedBoostCoroutine(float speed, float sec)
+    private async UniTaskVoid SpeedBoostAsync(float speed, float sec, CancellationToken ct)
     {
         _isSpeedBoost = true;
         _boostSpeed = speed;
-        yield return new WaitForSeconds(sec);
-
-        _isSpeedBoost = false;
-        _currentSpeed = _moveSpeed;
+        try
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(sec), DelayType.DeltaTime, cancellationToken: ct);
+            _isSpeedBoost = false;
+            _currentSpeed = _moveSpeed;
+        }
+        catch (OperationCanceledException) { }
     }
 }

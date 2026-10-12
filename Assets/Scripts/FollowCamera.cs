@@ -1,4 +1,6 @@
-using System.Collections;
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -69,8 +71,13 @@ public class FollowCamera : MonoBehaviour
         GetComponent<Camera>().nearClipPlane = 0.01f;
     }
 
-    private void Start()
+    private CancellationTokenSource _reactionCts;
+
+    private void OnDisable()
     {
+        _reactionCts?.Cancel();
+        _reactionCts?.Dispose();
+        _reactionCts = null;
     }
 
     private void LateUpdate()
@@ -112,7 +119,7 @@ public class FollowCamera : MonoBehaviour
         // 흔들림은 deltaTime이 아니라 매 프레임 난수라 timeScale 0에서도 계속되므로 직접 막는다 (일시정지·게임오버·클리어)
         if (Time.timeScale > 0f)
         {
-            Vector3 shakeOffset = Random.insideUnitCircle * (_maxShakeAmount * _shakeIntensity);
+            Vector3 shakeOffset = UnityEngine.Random.insideUnitCircle * (_maxShakeAmount * _shakeIntensity);
             transform.position += shakeOffset;
         }
     }
@@ -121,54 +128,63 @@ public class FollowCamera : MonoBehaviour
     {
         if (_isReacting)
             return;
-        StartCoroutine(ReactionCutCoroutine(holdDuration));
+        _reactionCts?.Cancel();
+        _reactionCts?.Dispose();
+        _reactionCts = new CancellationTokenSource();
+        ReactionCutAsync(holdDuration, _reactionCts.Token).Forget();
     }
 
     public void CancelReaction()
     {
-        StopAllCoroutines();
+        _reactionCts?.Cancel();
+        _reactionCts?.Dispose();
+        _reactionCts = null;
 
         _activeOffset = _offset.normalized * _currentDistance;
         _useLookAt = false;
         _isReacting = false;
     }
 
-    private IEnumerator ReactionCutCoroutine(float holdDuration)
+    private async UniTaskVoid ReactionCutAsync(float holdDuration, CancellationToken ct)
     {
-        _isReacting = true;
-        _useLookAt = true;
-        Vector3 startOffset = _activeOffset;
-
-        float t = 0f;
-        while (t < _reactionInDuration)
+        try
         {
-            t += Time.deltaTime;
-            _activeOffset = Vector3.Lerp(
-                startOffset,
-                _reactionOffset,
-                Mathf.Clamp01(t / _reactionInDuration)
-            );
-            yield return null;
+            _isReacting = true;
+            _useLookAt = true;
+            Vector3 startOffset = _activeOffset;
+
+            float t = 0f;
+            while (t < _reactionInDuration)
+            {
+                t += Time.deltaTime;
+                _activeOffset = Vector3.Lerp(
+                    startOffset,
+                    _reactionOffset,
+                    Mathf.Clamp01(t / _reactionInDuration)
+                );
+                await UniTask.Yield(PlayerLoopTiming.Update, ct);
+            }
+
+            _activeOffset = _reactionOffset;
+
+            await UniTask.Delay(TimeSpan.FromSeconds(holdDuration), DelayType.DeltaTime, cancellationToken: ct);
+
+            t = 0f;
+            Vector3 returnTarget = _offset.normalized * _currentDistance;
+            while (t < _reactionOutDuration)
+            {
+                t += Time.deltaTime;
+                _activeOffset = Vector3.Lerp(
+                    _reactionOffset,
+                    returnTarget,
+                    Mathf.Clamp01(t / _reactionOutDuration)
+                );
+                await UniTask.Yield(PlayerLoopTiming.Update, ct);
+            }
+
+            _useLookAt = false;
+            _isReacting = false;
         }
-
-        _activeOffset = _reactionOffset;
-
-        yield return new WaitForSeconds(holdDuration);
-
-        t = 0f;
-        Vector3 returnTarget = _offset.normalized * _currentDistance;
-        while (t < _reactionOutDuration)
-        {
-            t += Time.deltaTime;
-            _activeOffset = Vector3.Lerp(
-                _reactionOffset,
-                returnTarget,
-                Mathf.Clamp01(t / _reactionOutDuration)
-            );
-            yield return null;
-        }
-
-        _useLookAt = false;
-        _isReacting = false;
+        catch (OperationCanceledException) { }
     }
 }

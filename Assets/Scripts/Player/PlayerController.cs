@@ -1,6 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,8 +32,7 @@ public class PlayerController : MonoBehaviour
 
     private readonly Collider[] _interactHits = new Collider[16];
 
-    private Dictionary<EffectParticleType, Coroutine> _particleCorutine =
-        new Dictionary<EffectParticleType, Coroutine>();
+    private readonly Dictionary<EffectParticleType, CancellationTokenSource> _particleCts = new();
 
     private void Awake()
     {
@@ -56,6 +56,13 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         _ph.OnDied -= HandleDied;
+
+        foreach (var cts in _particleCts.Values)
+        {
+            cts.Cancel();
+            cts.Dispose();
+        }
+        _particleCts.Clear();
     }
 
     private void OnInteract(InputValue value)
@@ -141,34 +148,40 @@ public class PlayerController : MonoBehaviour
         if (particle == null)
             return;
 
-        if (_particleCorutine.TryGetValue(type, out var prev) && prev != null)
+        if (_particleCts.TryGetValue(type, out var prev))
         {
-            StopCoroutine(prev);
+            prev.Cancel();
+            prev.Dispose();
         }
 
         particle.gameObject.SetActive(true);
         particle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         particle.Play();
 
-        _particleCorutine[type] = StartCoroutine(DeactivateParticleAfter(particle, type, duration));
+        var cts = new CancellationTokenSource();
+        _particleCts[type] = cts;
+        DeactivateParticleAfterAsync(particle, duration, cts.Token).Forget();
     }
 
-    private IEnumerator DeactivateParticleAfter(
+    private async UniTaskVoid DeactivateParticleAfterAsync(
         ParticleSystem particle,
-        EffectParticleType type,
-        float duration
+        float duration,
+        CancellationToken ct
     )
     {
-        if (duration > 0f)
-            yield return new WaitForSeconds(duration);
-        else
+        try
         {
-            yield return null;
-            yield return new WaitWhile(() => particle.isPlaying);
-        }
+            if (duration > 0f)
+                await UniTask.Delay(TimeSpan.FromSeconds(duration), DelayType.DeltaTime, cancellationToken: ct);
+            else
+            {
+                await UniTask.Yield(PlayerLoopTiming.Update, ct);
+                await UniTask.WaitWhile(() => particle.isPlaying, cancellationToken: ct);
+            }
 
-        particle.Stop();
-        particle.gameObject.SetActive(false);
-        _particleCorutine[type] = null;
+            particle.Stop();
+            particle.gameObject.SetActive(false);
+        }
+        catch (OperationCanceledException) { }
     }
 }

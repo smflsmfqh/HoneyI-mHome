@@ -1,5 +1,6 @@
 using System;
-using System.Collections;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -32,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void SetTutorialInvincible(bool invincible) => _tutorialInvincible = invincible;
 
-    private Coroutine _invincibleCo;
+    private CancellationTokenSource _invincibleCts;
     private Animator _animator;
     private static readonly int k_IsDeadID = Animator.StringToHash("IsDead");
     private CauseDeath _pendingCause;
@@ -57,6 +58,13 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         OnHealthChanged?.Invoke(_currentHealth / k_maxHealth);
+    }
+
+    private void OnDisable()
+    {
+        _invincibleCts?.Cancel();
+        _invincibleCts?.Dispose();
+        _invincibleCts = null;
     }
 
     private void Update()
@@ -136,17 +144,21 @@ public class PlayerHealth : MonoBehaviour
 
     public void SetInvincible(float sec, string source = "unknown")
     {
-        if (_invincibleCo != null)
-            StopCoroutine(_invincibleCo);
-
-        _invincibleCo = StartCoroutine(InvincibleCoroutine(sec, source));
+        _invincibleCts?.Cancel();
+        _invincibleCts?.Dispose();
+        _invincibleCts = new CancellationTokenSource();
+        InvincibleAsync(sec, _invincibleCts.Token).Forget();
     }
 
-    private IEnumerator InvincibleCoroutine(float sec, string source)
+    private async UniTaskVoid InvincibleAsync(float sec, CancellationToken ct)
     {
         _isInvincible = true;
-        yield return new WaitForSeconds(sec);
-        _isInvincible = false;
+        try
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(sec), DelayType.DeltaTime, cancellationToken: ct);
+            _isInvincible = false;
+        }
+        catch (OperationCanceledException) { }
     }
 
     private void Die(CauseDeath cause)
