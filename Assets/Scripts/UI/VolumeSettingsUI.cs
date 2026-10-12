@@ -34,7 +34,7 @@ public class VolumeSettingsUI : MonoBehaviour
 
     private void SelectLanguage(Language language)
     {
-        PlayerPrefs.SetInt(TitleController.LanguagePrefKey, (int)language);
+        PlayerPrefs.SetInt(PrefKeys.Language, (int)language);
         PlayerPrefs.Save();
         StringTableManager.Instance.SetLanguage(language);
     }

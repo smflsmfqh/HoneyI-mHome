@@ -84,7 +84,13 @@ public class CatMovement : MonoBehaviour
     private float _waitTimer;
     private bool _initialized;
     private bool _hasDestination = false;
-    private string _currentAnim = string.Empty;
+    private int _currentAnim; // 0 = 강제 재생 필요
+
+    private static readonly int k_EatID = Animator.StringToHash("Eat");
+    private static readonly int k_RunID = Animator.StringToHash("Run");
+    private static readonly int k_IdleID = Animator.StringToHash("Idle_A");
+    private static readonly int k_WalkID = Animator.StringToHash("Walk");
+    private static readonly int k_IsFoundID = Animator.StringToHash("isFound");
     private Coroutine _meowCo;
     private bool _isTutorialCat;
     private bool _externallyPaused;
@@ -295,7 +301,7 @@ public class CatMovement : MonoBehaviour
         _isAttacking = true;
         _agent.isStopped = true;
 
-        _animator.Play("Eat");
+        _animator.Play(k_EatID);
         yield return null;
 
         float clipLength = _animator.GetCurrentAnimatorStateInfo(0).length;
@@ -312,7 +318,7 @@ public class CatMovement : MonoBehaviour
 
         // 공격 도중 걸린 외부 일시정지(게임오버·튜토리얼)를 풀지 않도록
         _agent.isStopped = _externallyPaused;
-        _currentAnim = string.Empty;
+        _currentAnim = 0;
         _isAttacking = false;
     }
 
@@ -321,23 +327,23 @@ public class CatMovement : MonoBehaviour
         if (_isAttacking)
             return;
 
-        string targetMove;
+        int targetMove;
         if (_state == State.Chase)
         {
-            targetMove = "Run";
+            targetMove = k_RunID;
         }
         else if (_isWaiting || _agent.velocity.magnitude < 0.1f)
         {
-            targetMove = "Idle_A";
+            targetMove = k_IdleID;
         }
         else
-            targetMove = "Walk";
+            targetMove = k_WalkID;
 
         if (_currentAnim != targetMove)
         {
             _currentAnim = targetMove;
             _animator.Play(targetMove);
-            _animator.SetBool("isFound", _isFound);
+            _animator.SetBool(k_IsFoundID, _isFound);
         }
     }
 

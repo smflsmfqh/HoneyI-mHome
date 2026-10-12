@@ -79,7 +79,7 @@ public class HangoverEffect : MonoBehaviour
 
     private void HandleMissionCompleted(ItemData item)
     {
-        if (item == null || !string.Equals(item.itemName, "ENERGYDRINK", System.StringComparison.OrdinalIgnoreCase))
+        if (item == null || !string.Equals(item.itemName, ItemNames.EnergyDrink, System.StringComparison.OrdinalIgnoreCase))
             return;
 
         _active = false;

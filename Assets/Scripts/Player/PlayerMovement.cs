@@ -23,7 +23,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Animator _animator;
 
-    private string _currentFace = string.Empty;
+    private int _currentFace; // 0 = 아직 재생 전
+
+    // 표정 레이어(1) 상태
+    private static readonly int k_FaceBlinkID = Animator.StringToHash("Eyes_Blink");
+    private static readonly int k_FaceCryID = Animator.StringToHash("Eyes_Cry");
+    private static readonly int k_FaceDeadID = Animator.StringToHash("Eyes_Dead");
+    private static readonly int k_FaceHappyID = Animator.StringToHash("Eyes_Happy");
+    private static readonly int k_FaceShrinkID = Animator.StringToHash("Eyes_Shrink");
+    private static readonly int k_FaceExcitedID = Animator.StringToHash("Eyes_Excited");
+    private static readonly int k_FaceTraumaID = Animator.StringToHash("Eyes_Trauma");
 
     [Header("Movement Speed")]
     [SerializeField]
@@ -321,28 +330,28 @@ public class PlayerMovement : MonoBehaviour
         OnRollChanged?.Invoke(ratio);
     }
 
-    public void PlayFace(string stateName)
+    private void PlayFace(int stateHash)
     {
-        if (_currentFace == stateName || _animator == null)
+        if (_currentFace == stateHash || _animator == null)
             return;
 
-        _currentFace = stateName;
-        _animator.Play(stateName, 1);
+        _currentFace = stateHash;
+        _animator.Play(stateHash, 1);
     }
 
-    public void ResetFace() => PlayFace("Eyes_Blink");
+    public void ResetFace() => PlayFace(k_FaceBlinkID);
 
-    public void SetFaceDamaged() => PlayFace("Eyes_Cry");
+    public void SetFaceDamaged() => PlayFace(k_FaceCryID);
 
-    public void SetFaceDead() => PlayFace("Eyes_Dead");
+    public void SetFaceDead() => PlayFace(k_FaceDeadID);
 
-    public void SetFaceHappy() => PlayFace("Eyes_Happy");
+    public void SetFaceHappy() => PlayFace(k_FaceHappyID);
 
-    public void SetFaceShrink() => PlayFace("Eyes_Shrink");
+    public void SetFaceShrink() => PlayFace(k_FaceShrinkID);
 
-    public void SetFaceExcited() => PlayFace("Eyes_Excited");
+    public void SetFaceExcited() => PlayFace(k_FaceExcitedID);
 
-    public void SetFaceTrauma() => PlayFace("Eyes_Trauma");
+    public void SetFaceTrauma() => PlayFace(k_FaceTraumaID);
 
     private void OnMove(InputValue value)
     {

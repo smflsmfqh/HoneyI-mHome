@@ -126,9 +126,9 @@ public class TutorialManager : MonoBehaviour
             _pharmacyZone.OnPlayerEntered += OnPharmacyEntered;
 
         // 재시작(게임오버 후)이면 튜토리얼 자동 스킵
-        if (PlayerPrefs.GetInt("SkipTutorial", 0) == 1)
+        if (PlayerPrefs.GetInt(PrefKeys.SkipTutorial, 0) == 1)
         {
-            PlayerPrefs.DeleteKey("SkipTutorial");
+            PlayerPrefs.DeleteKey(PrefKeys.SkipTutorial);
             Skip();
             return;
         }

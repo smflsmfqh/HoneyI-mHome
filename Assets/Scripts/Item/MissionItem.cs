@@ -160,18 +160,18 @@ public class MissionItem : MonoBehaviour, IInteractive
             MissionManager.Instance.ReportCollected(_itemData.itemName);
             _camera?.TriggerReactionCut(0.6f);
             _playerMovement.SetFaceHappy();
-            GameManager.Instance.AddScore(100);
+            GameManager.Instance.AddScore(ItemCategory.Mission);
         }
         else if (_itemData.category == ItemCategory.Food)
         {
             _camera?.TriggerReactionCut(0.6f);
             _playerMovement.SetFaceExcited();
-            GameManager.Instance.AddScore(50);
+            GameManager.Instance.AddScore(ItemCategory.Food);
         }
         else if (_itemData.category == ItemCategory.Optional)
         {
             MissionManager.Instance.ReportCollected(_itemData.itemName);
-            GameManager.Instance.AddScore(300);
+            GameManager.Instance.AddScore(ItemCategory.Optional);
         }
 
         if (IsPooled)

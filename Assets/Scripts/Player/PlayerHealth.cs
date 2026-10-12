@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     private Coroutine _invincibleCo;
     private Animator _animator;
+    private static readonly int k_IsDeadID = Animator.StringToHash("IsDead");
     private CauseDeath _pendingCause;
 
     // --- 이벤트 관련 필드 ---
@@ -154,7 +155,7 @@ public class PlayerHealth : MonoBehaviour
             return;
         _pendingCause = cause;
         isDead = true;
-        _animator?.SetBool("IsDead", isDead);
+        _animator?.SetBool(k_IsDeadID, isDead);
 
         _followCamera?.TriggerReactionCut(2f);
         _playerMovement?.SetFaceDead();

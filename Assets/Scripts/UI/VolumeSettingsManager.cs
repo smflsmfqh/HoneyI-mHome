@@ -5,9 +5,6 @@ public class VolumeSettingsManager : MonoBehaviour
 {
     public static VolumeSettingsManager Instance { get; private set; }
 
-    public const string BGMKey = "Vol_BGM";
-    public const string SFXKey = "Vol_SFX";
-
     [SerializeField] private AudioMixer _mixer;
 
     public float BGMVolume { get; private set; }
@@ -22,14 +19,14 @@ public class VolumeSettingsManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        BGMVolume = PlayerPrefs.GetFloat(BGMKey, 1f);
-        SFXVolume = PlayerPrefs.GetFloat(SFXKey, 1f);
+        BGMVolume = PlayerPrefs.GetFloat(PrefKeys.BGMVolume, 1f);
+        SFXVolume = PlayerPrefs.GetFloat(PrefKeys.SFXVolume, 1f);
     }
 
     private void Start()
     {
-        _mixer?.SetFloat("BGMVolume", LinearToDb(BGMVolume));
-        _mixer?.SetFloat("SFXVolume", LinearToDb(SFXVolume));
+        _mixer?.SetFloat(MixerParams.BGM, LinearToDb(BGMVolume));
+        _mixer?.SetFloat(MixerParams.SFX, LinearToDb(SFXVolume));
     }
 
     private static float LinearToDb(float linear) =>
@@ -38,14 +35,14 @@ public class VolumeSettingsManager : MonoBehaviour
     public void SetBGMVolume(float value)
     {
         BGMVolume = Mathf.Clamp01(value);
-        PlayerPrefs.SetFloat(BGMKey, BGMVolume);
-        _mixer?.SetFloat("BGMVolume", LinearToDb(BGMVolume));
+        PlayerPrefs.SetFloat(PrefKeys.BGMVolume, BGMVolume);
+        _mixer?.SetFloat(MixerParams.BGM, LinearToDb(BGMVolume));
     }
 
     public void SetSFXVolume(float value)
     {
         SFXVolume = Mathf.Clamp01(value);
-        PlayerPrefs.SetFloat(SFXKey, SFXVolume);
-        _mixer?.SetFloat("SFXVolume", LinearToDb(SFXVolume));
+        PlayerPrefs.SetFloat(PrefKeys.SFXVolume, SFXVolume);
+        _mixer?.SetFloat(MixerParams.SFX, LinearToDb(SFXVolume));
     }
 }

@@ -28,6 +28,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Language _language = Language.En;
 
+    [Header("아이템 점수")]
+    [SerializeField]
+    private int _missionScore = 100;
+
+    [SerializeField]
+    private int _foodScore = 50;
+
+    [SerializeField]
+    private int _optionalScore = 300;
+
     private void Awake()
     {
         if (Instance != null)
@@ -43,8 +53,8 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
         _score = 0;
 
-        if (PlayerPrefs.HasKey(TitleController.LanguagePrefKey))
-            _language = (Language)PlayerPrefs.GetInt(TitleController.LanguagePrefKey);
+        if (PlayerPrefs.HasKey(PrefKeys.Language))
+            _language = (Language)PlayerPrefs.GetInt(PrefKeys.Language);
         StringTableManager.Instance.SetLanguage(_language);
     }
 
@@ -74,6 +84,17 @@ public class GameManager : MonoBehaviour
     public void AddScore(int amount)
     {
         _score += amount;
+    }
+
+    public void AddScore(ItemCategory category)
+    {
+        AddScore(category switch
+        {
+            ItemCategory.Mission => _missionScore,
+            ItemCategory.Food => _foodScore,
+            ItemCategory.Optional => _optionalScore,
+            _ => 0,
+        });
     }
 
     public void GameOver(CauseDeath cause)
@@ -115,7 +136,7 @@ public class GameManager : MonoBehaviour
         SetGameTimeStopped(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene(SceneNames.Title);
     }
 
     public void Restart()
@@ -123,7 +144,7 @@ public class GameManager : MonoBehaviour
         SetGameTimeStopped(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        PlayerPrefs.SetInt("SkipTutorial", 1);
+        PlayerPrefs.SetInt(PrefKeys.SkipTutorial, 1);
         PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
