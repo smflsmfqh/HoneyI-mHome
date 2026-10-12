@@ -141,68 +141,72 @@ public class MissionManager : MonoBehaviour
         _hintTriggered = new bool[_hints?.Length ?? 0];
     }
 
+    // A·B 중 하나를 추가 미션 후보 그룹으로 결정 (인덱스 0 또는 1)
+    private const int BONUS_GROUP_COUNT = 2;
+
+    // 배분 규칙은 MissionPoolBuilder (EditMode 테스트로 검증), 여기서는 결과만 받는다
     private void BuildMissionPool()
     {
-        var pool = new List<(ItemData item, float time)>();
-
-        // 고정 미션
-        int fixedCount = Mathf.Min(_fixedMissions?.Length ?? 0, _fixedUnlockTimes?.Length ?? 0);
-        for (int i = 0; i < fixedCount; i++)
-            pool.Add((_fixedMissions[i], _fixedUnlockTimes[i]));
-
-        // _randomUnlockTimes를 Fisher-Yates로 셔플
-        var timeSlots = new List<float>(_randomUnlockTimes ?? Array.Empty<float>());
-        for (int i = timeSlots.Count - 1; i > 0; i--)
+        int seed = Environment.TickCount;
+#if UNITY_EDITOR
+        // 재현용: Tools > Mission Seed 창에서 켠 경우에만 덮어쓴다
+        if (UnityEditor.EditorPrefs.GetBool(SEED_OVERRIDE_ENABLED_KEY, false))
         {
-            int j = UnityEngine.Random.Range(0, i + 1);
-            (timeSlots[i], timeSlots[j]) = (timeSlots[j], timeSlots[i]);
+            seed = UnityEditor.EditorPrefs.GetInt(SEED_OVERRIDE_VALUE_KEY, 0);
+            Debug.LogWarning($"[MissionManager] 미션 시드 덮어쓰기 사용 중: {seed}", this);
         }
+        UnityEditor.EditorPrefs.SetInt(LAST_SEED_KEY, seed);
+#endif
+        Debug.Log($"[MissionManager] mission seed = {seed}", this);
 
-        // A·B 중 하나를 추가 미션 후보 그룹으로 결정 (인덱스 0 또는 1)
-        int bonusGroupIdx = UnityEngine.Random.Range(0, Mathf.Min(2, _randomGroups?.Length ?? 0));
-        ItemData bonusItem = null;
-        int timeSlotIdx = 0;
+        var pool = MissionPoolBuilder.Build(
+            _fixedMissions,
+            _fixedUnlockTimes,
+            ToCandidateLists(_randomGroups),
+            _randomUnlockTimes,
+            BONUS_GROUP_COUNT,
+            new System.Random(seed)
+        );
 
-        for (int i = 0; i < (_randomGroups?.Length ?? 0); i++)
-        {
-            var group = _randomGroups[i];
-            if (group.candidates == null || group.candidates.Length == 0)
-                continue;
+        foreach (var warning in pool.Warnings)
+            Debug.LogWarning($"[MissionManager] {warning}", this);
 
-            float unlockTime = timeSlotIdx < timeSlots.Count ? timeSlots[timeSlotIdx++] : 0f;
-            int picked = UnityEngine.Random.Range(0, group.candidates.Length);
-            pool.Add((group.candidates[picked], unlockTime));
-
-            // 보너스 그룹의 탈락 후보 수집
-            if (i == bonusGroupIdx && group.candidates.Length > 1)
-            {
-                var remaining = new List<ItemData>(group.candidates);
-                remaining.RemoveAt(picked);
-                bonusItem = remaining[UnityEngine.Random.Range(0, remaining.Count)];
-            }
-        }
-
-        // 보너스 아이템을 풀 끝에 추가 (unlockTime = float.MaxValue → 트리거 전까지 미부여)
-        if (bonusItem != null)
-        {
-            _bonusIdx = pool.Count;
-            pool.Add((bonusItem, float.MaxValue));
-        }
-
-        // unlockTime 기준 정렬 (보너스는 항상 맨 뒤)
-        pool.Sort((a, b) => a.time.CompareTo(b.time));
-
-        // 정렬 후 보너스 인덱스 재탐색
-        _missionPool = new ItemData[pool.Count];
-        _unlockTimes = new float[pool.Count];
-        for (int i = 0; i < pool.Count; i++)
-        {
-            _missionPool[i] = pool[i].item;
-            _unlockTimes[i] = pool[i].time;
-            if (pool[i].time >= float.MaxValue)
-                _bonusIdx = i;
-        }
+        _missionPool = pool.Items;
+        _unlockTimes = pool.UnlockTimes;
+        _bonusIdx = pool.BonusIndex;
     }
+
+    private static IReadOnlyList<ItemData>[] ToCandidateLists(RandomMissionGroup[] groups)
+    {
+        if (groups == null)
+            return null;
+
+        var lists = new IReadOnlyList<ItemData>[groups.Length];
+        for (int i = 0; i < groups.Length; i++)
+            lists[i] = groups[i].candidates;
+        return lists;
+    }
+
+#if UNITY_EDITOR
+    // MissionSeedWindow와 공유하는 EditorPrefs 키
+    public const string SEED_OVERRIDE_ENABLED_KEY = "HoneyIMHome.MissionSeed.OverrideEnabled";
+    public const string SEED_OVERRIDE_VALUE_KEY = "HoneyIMHome.MissionSeed.OverrideValue";
+    public const string LAST_SEED_KEY = "HoneyIMHome.MissionSeed.Last";
+
+    // 빌더와 같은 개수 검사를 인스펙터 편집 시점에 바로 보여준다 (필드는 수정하지 않음)
+    private void OnValidate()
+    {
+        var warnings = MissionPoolBuilder.CollectWarnings(
+            _fixedMissions?.Length ?? 0,
+            _fixedUnlockTimes?.Length ?? 0,
+            MissionPoolBuilder.CountNonEmptyGroups(ToCandidateLists(_randomGroups)),
+            _randomUnlockTimes?.Length ?? 0
+        );
+
+        foreach (var warning in warnings)
+            Debug.LogWarning($"[MissionManager] {warning}", this);
+    }
+#endif
 
     private void Update()
     {
