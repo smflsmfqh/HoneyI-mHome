@@ -23,7 +23,11 @@ public class ProximityPanelFeedbackUI : MonoBehaviour
     private void OnEnable()
     {
         if (_proximity != null)
+        {
             _proximity.OnIntensityChanged += HandleIntensity;
+            // 이벤트는 값이 바뀔 때만 오므로, 이미 위험 범위 안에서 켜져도 패널이 뜨도록 현재 값으로 맞춘다
+            HandleIntensity(_proximity.Intensity);
+        }
     }
 
     private void OnDisable()
@@ -47,6 +51,10 @@ public class ProximityPanelFeedbackUI : MonoBehaviour
 
     private void HandleIntensity(float intensity)
     {
+        // OnEnable에서 바로 호출되므로 미연결이면 씬 로드 직후 예외가 나지 않게 막는다
+        if (_panel == null)
+            return;
+
         _isInDanger = intensity > 0f;
         if (!_isInDanger)
         {

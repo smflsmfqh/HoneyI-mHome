@@ -11,14 +11,15 @@ public class ProximityFeedback : MonoBehaviour
     [SerializeField]
     private float _panicRadius = 1f;
 
-    [Header("카메라 흔들림")]
-    [SerializeField]
-    private FollowCamera _followCam;
     public event Action<float> OnIntensityChanged;
+    public event Action<bool> OnPanicChanged;
 
     public float DangerRadius => _dangerRadius;
     public float PanicRadius => _panicRadius;
     public float Intensity { get; private set; }
+
+    // 패닉(panicRadius 안) 판정은 여기서만 한다 — 구독자는 Intensity를 직접 비교하지 않는다
+    public bool IsPanic => IsPanicIntensity(Intensity);
 
     private readonly List<Transform> _dangers = new();
 
@@ -36,17 +37,25 @@ public class ProximityFeedback : MonoBehaviour
         float minDist = CalcMinDist();
         float newIntensity = CalcIntensity(minDist);
 
-        _followCam?.SetShakeIntensity(minDist <= _panicRadius ? 1f : 0f);
-
         bool wasInDanger = Intensity > 0f;
         bool isInDanger  = newIntensity > 0f;
 
-        if (wasInDanger == isInDanger && Mathf.Abs(newIntensity - Intensity) < 0.01f)
+        // 0.995 → 1.0처럼 변화량이 작아도 위험·패닉 경계를 넘으면 구독자가 경계 값을 받도록 반드시 발행한다
+        bool wasPanic = IsPanic;
+        bool isPanic  = IsPanicIntensity(newIntensity);
+
+        if (wasInDanger == isInDanger && wasPanic == isPanic && Mathf.Abs(newIntensity - Intensity) < 0.01f)
             return;
 
         Intensity = newIntensity;
         OnIntensityChanged?.Invoke(Intensity);
+
+        if (wasPanic != isPanic)
+            OnPanicChanged?.Invoke(isPanic);
     }
+
+    // panicRadius 안에서는 CalcIntensity가 정확히 1을 반환한다
+    private static bool IsPanicIntensity(float intensity) => intensity >= 1f;
 
     private float CalcMinDist()
     {

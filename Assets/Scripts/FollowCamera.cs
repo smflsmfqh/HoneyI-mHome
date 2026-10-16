@@ -30,6 +30,9 @@ public class FollowCamera : MonoBehaviour
 
     [Header("Feedback System")]
     [SerializeField]
+    private ProximityFeedback _proximity;
+
+    [SerializeField]
     private float _maxShakeAmount = 0.008f;
     private float _shakeIntensity;
 
@@ -51,8 +54,6 @@ public class FollowCamera : MonoBehaviour
     private float _scrollUnitScale = 1200f;
 
     private InputAction _zoomAction;
-
-    public void SetShakeIntensity(float intensity) => _shakeIntensity = intensity;
 
     private void Start()
     {
@@ -82,8 +83,21 @@ public class FollowCamera : MonoBehaviour
 
     private CancellationTokenSource _reactionCts;
 
+    private void OnEnable()
+    {
+        if (_proximity != null)
+        {
+            _proximity.OnPanicChanged += HandlePanic;
+            // 이벤트는 값이 바뀔 때만 오므로, 이미 패닉 상태에서 켜져도 흔들리도록 현재 값으로 맞춘다
+            HandlePanic(_proximity.IsPanic);
+        }
+    }
+
     private void OnDisable()
     {
+        if (_proximity != null)
+            _proximity.OnPanicChanged -= HandlePanic;
+
         // 작업만 취소하면 _isReacting이 true로 남아 다시 켜졌을 때 줌·리액션이 막히므로 상태까지 되돌린다
         CancelReaction();
     }
@@ -129,6 +143,8 @@ public class FollowCamera : MonoBehaviour
             transform.position += shakeOffset;
         }
     }
+
+    private void HandlePanic(bool isPanic) => _shakeIntensity = isPanic ? 1f : 0f;
 
     public void TriggerReactionCut(float holdDuration = 0.8f)
     {

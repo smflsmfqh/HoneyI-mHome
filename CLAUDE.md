@@ -158,22 +158,33 @@ Assets/
 
 ### ProximityFeedbackSystem
 
-NPC와의 최소 거리를 intensity(0~1)로 환산, 3채널이 독립 구독.
+NPC와의 최소 거리를 intensity(0~1)로 환산, 채널이 독립 구독.
 
 ```
 intensity = 1 - clamp((minDist - panicRadius) / (dangerRadius - panicRadius), 0, 1)
 ```
 
+intensity는 dangerRadius 밖에서 0, dangerRadius → panicRadius 구간에서 선형 증가, panicRadius 안에서 1로 고정된다 (1을 넘지 않음). **패닉 = intensity가 1, 즉 panicRadius 안**.
+
 | 파라미터 | 기본값 |
 |---------|--------|
 | dangerRadius | 4m |
 | panicRadius | 1m |
-| 카메라 흔들림 maxShake | 0.08 |
-| 카메라 흔들림 frequency | 18 |
+| 카메라 흔들림 maxShake | 0.008 (`FollowCamera._maxShakeAmount`) |
 | 파티클 maxEmissionRate | 40 |
 | 사운드 피치 범위 | 0.8 ~ 1.4 |
 
-`ProximityFeedbackSystem`은 플레이어 오브젝트에 부착. `CameraShakeController`는 Cinemachine VirtualCamera 자식에 부착.
+**현재 구현** (`Assets/Scripts/ProximityFeedback/ProximityFeedback.cs`, 플레이어에 부착)
+
+| 신호 | 발행 시점 | 구독 채널 | 반응 |
+|------|----------|----------|------|
+| `OnIntensityChanged(float)` | 변화량 0.01 이상, 또는 위험(>0)·패닉 경계를 넘을 때 | `ProximityPanelFeedbackUI` | intensity > 0(dangerRadius 안)이면 붉은 패널 깜빡임 |
+| `OnPanicChanged(bool)` / `IsPanic` | 패닉 진입·이탈 시 | `FollowCamera` | 패닉이면 흔들림 최대(on/off), 비례 아님 |
+
+- 카메라 흔들림은 intensity에 비례하지 않고 **panicRadius 안에서만 켜지는 on/off** 방식이다 (최초 구현부터 동일). 비례 방식으로 바꾸려면 `FollowCamera`가 `OnIntensityChanged`를 구독해 `_shakeIntensity = intensity`로 쓰면 된다.
+- 패닉 판정 기준은 `ProximityFeedback.IsPanic` 한 곳에만 둔다. 구독자가 `>= 1f` 같은 비교를 직접 하지 말 것.
+- 구독자는 `OnEnable`에서 구독 직후 현재 값(`Intensity` / `IsPanic`)으로 한 번 동기화한다. 이벤트는 값이 바뀔 때만 오기 때문.
+- 파티클·사운드 피치 채널은 아직 미구현.
 
 ### 미션 시스템
 
@@ -254,4 +265,4 @@ intensity = 1 - clamp((minDist - panicRadius) / (dangerRadius - panicRadius), 0,
 - **근접 경고 대상은 자체 등록**: `ProximityFeedback`은 태그 검색을 하지 않는다. 위험 오브젝트가 스스로 `RegisterDanger` / `UnregisterDanger`를 호출한다 (현재 `CatMovement`·`CarMovement`의 `Start`/`OnDestroy`). 스크립트 실행 순서에 의존하지 않기 위함. 풀링(`SetActive` 재사용) 대상에 적용할 때는 `OnEnable`/`OnDisable`에서 등록·해제할 것. 자세한 배경은 `Docs/proximity-danger-registration.md`.
 - **컷씬 일시정지**: `Time.timeScale = 0` 사용 시 UI Animator의 `Update Mode`를 `Unscaled Time`으로 설정.
 - **수치는 밸런스 시작값**: GDD의 체력/구르기 무적/카메라 거리 등 모든 수치는 플레이테스트 후 조정 대상.
-- **ProximityFeedbackSystem 채널 독립**: 채널(카메라/파티클/사운드) 간 직접 참조 없이 intensity float만 구독. 채널 추가/제거가 자유로워야 함.
+- **ProximityFeedbackSystem 채널 독립**: 채널(카메라/파티클/사운드) 간 직접 참조 없이 `ProximityFeedback`의 신호(`OnIntensityChanged` float / `OnPanicChanged` bool)만 구독. `ProximityFeedback`은 채널을 참조하지 않으며, 채널 추가/제거가 자유로워야 함.
