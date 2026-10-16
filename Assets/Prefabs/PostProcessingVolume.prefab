@@ -968,6 +968,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &1779603777585241034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,6 +1378,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &4726495708596576866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,6 +1472,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &1086251489612097259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3590,6 +3605,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &6894948898404936583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3732,6 +3752,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &979535260961864593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4537,6 +4562,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &2919334388172057421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4944,6 +4974,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &4589003443407967461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5892,7 +5927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -7514,7 +7548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -8656,7 +8689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -8937,7 +8969,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -9044,7 +9075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -9745,6 +9775,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &8469807327933864092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9805,6 +9840,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!1001 &1790228977483911139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10180,7 +10220,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -14891,7 +14930,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -16501,7 +16539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -16678,7 +16715,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -18687,7 +18723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -19701,7 +19736,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -20255,7 +20289,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -21943,6 +21976,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!114 &3825155232382873249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22003,6 +22041,11 @@ MonoBehaviour:
   _spreadHalfAngle: 30
   _dropDistanceMin: 0.4
   _dropDistanceMax: 0.8
+  _spotParticle: {fileID: 0}
+  _groundParticlePrefab: {fileID: 0}
+  _cooldown: 10
+  _foodCooldown: 5
+  _cooldownBar: {fileID: 0}
 --- !u!1001 &6691517113716661013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22715,7 +22758,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -23412,7 +23454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -24347,7 +24388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -26007,7 +26047,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -28064,7 +28103,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
@@ -28744,7 +28782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashDropper
   _dropTable:
-  - {fileID: 11400000, guid: 95018dbb05d484f099c89365f4f0c89e, type: 2}
   - {fileID: 11400000, guid: 7aa7350eae82b4c0eb745f4a63060831, type: 2}
   - {fileID: 11400000, guid: 96299d1b8137b4f40abf041a4697a9bd, type: 2}
   - {fileID: 11400000, guid: e147cdf8000010f4f9cf72729acf5ed0, type: 2}
