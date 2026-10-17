@@ -157,10 +157,7 @@ public class CarMovement : MonoBehaviour
 
         if (_hornPlaying)
         {
-            float t = Mathf.Clamp01(
-                (dist - _proximity.PanicRadius) / (_proximity.DangerRadius - _proximity.PanicRadius)
-            );
-            _audioSource.volume = 1f - t;
+            _audioSource.volume = SpatialAudio.ProximityVolume(dist, _proximity.PanicRadius, _proximity.DangerRadius);
         }
     }
 

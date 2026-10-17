@@ -366,8 +366,7 @@ public class CatMovement : MonoBehaviour
             return;
 
         float dist = Vector3.Distance(transform.position, _player.transform.position);
-        float t = Mathf.Clamp01((dist - _proximity.PanicRadius) / (_detectionRadius - _proximity.PanicRadius));
-        _audioSource.volume = 1f - t;
+        _audioSource.volume = SpatialAudio.ProximityVolume(dist, _proximity.PanicRadius, _detectionRadius);
     }
 
     private void StartMeowLoop()

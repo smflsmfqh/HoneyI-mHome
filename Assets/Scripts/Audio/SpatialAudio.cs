@@ -12,4 +12,14 @@ public static class SpatialAudio
         source.rolloffMode = AudioRolloffMode.Custom;
         source.SetCustomCurve(AudioSourceCurveType.CustomRolloff, _noRolloff);
     }
+
+    // 근접 음량: panicRadius 안쪽은 1, hearRadius 바깥은 0, 그 사이는 선형 감쇠.
+    public static float ProximityVolume(float distance, float panicRadius, float hearRadius)
+    {
+        float range = hearRadius - panicRadius;
+        if (range <= 0f)
+            return distance <= hearRadius ? 1f : 0f;
+
+        return 1f - Mathf.Clamp01((distance - panicRadius) / range);
+    }
 }

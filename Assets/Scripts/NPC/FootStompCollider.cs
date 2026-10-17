@@ -55,9 +55,8 @@ public class FootStompCollider : MonoBehaviour
 
         float panicRadius = _proximity != null ? _proximity.PanicRadius : 1f;
         float dist = Vector3.Distance(transform.position, _playerTransform.position);
-        float t = Mathf.Clamp01((dist - panicRadius) / (_hearRadius - panicRadius));
         float moveBlend = _npc != null ? _npc.MoveBlend : 1f;
-        _audioSource.volume = (1f - t) * moveBlend;
+        _audioSource.volume = SpatialAudio.ProximityVolume(dist, panicRadius, _hearRadius) * moveBlend;
     }
 
     private void OnTriggerEnter(Collider other)
