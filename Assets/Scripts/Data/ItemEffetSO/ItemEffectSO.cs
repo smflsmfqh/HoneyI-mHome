@@ -10,6 +10,5 @@ public enum EffectParticleType
 
 public abstract class ItemEffectSO : ScriptableObject
 {
-    public EffectParticleType particleType = EffectParticleType.None;
     public abstract void Apply(PlayerController player);
 }
