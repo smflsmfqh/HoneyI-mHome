@@ -1,0 +1,223 @@
+config,group,target_path,through
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_009",608
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_009",320
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",320
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",320
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_022",160
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_022",160
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_15",117
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_7",117
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18",91
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_15",90
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_001",80
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_5",80
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_7",80
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_001",80
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_5",80
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_27",80
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_11",78
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_0",78
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_9",77
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_27",75
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_16",74
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Eco_Building_Slope",66
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_9",60
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_16",52
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_0",50
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_11",41
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (3)",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Building_Super Market",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (2)",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (6)",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (1)",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (3)",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (4)",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (4)",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (1)",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (7)",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (4)",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (2)",40
+A_current,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (5)",40
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (2)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (3)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Building_Super Market",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (2)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (1)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (3)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (4)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (1)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (7)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (4)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (2)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (5)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (2)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (3)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Building_Super Market",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (2)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (6)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (1)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (3)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (4)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (4)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (1)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (7)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (4)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (2)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (5)",40
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (2)",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_21",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_3",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_13",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_29",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_003/CurbColliders",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_17",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",40
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_0",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (3)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Building_Super Market",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (2)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (6)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (1)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (3)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (4)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (4)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (1)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (7)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (4)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (2)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (5)",40
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (2)",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_21",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_3",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_13",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_29",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_003/CurbColliders",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_17",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",40
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_0",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (3)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Building_Super Market",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (2)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (1)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (3)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (4)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (1)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (7)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (4)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Coffee shop chair (2)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Props_Bench_2 (5)",40
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (2)",40
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (4)",39
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (4)",39
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (6)",38
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (6)",38
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Building_Coffee Shop",37
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Building_Coffee Shop",37
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table",36
+E_all_reverted,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_33",36
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (1)",35
+A_current,MeshCollider,"PostProcessingVolume/Store2/Building_Coffee Shop",33
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Building_Coffee Shop",33
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Building_Coffee Shop",33
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 3",33
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment",33
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Eco_Building_Slope",32
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 2 (1)",32
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_4x1_04",32
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_2x1_05",32
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 2",32
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_4x1_03",32
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_2x1_03",32
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (1)",31
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table",29
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_Destination",29
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store1/bench",28
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_Destination",28
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store1/bench",28
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 3",27
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment",27
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store1/Building_Drug Store",27
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/Building_Fruits  Shop",26
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/Building_Fruits  Shop",26
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 2 (1)",24
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_4x1_04",24
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_2x1_05",24
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 2",24
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_4x1_03",24
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_2x1_03",24
+D_road_mesh,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_33",24
+A_current,MeshCollider,"PostProcessingVolume/Store2/Building_Fruits  Shop",22
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/Building_Fruits  Shop",22
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/Building_Fruits  Shop",22
+C_discrete,MeshCollider,"PostProcessingVolume/Store1/Building_Drug Store",20
+A_current,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table",19
+A_current,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (1)",19
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table",19
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (1)",19
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Signboard_01",18
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Eco_Building_Terrace",18
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store1/Building_Coffee Shop",18
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store1/Building_Bakery",16
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Signboard_01",16
+A_current,MeshCollider,"PostProcessingVolume/Store2/ToyObject_063",14
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/ToyObject_063",14
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/ToyObject_063",14
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/ToyObject_063",13
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (1)",13
+C_discrete,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (2)",13
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/ToyObject_063",13
+A_current,MeshCollider,"PostProcessingVolume/Store1/bench",12
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table",12
+C_discrete,MeshCollider,"PostProcessingVolume/Store1/bench",12
+C_discrete,MeshCollider,"PostProcessingVolume/Store1/Building_Bakery",12
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store1/bench",12
+E_all_reverted,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (2)",12
+C_discrete,MeshCollider,"PostProcessingVolume/Store1/Building_Coffee Shop",11
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Signboard_01",10
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Signboard_01",10
+A_current,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_Destination",9
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Eco_Building_Terrace",9
+D_road_mesh,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_Destination",9
+E_all_reverted,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Eco_Building_Grid",9
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Signboard_01",8
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_Destination",7
+A_current,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 3",5
+A_current,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (2)",5
+A_current,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment",5
+A_current,MeshCollider,"PostProcessingVolume/Store1/Building_Coffee Shop",5
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment",5
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 3",5
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (2)",5
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment",5
+D_road_mesh,MeshCollider,"PostProcessingVolume/Store1/Building_Coffee Shop",5
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/plants 3",4
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store2/pizzeria house with environment/table (2)",4
+C_discrete,MeshCollider,"PostProcessingVolume/Demonstration/BasicSettingsMap/Eco_Building_Grid",4
+B_timestep_0.02,MeshCollider,"PostProcessingVolume/Store1/Building_Coffee Shop",3
+B_timestep_0.02,RoadCurb,"PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_16",1
