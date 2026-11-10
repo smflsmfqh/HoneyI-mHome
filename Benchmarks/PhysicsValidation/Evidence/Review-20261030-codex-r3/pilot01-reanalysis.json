@@ -1,0 +1,174 @@
+{
+  "W-H0-base-pilot-20261030T150726": {
+    "exit": 0,
+    "planned": 72,
+    "trials": 72,
+    "missing": [],
+    "duplicates": [],
+    "checks": {
+      "total": 4,
+      "matched": 4,
+      "items": [
+        {
+          "caseId": "CK13_flat_hold_timescale0",
+          "expect": "harness_error:time_scale_zero",
+          "outcome": "harness_error:time_scale_zero",
+          "match": true
+        },
+        {
+          "caseId": "CK08_flat_walk_noinput",
+          "expect": "harness_error:input_not_received",
+          "outcome": "harness_error:input_not_received",
+          "match": true
+        },
+        {
+          "caseId": "CK01_flat_hold",
+          "expect": "pass",
+          "outcome": "pass",
+          "match": true
+        },
+        {
+          "caseId": "CK03_hole_walk_slow",
+          "expect": "fall",
+          "outcome": "fall",
+          "match": true
+        }
+      ]
+    },
+    "outcomes": {
+      "pass": 69,
+      "harness_error:time_scale_zero": 1,
+      "harness_error:input_not_received": 1,
+      "fall": 1
+    }
+  },
+  "W-H1-base-pilot-20261030T150726": {
+    "exit": 0,
+    "planned": 72,
+    "trials": 72,
+    "missing": [],
+    "duplicates": [],
+    "checks": {
+      "total": 4,
+      "matched": 4,
+      "items": [
+        {
+          "caseId": "CK13_flat_hold_timescale0",
+          "expect": "harness_error:time_scale_zero",
+          "outcome": "harness_error:time_scale_zero",
+          "match": true
+        },
+        {
+          "caseId": "CK08_flat_walk_noinput",
+          "expect": "harness_error:input_not_received",
+          "outcome": "harness_error:input_not_received",
+          "match": true
+        },
+        {
+          "caseId": "CK01_flat_hold",
+          "expect": "pass",
+          "outcome": "pass",
+          "match": true
+        },
+        {
+          "caseId": "CK03_hole_walk_slow",
+          "expect": "fall",
+          "outcome": "fall",
+          "match": true
+        }
+      ]
+    },
+    "outcomes": {
+      "pass": 67,
+      "fall": 3,
+      "harness_error:time_scale_zero": 1,
+      "harness_error:input_not_received": 1
+    }
+  },
+  "W-H1-nocatch-pilot-20261030T150726": {
+    "exit": 0,
+    "planned": 72,
+    "trials": 72,
+    "missing": [],
+    "duplicates": [],
+    "checks": {
+      "total": 4,
+      "matched": 4,
+      "items": [
+        {
+          "caseId": "CK13_flat_hold_timescale0",
+          "expect": "harness_error:time_scale_zero",
+          "outcome": "harness_error:time_scale_zero",
+          "match": true
+        },
+        {
+          "caseId": "CK08_flat_walk_noinput",
+          "expect": "harness_error:input_not_received",
+          "outcome": "harness_error:input_not_received",
+          "match": true
+        },
+        {
+          "caseId": "CK01_flat_hold",
+          "expect": "pass",
+          "outcome": "pass",
+          "match": true
+        },
+        {
+          "caseId": "CK03_hole_walk_slow",
+          "expect": "fall",
+          "outcome": "fall",
+          "match": true
+        }
+      ]
+    },
+    "outcomes": {
+      "fall": 36,
+      "pass": 34,
+      "harness_error:time_scale_zero": 1,
+      "harness_error:input_not_received": 1
+    }
+  },
+  "W-H7-base-pilot-20261030T150726": {
+    "exit": 0,
+    "planned": 72,
+    "trials": 72,
+    "missing": [],
+    "duplicates": [],
+    "checks": {
+      "total": 4,
+      "matched": 4,
+      "items": [
+        {
+          "caseId": "CK13_flat_hold_timescale0",
+          "expect": "harness_error:time_scale_zero",
+          "outcome": "harness_error:time_scale_zero",
+          "match": true
+        },
+        {
+          "caseId": "CK08_flat_walk_noinput",
+          "expect": "harness_error:input_not_received",
+          "outcome": "harness_error:input_not_received",
+          "match": true
+        },
+        {
+          "caseId": "CK01_flat_hold",
+          "expect": "pass",
+          "outcome": "pass",
+          "match": true
+        },
+        {
+          "caseId": "CK03_hole_walk_slow",
+          "expect": "fall",
+          "outcome": "fall",
+          "match": true
+        }
+      ]
+    },
+    "outcomes": {
+      "pass": 67,
+      "fall": 3,
+      "harness_error:time_scale_zero": 1,
+      "harness_error:input_not_received": 1
+    }
+  }
+}

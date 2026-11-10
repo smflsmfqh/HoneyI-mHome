@@ -1,0 +1,31 @@
+{
+ "milestone": "M9 감사·대응 분석",
+ "nature": "M8 결과를 본 뒤 하는 서술 감사. 판정(M8)을 바꾸지 않는다. 동결 summarize_M6.py는 수정하지 않고, 새 스크립트 Tools/audit_M9.py가 Evidence/M6/audit/에만 쓴다",
+ "recordedBeforeComputation": "2026-11-10. 이 파일을 쓴 뒤 audit_M9.py를 작성·실행",
+ "rawPreservation": "결과 ZIP 두 개의 SHA를 다시 계산해 M8 기록과 비교. 원시 trial의 물리 실패를 분석 단계에서 무효로 바꾸지 않는다(무효는 freeze의 initialPen > 0.005·의도 외 harness_error만)",
+ "audits": {
+  "a_completion": "48 run 전부: status completed, planned == finished, trials 행 수 == case 파일 case 수, order.json caseId 집합 == case 파일 ID 집합, 중복 없음",
+  "b_inputs": "missingInputs가 있는 trial이 INTENDED(CK08·CK13)뿐인지. 그 밖의 harness_error는 ID와 함께 분모 제외 목록으로",
+  "c_initialState": "initialPenDepth·initialPenWallDepth > 0.005 수, trial start·yaw가 case 파일과 같은지(1e-4), fixedDeltaTime·collisionDetection이 그룹 기대값과 같은지(F 0.02/Discrete, p4 override, p5c·p5g 0.01/CCD, H0 0.02/Discrete 당시 값)",
+  "d_terrain": "E2_C trial 시작 지점 colliders 서명을 변형별 기대와 비교: S0a·S0p non-convex Mesh 바닥, S0b 바닥 Mesh 없음, S1 PhysicsBenchPlate, S2 convex Mesh, S3 FloorColliders Box, H0 non-convex Mesh. 연석 수정은 시작 콜라이더에 안 보이므로 씬 SHA가 유일 증거이며, BASE·CURBFIX 시작 콜라이더 집합이 같은지 확인",
+  "e_logErrors": "run별 고유 오류 오브젝트 경로를 바닥(road_·Set_B_Tiles)·연석(Curb)·차량(Car)·기타로 분류. CURBFIX에 연석 오류 0인지, p5g 증가분의 출처"
+ },
+ "failureDefinition": {
+  "curb": "passThrough, rescue_failed, escaped_by_rescue, fall, passed_unclassified, 그 밖의 harness_error 외 실패 범주",
+  "curbNonFailure": "pass, blocked_escaped, recovered_after_penetration, passedOver",
+  "E2_C": "fall = 실패, pass = 비실패",
+  "combined": "낙하·끼임(rescue_failed+escaped_by_rescue)·통과(passThrough) 중 하나라도 해당"
+ },
+ "pairing": {
+  "rule": "같은 attempt·seed·caseId 대응. 전이 행렬(원래 범주 × 바뀐 범주) + 개선(실패→비실패)/악화(비실패→실패)/유지(실패 상태 같음, 범주 변화 별도 표기)",
+  "pairs": ["P5c BASE → CURBFIX", "P4 각 칸 → 0.02/Discrete 기준", "바닥 S0a·S0b·S0p·S1·S2 → S3"],
+  "notPaired": "p5g(게임 조건, freeze상 합계만)"
+ },
+ "noiseFloor": "같은 빌드·같은 seed인 a1↔a2의 trial 범주 불일치 수(모든 그룹), P4 0.01/CCD ↔ P5c BASE 같은 attempt 대응 불일치 수",
+ "locationGroups": "연석 case는 '연석 지점 S2/S3'(바닥 변형 S2·S3과 다름) × 접근(Move·Roll·Sprint·Boost·BoostSprint) × 각도(c00·p02·m02·a30·a60)별 k/n. E2_C는 case별 k/n",
+ "time": "분석기 출력 fallStep·escapeStep·passStep × trial fixedDeltaTime(초), firstWallContactTime. trace 재판정 없음",
+ "statistics": "퍼센트포인트 차이만. 고정 격자이므로 확률 신뢰구간을 붙이지 않는다",
+ "traceability": "모든 칸에 runId 목록, n, k, 실패 caseId(attempt) 목록",
+ "claim3Check": "S3 기하 5mm 초과 지점과 단차 소실 위치가 남쪽 road_009_floor에 있는지 geom-S3.json으로 확인. 아니면 '남쪽 도로 단차와 같은 크기' 연결 문구 삭제. freeze에 '부분' 범주가 없으므로 기록상 ③ = 지지 아님(런타임 조건만 충족)",
+ "outOfScope": ["H2~H6", "다른 PC", "건물 관통", "화단", "차량 cooking", "30/120 FPS", "소품 P00·P04 원인", "M10 독립 재실행"]
+}

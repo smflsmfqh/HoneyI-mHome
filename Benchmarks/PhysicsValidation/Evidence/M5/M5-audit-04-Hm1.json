@@ -1,0 +1,34 @@
+{
+ "auditId": "M5-audit-04-Hm1",
+ "createdLocal": "2026-10-30 (Asia/Seoul)",
+ "question": "H0(1a44741)가 원래 수직 낙하를 볼 수 있는 기준선인가",
+ "facts": [
+  "H0 커밋 메시지: '[Add] Charcter prefabs 생성 & 플레이어 특정 맵 구간에서 수직 낙하 수정 중' → 낙하는 H0 이전에 관측됐고 H0는 수정이 일부 들어간 상태",
+  "직전 루트 커밋 d3a98563b6dae62d68f5f08c689ac144b4885886(2026-05-18 16:40, '개미 움직임과 개미 팔로우 캠 구현 중')의 PlayerMovement는 FixedUpdate에서 Rigidbody.MovePosition(position + move*dt)만 한다(Look·Yaw·점프·접지 판정 없음)",
+  "H0에서 바뀐 것: PlayerMovement를 linearVelocity 설정·Yaw·점프·Raycast 접지로 교체, 씬 MeshCollider 2개에 m_Convex=1 추가(guid 1fc6c020…, 835d0974…), 플레이어 레이어 3(Player)·_groundLayerMask, TagManager에 Player 레이어",
+  "연표(M5-audit-02)에 빠졌던 관련 커밋: 4d73f8d(05-22 10:05) '플레이어 y 위치 하드코딩'(playerPosY=0.17 필드 추가, 콜라이더 center 복원), e4b5c50(05-26 15:11) '[Fix] road 타일에서 공중에 뜨는 버그 및 바닥 타일 결계 버그'(접지 판정을 Ground/Road 태그 접촉 기반으로 교체, 씬 1,414줄 변경). 둘 다 H1(05-29) 이전이라 H1에 포함"
+ ],
+ "assetChoice": {
+  "asset": "23de6f3c207d54acf193d8961e54da0ee48d68a2(H0와 같음)",
+  "reason": "Hm1 루트에도 에셋 gitlink가 없다. 당시 커밋된 에셋은 9c220857(05-15)이지만 9c220857→23de6f3c의 Cartoon_City 변경은 이름 변경(R100)뿐이고 cooking·convex 변경 0. 같은 에셋을 써서 Hm1과 H0의 차이를 루트 변경으로 한정",
+  "missing": "Hm1 씬이 참조하는 Character 프리팹(guid 427aabc0…, 순찰 NPC)은 9c220857에만 있어 Missing Prefab으로 남는다(빌드 로그 확인). 물리 지형과 무관. 카메라 오브젝트의 스크립트 guid 948f4100…은 Hm1 원본에도 정의가 없다"
+ },
+ "approval": "2026-10-30 사용자 선택 'H-1 복원 (Recommended)' — 작업 공간 Benchmarks/.physics-work/project-Hm1, 원본 253,438,072 bytes",
+ "adapter": "PHYSICS_BENCH_HM1: _inputDir 리플렉션 읽기, Yaw=transform.eulerAngles.y, IsGrounded=false(이 버전에 없음), Look이 없어 방향은 출발 배치 회전(yaw:placement_only 통제 기록). 이동·충돌 로직은 건드리지 않음",
+ "evidence": [
+  "Evidence/Hm1/prepared-source-files.json",
+  "Evidence/M5/harness-sync-Hm1-01.json",
+  "Evidence/M5/harness-sync-Hm1-02.json",
+  "Evidence/M5/build-M5-Hm1-mac-01.log",
+  "Evidence/M5/build-M5-Hm1-win-01.log"
+ ],
+ "limits": [
+  "당시 로컬 미커밋 상태(에셋 포함)를 재현했다고 주장하지 않는다",
+  "Hm1 빌드 오류 2건은 Unity Cloud 심볼 업로드 실패와 Character Missing Prefab(물리 무관)"
+ ],
+ "correction-20261030-review-r3": {
+  "adapter": "위 adapter 설명(yaw:placement_only)은 무효 run M5-Hm1-base-mac-e2-01을 낸 첫 판(빌드 M5-Hm1-mac-01·win-01) 설명이다. 현재(M5-Hm1-mac-03·win-03)는 준비 단계에서 FollowCamera._yaw를 case yaw로 설정(yaw:camera_field_set)하고 반영을 확인한다",
+  "constraints": "H0의 constraints 변경 116→80은 FreezePositionY와 FreezeRotationY 해제(36)다",
+  "capabilities": "Hm1 실제 지원 동작은 Move뿐(Harness/Cases/capabilities-r1.json)"
+ }
+}

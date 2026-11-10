@@ -1,0 +1,20 @@
+{
+ "version": "H7",
+ "root_sha": "b8efce3526d3ef85eb0c85a580884369f3f5f48a",
+ "asset_sha": "a160f46591e2af970f47d05603d64ddad4781e59",
+ "workspace": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/project-H7",
+ "checkedUtc": "2026-10-29T13:22:27.044041+00:00",
+ "original_files_checked": 16766,
+ "changed": [],
+ "missing": [],
+ "extra_files": [
+  {
+   "path": "Packages/Coplay/Editor/CoplayLogs/console_logs_20261029.log",
+   "sha256": "c644a0cc347de77a558ae3e9db675665870978fba02d8958662df9cb6d7f6c4e"
+  },
+  {
+   "path": "Packages/Coplay/Editor/CoplayLogs/coplay_settings.json",
+   "sha256": "283bb86eefe4413593088ec64c32365338a9c71b5291be8701be589f2241376d"
+  }
+ ]
+}

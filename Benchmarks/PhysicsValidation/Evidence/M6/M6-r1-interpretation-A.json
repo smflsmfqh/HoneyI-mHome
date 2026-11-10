@@ -1,0 +1,44 @@
+{
+ "experimentId": "M6-r1",
+ "scope": "묶음 A 결과(주장 ④·⑤)만. 묶음 B(①②③·H0)는 미수신",
+ "recordedUtc": "2026-11-10",
+ "input": {
+  "resultsZip": "Evidence/PhysicsBench-M6A-Results-20261110T002814.zip",
+  "resultsZipSha256": "1bdf17a0f9e98c568d31ed51bfd0bd412bdfd145bf0c260fc60cf0cbaa1c65e1",
+  "extracted": "Evidence/M6/windows/PhysicsBench-M6A-Results-20261110T002814/",
+  "runs": 24, "exitCodeNonZero": 0,
+  "pc": "i5-12500 / GTX 1660 SUPER / Windows 10 19045 (M5와 같은 PC)"
+ },
+ "tools": {
+  "analyzer": "Harness/Tools/analyze_physics_bench.py c9950f0b90f145bc… (동결값과 같음), thresholds-B1 4aca1580… → Evidence/M6/analysis/<run>-a1",
+  "summarizer": "Tools/summarize_M6.py 185241a05baf05b4… (동결값과 같음) → Evidence/M6/M6-r1-summary-A-partial.json"
+ },
+ "provenanceCheck": {
+  "note": "summarize_M6.py는 빌드·씬·프로필을 검사하지 않으므로 manifest.json으로 따로 확인",
+  "result": "24/24 일치: experimentId M6-r1, case m6-curb.json(9d3037e6…), BASE run은 M6-BASE-win-01·씬 9d0bb583…, CURBFIX run은 M6-CURBFIX-win-01·씬 12ba8273…, p4 dt/CCD override가 run ID와 같음, p5c·p5g는 override 없음(-1), p4·p5c 18개는 profile-H7, p5g 6개는 profile-H7-game(빈 필드 제외 동일), seed·attempt가 RunM6A.cmd와 같음, CK 4/4로 제외 run 0"
+ },
+ "partialSummaryCaveat": "M6-r1-summary-A-partial.json의 verdicts ①②③ 필드는 B run이 없어 생긴 무의미한 값이다(예: ① invalidVariants). 인용 금지. 유효한 것은 ④·⑤와 ③ 보조값(P5c BASE E2_C 낙하 0/72)뿐. B 수신 후 동결 summarizer를 48 run 전체에 다시 돌려 최종 집계를 만든다",
+ "claim4": {
+  "table_BASE_curb34x3": {
+   "dt0.02-Discrete":          {"passThrough": "72/102", "rescue_failed": "0/102"},
+   "dt0.01-Discrete (dt만)":    {"passThrough": "38/102", "rescue_failed": "0/102"},
+   "dt0.02-CCD (CCD만)":        {"passThrough": "48/102", "rescue_failed": "0/102"},
+   "dt0.01-CCD":               {"passThrough": "19/102", "rescue_failed": "18/102"}
+  },
+  "E2_C": "네 칸 모두 낙하 0/72",
+  "rulesApplied": ["passThrough 감소 & 0.01/CCD에서도 > 0", "끼임: 0.01/CCD rescue_failed > 0.02/Discrete"],
+  "sentence": "물리 설정(ContinuousDynamic, dt 0.01)은 고속 연석 관통을 줄였지만 없애지는 못했다(72/102 → 19/102). CCD·dt 0.01은 관통을 줄였지만 연석 끼임은 늘렸다(0/102 → 18/102). 남은 관통과 끼임은 연석 콜라이더 밑면 연장(⑤)으로 해결했다.",
+  "note": "끼임은 네 칸 중 dt 0.01과 CCD를 함께 쓴 칸에서만 나왔다. 원인 주장은 하지 않고 수치로만 보고"
+ },
+ "claim5": {
+  "verdict": "support_eliminate",
+  "ctl_3attempts":  {"BASE": {"passThrough": "21/102", "rescue_failed": "18/102", "escaped_by_rescue": "0/102"}, "CURBFIX": {"passThrough": "0/102", "rescue_failed": "0/102", "escaped_by_rescue": "0/102"}},
+  "game_3runs":     {"BASE": {"passThrough": "20/102", "rescue_failed": "18/102", "escaped_by_rescue": "0/102"}, "CURBFIX": {"passThrough": "0/102", "rescue_failed": "0/102", "escaped_by_rescue": "0/102"}},
+  "E2_C_falls": "BASE·CURBFIX 통제·게임 모두 0/72",
+  "passedUnclassified": "BASE 0, CURBFIX 0",
+  "aux_recovered_maxPenWallDepthR": {"BASE_ctl": {"n": 33, "medianR": 0.655, "p90R": 1.696, "maxR": 1.959, "maxCm": 1.84}, "CURBFIX_ctl": {"n": 72, "medianR": 2.149, "p90R": 2.251, "maxR": 2.796, "maxCm": 2.63}},
+  "auxNote": "CURBFIX에서 recovered가 33→72로 늘고 깊이 중앙값도 커졌다. BASE에서 관통·끼임이던 case가 '파고든 뒤 밀려남'으로 옮겨 왔기 때문(대응표 pairedDiff 참고). 판정에는 쓰지 않음",
+  "sentence": "연석 BoxCollider 밑면을 도로면 아래(-0.3)까지 연장해, 고속 돌진 측정에서 연석 관통·끼임이 0이 됐다(통제 3회 반복: 관통 21/102·끼임 18/102 → 0/102·0/102, 게임 조건 3 run 합: 관통 20/102·끼임 18/102 → 0/102·0/102). 충돌 직후 최대 2.6cm 연석에 파고든 뒤 밀려난다(사용자 플레이에서도 보임).",
+  "reproduction": "fix1(M5) 통제 결과(21·18 → 0·0, recovered 72, 중앙값 2.15r)와 같은 값"
+ }
+}

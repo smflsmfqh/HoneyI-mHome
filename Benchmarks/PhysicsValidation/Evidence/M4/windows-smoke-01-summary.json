@@ -1,0 +1,19 @@
+{
+ "bundle": "Builds/M4-smoke-01.zip (sha256 7c901435f43a5ce7a5025bb9fd94a9970ee4d19f4e75f9485240297b60eacc59)",
+ "resultZip": "Evidence/PhysicsBench-Results-20261030T002951.zip (사용자 제공 원본, sha256 673b3af2bc56c82d517ef5038c2829ba3f671c6b61fb59f44e9be8b7febd6aa2, 보존)",
+ "extractedTo": "Evidence/M4/windows/PhysicsBench-Results-20261030T002951 (ZIP 내부 경로 구분자 '\\'를 '/'로 바꿔 추출, '..'·절대 경로 없음 확인)",
+ "environment": "Windows 10 10.0.19045 64bit, i5-12500, GTX 1660 SUPER, Direct3D12, 1280x720 창 모드, 143.995Hz, Development 빌드",
+ "runs": {
+  "W-H1-smoke-20261030T002951": {"status": "completed 20/20", "exitCode": 0, "runtimeHarnessErrors": "2 (의도한 time_scale_zero·hang)", "classifierChecks": "15/15", "analysis": "Evidence/M4/analysis/W-H1-smoke-20261030T002951-a1"},
+  "W-H7-smoke-20261030T002951": {"status": "completed 20/20", "exitCode": 0, "runtimeHarnessErrors": "2 (의도)", "classifierChecks": "14/15 — CK12는 H7 물리 차이(Mac과 동일)", "focused": false, "note": "창 포커스 없이도 입력 전부 수신(IgnoreFocus 동작)", "analysis": "Evidence/M4/analysis/W-H7-smoke-20261030T002951-a1"}
+ },
+ "mapCases": "Mac 진단과 같은 양상. H1: 숨은 Ground Box(y=0) 지지, S2·S3 연석 통과. H7: 도로면 -0.1 지지, S2 막힘, S3 통과",
+ "frames": "trial 평균 프레임 약 16.7ms(60fps 목표 도달). 최대 20초는 slow_load 검증",
+ "playerLogReadWriteErrors": {"H1": 5995, "H7": 913},
+ "limits": [
+  "smoke-01 하네스에는 독립 리뷰 R1~R5 결함이 있어 연석 첫 접촉 시각·조합 입력 전달·화면 개미 낙하 판정은 이 결과로 확정하지 않는다",
+  "실행 경로(그래픽·가상 입력·포커스·결과 저장·종료 코드)의 Windows 검증으로만 사용한다",
+  "windows-environment.txt는 cmd 리디렉션으로 인코딩이 섞여 읽을 수 없음(smoke-02에서 수정). environment.json으로 대체 확인",
+  "결과 ZIP 경로 구분자 '\\' 문제(PowerShell 5.1 Compress-Archive, smoke-02에서 tar로 변경)"
+ ]
+}

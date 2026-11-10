@@ -1,0 +1,128 @@
+{
+ "runDir": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Evidence/M3/runs/M3-H1-mac-ck-07",
+ "runState": "completed",
+ "inputs": {
+  "trials.jsonl": "557caa958654a3b9c9401f6a0b92842b177a60258441d5a972adb554cef20fa3",
+  "trace.jsonl": "ae4dfdfebe75c060e004bc5191b0922995046d1dfc2ab0f32543d71a588a9370",
+  "thresholds": "e75499b9d955ab201169fa4019f5cc4ffe37ab3d7b2a7712ff95d807b149f40a"
+ },
+ "thresholds": {
+  "revision": "r2-provisional",
+  "note": "M3 판정기 검증용 잠정값. r=캡슐 월드 반지름. 입력 수신은 물리 시간 기준. M5 예비 실행 후 M6에서 동결한다.",
+  "fallDepthR": 3.0,
+  "supportNormalY": 0.5,
+  "supportProbeGapR": 0.5,
+  "stableSupportSec": 0.1,
+  "escapeDistR": 2.0,
+  "penetrationSignificantR": 0.25,
+  "penetrationResolvedR": 0.1,
+  "passThroughR": 3.0,
+  "inputReceiveMaxFixedSec": 0.4
+ },
+ "planned": 14,
+ "trials": 14,
+ "missingCases": [],
+ "duplicateTrials": [],
+ "harnessErrors": 3,
+ "outcomes": {
+  "pass": 4,
+  "harness_error:time_scale_zero": 1,
+  "fall": 2,
+  "blocked_escaped": 2,
+  "harness_error:fixed_step_stalled": 1,
+  "passed_curb": 1,
+  "recovered_after_penetration": 1,
+  "harness_error:input_not_received": 1,
+  "rescue_failed": 1
+ },
+ "classifierChecks": {
+  "total": 14,
+  "matched": 14,
+  "items": [
+   {
+    "caseId": "CK10_flat_jump",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK13_flat_hold_timescale0",
+    "expect": "harness_error:time_scale_zero",
+    "outcome": "harness_error:time_scale_zero",
+    "match": true
+   },
+   {
+    "caseId": "CK03_hole_walk_slow",
+    "expect": "fall",
+    "outcome": "fall",
+    "match": true
+   },
+   {
+    "caseId": "CK02_flat_walk",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK05_curb_sprint",
+    "expect": "blocked_escaped",
+    "outcome": "blocked_escaped",
+    "match": true
+   },
+   {
+    "caseId": "CK14_flat_hold_hang",
+    "expect": "harness_error:fixed_step_stalled",
+    "outcome": "harness_error:fixed_step_stalled",
+    "match": true
+   },
+   {
+    "caseId": "CK09_void_hold",
+    "expect": "fall",
+    "outcome": "fall",
+    "match": true
+   },
+   {
+    "caseId": "CK11_curb_trigger_sprint",
+    "expect": "passed_curb",
+    "outcome": "passed_curb",
+    "match": true
+   },
+   {
+    "caseId": "CK07_penetration_move",
+    "expect": "recovered_after_penetration",
+    "outcome": "recovered_after_penetration",
+    "match": true
+   },
+   {
+    "caseId": "CK04_stepdown_walk",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK01_flat_hold",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK08_flat_walk_noinput",
+    "expect": "harness_error:input_not_received",
+    "outcome": "harness_error:input_not_received",
+    "match": true
+   },
+   {
+    "caseId": "CK12_curb_oblique60_sprint",
+    "expect": "blocked_escaped",
+    "outcome": "blocked_escaped",
+    "match": true
+   },
+   {
+    "caseId": "CK06_trap_move",
+    "expect": "rescue_failed",
+    "outcome": "rescue_failed",
+    "match": true
+   }
+  ]
+ }
+}

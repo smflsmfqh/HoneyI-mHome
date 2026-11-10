@@ -1,0 +1,5089 @@
+{
+ "generatedBy": "Tools/audit_M9.py",
+ "rules": "Evidence/M6/audit/M9-audit-rules.json",
+ "rulesSha256": "aa9019534aa1c338deeea5317983103f747835dc55dc3462977cc2a2742ec9d2",
+ "summarizedFrom": "Evidence/M6/M6-r1-summary-final.json",
+ "auditSummary": {
+  "rawZips": {
+   "A": {
+    "path": "Evidence/PhysicsBench-M6A-Results-20261110T002814.zip",
+    "sha256": "1bdf17a0f9e98c568d31ed51bfd0bd412bdfd145bf0c260fc60cf0cbaa1c65e1",
+    "matchesM8": true
+   },
+   "B": {
+    "path": "Evidence/PhysicsBench-M6B-Results-20261110T145343.zip",
+    "sha256": "3b5c84bb73b58dec7908a98bc570117f237c73ffc7a7f8a6941695b26b589e7b",
+    "matchesM8": true
+   }
+  },
+  "runs": 48,
+  "a_completion_fail": [],
+  "b_unintended": [],
+  "b_intendedCount": {
+   "CK08_flat_walk_noinput": 48,
+   "CK13_flat_hold_timescale0": 48
+  },
+  "c_problems": [],
+  "d_mismatch": [],
+  "e_curbErrorsInCURBFIX": [],
+  "e_curbErrorsAny": [],
+  "e_objectsByClass": {
+   "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814": {
+    "car": 26,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p5c-def-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p5c-def-a2-s1-20261110T002814": {
+    "car": 26,
+    "other": 37
+   },
+   "W-M6-BASE-p5c-def-a3-s2-20261110T002814": {
+    "car": 26,
+    "other": 37
+   },
+   "W-M6-BASE-p5g-def-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p5g-def-a2-s2-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-BASE-p5g-def-a3-s3-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-CURBFIX-p5g-def-a1-s1-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-CURBFIX-p5g-def-a2-s2-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-CURBFIX-p5g-def-a3-s3-20261110T002814": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-H0-h0-def-a1-s1-20261110T145343": {},
+   "W-M6-H0-h0-def-a2-s1-20261110T145343": {},
+   "W-M6-H0-h0-def-a3-s2-20261110T145343": {},
+   "W-M6-H0-h0-def-a4-s3-20261110T145343": {},
+   "W-M6-H0-h0-def-a5-s4-20261110T145343": {},
+   "W-M6-H0-h0-def-a6-s5-20261110T145343": {},
+   "W-M6-S0a-f-dt0.02-Discrete-a1-s1-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S0a-f-dt0.02-Discrete-a3-s2-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S0b-f-dt0.02-Discrete-a1-s1-20261110T145343": {
+    "car": 26,
+    "other": 37,
+    "floor": 32
+   },
+   "W-M6-S0b-f-dt0.02-Discrete-a2-s1-20261110T145343": {
+    "car": 31,
+    "other": 37,
+    "floor": 32
+   },
+   "W-M6-S0b-f-dt0.02-Discrete-a3-s2-20261110T145343": {
+    "car": 31,
+    "other": 37,
+    "floor": 32
+   },
+   "W-M6-S0p-f-dt0.02-Discrete-a1-s1-20261110T145343": {
+    "car": 26,
+    "other": 37
+   },
+   "W-M6-S0p-f-dt0.02-Discrete-a2-s1-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S0p-f-dt0.02-Discrete-a3-s2-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S1-f-dt0.02-Discrete-a1-s1-20261110T145343": {
+    "car": 26,
+    "other": 37
+   },
+   "W-M6-S1-f-dt0.02-Discrete-a2-s1-20261110T145343": {
+    "car": 25,
+    "other": 37
+   },
+   "W-M6-S1-f-dt0.02-Discrete-a3-s2-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S2-f-dt0.02-Discrete-a1-s1-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S2-f-dt0.02-Discrete-a2-s1-20261110T145343": {
+    "car": 26,
+    "other": 37
+   },
+   "W-M6-S2-f-dt0.02-Discrete-a3-s2-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343": {
+    "car": 31,
+    "other": 37
+   },
+   "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343": {
+    "car": 31,
+    "other": 37
+   }
+  },
+  "e_p5gExtraVsP5c_a1": {
+   "BASE": {
+    "n": 0,
+    "classes": {},
+    "paths": []
+   },
+   "CURBFIX": {
+    "n": 0,
+    "classes": {},
+    "paths": []
+   }
+  }
+ },
+ "tables": {
+  "floor_E2C": {
+   "S0a": {
+    "k": 42,
+    "n": 72,
+    "pct": 58.3,
+    "tags": {
+     "fall": 42,
+     "pass": 30
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-S0a-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S0a-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "failures": [
+     "E2_C01_jump@a1:fall",
+     "E2_C02_jump@a1:fall",
+     "E2_C02_walk@a1:fall",
+     "E2_C03_jump@a1:fall",
+     "E2_C04_jump@a1:fall",
+     "E2_C05_jump@a1:fall",
+     "E2_C06_jump@a1:fall",
+     "E2_C06_walk@a1:fall",
+     "E2_C07_jump@a1:fall",
+     "E2_C08_jump@a1:fall",
+     "E2_C09_jump@a1:fall",
+     "E2_C10_jump@a1:fall",
+     "E2_C11_jump@a1:fall",
+     "E2_C12_jump@a1:fall",
+     "E2_C01_jump@a2:fall",
+     "E2_C02_jump@a2:fall",
+     "E2_C02_walk@a2:fall",
+     "E2_C03_jump@a2:fall",
+     "E2_C04_jump@a2:fall",
+     "E2_C05_jump@a2:fall",
+     "E2_C06_jump@a2:fall",
+     "E2_C06_walk@a2:fall",
+     "E2_C07_jump@a2:fall",
+     "E2_C08_jump@a2:fall",
+     "E2_C09_jump@a2:fall",
+     "E2_C10_jump@a2:fall",
+     "E2_C11_jump@a2:fall",
+     "E2_C12_jump@a2:fall",
+     "E2_C01_jump@a3:fall",
+     "E2_C02_jump@a3:fall",
+     "E2_C02_walk@a3:fall",
+     "E2_C03_jump@a3:fall",
+     "E2_C04_jump@a3:fall",
+     "E2_C05_jump@a3:fall",
+     "E2_C06_jump@a3:fall",
+     "E2_C06_walk@a3:fall",
+     "E2_C07_jump@a3:fall",
+     "E2_C08_jump@a3:fall",
+     "E2_C09_jump@a3:fall",
+     "E2_C10_jump@a3:fall",
+     "E2_C11_jump@a3:fall",
+     "E2_C12_jump@a3:fall"
+    ]
+   },
+   "S0b": {
+    "k": 72,
+    "n": 72,
+    "pct": 100.0,
+    "tags": {
+     "fall": 72
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-S0b-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S0b-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S0b-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "failures": [
+     "E2_C01_jump@a1:fall",
+     "E2_C01_walk@a1:fall",
+     "E2_C02_jump@a1:fall",
+     "E2_C02_walk@a1:fall",
+     "E2_C03_jump@a1:fall",
+     "E2_C03_walk@a1:fall",
+     "E2_C04_jump@a1:fall",
+     "E2_C04_walk@a1:fall",
+     "E2_C05_jump@a1:fall",
+     "E2_C05_walk@a1:fall",
+     "E2_C06_jump@a1:fall",
+     "E2_C06_walk@a1:fall",
+     "E2_C07_jump@a1:fall",
+     "E2_C07_walk@a1:fall",
+     "E2_C08_jump@a1:fall",
+     "E2_C08_walk@a1:fall",
+     "E2_C09_jump@a1:fall",
+     "E2_C09_walk@a1:fall",
+     "E2_C10_jump@a1:fall",
+     "E2_C10_walk@a1:fall",
+     "E2_C11_jump@a1:fall",
+     "E2_C11_walk@a1:fall",
+     "E2_C12_jump@a1:fall",
+     "E2_C12_walk@a1:fall",
+     "E2_C01_jump@a2:fall",
+     "E2_C01_walk@a2:fall",
+     "E2_C02_jump@a2:fall",
+     "E2_C02_walk@a2:fall",
+     "E2_C03_jump@a2:fall",
+     "E2_C03_walk@a2:fall",
+     "E2_C04_jump@a2:fall",
+     "E2_C04_walk@a2:fall",
+     "E2_C05_jump@a2:fall",
+     "E2_C05_walk@a2:fall",
+     "E2_C06_jump@a2:fall",
+     "E2_C06_walk@a2:fall",
+     "E2_C07_jump@a2:fall",
+     "E2_C07_walk@a2:fall",
+     "E2_C08_jump@a2:fall",
+     "E2_C08_walk@a2:fall",
+     "E2_C09_jump@a2:fall",
+     "E2_C09_walk@a2:fall",
+     "E2_C10_jump@a2:fall",
+     "E2_C10_walk@a2:fall",
+     "E2_C11_jump@a2:fall",
+     "E2_C11_walk@a2:fall",
+     "E2_C12_jump@a2:fall",
+     "E2_C12_walk@a2:fall",
+     "E2_C01_jump@a3:fall",
+     "E2_C01_walk@a3:fall",
+     "E2_C02_jump@a3:fall",
+     "E2_C02_walk@a3:fall",
+     "E2_C03_jump@a3:fall",
+     "E2_C03_walk@a3:fall",
+     "E2_C04_jump@a3:fall",
+     "E2_C04_walk@a3:fall",
+     "E2_C05_jump@a3:fall",
+     "E2_C05_walk@a3:fall",
+     "E2_C06_jump@a3:fall",
+     "E2_C06_walk@a3:fall",
+     "E2_C07_jump@a3:fall",
+     "E2_C07_walk@a3:fall",
+     "E2_C08_jump@a3:fall",
+     "E2_C08_walk@a3:fall",
+     "E2_C09_jump@a3:fall",
+     "E2_C09_walk@a3:fall",
+     "E2_C10_jump@a3:fall",
+     "E2_C10_walk@a3:fall",
+     "E2_C11_jump@a3:fall",
+     "E2_C11_walk@a3:fall",
+     "E2_C12_jump@a3:fall",
+     "E2_C12_walk@a3:fall"
+    ]
+   },
+   "S0p": {
+    "k": 42,
+    "n": 72,
+    "pct": 58.3,
+    "tags": {
+     "fall": 42,
+     "pass": 30
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-S0p-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S0p-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S0p-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "failures": [
+     "E2_C01_jump@a1:fall",
+     "E2_C02_jump@a1:fall",
+     "E2_C02_walk@a1:fall",
+     "E2_C03_jump@a1:fall",
+     "E2_C04_jump@a1:fall",
+     "E2_C05_jump@a1:fall",
+     "E2_C06_jump@a1:fall",
+     "E2_C06_walk@a1:fall",
+     "E2_C07_jump@a1:fall",
+     "E2_C08_jump@a1:fall",
+     "E2_C09_jump@a1:fall",
+     "E2_C10_jump@a1:fall",
+     "E2_C11_jump@a1:fall",
+     "E2_C12_jump@a1:fall",
+     "E2_C01_jump@a2:fall",
+     "E2_C02_jump@a2:fall",
+     "E2_C02_walk@a2:fall",
+     "E2_C03_jump@a2:fall",
+     "E2_C04_jump@a2:fall",
+     "E2_C05_jump@a2:fall",
+     "E2_C06_jump@a2:fall",
+     "E2_C06_walk@a2:fall",
+     "E2_C07_jump@a2:fall",
+     "E2_C08_jump@a2:fall",
+     "E2_C09_jump@a2:fall",
+     "E2_C10_jump@a2:fall",
+     "E2_C11_jump@a2:fall",
+     "E2_C12_jump@a2:fall",
+     "E2_C01_jump@a3:fall",
+     "E2_C02_jump@a3:fall",
+     "E2_C02_walk@a3:fall",
+     "E2_C03_jump@a3:fall",
+     "E2_C04_jump@a3:fall",
+     "E2_C05_jump@a3:fall",
+     "E2_C06_jump@a3:fall",
+     "E2_C06_walk@a3:fall",
+     "E2_C07_jump@a3:fall",
+     "E2_C08_jump@a3:fall",
+     "E2_C09_jump@a3:fall",
+     "E2_C10_jump@a3:fall",
+     "E2_C11_jump@a3:fall",
+     "E2_C12_jump@a3:fall"
+    ]
+   },
+   "S1": {
+    "k": 0,
+    "n": 72,
+    "pct": 0.0,
+    "tags": {
+     "pass": 72
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-S1-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S1-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S1-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "failures": []
+   },
+   "S2": {
+    "k": 12,
+    "n": 72,
+    "pct": 16.7,
+    "tags": {
+     "fall": 12,
+     "pass": 60
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-S2-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S2-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S2-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "failures": [
+     "E2_C01_jump@a1:fall",
+     "E2_C01_walk@a1:fall",
+     "E2_C07_jump@a1:fall",
+     "E2_C07_walk@a1:fall",
+     "E2_C01_jump@a2:fall",
+     "E2_C01_walk@a2:fall",
+     "E2_C07_jump@a2:fall",
+     "E2_C07_walk@a2:fall",
+     "E2_C01_jump@a3:fall",
+     "E2_C01_walk@a3:fall",
+     "E2_C07_jump@a3:fall",
+     "E2_C07_walk@a3:fall"
+    ]
+   },
+   "S3": {
+    "k": 0,
+    "n": 72,
+    "pct": 0.0,
+    "tags": {
+     "pass": 72
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "failures": []
+   },
+   "H0": {
+    "k": 34,
+    "n": 144,
+    "pct": 23.6,
+    "tags": {
+     "fall": 34,
+     "pass": 110
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-H0-h0-def-a1-s1-20261110T145343",
+     "W-M6-H0-h0-def-a2-s1-20261110T145343",
+     "W-M6-H0-h0-def-a3-s2-20261110T145343",
+     "W-M6-H0-h0-def-a4-s3-20261110T145343",
+     "W-M6-H0-h0-def-a5-s4-20261110T145343",
+     "W-M6-H0-h0-def-a6-s5-20261110T145343"
+    ],
+    "failures": [
+     "E2_C01_jump@a1:fall",
+     "E2_C06_walk@a1:fall",
+     "E2_C08_walk@a1:fall",
+     "E2_C11_jump@a1:fall",
+     "E2_C11_walk@a1:fall",
+     "E2_C01_jump@a2:fall",
+     "E2_C06_walk@a2:fall",
+     "E2_C08_walk@a2:fall",
+     "E2_C09_jump@a2:fall",
+     "E2_C11_jump@a2:fall",
+     "E2_C11_walk@a2:fall",
+     "E2_C01_jump@a3:fall",
+     "E2_C06_walk@a3:fall",
+     "E2_C08_walk@a3:fall",
+     "E2_C09_jump@a3:fall",
+     "E2_C11_jump@a3:fall",
+     "E2_C11_walk@a3:fall",
+     "E2_C01_jump@a4:fall",
+     "E2_C06_walk@a4:fall",
+     "E2_C08_walk@a4:fall",
+     "E2_C11_jump@a4:fall",
+     "E2_C11_walk@a4:fall",
+     "E2_C01_jump@a5:fall",
+     "E2_C06_walk@a5:fall",
+     "E2_C08_walk@a5:fall",
+     "E2_C09_jump@a5:fall",
+     "E2_C11_jump@a5:fall",
+     "E2_C11_walk@a5:fall",
+     "E2_C01_jump@a6:fall",
+     "E2_C06_walk@a6:fall",
+     "E2_C08_walk@a6:fall",
+     "E2_C09_jump@a6:fall",
+     "E2_C11_jump@a6:fall",
+     "E2_C11_walk@a6:fall"
+    ]
+   },
+   "P5c_BASE(보조)": {
+    "k": 0,
+    "n": 72,
+    "pct": 0.0,
+    "tags": {
+     "pass": 72
+    },
+    "invalidExcluded": [],
+    "runs": [
+     "W-M6-BASE-p5c-def-a1-s1-20261110T002814",
+     "W-M6-BASE-p5c-def-a2-s1-20261110T002814",
+     "W-M6-BASE-p5c-def-a3-s2-20261110T002814"
+    ],
+    "failures": []
+   }
+  },
+  "floor_pairs_vs_S3": {
+   "S0a": {
+    "from": "S0a",
+    "to": "S3",
+    "nPairs": 72,
+    "transition": {
+     "fall → pass": 42,
+     "pass → pass": 30
+    },
+    "improved": 42,
+    "worsened": 0,
+    "categoryChangedSameFailState": 0,
+    "improvedCases": [
+     "E2_C01_jump@a1",
+     "E2_C02_jump@a1",
+     "E2_C02_walk@a1",
+     "E2_C03_jump@a1",
+     "E2_C04_jump@a1",
+     "E2_C05_jump@a1",
+     "E2_C06_jump@a1",
+     "E2_C06_walk@a1",
+     "E2_C07_jump@a1",
+     "E2_C08_jump@a1",
+     "E2_C09_jump@a1",
+     "E2_C10_jump@a1",
+     "E2_C11_jump@a1",
+     "E2_C12_jump@a1",
+     "E2_C01_jump@a2",
+     "E2_C02_jump@a2",
+     "E2_C02_walk@a2",
+     "E2_C03_jump@a2",
+     "E2_C04_jump@a2",
+     "E2_C05_jump@a2",
+     "E2_C06_jump@a2",
+     "E2_C06_walk@a2",
+     "E2_C07_jump@a2",
+     "E2_C08_jump@a2",
+     "E2_C09_jump@a2",
+     "E2_C10_jump@a2",
+     "E2_C11_jump@a2",
+     "E2_C12_jump@a2",
+     "E2_C01_jump@a3",
+     "E2_C02_jump@a3",
+     "E2_C02_walk@a3",
+     "E2_C03_jump@a3",
+     "E2_C04_jump@a3",
+     "E2_C05_jump@a3",
+     "E2_C06_jump@a3",
+     "E2_C06_walk@a3",
+     "E2_C07_jump@a3",
+     "E2_C08_jump@a3",
+     "E2_C09_jump@a3",
+     "E2_C10_jump@a3",
+     "E2_C11_jump@a3",
+     "E2_C12_jump@a3"
+    ],
+    "worsenedCases": [],
+    "changedCases": [],
+    "runsFrom": [
+     "W-M6-S0a-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S0a-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "runsTo": [
+     "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ]
+   },
+   "S0b": {
+    "from": "S0b",
+    "to": "S3",
+    "nPairs": 72,
+    "transition": {
+     "fall → pass": 72
+    },
+    "improved": 72,
+    "worsened": 0,
+    "categoryChangedSameFailState": 0,
+    "improvedCases": [
+     "E2_C01_jump@a1",
+     "E2_C01_walk@a1",
+     "E2_C02_jump@a1",
+     "E2_C02_walk@a1",
+     "E2_C03_jump@a1",
+     "E2_C03_walk@a1",
+     "E2_C04_jump@a1",
+     "E2_C04_walk@a1",
+     "E2_C05_jump@a1",
+     "E2_C05_walk@a1",
+     "E2_C06_jump@a1",
+     "E2_C06_walk@a1",
+     "E2_C07_jump@a1",
+     "E2_C07_walk@a1",
+     "E2_C08_jump@a1",
+     "E2_C08_walk@a1",
+     "E2_C09_jump@a1",
+     "E2_C09_walk@a1",
+     "E2_C10_jump@a1",
+     "E2_C10_walk@a1",
+     "E2_C11_jump@a1",
+     "E2_C11_walk@a1",
+     "E2_C12_jump@a1",
+     "E2_C12_walk@a1",
+     "E2_C01_jump@a2",
+     "E2_C01_walk@a2",
+     "E2_C02_jump@a2",
+     "E2_C02_walk@a2",
+     "E2_C03_jump@a2",
+     "E2_C03_walk@a2",
+     "E2_C04_jump@a2",
+     "E2_C04_walk@a2",
+     "E2_C05_jump@a2",
+     "E2_C05_walk@a2",
+     "E2_C06_jump@a2",
+     "E2_C06_walk@a2",
+     "E2_C07_jump@a2",
+     "E2_C07_walk@a2",
+     "E2_C08_jump@a2",
+     "E2_C08_walk@a2",
+     "E2_C09_jump@a2",
+     "E2_C09_walk@a2",
+     "E2_C10_jump@a2",
+     "E2_C10_walk@a2",
+     "E2_C11_jump@a2",
+     "E2_C11_walk@a2",
+     "E2_C12_jump@a2",
+     "E2_C12_walk@a2",
+     "E2_C01_jump@a3",
+     "E2_C01_walk@a3",
+     "E2_C02_jump@a3",
+     "E2_C02_walk@a3",
+     "E2_C03_jump@a3",
+     "E2_C03_walk@a3",
+     "E2_C04_jump@a3",
+     "E2_C04_walk@a3",
+     "E2_C05_jump@a3",
+     "E2_C05_walk@a3",
+     "E2_C06_jump@a3",
+     "E2_C06_walk@a3",
+     "E2_C07_jump@a3",
+     "E2_C07_walk@a3",
+     "E2_C08_jump@a3",
+     "E2_C08_walk@a3",
+     "E2_C09_jump@a3",
+     "E2_C09_walk@a3",
+     "E2_C10_jump@a3",
+     "E2_C10_walk@a3",
+     "E2_C11_jump@a3",
+     "E2_C11_walk@a3",
+     "E2_C12_jump@a3",
+     "E2_C12_walk@a3"
+    ],
+    "worsenedCases": [],
+    "changedCases": [],
+    "runsFrom": [
+     "W-M6-S0b-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S0b-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S0b-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "runsTo": [
+     "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ]
+   },
+   "S0p": {
+    "from": "S0p",
+    "to": "S3",
+    "nPairs": 72,
+    "transition": {
+     "fall → pass": 42,
+     "pass → pass": 30
+    },
+    "improved": 42,
+    "worsened": 0,
+    "categoryChangedSameFailState": 0,
+    "improvedCases": [
+     "E2_C01_jump@a1",
+     "E2_C02_jump@a1",
+     "E2_C02_walk@a1",
+     "E2_C03_jump@a1",
+     "E2_C04_jump@a1",
+     "E2_C05_jump@a1",
+     "E2_C06_jump@a1",
+     "E2_C06_walk@a1",
+     "E2_C07_jump@a1",
+     "E2_C08_jump@a1",
+     "E2_C09_jump@a1",
+     "E2_C10_jump@a1",
+     "E2_C11_jump@a1",
+     "E2_C12_jump@a1",
+     "E2_C01_jump@a2",
+     "E2_C02_jump@a2",
+     "E2_C02_walk@a2",
+     "E2_C03_jump@a2",
+     "E2_C04_jump@a2",
+     "E2_C05_jump@a2",
+     "E2_C06_jump@a2",
+     "E2_C06_walk@a2",
+     "E2_C07_jump@a2",
+     "E2_C08_jump@a2",
+     "E2_C09_jump@a2",
+     "E2_C10_jump@a2",
+     "E2_C11_jump@a2",
+     "E2_C12_jump@a2",
+     "E2_C01_jump@a3",
+     "E2_C02_jump@a3",
+     "E2_C02_walk@a3",
+     "E2_C03_jump@a3",
+     "E2_C04_jump@a3",
+     "E2_C05_jump@a3",
+     "E2_C06_jump@a3",
+     "E2_C06_walk@a3",
+     "E2_C07_jump@a3",
+     "E2_C08_jump@a3",
+     "E2_C09_jump@a3",
+     "E2_C10_jump@a3",
+     "E2_C11_jump@a3",
+     "E2_C12_jump@a3"
+    ],
+    "worsenedCases": [],
+    "changedCases": [],
+    "runsFrom": [
+     "W-M6-S0p-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S0p-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S0p-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "runsTo": [
+     "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ]
+   },
+   "S1": {
+    "from": "S1",
+    "to": "S3",
+    "nPairs": 72,
+    "transition": {
+     "pass → pass": 72
+    },
+    "improved": 0,
+    "worsened": 0,
+    "categoryChangedSameFailState": 0,
+    "improvedCases": [],
+    "worsenedCases": [],
+    "changedCases": [],
+    "runsFrom": [
+     "W-M6-S1-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S1-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S1-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "runsTo": [
+     "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ]
+   },
+   "S2": {
+    "from": "S2",
+    "to": "S3",
+    "nPairs": 72,
+    "transition": {
+     "fall → pass": 12,
+     "pass → pass": 60
+    },
+    "improved": 12,
+    "worsened": 0,
+    "categoryChangedSameFailState": 0,
+    "improvedCases": [
+     "E2_C01_jump@a1",
+     "E2_C01_walk@a1",
+     "E2_C07_jump@a1",
+     "E2_C07_walk@a1",
+     "E2_C01_jump@a2",
+     "E2_C01_walk@a2",
+     "E2_C07_jump@a2",
+     "E2_C07_walk@a2",
+     "E2_C01_jump@a3",
+     "E2_C01_walk@a3",
+     "E2_C07_jump@a3",
+     "E2_C07_walk@a3"
+    ],
+    "worsenedCases": [],
+    "changedCases": [],
+    "runsFrom": [
+     "W-M6-S2-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S2-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S2-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ],
+    "runsTo": [
+     "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+     "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343"
+    ]
+   }
+  },
+  "floor_perCase": {
+   "S0a": {
+    "E2_C01_jump": "3/3",
+    "E2_C02_jump": "3/3",
+    "E2_C02_walk": "3/3",
+    "E2_C03_jump": "3/3",
+    "E2_C04_jump": "3/3",
+    "E2_C05_jump": "3/3",
+    "E2_C06_jump": "3/3",
+    "E2_C06_walk": "3/3",
+    "E2_C07_jump": "3/3",
+    "E2_C08_jump": "3/3",
+    "E2_C09_jump": "3/3",
+    "E2_C10_jump": "3/3",
+    "E2_C11_jump": "3/3",
+    "E2_C12_jump": "3/3"
+   },
+   "S0b": {
+    "E2_C01_jump": "3/3",
+    "E2_C01_walk": "3/3",
+    "E2_C02_jump": "3/3",
+    "E2_C02_walk": "3/3",
+    "E2_C03_jump": "3/3",
+    "E2_C03_walk": "3/3",
+    "E2_C04_jump": "3/3",
+    "E2_C04_walk": "3/3",
+    "E2_C05_jump": "3/3",
+    "E2_C05_walk": "3/3",
+    "E2_C06_jump": "3/3",
+    "E2_C06_walk": "3/3",
+    "E2_C07_jump": "3/3",
+    "E2_C07_walk": "3/3",
+    "E2_C08_jump": "3/3",
+    "E2_C08_walk": "3/3",
+    "E2_C09_jump": "3/3",
+    "E2_C09_walk": "3/3",
+    "E2_C10_jump": "3/3",
+    "E2_C10_walk": "3/3",
+    "E2_C11_jump": "3/3",
+    "E2_C11_walk": "3/3",
+    "E2_C12_jump": "3/3",
+    "E2_C12_walk": "3/3"
+   },
+   "S0p": {
+    "E2_C01_jump": "3/3",
+    "E2_C02_jump": "3/3",
+    "E2_C02_walk": "3/3",
+    "E2_C03_jump": "3/3",
+    "E2_C04_jump": "3/3",
+    "E2_C05_jump": "3/3",
+    "E2_C06_jump": "3/3",
+    "E2_C06_walk": "3/3",
+    "E2_C07_jump": "3/3",
+    "E2_C08_jump": "3/3",
+    "E2_C09_jump": "3/3",
+    "E2_C10_jump": "3/3",
+    "E2_C11_jump": "3/3",
+    "E2_C12_jump": "3/3"
+   },
+   "S1": {},
+   "S2": {
+    "E2_C01_jump": "3/3",
+    "E2_C01_walk": "3/3",
+    "E2_C07_jump": "3/3",
+    "E2_C07_walk": "3/3"
+   },
+   "S3": {},
+   "H0": {
+    "E2_C01_jump": "6/6",
+    "E2_C06_walk": "6/6",
+    "E2_C08_walk": "6/6",
+    "E2_C09_jump": "4/6",
+    "E2_C11_jump": "6/6",
+    "E2_C11_walk": "6/6"
+   }
+  },
+  "P4_kinds": {
+   "dt0.02-Discrete": {
+    "passThrough": {
+     "k": 72,
+     "n": 102,
+     "pct": 70.6,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_BoostSprint_c00@a1",
+      "B_S2_BoostSprint_m02@a1",
+      "B_S2_BoostSprint_p02@a1",
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Roll_a30@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_a60@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_BoostSprint_c00@a1",
+      "B_S3_BoostSprint_m02@a1",
+      "B_S3_BoostSprint_p02@a1",
+      "B_S3_Boost_c00@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_a60@a1",
+      "B_S3_Sprint_c00@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_BoostSprint_c00@a2",
+      "B_S2_BoostSprint_m02@a2",
+      "B_S2_BoostSprint_p02@a2",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Roll_a30@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_a60@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_BoostSprint_c00@a2",
+      "B_S3_BoostSprint_m02@a2",
+      "B_S3_BoostSprint_p02@a2",
+      "B_S3_Boost_c00@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_a60@a2",
+      "B_S3_Sprint_c00@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_BoostSprint_c00@a3",
+      "B_S2_BoostSprint_m02@a3",
+      "B_S2_BoostSprint_p02@a3",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Roll_a30@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_a60@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_BoostSprint_c00@a3",
+      "B_S3_BoostSprint_m02@a3",
+      "B_S3_BoostSprint_p02@a3",
+      "B_S3_Boost_c00@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_a60@a3",
+      "B_S3_Sprint_c00@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "stuck": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 72,
+     "n": 102,
+     "pct": 70.6,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_BoostSprint_c00@a1",
+      "B_S2_BoostSprint_m02@a1",
+      "B_S2_BoostSprint_p02@a1",
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Roll_a30@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_a60@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_BoostSprint_c00@a1",
+      "B_S3_BoostSprint_m02@a1",
+      "B_S3_BoostSprint_p02@a1",
+      "B_S3_Boost_c00@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_a60@a1",
+      "B_S3_Sprint_c00@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_BoostSprint_c00@a2",
+      "B_S2_BoostSprint_m02@a2",
+      "B_S2_BoostSprint_p02@a2",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Roll_a30@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_a60@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_BoostSprint_c00@a2",
+      "B_S3_BoostSprint_m02@a2",
+      "B_S3_BoostSprint_p02@a2",
+      "B_S3_Boost_c00@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_a60@a2",
+      "B_S3_Sprint_c00@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_BoostSprint_c00@a3",
+      "B_S2_BoostSprint_m02@a3",
+      "B_S2_BoostSprint_p02@a3",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Roll_a30@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_a60@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_BoostSprint_c00@a3",
+      "B_S3_BoostSprint_m02@a3",
+      "B_S3_BoostSprint_p02@a3",
+      "B_S3_Boost_c00@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_a60@a3",
+      "B_S3_Sprint_c00@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814"
+    ]
+   },
+   "dt0.01-Discrete": {
+    "passThrough": {
+     "k": 38,
+     "n": 102,
+     "pct": 37.3,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "stuck": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 38,
+     "n": 102,
+     "pct": 37.3,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814"
+    ],
+    "ppDiff_vs_0.02D": {
+     "passThrough": -33.3,
+     "stuck": 0.0,
+     "fall": 0.0,
+     "combined": -33.3
+    }
+   },
+   "dt0.02-ContinuousDynamic": {
+    "passThrough": {
+     "k": 48,
+     "n": 102,
+     "pct": 47.1,
+     "cases": [
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Roll_a30@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_a60@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_Boost_c00@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_a60@a1",
+      "B_S3_Sprint_c00@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Roll_a30@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_a60@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_Boost_c00@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_a60@a2",
+      "B_S3_Sprint_c00@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Roll_a30@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_a60@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_Boost_c00@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_a60@a3",
+      "B_S3_Sprint_c00@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "stuck": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 48,
+     "n": 102,
+     "pct": 47.1,
+     "cases": [
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Roll_a30@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_a60@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_Boost_c00@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_a60@a1",
+      "B_S3_Sprint_c00@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Roll_a30@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_a60@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_Boost_c00@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_a60@a2",
+      "B_S3_Sprint_c00@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Roll_a30@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_a60@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_Boost_c00@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_a60@a3",
+      "B_S3_Sprint_c00@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814"
+    ],
+    "ppDiff_vs_0.02D": {
+     "passThrough": -23.5,
+     "stuck": 0.0,
+     "fall": 0.0,
+     "combined": -23.5
+    }
+   },
+   "dt0.01-ContinuousDynamic": {
+    "passThrough": {
+     "k": 19,
+     "n": 102,
+     "pct": 18.6,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "stuck": {
+     "k": 18,
+     "n": 102,
+     "pct": 17.6,
+     "cases": [
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3"
+     ]
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 37,
+     "n": 102,
+     "pct": 36.3,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814"
+    ],
+    "ppDiff_vs_0.02D": {
+     "passThrough": -52.0,
+     "stuck": 17.6,
+     "fall": 0.0,
+     "combined": -34.3
+    }
+   }
+  },
+  "P4_pairs_vs_0.02D": {
+   "dt0.01-Discrete": {
+    "from": "dt0.02-Discrete",
+    "to": "dt0.01-Discrete",
+    "nPairs": 102,
+    "transition": {
+     "blocked_escaped → blocked_escaped": 6,
+     "passThrough → blocked_escaped": 21,
+     "passThrough → passThrough": 38,
+     "passThrough → recovered_after_penetration": 13,
+     "recovered_after_penetration → blocked_escaped": 3,
+     "recovered_after_penetration → recovered_after_penetration": 21
+    },
+    "improved": 34,
+    "worsened": 0,
+    "categoryChangedSameFailState": 3,
+    "improvedCases": [
+     "B_S2_BoostSprint_c00@a1",
+     "B_S2_BoostSprint_m02@a1",
+     "B_S2_BoostSprint_p02@a1",
+     "B_S2_Roll_a30@a1",
+     "B_S2_Sprint_a60@a1",
+     "B_S3_BoostSprint_c00@a1",
+     "B_S3_BoostSprint_m02@a1",
+     "B_S3_BoostSprint_p02@a1",
+     "B_S3_Boost_c00@a1",
+     "B_S3_Sprint_a60@a1",
+     "B_S3_Sprint_c00@a1",
+     "B_S2_BoostSprint_c00@a2",
+     "B_S2_BoostSprint_m02@a2",
+     "B_S2_BoostSprint_p02@a2",
+     "B_S2_Roll_a30@a2",
+     "B_S2_Sprint_a60@a2",
+     "B_S3_BoostSprint_c00@a2",
+     "B_S3_BoostSprint_m02@a2",
+     "B_S3_BoostSprint_p02@a2",
+     "B_S3_Boost_c00@a2",
+     "B_S3_Sprint_a60@a2",
+     "B_S3_Sprint_c00@a2",
+     "B_S2_BoostSprint_c00@a3",
+     "B_S2_BoostSprint_m02@a3",
+     "B_S2_BoostSprint_p02@a3",
+     "B_S2_Roll_a30@a3",
+     "B_S2_Sprint_a60@a3",
+     "B_S3_BoostSprint_c00@a3",
+     "B_S3_BoostSprint_m02@a3",
+     "B_S3_BoostSprint_p02@a3",
+     "B_S3_Boost_c00@a3",
+     "B_S3_Boost_m02@a3",
+     "B_S3_Sprint_a60@a3",
+     "B_S3_Sprint_c00@a3"
+    ],
+    "worsenedCases": [],
+    "changedCases": [
+     "B_S3_Roll_a30@a1:recovered_after_penetration→blocked_escaped",
+     "B_S3_Roll_a30@a2:recovered_after_penetration→blocked_escaped",
+     "B_S3_Roll_a30@a3:recovered_after_penetration→blocked_escaped"
+    ],
+    "runsFrom": [
+     "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814"
+    ],
+    "runsTo": [
+     "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814"
+    ]
+   },
+   "dt0.02-ContinuousDynamic": {
+    "from": "dt0.02-Discrete",
+    "to": "dt0.02-ContinuousDynamic",
+    "nPairs": 102,
+    "transition": {
+     "blocked_escaped → blocked_escaped": 6,
+     "passThrough → blocked_escaped": 24,
+     "passThrough → passThrough": 48,
+     "recovered_after_penetration → recovered_after_penetration": 24
+    },
+    "improved": 24,
+    "worsened": 0,
+    "categoryChangedSameFailState": 0,
+    "improvedCases": [
+     "B_S2_BoostSprint_a30@a1",
+     "B_S2_BoostSprint_c00@a1",
+     "B_S2_BoostSprint_m02@a1",
+     "B_S2_BoostSprint_p02@a1",
+     "B_S3_BoostSprint_a30@a1",
+     "B_S3_BoostSprint_c00@a1",
+     "B_S3_BoostSprint_m02@a1",
+     "B_S3_BoostSprint_p02@a1",
+     "B_S2_BoostSprint_a30@a2",
+     "B_S2_BoostSprint_c00@a2",
+     "B_S2_BoostSprint_m02@a2",
+     "B_S2_BoostSprint_p02@a2",
+     "B_S3_BoostSprint_a30@a2",
+     "B_S3_BoostSprint_c00@a2",
+     "B_S3_BoostSprint_m02@a2",
+     "B_S3_BoostSprint_p02@a2",
+     "B_S2_BoostSprint_a30@a3",
+     "B_S2_BoostSprint_c00@a3",
+     "B_S2_BoostSprint_m02@a3",
+     "B_S2_BoostSprint_p02@a3",
+     "B_S3_BoostSprint_a30@a3",
+     "B_S3_BoostSprint_c00@a3",
+     "B_S3_BoostSprint_m02@a3",
+     "B_S3_BoostSprint_p02@a3"
+    ],
+    "worsenedCases": [],
+    "changedCases": [],
+    "runsFrom": [
+     "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814"
+    ],
+    "runsTo": [
+     "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814"
+    ]
+   },
+   "dt0.01-ContinuousDynamic": {
+    "from": "dt0.02-Discrete",
+    "to": "dt0.01-ContinuousDynamic",
+    "nPairs": 102,
+    "transition": {
+     "blocked_escaped → blocked_escaped": 6,
+     "passThrough → blocked_escaped": 21,
+     "passThrough → passThrough": 19,
+     "passThrough → recovered_after_penetration": 14,
+     "passThrough → rescue_failed": 18,
+     "recovered_after_penetration → blocked_escaped": 3,
+     "recovered_after_penetration → recovered_after_penetration": 21
+    },
+    "improved": 35,
+    "worsened": 0,
+    "categoryChangedSameFailState": 21,
+    "improvedCases": [
+     "B_S2_BoostSprint_c00@a1",
+     "B_S2_BoostSprint_m02@a1",
+     "B_S2_BoostSprint_p02@a1",
+     "B_S2_Roll_a30@a1",
+     "B_S2_Sprint_a60@a1",
+     "B_S3_BoostSprint_c00@a1",
+     "B_S3_BoostSprint_m02@a1",
+     "B_S3_BoostSprint_p02@a1",
+     "B_S3_Boost_c00@a1",
+     "B_S3_Sprint_a60@a1",
+     "B_S3_Sprint_c00@a1",
+     "B_S2_BoostSprint_c00@a2",
+     "B_S2_BoostSprint_m02@a2",
+     "B_S2_BoostSprint_p02@a2",
+     "B_S2_Roll_a30@a2",
+     "B_S2_Sprint_a60@a2",
+     "B_S3_BoostSprint_c00@a2",
+     "B_S3_BoostSprint_m02@a2",
+     "B_S3_BoostSprint_p02@a2",
+     "B_S3_Boost_c00@a2",
+     "B_S3_Boost_m02@a2",
+     "B_S3_Sprint_a60@a2",
+     "B_S3_Sprint_c00@a2",
+     "B_S2_BoostSprint_c00@a3",
+     "B_S2_BoostSprint_m02@a3",
+     "B_S2_BoostSprint_p02@a3",
+     "B_S2_Roll_a30@a3",
+     "B_S2_Sprint_a60@a3",
+     "B_S3_BoostSprint_c00@a3",
+     "B_S3_BoostSprint_m02@a3",
+     "B_S3_BoostSprint_p02@a3",
+     "B_S3_Boost_c00@a3",
+     "B_S3_Boost_m02@a3",
+     "B_S3_Sprint_a60@a3",
+     "B_S3_Sprint_c00@a3"
+    ],
+    "worsenedCases": [],
+    "changedCases": [
+     "B_S2_Boost_c00@a1:passThrough→rescue_failed",
+     "B_S2_Boost_m02@a1:passThrough→rescue_failed",
+     "B_S2_Boost_p02@a1:passThrough→rescue_failed",
+     "B_S2_Sprint_c00@a1:passThrough→rescue_failed",
+     "B_S2_Sprint_m02@a1:passThrough→rescue_failed",
+     "B_S2_Sprint_p02@a1:passThrough→rescue_failed",
+     "B_S3_Roll_a30@a1:recovered_after_penetration→blocked_escaped",
+     "B_S2_Boost_c00@a2:passThrough→rescue_failed",
+     "B_S2_Boost_m02@a2:passThrough→rescue_failed",
+     "B_S2_Boost_p02@a2:passThrough→rescue_failed",
+     "B_S2_Sprint_c00@a2:passThrough→rescue_failed",
+     "B_S2_Sprint_m02@a2:passThrough→rescue_failed",
+     "B_S2_Sprint_p02@a2:passThrough→rescue_failed",
+     "B_S3_Roll_a30@a2:recovered_after_penetration→blocked_escaped",
+     "B_S2_Boost_c00@a3:passThrough→rescue_failed",
+     "B_S2_Boost_m02@a3:passThrough→rescue_failed",
+     "B_S2_Boost_p02@a3:passThrough→rescue_failed",
+     "B_S2_Sprint_c00@a3:passThrough→rescue_failed",
+     "B_S2_Sprint_m02@a3:passThrough→rescue_failed",
+     "B_S2_Sprint_p02@a3:passThrough→rescue_failed",
+     "B_S3_Roll_a30@a3:recovered_after_penetration→blocked_escaped"
+    ],
+    "runsFrom": [
+     "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814"
+    ],
+    "runsTo": [
+     "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814",
+     "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814"
+    ]
+   }
+  },
+  "P5_kinds": {
+   "p5c/BASE": {
+    "passThrough": {
+     "k": 21,
+     "n": 102,
+     "pct": 20.6,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "stuck": {
+     "k": 18,
+     "n": 102,
+     "pct": 17.6,
+     "cases": [
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3"
+     ]
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 39,
+     "n": 102,
+     "pct": 38.2,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_m02@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-BASE-p5c-def-a1-s1-20261110T002814",
+     "W-M6-BASE-p5c-def-a2-s1-20261110T002814",
+     "W-M6-BASE-p5c-def-a3-s2-20261110T002814"
+    ]
+   },
+   "p5c/CURBFIX": {
+    "passThrough": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "stuck": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814",
+     "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814",
+     "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814"
+    ]
+   },
+   "p5g/BASE": {
+    "passThrough": {
+     "k": 20,
+     "n": 102,
+     "pct": 19.6,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "stuck": {
+     "k": 18,
+     "n": 102,
+     "pct": 17.6,
+     "cases": [
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3"
+     ]
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 38,
+     "n": 102,
+     "pct": 37.3,
+     "cases": [
+      "B_S2_BoostSprint_a30@a1",
+      "B_S2_Boost_c00@a1",
+      "B_S2_Boost_m02@a1",
+      "B_S2_Boost_p02@a1",
+      "B_S2_Sprint_a30@a1",
+      "B_S2_Sprint_c00@a1",
+      "B_S2_Sprint_m02@a1",
+      "B_S2_Sprint_p02@a1",
+      "B_S3_BoostSprint_a30@a1",
+      "B_S3_Boost_p02@a1",
+      "B_S3_Sprint_m02@a1",
+      "B_S3_Sprint_p02@a1",
+      "B_S2_BoostSprint_a30@a2",
+      "B_S2_Boost_c00@a2",
+      "B_S2_Boost_m02@a2",
+      "B_S2_Boost_p02@a2",
+      "B_S2_Sprint_a30@a2",
+      "B_S2_Sprint_c00@a2",
+      "B_S2_Sprint_m02@a2",
+      "B_S2_Sprint_p02@a2",
+      "B_S3_BoostSprint_a30@a2",
+      "B_S3_Boost_m02@a2",
+      "B_S3_Boost_p02@a2",
+      "B_S3_Sprint_m02@a2",
+      "B_S3_Sprint_p02@a2",
+      "B_S2_BoostSprint_a30@a3",
+      "B_S2_Boost_c00@a3",
+      "B_S2_Boost_m02@a3",
+      "B_S2_Boost_p02@a3",
+      "B_S2_Sprint_a30@a3",
+      "B_S2_Sprint_c00@a3",
+      "B_S2_Sprint_m02@a3",
+      "B_S2_Sprint_p02@a3",
+      "B_S3_BoostSprint_a30@a3",
+      "B_S3_Boost_m02@a3",
+      "B_S3_Boost_p02@a3",
+      "B_S3_Sprint_m02@a3",
+      "B_S3_Sprint_p02@a3"
+     ]
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-BASE-p5g-def-a1-s1-20261110T002814",
+     "W-M6-BASE-p5g-def-a2-s2-20261110T002814",
+     "W-M6-BASE-p5g-def-a3-s3-20261110T002814"
+    ]
+   },
+   "p5g/CURBFIX": {
+    "passThrough": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "stuck": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "fall": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "combined": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "cases": []
+    },
+    "E2_C_fall": {
+     "k": 0,
+     "n": 72,
+     "cases": []
+    },
+    "runs": [
+     "W-M6-CURBFIX-p5g-def-a1-s1-20261110T002814",
+     "W-M6-CURBFIX-p5g-def-a2-s2-20261110T002814",
+     "W-M6-CURBFIX-p5g-def-a3-s3-20261110T002814"
+    ]
+   },
+   "p5c/ppDiff": {
+    "passThrough": -20.6,
+    "stuck": -17.6,
+    "fall": 0.0,
+    "combined": -38.2
+   },
+   "p5g/ppDiff": {
+    "passThrough": -19.6,
+    "stuck": -17.6,
+    "fall": 0.0,
+    "combined": -37.3
+   }
+  },
+  "P5c_pairs": {
+   "from": "BASE",
+   "to": "CURBFIX",
+   "nPairs": 174,
+   "transition": {
+    "blocked_escaped → blocked_escaped": 30,
+    "pass → pass": 72,
+    "passThrough → recovered_after_penetration": 21,
+    "recovered_after_penetration → recovered_after_penetration": 33,
+    "rescue_failed → recovered_after_penetration": 18
+   },
+   "improved": 39,
+   "worsened": 0,
+   "categoryChangedSameFailState": 0,
+   "improvedCases": [
+    "B_S2_BoostSprint_a30@a1",
+    "B_S2_Boost_c00@a1",
+    "B_S2_Boost_m02@a1",
+    "B_S2_Boost_p02@a1",
+    "B_S2_Sprint_a30@a1",
+    "B_S2_Sprint_c00@a1",
+    "B_S2_Sprint_m02@a1",
+    "B_S2_Sprint_p02@a1",
+    "B_S3_BoostSprint_a30@a1",
+    "B_S3_Boost_m02@a1",
+    "B_S3_Boost_p02@a1",
+    "B_S3_Sprint_m02@a1",
+    "B_S3_Sprint_p02@a1",
+    "B_S2_BoostSprint_a30@a2",
+    "B_S2_Boost_c00@a2",
+    "B_S2_Boost_m02@a2",
+    "B_S2_Boost_p02@a2",
+    "B_S2_Sprint_a30@a2",
+    "B_S2_Sprint_c00@a2",
+    "B_S2_Sprint_m02@a2",
+    "B_S2_Sprint_p02@a2",
+    "B_S3_BoostSprint_a30@a2",
+    "B_S3_Boost_m02@a2",
+    "B_S3_Boost_p02@a2",
+    "B_S3_Sprint_m02@a2",
+    "B_S3_Sprint_p02@a2",
+    "B_S2_BoostSprint_a30@a3",
+    "B_S2_Boost_c00@a3",
+    "B_S2_Boost_m02@a3",
+    "B_S2_Boost_p02@a3",
+    "B_S2_Sprint_a30@a3",
+    "B_S2_Sprint_c00@a3",
+    "B_S2_Sprint_m02@a3",
+    "B_S2_Sprint_p02@a3",
+    "B_S3_BoostSprint_a30@a3",
+    "B_S3_Boost_m02@a3",
+    "B_S3_Boost_p02@a3",
+    "B_S3_Sprint_m02@a3",
+    "B_S3_Sprint_p02@a3"
+   ],
+   "worsenedCases": [],
+   "changedCases": [],
+   "runsFrom": [
+    "W-M6-BASE-p5c-def-a1-s1-20261110T002814",
+    "W-M6-BASE-p5c-def-a2-s1-20261110T002814",
+    "W-M6-BASE-p5c-def-a3-s2-20261110T002814"
+   ],
+   "runsTo": [
+    "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814",
+    "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814",
+    "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814"
+   ]
+  },
+  "curb_location": {
+   "P4/dt0.02-Discrete": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    }
+   },
+   "P4/dt0.01-Discrete": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "passThrough": 2,
+     "recovered_after_penetration": 1
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    }
+   },
+   "P4/dt0.02-ContinuousDynamic": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    }
+   },
+   "P4/dt0.01-ContinuousDynamic": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "passThrough": 1,
+     "recovered_after_penetration": 2
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    }
+   },
+   "p5c/BASE": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    }
+   },
+   "p5c/CURBFIX": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    }
+   },
+   "p5g/BASE": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "rescue_failed": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "recovered_after_penetration": 1,
+     "passThrough": 2
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "passThrough": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "passThrough": 3
+    }
+   },
+   "p5g/CURBFIX": {
+    "연석지점S2/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Boost/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Boost/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/BoostSprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S2/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S2/Sprint/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Boost/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/BoostSprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/BoostSprint/a60": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/c00": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/m02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/BoostSprint/p02": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Move/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/a30": {
+     "n": 3,
+     "blocked_escaped": 3
+    },
+    "연석지점S3/Roll/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Roll/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a30": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/a60": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/c00": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/m02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    },
+    "연석지점S3/Sprint/p02": {
+     "n": 3,
+     "recovered_after_penetration": 3
+    }
+   }
+  },
+  "time": {
+   "floor/S0a": {
+    "fall": {
+     "n": 42,
+     "fallSec": {
+      "n": 42,
+      "median": 2.49,
+      "min": 1.16,
+      "max": 6.28
+     }
+    }
+   },
+   "floor/S0b": {
+    "fall": {
+     "n": 72,
+     "fallSec": {
+      "n": 72,
+      "median": 0.34,
+      "min": 0.32,
+      "max": 1.16
+     }
+    }
+   },
+   "floor/S0p": {
+    "fall": {
+     "n": 42,
+     "fallSec": {
+      "n": 42,
+      "median": 2.49,
+      "min": 1.16,
+      "max": 6.28
+     }
+    }
+   },
+   "floor/S2": {
+    "fall": {
+     "n": 12,
+     "fallSec": {
+      "n": 12,
+      "median": 2.23,
+      "min": 0.98,
+      "max": 3.48
+     }
+    }
+   },
+   "H0": {
+    "fall": {
+     "n": 34,
+     "fallSec": {
+      "n": 34,
+      "median": 4.2,
+      "min": 3.22,
+      "max": 6.2
+     }
+    }
+   },
+   "P4/dt0.02-Discrete": {
+    "passThrough": {
+     "n": 72,
+     "passSec": {
+      "n": 72,
+      "median": 0.64,
+      "min": 0.62,
+      "max": 0.84
+     },
+     "escapeAfterContactSec": {
+      "n": 36,
+      "median": 1.2,
+      "min": 1.18,
+      "max": 1.3
+     }
+    },
+    "blocked_escaped": {
+     "n": 6,
+     "escapeAfterContactSec": {
+      "n": 6,
+      "median": 1.18,
+      "min": 1.18,
+      "max": 1.2
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 24,
+     "escapeAfterContactSec": {
+      "n": 24,
+      "median": 1.2,
+      "min": 1.2,
+      "max": 1.22
+     }
+    }
+   },
+   "P4/dt0.01-Discrete": {
+    "passThrough": {
+     "n": 38,
+     "passSec": {
+      "n": 38,
+      "median": 0.67,
+      "min": 0.64,
+      "max": 0.71
+     },
+     "escapeAfterContactSec": {
+      "n": 34,
+      "median": 1.21,
+      "min": 1.19,
+      "max": 1.31
+     }
+    },
+    "blocked_escaped": {
+     "n": 30,
+     "escapeAfterContactSec": {
+      "n": 30,
+      "median": 1.2,
+      "min": 1.19,
+      "max": 1.23
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 34,
+     "escapeAfterContactSec": {
+      "n": 34,
+      "median": 1.22,
+      "min": 1.2,
+      "max": 1.24
+     }
+    }
+   },
+   "P4/dt0.02-ContinuousDynamic": {
+    "passThrough": {
+     "n": 48,
+     "passSec": {
+      "n": 48,
+      "median": 0.66,
+      "min": 0.64,
+      "max": 1.0
+     },
+     "escapeAfterContactSec": {
+      "n": 21,
+      "median": 1.22,
+      "min": 1.2,
+      "max": 1.52
+     }
+    },
+    "blocked_escaped": {
+     "n": 30,
+     "escapeAfterContactSec": {
+      "n": 30,
+      "median": 1.18,
+      "min": 1.18,
+      "max": 1.2
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 24,
+     "escapeAfterContactSec": {
+      "n": 24,
+      "median": 1.2,
+      "min": 1.2,
+      "max": 1.2
+     }
+    }
+   },
+   "P4/dt0.01-ContinuousDynamic": {
+    "passThrough": {
+     "n": 19,
+     "passSec": {
+      "n": 19,
+      "median": 0.69,
+      "min": 0.64,
+      "max": 0.85
+     },
+     "escapeAfterContactSec": {
+      "n": 17,
+      "median": 1.22,
+      "min": 1.19,
+      "max": 1.54
+     }
+    },
+    "rescue_failed": {
+     "n": 18
+    },
+    "blocked_escaped": {
+     "n": 30,
+     "escapeAfterContactSec": {
+      "n": 30,
+      "median": 1.2,
+      "min": 1.19,
+      "max": 1.22
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 35,
+     "escapeAfterContactSec": {
+      "n": 35,
+      "median": 1.21,
+      "min": 1.19,
+      "max": 1.24
+     }
+    }
+   },
+   "p5c/BASE": {
+    "passThrough": {
+     "n": 21,
+     "passSec": {
+      "n": 21,
+      "median": 0.69,
+      "min": 0.64,
+      "max": 0.84
+     },
+     "escapeAfterContactSec": {
+      "n": 20,
+      "median": 1.21,
+      "min": 1.19,
+      "max": 1.54
+     }
+    },
+    "rescue_failed": {
+     "n": 18
+    },
+    "blocked_escaped": {
+     "n": 30,
+     "escapeAfterContactSec": {
+      "n": 30,
+      "median": 1.2,
+      "min": 1.19,
+      "max": 1.22
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 33,
+     "escapeAfterContactSec": {
+      "n": 33,
+      "median": 1.22,
+      "min": 1.19,
+      "max": 1.24
+     }
+    }
+   },
+   "p5c/CURBFIX": {
+    "blocked_escaped": {
+     "n": 30,
+     "escapeAfterContactSec": {
+      "n": 30,
+      "median": 1.19,
+      "min": 1.19,
+      "max": 1.22
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 72,
+     "escapeAfterContactSec": {
+      "n": 72,
+      "median": 1.21,
+      "min": 1.19,
+      "max": 1.24
+     }
+    }
+   },
+   "p5g/BASE": {
+    "passThrough": {
+     "n": 20,
+     "passSec": {
+      "n": 20,
+      "median": 0.69,
+      "min": 0.64,
+      "max": 0.85
+     },
+     "escapeAfterContactSec": {
+      "n": 17,
+      "median": 1.22,
+      "min": 1.19,
+      "max": 1.54
+     }
+    },
+    "rescue_failed": {
+     "n": 18
+    },
+    "blocked_escaped": {
+     "n": 30,
+     "escapeAfterContactSec": {
+      "n": 30,
+      "median": 1.19,
+      "min": 1.19,
+      "max": 1.22
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 34,
+     "escapeAfterContactSec": {
+      "n": 34,
+      "median": 1.22,
+      "min": 1.2,
+      "max": 1.24
+     }
+    }
+   },
+   "p5g/CURBFIX": {
+    "blocked_escaped": {
+     "n": 30,
+     "escapeAfterContactSec": {
+      "n": 30,
+      "median": 1.19,
+      "min": 1.19,
+      "max": 1.23
+     }
+    },
+    "recovered_after_penetration": {
+     "n": 72,
+     "escapeAfterContactSec": {
+      "n": 72,
+      "median": 1.21,
+      "min": 1.19,
+      "max": 1.24
+     }
+    }
+   }
+  },
+  "noise": {
+   "BASE/p4/dt0.01-ContinuousDynamic a1↔a2(seed1)": {
+    "n": 58,
+    "diff": 1,
+    "cases": [
+     "B_S3_Boost_m02:passThrough→recovered_after_penetration"
+    ]
+   },
+   "BASE/p4/dt0.01-Discrete a1↔a2(seed1)": {
+    "n": 58,
+    "diff": 0,
+    "cases": []
+   },
+   "BASE/p4/dt0.02-ContinuousDynamic a1↔a2(seed1)": {
+    "n": 58,
+    "diff": 0,
+    "cases": []
+   },
+   "BASE/p4/dt0.02-Discrete a1↔a2(seed1)": {
+    "n": 58,
+    "diff": 0,
+    "cases": []
+   },
+   "BASE/p5c/def a1↔a2(seed1)": {
+    "n": 58,
+    "diff": 0,
+    "cases": []
+   },
+   "CURBFIX/p5c/def a1↔a2(seed1)": {
+    "n": 58,
+    "diff": 0,
+    "cases": []
+   },
+   "H0/h0/def a1↔a2(seed1)": {
+    "n": 24,
+    "diff": 1,
+    "cases": [
+     "E2_C09_jump:pass→fall"
+    ]
+   },
+   "S0a/f/dt0.02-Discrete a1↔a2(seed1)": {
+    "n": 24,
+    "diff": 0,
+    "cases": []
+   },
+   "S0b/f/dt0.02-Discrete a1↔a2(seed1)": {
+    "n": 24,
+    "diff": 0,
+    "cases": []
+   },
+   "S0p/f/dt0.02-Discrete a1↔a2(seed1)": {
+    "n": 24,
+    "diff": 0,
+    "cases": []
+   },
+   "S1/f/dt0.02-Discrete a1↔a2(seed1)": {
+    "n": 24,
+    "diff": 0,
+    "cases": []
+   },
+   "S2/f/dt0.02-Discrete a1↔a2(seed1)": {
+    "n": 24,
+    "diff": 0,
+    "cases": []
+   },
+   "S3/f/dt0.02-Discrete a1↔a2(seed1)": {
+    "n": 24,
+    "diff": 0,
+    "cases": []
+   },
+   "P4 0.01/CCD ↔ P5c BASE (같은 attempt)": {
+    "nPairs": 174,
+    "diff": 2,
+    "transitionOffDiagonal": {
+     "recovered_after_penetration → passThrough": 2
+    },
+    "worsened": [
+     "B_S3_Boost_m02@a2:passThrough",
+     "B_S3_Boost_m02@a3:passThrough"
+    ],
+    "improved": [],
+    "changed": []
+   }
+  },
+  "claim3_geomLocation": {
+   "pointsOver5mm": 2319,
+   "byLineCollider": {
+    "C07|road_009_floor": 2187,
+    "C01|Eco_Building_Terrace": 36,
+    "C03|road_001": 21,
+    "C05|road_020": 18,
+    "C01|road_009": 12,
+    "C07|road_009": 12,
+    "C09|road_009": 12,
+    "C03|Set_B_Tiles_04_floor": 6,
+    "S2|road_009": 6,
+    "S3|Curb_18": 5,
+    "C11|Set_B_Tiles_04_floor": 3,
+    "S3|road_019": 1
+   },
+   "stepLostByLine": {
+    "C07@-0.10": 2,
+    "C07@+0.00": 2,
+    "C07@+0.10": 2
+   },
+   "curbP95ByLineOver5mm": {
+    "C07@-0.10": 100.0,
+    "C07@+0.00": 100.0,
+    "C07@+0.10": 100.0
+   }
+  }
+ },
+ "auditDetail": {
+  "a_completion": [
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a2-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a3-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a2-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a3-s3-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a1-s1-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a2-s2-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a3-s3-20261110T002814",
+    "ok": true,
+    "planned": 62,
+    "finished": 62,
+    "trials": 62,
+    "cases": 62
+   },
+   {
+    "run": "W-M6-H0-h0-def-a1-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-H0-h0-def-a2-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-H0-h0-def-a3-s2-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-H0-h0-def-a4-s3-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-H0-h0-def-a5-s4-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-H0-h0-def-a6-s5-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "ok": true,
+    "planned": 28,
+    "finished": 28,
+    "trials": 28,
+    "cases": 28
+   }
+  ],
+  "b_inputs": [
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.550 missing=Move",
+     "Release@11.050 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.540 missing=Move",
+     "Release@11.040 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@193.000 missing=Move",
+     "Release@193.500 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.540 missing=Move",
+     "Release@11.040 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.540 missing=Move",
+     "Release@11.040 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@195.970 missing=Move",
+     "Release@196.470 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.540 missing=Move",
+     "Release@11.040 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.540 missing=Move",
+     "Release@11.040 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@193.000 missing=Move",
+     "Release@193.500 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.540 missing=Move",
+     "Release@11.040 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.560 missing=Move",
+     "Release@11.060 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@195.960 missing=Move",
+     "Release@196.460 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.550 missing=Move",
+     "Release@11.050 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a2-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.560 missing=Move",
+     "Release@11.060 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a2-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a3-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@190.030 missing=Move",
+     "Release@190.530 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p5c-def-a3-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.550 missing=Move",
+     "Release@11.050 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a2-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@193.020 missing=Move",
+     "Release@193.520 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a2-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a3-s3-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@0.690 missing=Move",
+     "Release@1.190 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-BASE-p5g-def-a3-s3-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.550 missing=Move",
+     "Release@11.050 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.550 missing=Move",
+     "Release@11.050 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@190.070 missing=Move",
+     "Release@190.570 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a1-s1-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@10.560 missing=Move",
+     "Release@11.060 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a1-s1-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a2-s2-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@190.060 missing=Move",
+     "Release@190.560 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a2-s2-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a3-s3-20261110T002814",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@0.690 missing=Move",
+     "Release@1.190 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-CURBFIX-p5g-def-a3-s3-20261110T002814",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-H0-h0-def-a1-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-H0-h0-def-a1-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.220 missing=Move",
+     "Release@197.720 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-H0-h0-def-a2-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-H0-h0-def-a2-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.300 missing=Move",
+     "Release@197.800 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-H0-h0-def-a3-s2-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-H0-h0-def-a3-s2-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@171.720 missing=Move",
+     "Release@172.220 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-H0-h0-def-a4-s3-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-H0-h0-def-a4-s3-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@32.560 missing=Move",
+     "Release@33.060 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-H0-h0-def-a5-s4-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-H0-h0-def-a5-s4-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@50.080 missing=Move",
+     "Release@50.580 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-H0-h0-def-a6-s5-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@138.160 missing=Move",
+     "Release@138.660 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-H0-h0-def-a6-s5-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.420 missing=Move",
+     "Release@197.920 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.380 missing=Move",
+     "Release@197.880 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@171.860 missing=Move",
+     "Release@172.360 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.380 missing=Move",
+     "Release@197.880 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.420 missing=Move",
+     "Release@197.920 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@171.800 missing=Move",
+     "Release@172.300 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.420 missing=Move",
+     "Release@197.920 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.420 missing=Move",
+     "Release@197.920 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@171.860 missing=Move",
+     "Release@172.360 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.380 missing=Move",
+     "Release@197.880 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.340 missing=Move",
+     "Release@197.840 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@171.760 missing=Move",
+     "Release@172.260 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.360 missing=Move",
+     "Release@197.860 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.480 missing=Move",
+     "Release@197.980 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@171.840 missing=Move",
+     "Release@172.340 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.420 missing=Move",
+     "Release@197.920 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@197.360 missing=Move",
+     "Release@197.860 missing=Move"
+    ]
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK13_flat_hold_timescale0",
+    "intended": true,
+    "outcome": "harness_error:time_scale_zero",
+    "missing": null
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "case": "CK08_flat_walk_noinput",
+    "intended": true,
+    "outcome": "harness_error:input_not_received",
+    "missing": [
+     "Move@171.740 missing=Move",
+     "Release@172.240 missing=Move"
+    ]
+   }
+  ],
+  "d_terrain": [
+   {
+    "run": "W-M6-H0-h0-def-a1-s1-20261110T145343",
+    "variant": "H0",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-H0-h0-def-a2-s1-20261110T145343",
+    "variant": "H0",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-H0-h0-def-a3-s2-20261110T145343",
+    "variant": "H0",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-H0-h0-def-a4-s3-20261110T145343",
+    "variant": "H0",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-H0-h0-def-a5-s4-20261110T145343",
+    "variant": "H0",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-H0-h0-def-a6-s5-20261110T145343",
+    "variant": "H0",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "variant": "S0a",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "variant": "S0a",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0a-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "variant": "S0a",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "variant": "S0b",
+    "mismatch": [],
+    "signatures": {
+     "(none)": 22,
+     "other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "variant": "S0b",
+    "mismatch": [],
+    "signatures": {
+     "(none)": 22,
+     "other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0b-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "variant": "S0b",
+    "mismatch": [],
+    "signatures": {
+     "(none)": 22,
+     "other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "variant": "S0p",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "variant": "S0p",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S0p-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "variant": "S0p",
+    "mismatch": [],
+    "signatures": {
+     "floorMesh": 22,
+     "floorMesh+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "variant": "S1",
+    "mismatch": [],
+    "signatures": {
+     "plate": 20,
+     "other:BoxCollider+plate": 2,
+     "other:MeshCollider+plate": 2
+    }
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "variant": "S1",
+    "mismatch": [],
+    "signatures": {
+     "plate": 20,
+     "other:BoxCollider+plate": 2,
+     "other:MeshCollider+plate": 2
+    }
+   },
+   {
+    "run": "W-M6-S1-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "variant": "S1",
+    "mismatch": [],
+    "signatures": {
+     "plate": 20,
+     "other:MeshCollider+plate": 2,
+     "other:BoxCollider+plate": 2
+    }
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "variant": "S2",
+    "mismatch": [],
+    "signatures": {
+     "floorMeshConvex": 22,
+     "floorMeshConvex+other:BoxCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "variant": "S2",
+    "mismatch": [],
+    "signatures": {
+     "floorMeshConvex": 22,
+     "floorMeshConvex+other:BoxCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S2-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "variant": "S2",
+    "mismatch": [],
+    "signatures": {
+     "floorMeshConvex": 22,
+     "floorMeshConvex+other:BoxCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a1-s1-20261110T145343",
+    "variant": "S3",
+    "mismatch": [],
+    "signatures": {
+     "floorBox": 8,
+     "floorBox+other:BoxCollider": 14,
+     "floorBox+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a2-s1-20261110T145343",
+    "variant": "S3",
+    "mismatch": [],
+    "signatures": {
+     "floorBox": 8,
+     "floorBox+other:BoxCollider": 14,
+     "floorBox+other:MeshCollider": 2
+    }
+   },
+   {
+    "run": "W-M6-S3-f-dt0.02-Discrete-a3-s2-20261110T145343",
+    "variant": "S3",
+    "mismatch": [],
+    "signatures": {
+     "floorBox": 8,
+     "floorBox+other:BoxCollider": 14,
+     "floorBox+other:MeshCollider": 2
+    }
+   },
+   {
+    "pair": "p5c a1 BASE↔CURBFIX",
+    "startCollidersIdentical": true,
+    "note": "연석 수정은 시작 콜라이더에 안 보임. 씬 SHA(12ba8273…)가 유일 증거"
+   },
+   {
+    "pair": "p5c a2 BASE↔CURBFIX",
+    "startCollidersIdentical": true,
+    "note": "연석 수정은 시작 콜라이더에 안 보임. 씬 SHA(12ba8273…)가 유일 증거"
+   },
+   {
+    "pair": "p5c a3 BASE↔CURBFIX",
+    "startCollidersIdentical": true,
+    "note": "연석 수정은 시작 콜라이더에 안 보임. 씬 SHA(12ba8273…)가 유일 증거"
+   },
+   {
+    "pair": "p5g a1 BASE↔CURBFIX",
+    "startCollidersIdentical": true,
+    "note": "연석 수정은 시작 콜라이더에 안 보임. 씬 SHA(12ba8273…)가 유일 증거"
+   },
+   {
+    "pair": "p5g a2 BASE↔CURBFIX",
+    "startCollidersIdentical": true,
+    "note": "연석 수정은 시작 콜라이더에 안 보임. 씬 SHA(12ba8273…)가 유일 증거"
+   },
+   {
+    "pair": "p5g a3 BASE↔CURBFIX",
+    "startCollidersIdentical": true,
+    "note": "연석 수정은 시작 콜라이더에 안 보임. 씬 SHA(12ba8273…)가 유일 증거"
+   }
+  ],
+  "c_initialState": []
+ }
+}

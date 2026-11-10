@@ -1,0 +1,37 @@
+{
+ "runDir": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Evidence/M5/runs/M5-H7-base-mac-e2-E2_B-01",
+ "runState": "completed",
+ "inputs": {
+  "trials.jsonl": "f708df50798ddc7a0d516ecbdc3a56631133812292f7b2c30c9da907bf3d2a6e",
+  "trace.jsonl": "574f16ee6153886b13937ef0c7505d4fefcfdedc1a38b8406e235b3a0b930289",
+  "thresholds": "1fcdffdd2abb013178be48b82ac12b2c40cc794700cdd7c29af9bbd9257aecb1"
+ },
+ "thresholds": {
+  "revision": "r4-provisional",
+  "note": "M3 판정기 검증용 잠정값. r=캡슐 월드 반지름. 입력 수신은 물리 시간 기준. M5 예비 실행 후 M6에서 동결한다.",
+  "fallDepthR": 3.0,
+  "supportNormalY": 0.5,
+  "supportProbeGapR": 0.5,
+  "stableSupportSec": 0.1,
+  "escapeDistR": 2.0,
+  "penetrationSignificantR": 0.25,
+  "penetrationResolvedR": 0.1,
+  "passThroughR": 3.0,
+  "inputReceiveMaxFixedSec": 0.4,
+  "preContactWindowSec": 0.06,
+  "restVerticalSpeed": 0.02
+ },
+ "planned": 4,
+ "trials": 4,
+ "missingCases": [],
+ "duplicateTrials": [],
+ "harnessErrors": 0,
+ "outcomes": {
+  "recovered_after_penetration": 4
+ },
+ "classifierChecks": {
+  "total": 0,
+  "matched": 0,
+  "items": []
+ }
+}

@@ -1,0 +1,351 @@
+{
+ "auditId": "M5-audit-03-H7-runtime-cooking",
+ "createdUtc": "2026-10-30",
+ "source": [
+  "Evidence/M5/probe-H7-S2S3-columns.json",
+  "Evidence/M4/windows/PhysicsBench-Results-20261030T014743/W-H7-smoke-20261030T014743.player.log"
+ ],
+ "question": "H7 MeshCollider 중 Read/Write 없이 런타임 cooking이 필요한 것(빌드에서 충돌면이 비는 후보)이 개미 바닥·연석에 해당하는가",
+ "needsRuntimeCookingCount": 46,
+ "windowsPlayerLogUniquePaths": 68,
+ "probeVsLogMismatch": {
+  "probeOnly": [
+   "PostProcessingVolume/Store2/pizzeria house with environment",
+   "PostProcessingVolume/Store2/pizzeria house with environment/plants 2",
+   "PostProcessingVolume/Store2/pizzeria house with environment/plants 2 (1)",
+   "PostProcessingVolume/Store2/pizzeria house with environment/plants 3",
+   "PostProcessingVolume/Store2/pizzeria house with environment/table",
+   "PostProcessingVolume/Store2/pizzeria house with environment/table (1)",
+   "PostProcessingVolume/Store2/pizzeria house with environment/table (2)"
+  ],
+  "logOnly": [
+   "Manager/CarSpawnManager/Car_06(Clone)",
+   "Manager/CarSpawnManager/Car_06(Clone)/Car_06_Wheel_Front_Left",
+   "Manager/CarSpawnManager/Car_06(Clone)/Car_06_Wheel_Front_Right",
+   "Manager/CarSpawnManager/Car_06(Clone)/Car_06_Wheel_Rear_Left",
+   "Manager/CarSpawnManager/Car_06(Clone)/Car_06_Wheel_Rear_Right",
+   "Manager/CarSpawnManager/Car_13(Clone)",
+   "Manager/CarSpawnManager/Car_13(Clone)/Car_13_Spoiler",
+   "Manager/CarSpawnManager/Car_13(Clone)/Car_13_Wheel_Front_Left",
+   "Manager/CarSpawnManager/Car_13(Clone)/Car_13_Wheel_Front_Right",
+   "Manager/CarSpawnManager/Car_13(Clone)/Car_13_Wheel_Rear_Left",
+   "Manager/CarSpawnManager/Car_13(Clone)/Car_13_Wheel_Rear_Right",
+   "Manager/CarSpawnManager/Car_16(Clone)",
+   "Manager/CarSpawnManager/Car_16(Clone)/Car_16_Wheel_Front_Left",
+   "Manager/CarSpawnManager/Car_16(Clone)/Car_16_Wheel_Front_Right",
+   "Manager/CarSpawnManager/Car_16(Clone)/Car_16_Wheel_Rear_Left",
+   "Manager/CarSpawnManager/Car_16(Clone)/Car_16_Wheel_Rear_Right",
+   "Manager/CarSpawnManager/Car_19(Clone)",
+   "Manager/CarSpawnManager/Car_19(Clone)/Car_19_Wheel_Front_Left",
+   "Manager/CarSpawnManager/Car_19(Clone)/Car_19_Wheel_Front_Right",
+   "Manager/CarSpawnManager/Car_19(Clone)/Car_19_Wheel_Rear_Left",
+   "Manager/CarSpawnManager/Car_19(Clone)/Car_19_Wheel_Rear_Right",
+   "Manager/CarSpawnManager/Futuristic_Car_1(Clone)",
+   "Manager/CarSpawnManager/Futuristic_Car_1(Clone)/Futuristic_Car_1_Wheel_Front_Left",
+   "Manager/CarSpawnManager/Futuristic_Car_1(Clone)/Futuristic_Car_1_Wheel_Front_Right",
+   "Manager/CarSpawnManager/Futuristic_Car_1(Clone)/Futuristic_Car_1_Wheel_Rear_Left",
+   "Manager/CarSpawnManager/Futuristic_Car_1(Clone)/Futuristic_Car_1_Wheel_Rear_Right",
+   "Manager/CarSpawnManager/Van(Clone)",
+   "Manager/CarSpawnManager/Van(Clone)/Van_Wheel_Front_Left",
+   "Manager/CarSpawnManager/Van(Clone)/Van_Wheel_Front_Right",
+   "Manager/CarSpawnManager/Van(Clone)/Van_Wheel_Rear_Left",
+   "Manager/CarSpawnManager/Van(Clone)/Van_Wheel_Rear_Right"
+  ]
+ },
+ "byCategoryLayer": {
+  "prop/Default": 24,
+  "prop/Obstacle": 22
+ },
+ "items": [
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_2x1_03",
+   "mesh": "Billboard_2x1_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_2x1_05",
+   "mesh": "Billboard_2x1_05",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_4x1_03",
+   "mesh": "Billboard_4x1_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Billboard_4x1_04",
+   "mesh": "Billboard_4x1_04",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_02",
+   "mesh": "Bus_Stop_02",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_02 (1)",
+   "mesh": "Bus_Stop_02",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_02 (2)",
+   "mesh": "Bus_Stop_02",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_Destination",
+   "mesh": "Bus_Stop_02",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Graffiti_03",
+   "mesh": "Graffiti_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Signboard_01",
+   "mesh": "Signboard_01",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (2)",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (3)",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (4)",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (5)",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (6)",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (7)",
+   "mesh": "Trash_Can_06",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08",
+   "mesh": "Trash_Can_08",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08",
+   "mesh": "Trash_Can_08",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (1)",
+   "mesh": "Trash_Can_08",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (2)",
+   "mesh": "Trash_Can_08",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (3)",
+   "mesh": "Trash_Can_08",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_08 (4)",
+   "mesh": "Trash_Can_08",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/traffic_light_001",
+   "mesh": "traffic_light_001",
+   "layer": "Obstacle",
+   "otherColliders": [
+    "CapsuleCollider"
+   ]
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Graffiti_03",
+   "mesh": "Graffiti_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_02",
+   "mesh": "Trash_02",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_02 (1)",
+   "mesh": "Trash_02",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_02 (2)",
+   "mesh": "Trash_02",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_03",
+   "mesh": "Trash_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_03 (1)",
+   "mesh": "Trash_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_03 (2)",
+   "mesh": "Trash_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_05",
+   "mesh": "Trash_05",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_05 (1)",
+   "mesh": "Trash_05",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store1/Trash_05 (2)",
+   "mesh": "Trash_05",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/Fountain_03",
+   "mesh": "Fountain_03",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/Trash_03 (1)",
+   "mesh": "Trash_03",
+   "layer": "Obstacle",
+   "otherColliders": [
+    "BoxCollider"
+   ]
+  },
+  {
+   "path": "PostProcessingVolume/Store2/Trash_03 (2)",
+   "mesh": "Trash_03",
+   "layer": "Obstacle",
+   "otherColliders": [
+    "BoxCollider"
+   ]
+  },
+  {
+   "path": "PostProcessingVolume/Store2/pizzeria house with environment",
+   "mesh": "pizzeria_house",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/pizzeria house with environment/plants 2",
+   "mesh": "plants_2",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/pizzeria house with environment/plants 2 (1)",
+   "mesh": "plants_2",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/pizzeria house with environment/plants 3",
+   "mesh": "plants_3",
+   "layer": "Obstacle",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/pizzeria house with environment/table",
+   "mesh": "table",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/pizzeria house with environment/table (1)",
+   "mesh": "table",
+   "layer": "Default",
+   "otherColliders": []
+  },
+  {
+   "path": "PostProcessingVolume/Store2/pizzeria house with environment/table (2)",
+   "mesh": "table",
+   "layer": "Default",
+   "otherColliders": []
+  }
+ ],
+ "finding": "46개 모두 소품(광고판·버스정류장·쓰레기통·분수·피자 가게·화분·테이블·신호등·그라피티)이며 도로·타일·연석 메시는 없다. Windows H7 smoke player log의 Read/Write 오류 경로와 일치. 빌드에서 이 소품들의 충돌면이 비었을 가능성이 있으나 H7 바닥 낙하(A)·연석 끼임(B)의 직접 원인 후보에서는 제외. 소품 관통은 별도 관찰 항목.",
+ "notAConclusion": "충돌면이 실제로 비는지는 해당 소품에 대한 런타임 접촉 측정 전까지 미확정",
+ "uniqueProbePaths": 44,
+ "mismatchNotes": [
+  "probe 46개는 같은 경로의 중복 컴포넌트 포함, 고유 경로 44개",
+  "probe에만 있는 7개(피자 가게·화분·테이블)는 Windows log에 Read/Write 오류가 없다. 원인 미확인(로그에 다른 형태로 나왔거나 실제로는 cooking 성공). 추정으로 쓰지 않음",
+  "log에만 있는 31개는 CarSpawnManager가 런타임에 생성한 차량·바퀴 MeshCollider. 에디터 씬 probe 대상이 아님. 바닥·연석 아님"
+ ]
+}

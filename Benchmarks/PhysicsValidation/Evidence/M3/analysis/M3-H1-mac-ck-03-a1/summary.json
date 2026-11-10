@@ -1,0 +1,101 @@
+{
+ "runDir": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Evidence/M3/runs/M3-H1-mac-ck-03",
+ "runState": "completed",
+ "inputs": {
+  "trials.jsonl": "7c4c2525ac54be3ba088d2473661940dc6517b2b25491a2db54aa1458d94371c",
+  "trace.jsonl": "1a768f8f1e4ce7de499b43e1c3e5f4a49982f81faccb433ba064750aa4071ccf",
+  "thresholds": "76a2fb073106048ff55235b1c6a1d89a5c68dace4582d5525ccf13c649e8d251"
+ },
+ "thresholds": {
+  "revision": "r1-provisional",
+  "note": "M3 판정기 검증용 잠정값. r=캡슐 월드 반지름. M5 예비 실행 후 M6에서 동결한다.",
+  "fallDepthR": 3.0,
+  "supportNormalY": 0.5,
+  "supportProbeGapR": 0.5,
+  "stableSupportSec": 0.1,
+  "escapeDistR": 2.0,
+  "penetrationSignificantR": 0.25,
+  "penetrationResolvedR": 0.1,
+  "passThroughR": 3.0,
+  "inputReceiveMaxSec": 0.5
+ },
+ "planned": 10,
+ "trials": 10,
+ "missingCases": [],
+ "duplicateTrials": [],
+ "harnessErrors": 1,
+ "outcomes": {
+  "fall": 2,
+  "rescue_failed": 1,
+  "blocked_escaped": 1,
+  "pass": 4,
+  "recovered_after_penetration": 1,
+  "harness_error:input_not_received": 1
+ },
+ "classifierChecks": {
+  "total": 10,
+  "matched": 10,
+  "items": [
+   {
+    "caseId": "CK03_hole_walk_slow",
+    "expect": "fall",
+    "outcome": "fall",
+    "match": true
+   },
+   {
+    "caseId": "CK06_trap_move",
+    "expect": "rescue_failed",
+    "outcome": "rescue_failed",
+    "match": true
+   },
+   {
+    "caseId": "CK05_curb_sprint",
+    "expect": "blocked_escaped",
+    "outcome": "blocked_escaped",
+    "match": true
+   },
+   {
+    "caseId": "CK09_void_hold",
+    "expect": "fall",
+    "outcome": "fall",
+    "match": true
+   },
+   {
+    "caseId": "CK10_flat_jump",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK01_flat_hold",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK07_penetration_move",
+    "expect": "recovered_after_penetration",
+    "outcome": "recovered_after_penetration",
+    "match": true
+   },
+   {
+    "caseId": "CK02_flat_walk",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK04_stepdown_walk",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK08_flat_walk_noinput",
+    "expect": "harness_error:input_not_received",
+    "outcome": "harness_error:input_not_received",
+    "match": true
+   }
+  ]
+ }
+}

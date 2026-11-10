@@ -1,0 +1,10 @@
+{
+    "runId": "B-S3-floor-mac-01",
+    "state": "completed",
+    "planned": 28,
+    "finished": 28,
+    "harnessErrors": 1,
+    "currentCase": "",
+    "updatedUtc": "2026-11-08T11:11:51.4375170Z",
+    "message": ""
+}

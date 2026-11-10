@@ -1,0 +1,46 @@
+{
+    "fix": {
+        "variant": "CurbFix",
+        "scene": "Assets/Scenes/AntDemoScene.unity",
+        "candidates": 820,
+        "extended": 820,
+        "skippedShape": 0,
+        "skippedNotAxisAligned": 0,
+        "inPrefabInstance": 130,
+        "prefabRoots": [
+            "PostProcessingVolume <- Assets/Prefabs/PostProcessingVolume.prefab"
+        ],
+        "newBottomY": -0.30000001192092898,
+        "appliedUtc": "2026-11-09T09:24:49.1591070Z"
+    },
+    "s3cExtended": 820,
+    "boxesCompared": 820,
+    "boxMismatches": 0,
+    "mismatchSamples": [],
+    "nonCurbCollidersChanged": 0,
+    "nonCurbChangedSamples": [],
+    "bandOverlapBoxes": 4793,
+    "bandOverlapWithFloorColliders": 4787,
+    "bandOverlapOther": 6,
+    "bandOverlapSamples": [
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_01 (1)/CurbColliders/Curb_5 (1) x PostProcessingVolume/Demonstration/FloorColliders/road_009_road (BoxCollider)",
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_01 (1)/CurbColliders/Curb_5 (1) x PostProcessingVolume/Demonstration/FloorColliders/Set_B_Tiles_01_floor (24) (BoxCollider)",
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_01 (1)/CurbColliders/Curb_5 (1) x PostProcessingVolume/Demonstration/FloorColliders/Set_B_Tiles_01 (1)_floor (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18 x PostProcessingVolume/Demonstration/FloorColliders/road_022_road (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18 x PostProcessingVolume/Demonstration/FloorColliders/Set_B_Tiles_04_floor (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18 x PostProcessingVolume/Demonstration/FloorColliders/road_019_floor (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18 x PostProcessingVolume/Demonstration/FloorColliders/Set_B_Tiles_04 (2)_floor (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18 x PostProcessingVolume/Demonstration/FloorColliders/Set_B_Tiles_04 (1)_floor (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18 x PostProcessingVolume/Demonstration/FloorColliders/road_009_road (BoxCollider)",
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_01 (1)/CurbColliders/Curb_9 x PostProcessingVolume/Demonstration/FloorColliders/road_009_road (BoxCollider)"
+    ],
+    "bandOverlapOtherSamples": [
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_05 (4)/CurbColliders/Curb_0 x PostProcessingVolume/MapBoundaries/West (BoxCollider)",
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_05 (2)/CurbColliders/Curb_0 x PostProcessingVolume/MapBoundaries/West (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/Set_B_Tiles_06/CurbColliders/Curb_2 x PostProcessingVolume/Demonstration/BasicSettingsMap/Spotlight_01 (CapsuleCollider)",
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_05 (4)/CurbColliders/Curb_1 x PostProcessingVolume/MapBoundaries/West (BoxCollider)",
+        "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18 x PostProcessingVolume/Demonstration/BasicSettingsMap/traffic_light_001 (CapsuleCollider)",
+        "PostProcessingVolume/Demonstration/StoreMap/Set_B_Tiles_05 (2)/CurbColliders/Curb_1 x PostProcessingVolume/MapBoundaries/West (BoxCollider)"
+    ],
+    "verifiedUtc": "2026-11-09T09:25:02.7698900Z"
+}

@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "milestone": "M1",
+  "baseline_id": "physics-baseline-20261029-01",
+  "captured_at_utc": "2026-10-29T10:27:38.359264+00:00",
+  "authorization": {
+    "user_statement": "그럼 m1부터 진행 시작해줘.",
+    "user_context_date": "2026-10-29",
+    "timezone": "Asia/Seoul",
+    "scope": [
+      "planned_implementation",
+      "isolated_historical_restore",
+      "same_version_windows_mono_module",
+      "planned_builds_and_tests"
+    ],
+    "exclusions": [
+      "paid_resources_without_further_authorization",
+      "remote_windows_control_without_connection_and_authorization",
+      "deletion_of_user_originals"
+    ]
+  },
+  "workspace_root": "/Users/ihaneul/unityProject/HoneyI-mHome",
+  "repositories": [
+    {
+      "id": "root",
+      "path": "/Users/ihaneul/unityProject/HoneyI-mHome",
+      "head": "b8efce3526d3ef85eb0c85a580884369f3f5f48a",
+      "tracked_count": 1676,
+      "untracked_files": [
+        "Assets/_Recovery.meta",
+        "Assets/_Recovery/0 (1).unity",
+        "Assets/_Recovery/0 (1).unity.meta",
+        "Assets/_Recovery/0.unity",
+        "Assets/_Recovery/0.unity.meta",
+        "Benchmarks/AnalyzeCurbStuckRuntime.py",
+        "Benchmarks/CURB_RUNTIME_TESTS.md",
+        "Benchmarks/CurbStuckRuntime/20261023_022541/setup.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022541/status.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022541/trace.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022541/trials.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022716/setup.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022716/status.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022716/trace.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022716/trials.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022738/setup.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022738/status.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022738/trace.json",
+        "Benchmarks/CurbStuckRuntime/20261023_022738/trials.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/setup.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/status.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/trace.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/trials.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/RESULTS.md",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/audit.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/editor_after.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/reference_boxes.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/runner_source.cs",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/setup.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/source_manifest.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/status.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/summary.csv",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/trace.json",
+        "Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/trials.json",
+        "Benchmarks/FLOOR_BOUNDARY_TESTS.md",
+        "Benchmarks/RunCurbStuckRuntimeMatrix.cs",
+        "Benchmarks/RunCurbStuckRuntimePilot.cs",
+        "Benchmarks/RunFloorBoundaryBenchmark.cs",
+        "Benchmarks/youtube-icon.png",
+        "Docs/physics-collider-execution-plan.md",
+        "Docs/physics-collider-handoff.zip.sha256",
+        "Docs/physics-collider-history-audit.md",
+        "Docs/physics-collider-progress.md",
+        "Docs/physics-collider-validation-plan.md",
+        "Docs/portfolio-assets/slide13-before-2026-05-29-building-bakery-mesh.jpg",
+        "Docs/portfolio-assets/slide13-road009-collider-inspector.jpg",
+        "Docs/portfolio-assets/slide13-road009-curb-closeup-crop.jpg",
+        "Docs/portfolio-assets/slide13-road009-curb-closeup.jpg",
+        "Docs/portfolio-assets/slide13-road009-curb-scene-crop.jpg",
+        "Docs/portfolio-assets/slide13-road009-curb-scene.jpg",
+        "Docs/portfolio-assets/slide13-tools-add-road-curb-command.jpg",
+        "Docs/portfolio-code-snippets/p07_MissionMessageUI.png",
+        "Docs/portfolio-code-snippets/p10_ProximityFeedback.png",
+        "Docs/portfolio-code-snippets/p11_SpeedBoostEffectSO.png",
+        "Docs/portfolio-code-snippets/p15_after_groundContacts.png",
+        "Docs/portfolio-code-snippets/p15_before_IsGrounded.png"
+      ],
+      "status_porcelain": "?? Assets/_Recovery.meta\n?? \"Assets/_Recovery/0 (1).unity\"\n?? \"Assets/_Recovery/0 (1).unity.meta\"\n?? Assets/_Recovery/0.unity\n?? Assets/_Recovery/0.unity.meta\n?? Benchmarks/AnalyzeCurbStuckRuntime.py\n?? Benchmarks/CURB_RUNTIME_TESTS.md\n?? Benchmarks/CurbStuckRuntime/20261023_022541/setup.json\n?? Benchmarks/CurbStuckRuntime/20261023_022541/status.json\n?? Benchmarks/CurbStuckRuntime/20261023_022541/trace.json\n?? Benchmarks/CurbStuckRuntime/20261023_022541/trials.json\n?? Benchmarks/CurbStuckRuntime/20261023_022716/setup.json\n?? Benchmarks/CurbStuckRuntime/20261023_022716/status.json\n?? Benchmarks/CurbStuckRuntime/20261023_022716/trace.json\n?? Benchmarks/CurbStuckRuntime/20261023_022716/trials.json\n?? Benchmarks/CurbStuckRuntime/20261023_022738/setup.json\n?? Benchmarks/CurbStuckRuntime/20261023_022738/status.json\n?? Benchmarks/CurbStuckRuntime/20261023_022738/trace.json\n?? Benchmarks/CurbStuckRuntime/20261023_022738/trials.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/setup.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/status.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/trace.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_022929/trials.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/RESULTS.md\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/audit.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/editor_after.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/reference_boxes.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/runner_source.cs\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/setup.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/source_manifest.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/status.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/summary.csv\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/trace.json\n?? Benchmarks/CurbStuckRuntimeMatrix/20261023_023059/trials.json\n?? Benchmarks/FLOOR_BOUNDARY_TESTS.md\n?? Benchmarks/RunCurbStuckRuntimeMatrix.cs\n?? Benchmarks/RunCurbStuckRuntimePilot.cs\n?? Benchmarks/RunFloorBoundaryBenchmark.cs\n?? Benchmarks/youtube-icon.png\n?? Docs/physics-collider-execution-plan.md\n?? Docs/physics-collider-handoff.zip.sha256\n?? Docs/physics-collider-history-audit.md\n?? Docs/physics-collider-progress.md\n?? Docs/physics-collider-validation-plan.md\n?? Docs/portfolio-assets/slide13-before-2026-05-29-building-bakery-mesh.jpg\n?? Docs/portfolio-assets/slide13-road009-collider-inspector.jpg\n?? Docs/portfolio-assets/slide13-road009-curb-closeup-crop.jpg\n?? Docs/portfolio-assets/slide13-road009-curb-closeup.jpg\n?? Docs/portfolio-assets/slide13-road009-curb-scene-crop.jpg\n?? Docs/portfolio-assets/slide13-road009-curb-scene.jpg\n?? Docs/portfolio-assets/slide13-tools-add-road-curb-command.jpg\n?? Docs/portfolio-code-snippets/p07_MissionMessageUI.png\n?? Docs/portfolio-code-snippets/p10_ProximityFeedback.png\n?? Docs/portfolio-code-snippets/p11_SpeedBoostEffectSO.png\n?? Docs/portfolio-code-snippets/p15_after_groundContacts.png\n?? Docs/portfolio-code-snippets/p15_before_IsGrounded.png\n",
+      "tracked_diff_bytes": 0,
+      "staged_diff_bytes": 0,
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "assets",
+      "path": "/Users/ihaneul/unityProject/HoneyI-mHome/Assets/minigame-project-assets-smflsmfqh",
+      "head": "a160f46591e2af970f47d05603d64ddad4781e59",
+      "tracked_count": 15159,
+      "untracked_files": [],
+      "status_porcelain": "",
+      "tracked_diff_bytes": 0,
+      "staged_diff_bytes": 0,
+      "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "staged_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "file_index": {
+    "path": "Benchmarks/PhysicsValidation/Evidence/baseline-files.json",
+    "sha256": "5752f0f51fa9c7ddd9c52ddcd778351aa2acd1041330453865e4d953faaa2a72",
+    "records": 16891,
+    "hashed_bytes": 1608530245
+  },
+  "editor": {
+    "version": "6000.3.15f1",
+    "changeset": "c1aa84e375f6",
+    "editor_running": false,
+    "observation": "No Unity editor or UnityPackageManager process in read-only process inventory; no project Temp/UnityLockfile",
+    "process_inventory_verified": true,
+    "live_scene_dirty": null,
+    "live_play_mode": null,
+    "live_state_reason": "editor_not_running",
+    "last_saved_scene_setup": "sceneSetups:\n- path: Assets/Scenes/AntDemoScene.unity\n  isLoaded: 1\n  isActive: 1\n  isSubScene: 0\n",
+    "last_saved_scene_setup_sha256": "6c4aec2feffcae25aa7e4d99061f39e7aac2a7b3589486b4efbae72edc63b318",
+    "note": "Last saved scene setup is not live UI state. Global Editor.log belongs to a different project and was not used as project evidence."
+  },
+  "platform": {
+    "host_system": "Darwin",
+    "machine": "arm64"
+  },
+  "disk": {
+    "total_bytes": 245107195904,
+    "free_bytes": 20148584448
+  },
+  "module": {
+    "metadata_path": "/Applications/Unity/Hub/Editor/6000.3.15f1/modules.json",
+    "metadata_sha256": "07342656e17fe7f6c8d7cd3a76b0599398abb7b89773061d301d5828e3ab04a3",
+    "windows_mono_download_bytes": 381878545,
+    "windows_mono_installed_bytes": 989461000,
+    "installed_playback_engines": [
+      "MacStandaloneSupport"
+    ],
+    "installed_during_m1": false
+  },
+  "protection": {
+    "original_game_files_modified": false,
+    "original_scene_saved": false,
+    "editor_started": false,
+    "existing_untracked_files_preserved": true,
+    "historical_workspace_created": false,
+    "new_physics_tests_run": false
+  }
+}

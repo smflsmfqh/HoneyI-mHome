@@ -1,0 +1,7 @@
+{
+ "recordedUtc": "2026-11-09T13:13:29.092035+00:00",
+ "corrects": "Evidence/M5/M5-windows-20261109-interpretation.json 의 ④ '연석 끼임 재현 안 됨 → 10/23 결과와 상충, 인용 불가' (원 파일은 수정하지 않음)",
+ "evidence": "fix1 Windows(같은 PC i5-12500) BASE = 원본 씬, 테스트용 Zone 통제 없음, dt 0.01/CCD: 통제 3 run·게임 3 run 모두 S2 Sprint·Boost 직진 6건(m02·c00·p02)이 rescue_failed(완전 끼임), 3/3 결정적. 트랙 B S3(0.01/CCD)는 Zone/CarDrivingZone 비트리거 콜라이더 등을 트리거로 바꾼 공통 통제 아래에서 같은 case가 관통으로 나옴",
+ "corrected": "연석 끼임은 원본 씬 구성에서 재현된다(원본 씬, 같은 PC). 트랙 B의 '끼임 0'은 공통 통제가 끼임 조건을 없앤 결과로 보임. ④는 관통·끼임 모두에 대해 지지(CURBFIX에서 관통 21→0, 끼임 18→0, 통제 조건). 끼임 기전(밀려 내려간 개미가 CarDrivingZone 지지면 사이에 낌)은 가설, 접촉 대상 이름 미확인",
+ "scope": "PC 1대, 탐색(M5)"
+}

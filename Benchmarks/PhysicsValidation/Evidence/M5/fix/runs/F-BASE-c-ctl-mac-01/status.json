@@ -1,0 +1,10 @@
+{
+    "runId": "F-BASE-c-ctl-mac-01",
+    "state": "completed",
+    "planned": 12,
+    "finished": 12,
+    "harnessErrors": 1,
+    "currentCase": "",
+    "updatedUtc": "2026-11-09T09:37:34.9903410Z",
+    "message": ""
+}

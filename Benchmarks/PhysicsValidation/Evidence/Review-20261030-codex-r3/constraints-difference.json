@@ -1,0 +1,9 @@
+{
+  "before": 116,
+  "after": 80,
+  "xor": 36,
+  "removedBits": 36,
+  "FreezePositionY": 4,
+  "FreezeRotationY": 32,
+  "onlyUnfreezePositionY": 112
+}

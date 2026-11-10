@@ -1,0 +1,93 @@
+{
+ "milestone": "M3",
+ "state": "DONE",
+ "recordedAt": "2026-10-29 (Asia/Seoul)",
+ "worker": "Claude Code session",
+ "scope": "H1 복원본 기준 하네스·판정기 구현과 Mac Standalone 실행 경로 검증. Windows 결과 아님. 합성 지형 결과는 원래 버그의 개선 증거로 쓰지 않음",
+ "harnessSources": {
+  "Harness/Cases/classifier-checks.json": "e97a0ca1032aaa0da4a3aa531763bb0910dba4f9d8d2ff4062e64c9faa7e4395",
+  "Harness/Cases/profile-H1.json": "a8e8ea1a72b277f6b0fba2d1185515ed060da111f0606eb39680e1483c74e5e3",
+  "Harness/Cases/profile-H7.json": "9ab52aa0db03639027128954912a204d753339466355d922ec317eab240d6b3d",
+  "Harness/Cases/thresholds-r1.json": "76a2fb073106048ff55235b1c6a1d89a5c68dace4582d5525ccf13c649e8d251",
+  "Harness/Cases/thresholds-r2.json": "e75499b9d955ab201169fa4019f5cc4ffe37ab3d7b2a7712ff95d807b149f40a",
+  "Harness/Editor/PhysicsBenchBuild.cs": "82643341b91f682e7e314270968ebd717b2cea8403a328b31b429a7688192f97",
+  "Harness/README.md": "21c5f52bf4f0252817fed32aecc6f5bc7b71fcb947f520b358a06db2f1b55995",
+  "Harness/Runtime/PhysicsBenchData.cs": "f4ce03b11ef2217399563c76cb8a58e0ae81389aa2a6a49dec4d6e068e21c67e",
+  "Harness/Runtime/PhysicsBenchFixtures.cs": "0f87704e737191944d83fec35e821b31cbc946d15558ada2eb7230e8c8e3305c",
+  "Harness/Runtime/PhysicsBenchInput.cs": "fce1c07d47700b291d3ffa2621650ad4949545bd5c608c4c778484d6e61a82dd",
+  "Harness/Runtime/PhysicsBenchRunner.cs": "83ca42e56105ad65cf900928b9bbc03d4f238fd9856dcbc1d1f385a8196cea5c",
+  "Harness/Tools/analyze_physics_bench.py": "966fa4ec4222ac0db4d55fe1fad3e545fe2aab6709060f60ea45611dc37baee4",
+  "Tools/sync_harness.py": "62c7690b2bae31f3da10a35b63ce1d288c4d6ec10e2fb6084f76553760b1f451",
+  "Tools/verify_snapshot.py": "458f81b856ef6dc7f5d2febf27e5f5fc8e7d6656b6656533668ae2c5dc78b236"
+ },
+ "workspaceInstall": {
+  "path": "Benchmarks/.physics-work/project/Assets/PhysicsBench",
+  "syncRecord": "Evidence/M3/harness-sync-08.json",
+  "originalVerification": "Evidence/M3/H1-source-after-mac-08.json — mac-08 빌드·실행 후 원본 5,889개 Git blob 일치, 추가 파일은 하네스 사본·StreamingAssets·감사 스크립트와 .meta뿐"
+ },
+ "finalBuild": {
+  "buildId": "M3-H1-mac-08",
+  "target": "StandaloneOSX",
+  "backend": "Mono2x",
+  "development": true,
+  "defines": "PHYSICS_BENCH",
+  "result": "Succeeded, 0 errors",
+  "report": "Evidence/M3/builds/M3-H1-mac-08.build-result.json",
+  "log": "Evidence/M3/build-M3-H1-mac-08.log (ZIP 제외)",
+  "location": "Benchmarks/.physics-work/builds/M3-H1-mac-08 (재생성 가능 임시 빌드)"
+ },
+ "classifierChecks": {
+  "caseSet": "Harness/Cases/classifier-checks.json r3 (15건)",
+  "thresholds": "Harness/Cases/thresholds-r2.json",
+  "finalRun": {
+   "run": "Evidence/M3/runs/M3-H1-mac-ck-09",
+   "seed": 9,
+   "analysis": "Evidence/M3/analysis/M3-H1-mac-ck-09-a2",
+   "matched": "15/15",
+   "summarySha256": "08cf8ff0ab1229976a63367c065cf7ce70111940ce2edf1a2fc7df5aadde9c3c"
+  },
+  "earlierRuns": "ck-06(mac-06, 14/14), ck-07·08(mac-07, 각 14/14), ck-02~05(r1 10건 각 10/10), ck-01(8/10, 결함 수정 전). ck-09-a1은 자식 플래그 세분화 전 분석. 모두 보존"
+ },
+ "robustnessChecks": {
+  "sameRunIdRefused": "ck-03 재실행: 종료 코드 1, run_dir_exists, 기존 trials.jsonl SHA 불변",
+  "interrupt": "int-01: SIGTERM. 완료 3건 보존, status=running 잔존(강제 종료는 OnApplicationQuit 미호출), 분석기 종료 코드 3·누락 7건",
+  "watchdog": "CK13 time_scale_zero → harness_error:time_scale_zero, 직후 CK03이 reset:timeScale_was=0 기록과 함께 정상 완료(ck-07). CK14 hang → harness_error:fixed_step_stalled 후 다음 trial 정상",
+  "inputNotDelivered": "CK08 → harness_error:input_not_received. 입력 수신 지연은 물리 시간 기준(0.4s)",
+  "lowSpeedAndSettleFall": "CK03(Move)·CK09(지지면 없음) fall, 무효 처리 없음",
+  "passThroughAndOblique": "CK11 Trigger 연석 → passed_curb(접촉 없이 벽면 교차). CK12 60° 접근 → 기준 벽 법선으로 접촉 검출, blocked_escaped",
+  "repeatability": "Evidence/M3/trace-repeatability-ck07-08.json: 정착 종료 위치 차 1~5mm, 첫 입력 수신 스텝 동일. 0번 스텝 속도 차 0.03~0.14m/s 잔존(순서 무관, 자식 body·애니메이션 기원 추정). 복원 전(ck02-05) 1~12cm",
+  "capture": "-benchCapture end, ck-07/08 captures",
+  "slowLoad": "CK15: 씬 로드 중 20초 정지 → pass(stall 감시 기준을 로드 완료 시점으로 이동), trial 실시간 21.7초",
+  "overlapSaturation": "관측 쿼리 버퍼 포화 시 trace overlapSaturated, 분석기 플래그. 합성 지형에서는 발생 없음"
+ },
+ "harnessDefectsFoundAndFixed": [
+  "자식 body Rigidbody(다리·머리·더듬이)가 연석에 먼저 닿는데 주 캡슐만 기록 → 연석 접촉 누락·자기 접촉 오인. 모든 플레이어 Rigidbody 기록, 자기 접촉 분리",
+  "초기 침투가 첫 스텝에 해소되어 누락 → 배치 직후 침투 기록",
+  "재배치 시 자식 body 속도·자세 미초기화 → 씬 로드 직후 로컬 자세 복원·전체 정지",
+  "자식 콜라이더 침투·자기 침투·상대 위치 미관측 → trace에 추가",
+  "진행 방향 기준 벽 판정은 60° 근처 접근에서 실패 → case 기준 벽 법선 사용",
+  "미접촉 연석 case가 성공으로 흐를 수 있음 → no_wall_contact 결과, 벽면 교차로 통과 판정",
+  "입력 수신 실시간 기준은 느린 PC에서 오탐 → 물리 시간 기준",
+  "Development 콘솔·기본 재질로 캡처 불가 → 콘솔 숨김·URP Lit 재질",
+  "씬 로드가 15초를 넘으면 stall 감시가 정상 trial을 끊음 → 로드 완료·정렬 후 감시 기준 갱신"
+ ],
+ "observationsForM5": [
+  "H1 Mac 빌드 Player 로그: MeshCollider Read/Write 미설정 오류 140개 오브젝트(road_009·road_019·Set_B_Tiles 등). 목록 Evidence/M3/H1-mac-player-meshcollider-readwrite-errors.txt. H1 ProjectSettings bakeCollisionMeshes: 0(Prebake Collision Meshes 꺼짐). 빌드에서 해당 충돌체가 실제로 비는지 미확인 — 가설",
+  "M5 감사에 버전별 Prebake Collision Meshes, 해당 메시의 비균일 스케일·cooking 옵션·Read/Write를 함께 기록",
+  "합성 연석 Sprint 충돌에서 자식 콜라이더 연석 침투 약 1.9r, 주 캡슐 비침투. 자기 침투 약 1.4r, 자식 상대 이동 약 4.8r",
+  "H1 주 캡슐은 자식 콜라이더와 상시 자기 접촉(스텝당 8~18건)",
+  "개미 SkinnedMeshRenderer의 본에 'body'(자식 Rigidbody)가 포함 → 화면의 개미는 자식 body를 따라 그려진다. 분석기는 child_fall / child_transient_dip / child_beyond_wall을 주 결과와 따로 보고",
+  "점프 착지(약 2.8m/s)에서 Discrete 자식 body가 바닥 아래 약 3cm까지 1스텝 침투 후 복귀(CK12 구제 점프, ck-07·08·09 모두 287번 스텝). 주 캡슐은 비침투. 화면상 순간 낙하로 보일 수 있는 후보 기전 — 얇은 바닥에서 완전 관통 여부를 M5에서 확인"
+ ],
+ "versionCompatibility": "H1~H7 공개 API(InputDir, Yaw, IsGrounded, OnRollActive, SetSpeedBoost, PlayerHealth.SetInvincible)·키 바인딩 동일(git show). H7 profile 작성(HangoverEffect·TutorialManager 비활성). H2~H6 profile은 H7 기준으로 M5에서 작성. profile-H7.json은 미실행·미검증(첫 H7 smoke가 검증)",
+ "knownUncontrolled": [
+  "Destination 트리거의 GameClear/GameOver(timeScale=0)는 watchdog으로만 처리"
+ ],
+ "notDone": [
+  "Windows 컴파일·실행(M4)",
+  "실제 맵 case 실행",
+  "H2~H7 복원·계측",
+  "임계값 동결(M6)",
+  "애니메이터 초기화 여부 결정(잔여 비결정성)"
+ ]
+}

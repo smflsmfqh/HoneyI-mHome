@@ -1,0 +1,142 @@
+{
+ "seed": 20261110,
+ "eligible": 83,
+ "sites": [
+  {
+   "site": "G01",
+   "stratum": "A",
+   "kind": "mid",
+   "road": "road_001",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_001",
+   "neighbor": "",
+   "point": [
+    -13.6324,
+    -6.7178
+   ],
+   "normal": [
+    1.0,
+    -0.0
+   ],
+   "faceLength": 19.775
+  },
+  {
+   "site": "G02",
+   "stratum": "A",
+   "kind": "mid",
+   "road": "road_020",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+   "neighbor": "",
+   "point": [
+    -22.5,
+    28.6348
+   ],
+   "normal": [
+    1e-06,
+    -1.0
+   ],
+   "faceLength": 15.0
+  },
+  {
+   "site": "G03",
+   "stratum": "A",
+   "kind": "mid",
+   "road": "road_022",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_022",
+   "neighbor": "",
+   "point": [
+    7.5,
+    -63.8661
+   ],
+   "normal": [
+    -0.0,
+    -1.0
+   ],
+   "faceLength": 15.0
+  },
+  {
+   "site": "G04",
+   "stratum": "B",
+   "kind": "mid",
+   "road": "road_013",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_15",
+   "neighbor": "",
+   "point": [
+    -50.4692,
+    -69.5735
+   ],
+   "normal": [
+    0.483233,
+    0.875492
+   ],
+   "faceLength": 1.586
+  },
+  {
+   "site": "G05",
+   "stratum": "B",
+   "kind": "mid",
+   "road": "road_013",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_15",
+   "neighbor": "",
+   "point": [
+    54.6024,
+    -65.4829
+   ],
+   "normal": [
+    -0.882644,
+    0.470042
+   ],
+   "faceLength": 1.599
+  },
+  {
+   "site": "G06",
+   "stratum": "B",
+   "kind": "mid",
+   "road": "road_003",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_003/CurbColliders/Curb_0 (15)",
+   "neighbor": "",
+   "point": [
+    -13.6974,
+    15.2428
+   ],
+   "normal": [
+    0.984625,
+    0.174679
+   ],
+   "faceLength": 0.552
+  },
+  {
+   "site": "G07",
+   "stratum": "C",
+   "kind": "joint",
+   "road": "road_020",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+   "neighbor": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+   "point": [
+    -30.0,
+    28.6348
+   ],
+   "normal": [
+    1e-06,
+    -1.0
+   ],
+   "faceLength": 15.0
+  },
+  {
+   "site": "G08",
+   "stratum": "C",
+   "kind": "joint",
+   "road": "road_020",
+   "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+   "neighbor": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+   "point": [
+    -13.6338,
+    45.0
+   ],
+   "normal": [
+    1.0,
+    -1e-06
+   ],
+   "faceLength": 15.0
+  }
+ ]
+}

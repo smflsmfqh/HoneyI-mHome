@@ -1,0 +1,2099 @@
+{
+ "generatedBy": "Tools/summarize_M6.py",
+ "freeze": "Evidence/M6/M6-r1-freeze.json",
+ "runCount": 24,
+ "problems": [],
+ "pcs": [
+  "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER"
+ ],
+ "runs": {
+  "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.01-ContinuousDynamic",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a2-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.01-ContinuousDynamic",
+   "attempt": 2,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.01-ContinuousDynamic-a3-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.01-ContinuousDynamic",
+   "attempt": 3,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.01-Discrete-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.01-Discrete",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.01-Discrete-a2-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.01-Discrete",
+   "attempt": 2,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.01-Discrete-a3-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.01-Discrete",
+   "attempt": 3,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.02-ContinuousDynamic",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a2-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.02-ContinuousDynamic",
+   "attempt": 2,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.02-ContinuousDynamic-a3-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.02-ContinuousDynamic",
+   "attempt": 3,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.02-Discrete-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.02-Discrete",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.02-Discrete-a2-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.02-Discrete",
+   "attempt": 2,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814": {
+   "name": "W-M6-BASE-p4-dt0.02-Discrete-a3-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p4",
+   "phys": "dt0.02-Discrete",
+   "attempt": 3,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p5c-def-a1-s1-20261110T002814": {
+   "name": "W-M6-BASE-p5c-def-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p5c",
+   "phys": "def",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p5c-def-a2-s1-20261110T002814": {
+   "name": "W-M6-BASE-p5c-def-a2-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p5c",
+   "phys": "def",
+   "attempt": 2,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p5c-def-a3-s2-20261110T002814": {
+   "name": "W-M6-BASE-p5c-def-a3-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p5c",
+   "phys": "def",
+   "attempt": 3,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p5g-def-a1-s1-20261110T002814": {
+   "name": "W-M6-BASE-p5g-def-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p5g",
+   "phys": "def",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p5g-def-a2-s2-20261110T002814": {
+   "name": "W-M6-BASE-p5g-def-a2-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p5g",
+   "phys": "def",
+   "attempt": 2,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-BASE-p5g-def-a3-s3-20261110T002814": {
+   "name": "W-M6-BASE-p5g-def-a3-s3-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "BASE",
+   "grp": "p5g",
+   "phys": "def",
+   "attempt": 3,
+   "seed": 3,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814": {
+   "name": "W-M6-CURBFIX-p5c-def-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "CURBFIX",
+   "grp": "p5c",
+   "phys": "def",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814": {
+   "name": "W-M6-CURBFIX-p5c-def-a2-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "CURBFIX",
+   "grp": "p5c",
+   "phys": "def",
+   "attempt": 2,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814": {
+   "name": "W-M6-CURBFIX-p5c-def-a3-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "CURBFIX",
+   "grp": "p5c",
+   "phys": "def",
+   "attempt": 3,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-CURBFIX-p5g-def-a1-s1-20261110T002814": {
+   "name": "W-M6-CURBFIX-p5g-def-a1-s1-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "CURBFIX",
+   "grp": "p5g",
+   "phys": "def",
+   "attempt": 1,
+   "seed": 1,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-CURBFIX-p5g-def-a2-s2-20261110T002814": {
+   "name": "W-M6-CURBFIX-p5g-def-a2-s2-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "CURBFIX",
+   "grp": "p5g",
+   "phys": "def",
+   "attempt": 2,
+   "seed": 2,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass"
+   },
+   "floorRwObjects": 0
+  },
+  "W-M6-CURBFIX-p5g-def-a3-s3-20261110T002814": {
+   "name": "W-M6-CURBFIX-p5g-def-a3-s3-20261110T002814",
+   "bundle": "PhysicsBench-M6A-Results-20261110T002814",
+   "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+   "variant": "CURBFIX",
+   "grp": "p5g",
+   "phys": "def",
+   "attempt": 3,
+   "seed": 3,
+   "state": "completed",
+   "ckOk": true,
+   "ck": {
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass",
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall"
+   },
+   "floorRwObjects": 0
+  }
+ },
+ "F_floor": {
+  "S0a": {
+   "runs": 0,
+   "E2_C": {
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 0,
+    "runsExcluded": []
+   },
+   "falls": 0,
+   "n": 0,
+   "manipulationCheck": {
+    "rule": "바닥 Read/Write 오류 0",
+    "ok": false,
+    "floorRwObjectsPerRun": []
+   },
+   "fallCases": []
+  },
+  "S0b": {
+   "runs": 0,
+   "E2_C": {
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 0,
+    "runsExcluded": []
+   },
+   "falls": 0,
+   "n": 0,
+   "manipulationCheck": {
+    "rule": "바닥 Read/Write 오류 > 0",
+    "ok": false,
+    "floorRwObjectsPerRun": []
+   },
+   "fallCases": []
+  },
+  "S0p": {
+   "runs": 0,
+   "E2_C": {
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 0,
+    "runsExcluded": []
+   },
+   "falls": 0,
+   "n": 0,
+   "manipulationCheck": {
+    "rule": "바닥 Read/Write 오류 0",
+    "ok": false,
+    "floorRwObjectsPerRun": []
+   },
+   "fallCases": []
+  },
+  "S1": {
+   "runs": 0,
+   "E2_C": {
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 0,
+    "runsExcluded": []
+   },
+   "falls": 0,
+   "n": 0,
+   "manipulationCheck": {
+    "rule": "없음",
+    "ok": true,
+    "floorRwObjectsPerRun": []
+   },
+   "fallCases": []
+  },
+  "S2": {
+   "runs": 0,
+   "E2_C": {
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 0,
+    "runsExcluded": []
+   },
+   "falls": 0,
+   "n": 0,
+   "manipulationCheck": {
+    "rule": "바닥 Read/Write 오류 0",
+    "ok": false,
+    "floorRwObjectsPerRun": []
+   },
+   "fallCases": []
+  },
+  "S3": {
+   "runs": 0,
+   "E2_C": {
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 0,
+    "runsExcluded": []
+   },
+   "falls": 0,
+   "n": 0,
+   "manipulationCheck": {
+    "rule": "없음",
+    "ok": true,
+    "floorRwObjectsPerRun": []
+   },
+   "fallCases": []
+  }
+ },
+ "geometry": {
+  "S0a": {
+   "holeRate": 0.00017765144785930004,
+   "absErrP95mm": 7.450580596923828e-06,
+   "curbAbsErrP95mm": 7.450580596923828e-06,
+   "stepLost": 0,
+   "transitions": 90
+  },
+  "S1": {
+   "holeRate": 0.5596020607567952,
+   "absErrP95mm": 100.00034730612128,
+   "curbAbsErrP95mm": 200.0001072883606,
+   "stepLost": 84,
+   "transitions": 90
+  },
+  "S1z": {
+   "holeRate": 0.02575945993959851,
+   "absErrP95mm": 100.00012069940567,
+   "curbAbsErrP95mm": 100.0002771615982,
+   "stepLost": 87,
+   "transitions": 90
+  },
+  "S2": {
+   "holeRate": 0.0001184342985728667,
+   "absErrP95mm": 750.0000000000001,
+   "curbAbsErrP95mm": 199.99991357326508,
+   "stepLost": 90,
+   "transitions": 90
+  },
+  "S3": {
+   "holeRate": 0.0002664771717889501,
+   "absErrP95mm": 100.00011324882507,
+   "curbAbsErrP95mm": 100.00011324882507,
+   "stepLost": 6,
+   "transitions": 90
+  }
+ },
+ "H0": {
+  "runs": 0,
+  "perCase_k_of_n": {},
+  "totalFalls": 0,
+  "totalTrials": 0,
+  "casesWithFall": 0
+ },
+ "P4": {
+  "dt0.02-Discrete": {
+   "runs": 3,
+   "all": {
+    "n": 102,
+    "passThrough": 72,
+    "recovered_after_penetration": 24,
+    "blocked_escaped": 6,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_straight": {
+    "n": 54,
+    "passThrough": 54,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_frontRollMove": {
+    "n": 12,
+    "recovered_after_penetration": 12,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_angled": {
+    "n": 36,
+    "passThrough": 18,
+    "recovered_after_penetration": 12,
+    "blocked_escaped": 6,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "E2_C": {
+    "n": 72,
+    "pass": 72,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   }
+  },
+  "dt0.02-ContinuousDynamic": {
+   "runs": 3,
+   "all": {
+    "n": 102,
+    "blocked_escaped": 30,
+    "recovered_after_penetration": 24,
+    "passThrough": 48,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_straight": {
+    "n": 54,
+    "blocked_escaped": 18,
+    "passThrough": 36,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_frontRollMove": {
+    "n": 12,
+    "recovered_after_penetration": 12,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_angled": {
+    "n": 36,
+    "blocked_escaped": 12,
+    "recovered_after_penetration": 12,
+    "passThrough": 12,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "E2_C": {
+    "n": 72,
+    "pass": 72,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   }
+  },
+  "dt0.01-Discrete": {
+   "runs": 3,
+   "all": {
+    "n": 102,
+    "passThrough": 38,
+    "blocked_escaped": 30,
+    "recovered_after_penetration": 34,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_straight": {
+    "n": 54,
+    "blocked_escaped": 18,
+    "passThrough": 29,
+    "recovered_after_penetration": 7,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_frontRollMove": {
+    "n": 12,
+    "recovered_after_penetration": 12,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_angled": {
+    "n": 36,
+    "passThrough": 9,
+    "recovered_after_penetration": 15,
+    "blocked_escaped": 12,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "E2_C": {
+    "n": 72,
+    "pass": 72,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   }
+  },
+  "dt0.01-ContinuousDynamic": {
+   "runs": 3,
+   "all": {
+    "n": 102,
+    "passThrough": 19,
+    "blocked_escaped": 30,
+    "recovered_after_penetration": 35,
+    "rescue_failed": 18,
+    "fullStuck": 18,
+    "directionalStuck": 18,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_straight": {
+    "n": 54,
+    "blocked_escaped": 18,
+    "passThrough": 10,
+    "rescue_failed": 18,
+    "recovered_after_penetration": 8,
+    "fullStuck": 18,
+    "directionalStuck": 18,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_frontRollMove": {
+    "n": 12,
+    "recovered_after_penetration": 12,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "curb_angled": {
+    "n": 36,
+    "passThrough": 9,
+    "recovered_after_penetration": 15,
+    "blocked_escaped": 12,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   },
+   "E2_C": {
+    "n": 72,
+    "pass": 72,
+    "fullStuck": 0,
+    "directionalStuck": 0,
+    "runsUsed": 3,
+    "runsExcluded": []
+   }
+  },
+  "pairedDiff_vs_dt0.02-Discrete": {
+   "dt0.02-ContinuousDynamic": [
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.02-ContinuousDynamic": "blocked_escaped"
+    }
+   ],
+   "dt0.01-Discrete": [
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Roll_a30",
+     "dt0.02-Discrete": "recovered_after_penetration",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Roll_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Roll_a30",
+     "dt0.02-Discrete": "recovered_after_penetration",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Roll_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Roll_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Boost_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-Discrete": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Roll_a30",
+     "dt0.02-Discrete": "recovered_after_penetration",
+     "dt0.01-Discrete": "blocked_escaped"
+    }
+   ],
+   "dt0.01-ContinuousDynamic": [
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Roll_a30",
+     "dt0.02-Discrete": "recovered_after_penetration",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Roll_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Boost_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Roll_a30",
+     "dt0.02-Discrete": "recovered_after_penetration",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Roll_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_a60",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Roll_a30",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Boost_m02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_p02",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "rescue_failed"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_c00",
+     "dt0.02-Discrete": "passThrough",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Roll_a30",
+     "dt0.02-Discrete": "recovered_after_penetration",
+     "dt0.01-ContinuousDynamic": "blocked_escaped"
+    }
+   ]
+  }
+ },
+ "P5": {
+  "p5c": {
+   "BASE": {
+    "runs": 3,
+    "all": {
+     "n": 102,
+     "passThrough": 21,
+     "blocked_escaped": 30,
+     "recovered_after_penetration": 33,
+     "rescue_failed": 18,
+     "fullStuck": 18,
+     "directionalStuck": 18,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_straight": {
+     "n": 54,
+     "blocked_escaped": 18,
+     "passThrough": 12,
+     "rescue_failed": 18,
+     "recovered_after_penetration": 6,
+     "fullStuck": 18,
+     "directionalStuck": 18,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_frontRollMove": {
+     "n": 12,
+     "recovered_after_penetration": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_angled": {
+     "n": 36,
+     "passThrough": 9,
+     "recovered_after_penetration": 15,
+     "blocked_escaped": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "E2_C": {
+     "n": 72,
+     "pass": 72,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "penetrationAux": {
+     "n": 33,
+     "medianR": 0.655,
+     "p90R": 1.696,
+     "maxR": 1.959,
+     "maxCm": 1.84
+    }
+   },
+   "CURBFIX": {
+    "runs": 3,
+    "all": {
+     "n": 102,
+     "recovered_after_penetration": 72,
+     "blocked_escaped": 30,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_straight": {
+     "n": 54,
+     "blocked_escaped": 18,
+     "recovered_after_penetration": 36,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_frontRollMove": {
+     "n": 12,
+     "recovered_after_penetration": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_angled": {
+     "n": 36,
+     "recovered_after_penetration": 24,
+     "blocked_escaped": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "E2_C": {
+     "n": 72,
+     "pass": 72,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "penetrationAux": {
+     "n": 72,
+     "medianR": 2.149,
+     "p90R": 2.251,
+     "maxR": 2.796,
+     "maxCm": 2.63
+    }
+   },
+   "pairedDiff": [
+    {
+     "attempt": 1,
+     "case": "B_S3_BoostSprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_BoostSprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Boost_m02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_m02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_m02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_p02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_c00",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Boost_p02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_p02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_p02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_c00",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_m02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_BoostSprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_BoostSprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Boost_m02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_m02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_m02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_p02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_c00",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Boost_p02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_p02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_p02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_c00",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_m02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_m02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_BoostSprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_BoostSprint_a30",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_m02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_p02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_c00",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_p02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_m02",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Boost_m02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Boost_p02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_c00",
+     "BASE": "rescue_failed",
+     "CURBFIX": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_p02",
+     "BASE": "passThrough",
+     "CURBFIX": "recovered_after_penetration"
+    }
+   ]
+  },
+  "p5g": {
+   "BASE": {
+    "runs": 3,
+    "all": {
+     "n": 102,
+     "passThrough": 20,
+     "blocked_escaped": 30,
+     "recovered_after_penetration": 34,
+     "rescue_failed": 18,
+     "fullStuck": 18,
+     "directionalStuck": 18,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_straight": {
+     "n": 54,
+     "blocked_escaped": 18,
+     "recovered_after_penetration": 7,
+     "rescue_failed": 18,
+     "passThrough": 11,
+     "fullStuck": 18,
+     "directionalStuck": 18,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_frontRollMove": {
+     "n": 12,
+     "recovered_after_penetration": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_angled": {
+     "n": 36,
+     "passThrough": 9,
+     "recovered_after_penetration": 15,
+     "blocked_escaped": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "E2_C": {
+     "n": 72,
+     "pass": 72,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "penetrationAux": {
+     "n": 34,
+     "medianR": 0.655,
+     "p90R": 1.696,
+     "maxR": 1.959,
+     "maxCm": 1.84
+    }
+   },
+   "CURBFIX": {
+    "runs": 3,
+    "all": {
+     "n": 102,
+     "recovered_after_penetration": 72,
+     "blocked_escaped": 30,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_straight": {
+     "n": 54,
+     "blocked_escaped": 18,
+     "recovered_after_penetration": 36,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_frontRollMove": {
+     "n": 12,
+     "recovered_after_penetration": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "curb_angled": {
+     "n": 36,
+     "recovered_after_penetration": 24,
+     "blocked_escaped": 12,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "E2_C": {
+     "n": 72,
+     "pass": 72,
+     "fullStuck": 0,
+     "directionalStuck": 0,
+     "runsUsed": 3,
+     "runsExcluded": []
+    },
+    "penetrationAux": {
+     "n": 72,
+     "medianR": 2.149,
+     "p90R": 2.251,
+     "maxR": 2.796,
+     "maxCm": 2.63
+    }
+   }
+  },
+  "p5c_BASE_vs_p4_dt0.01CCD_sameness": [
+   {
+    "attempt": 2,
+    "case": "B_S3_Boost_m02",
+    "p5c-default": "passThrough",
+    "p4-explicit": "recovered_after_penetration"
+   },
+   {
+    "attempt": 3,
+    "case": "B_S3_Boost_m02",
+    "p5c-default": "passThrough",
+    "p4-explicit": "recovered_after_penetration"
+   }
+  ]
+ },
+ "verdicts": {
+  "①": {
+   "support": false,
+   "S0withFalls": [],
+   "S3falls": 0,
+   "S0p": "S0p 조작 체크 실패(무효)",
+   "alt_B": false,
+   "H0": "언급 안 함",
+   "invalidVariants": [
+    "S0a",
+    "S0b",
+    "S0p",
+    "S2"
+   ]
+  },
+  "②": {
+   "support": true,
+   "against": false,
+   "S2curbP95mm": 199.99991357326508,
+   "S2stepLostRate": 1.0,
+   "S2runtimeFalls": 0
+  },
+  "③": {
+   "S3runtimeFalls0": true,
+   "S3geomMatch": false,
+   "S3geom": {
+    "holeRate": 0.0002664771717889501,
+    "absErrP95mm": 100.00011324882507,
+    "curbAbsErrP95mm": 100.00011324882507,
+    "stepLost": 6,
+    "transitions": 90
+   },
+   "S1limit": true,
+   "S1runtimeFalls": 0,
+   "supplementary_P5c_BASE_E2C_falls": 0,
+   "supplementary_n": 72
+  },
+  "④": {
+   "passThrough_0.02D": 72,
+   "passThrough_0.01CCD": 19,
+   "n_0.02D": 102,
+   "n_0.01CCD": 102,
+   "fullStuck_0.02D": 0,
+   "fullStuck_0.01CCD": 18,
+   "support_passThrough": true,
+   "sentence": "감소했지만 0.01/CCD에서도 > 0",
+   "stuckSentence": "끼임 남김/늘림 문장"
+  },
+  "⑤": {
+   "eliminate": true,
+   "partial": false,
+   "against": false,
+   "regressionSignal": false,
+   "ctl": {
+    "BASE": {
+     "passThrough": 21,
+     "fullStuck": 18,
+     "escaped_by_rescue": 0,
+     "n": 102,
+     "E2C_fall": 0
+    },
+    "CURBFIX": {
+     "passThrough": 0,
+     "fullStuck": 0,
+     "escaped_by_rescue": 0,
+     "n": 102,
+     "E2C_fall": 0
+    }
+   },
+   "game": {
+    "BASE": {
+     "passThrough": 20,
+     "fullStuck": 18,
+     "escaped_by_rescue": 0,
+     "n": 102,
+     "E2C_fall": 0
+    },
+    "CURBFIX": {
+     "passThrough": 0,
+     "fullStuck": 0,
+     "escaped_by_rescue": 0,
+     "n": 102,
+     "E2C_fall": 0
+    }
+   },
+   "aux": {
+    "n": 72,
+    "medianR": 2.149,
+    "p90R": 2.251,
+    "maxR": 2.796,
+    "maxCm": 2.63
+   },
+   "auxSentence": true,
+   "passedUnclassified": {
+    "BASE": 0,
+    "CURBFIX": 0
+   }
+  }
+ }
+}

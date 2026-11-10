@@ -1,0 +1,545 @@
+{
+ "experimentId": "M5-fix1",
+ "caseSetRevision": "fix1-c",
+ "version": "H7",
+ "generatedBy": "Tools/make_explore_e2.py",
+ "probe": "probe-H7-e2c.json",
+ "cases": [
+  {
+   "id": "CK01_flat_hold",
+   "scenario": "hold",
+   "environment": "fixture",
+   "fixture": "flat",
+   "start": [
+    0.0,
+    -100.0,
+    -0.15
+   ],
+   "yaw": 0.0,
+   "moveMode": "Move",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -100.0,
+   "sabotage": "",
+   "expect": "pass",
+   "notes": "",
+   "wallNormal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallTopY": 0.0,
+   "wallPlaneTolerance": 0.0,
+   "wallTargets": []
+  },
+  {
+   "id": "CK03_hole_walk_slow",
+   "scenario": "walk",
+   "environment": "fixture",
+   "fixture": "hole",
+   "start": [
+    0.0,
+    -100.0,
+    -0.2
+   ],
+   "yaw": 0.0,
+   "moveMode": "Move",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -100.0,
+   "sabotage": "",
+   "expect": "fall",
+   "notes": "Move 0.8m/s 저속 보행으로 구멍에 들어감. 저속이라는 이유로 무효 처리되지 않아야 함",
+   "wallNormal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallTopY": 0.0,
+   "wallPlaneTolerance": 0.0,
+   "wallTargets": []
+  },
+  {
+   "id": "CK08_flat_walk_noinput",
+   "scenario": "walk",
+   "environment": "fixture",
+   "fixture": "flat",
+   "start": [
+    0.0,
+    -100.0,
+    -0.3
+   ],
+   "yaw": 0.0,
+   "moveMode": "Move",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 0.5,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -100.0,
+   "sabotage": "no_input",
+   "expect": "harness_error:input_not_received",
+   "notes": "PlayerInput을 미사용 장치에 페어링. 끼임/정지로 세면 안 됨",
+   "wallNormal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallTopY": 0.0,
+   "wallPlaneTolerance": 0.0,
+   "wallTargets": []
+  },
+  {
+   "id": "CK13_flat_hold_timescale0",
+   "scenario": "hold",
+   "environment": "fixture",
+   "fixture": "flat",
+   "start": [
+    0.0,
+    -100.0,
+    -0.15
+   ],
+   "yaw": 0.0,
+   "moveMode": "Move",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -100.0,
+   "sabotage": "time_scale_zero",
+   "expect": "harness_error:time_scale_zero",
+   "notes": "trial 중 timeScale=0. watchdog이 중단하고 다음 trial이 정상 진행되어야 함",
+   "wallNormal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallTopY": 0.0,
+   "wallPlaneTolerance": 0.0,
+   "wallTargets": []
+  },
+  {
+   "id": "E2_P00_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -48.532,
+    0.0,
+    -23.462
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 6.17,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_02(Read/Write 없이 런타임 cooking 필요, 폭 1.98m) AABB 서쪽 면 x=-47.932로 중심선 Sprint 돌진. 출발 지면 y=0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -47.932,
+    0.0,
+    -23.462
+   ],
+   "wallTopY": 2.499,
+   "wallPlaneTolerance": 1.985,
+   "wallTargets": [
+    "PostProcessingVolume/Demonstration/BasicSettingsMap/Bus_Stop_02"
+   ]
+  },
+  {
+   "id": "E2_P01_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    30.459,
+    -0.0,
+    -53.259
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 5.33,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06(Read/Write 없이 런타임 cooking 필요, 폭 1.57m) AABB 서쪽 면 x=31.059로 중심선 Sprint 돌진. 출발 지면 y=-0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    31.059,
+    -0.0,
+    -53.259
+   ],
+   "wallTopY": 1.213,
+   "wallPlaneTolerance": 1.567,
+   "wallTargets": [
+    "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06"
+   ]
+  },
+  {
+   "id": "E2_P02_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -80.164,
+    0.0,
+    32.865
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 4.52,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)(Read/Write 없이 런타임 cooking 필요, 폭 1.16m) AABB 서쪽 면 x=-79.564로 중심선 Sprint 돌진. 출발 지면 y=0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -79.564,
+    0.0,
+    32.865
+   ],
+   "wallTopY": 1.213,
+   "wallPlaneTolerance": 1.162,
+   "wallTargets": [
+    "PostProcessingVolume/Demonstration/BasicSettingsMap/Trash_Can_06 (1)"
+   ]
+  },
+  {
+   "id": "E2_P03_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    18.175,
+    -0.0,
+    -27.28
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.22,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Store1/Trash_02(Read/Write 없이 런타임 cooking 필요, 폭 0.51m) AABB 서쪽 면 x=18.775로 중심선 Sprint 돌진. 출발 지면 y=-0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    18.775,
+    -0.0,
+    -27.28
+   ],
+   "wallTopY": 0.876,
+   "wallPlaneTolerance": 0.51,
+   "wallTargets": [
+    "PostProcessingVolume/Store1/Trash_02"
+   ]
+  },
+  {
+   "id": "E2_P04_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -86.739,
+    -0.0,
+    37.792
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 10.44,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Store2/Fountain_03(Read/Write 없이 런타임 cooking 필요, 폭 4.12m) AABB 서쪽 면 x=-86.139로 중심선 Sprint 돌진. 출발 지면 y=-0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -86.139,
+    -0.0,
+    37.792
+   ],
+   "wallTopY": 3.02,
+   "wallPlaneTolerance": 4.12,
+   "wallTargets": [
+    "PostProcessingVolume/Store2/Fountain_03"
+   ]
+  },
+  {
+   "id": "E2_P05_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -89.077,
+    0.0,
+    45.852
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 15.79,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Store2/pizzeria house with environment(Read/Write 없이 런타임 cooking 필요, 폭 6.79m) AABB 서쪽 면 x=-88.477로 중심선 Sprint 돌진. 출발 지면 y=0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -88.477,
+    0.0,
+    45.852
+   ],
+   "wallTopY": 11.206,
+   "wallPlaneTolerance": 6.794,
+   "wallTargets": [
+    "PostProcessingVolume/Store2/pizzeria house with environment"
+   ]
+  },
+  {
+   "id": "E2_P06_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -80.031,
+    0.0,
+    50.142
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.6,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Store2/pizzeria house with environment/plants 2(Read/Write 없이 런타임 cooking 필요, 폭 0.70m) AABB 서쪽 면 x=-79.431로 중심선 Sprint 돌진. 출발 지면 y=0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -79.431,
+    0.0,
+    50.142
+   ],
+   "wallTopY": 1.891,
+   "wallPlaneTolerance": 0.702,
+   "wallTargets": [
+    "PostProcessingVolume/Store2/pizzeria house with environment/plants 2"
+   ]
+  },
+  {
+   "id": "E2_P07_prop",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -82.105,
+    0.0,
+    47.733
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 4.86,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "H7 소품 PostProcessingVolume/Store2/pizzeria house with environment/table(Read/Write 없이 런타임 cooking 필요, 폭 1.33m) AABB 서쪽 면 x=-81.505로 중심선 Sprint 돌진. 출발 지면 y=0.0 (probe-H7-e2c.json). 이 collider 접촉 유무가 관측 대상",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -81.505,
+    0.0,
+    47.733
+   ],
+   "wallTopY": 0.93,
+   "wallPlaneTolerance": 1.33,
+   "wallTargets": [
+    "PostProcessingVolume/Store2/pizzeria house with environment/table"
+   ]
+  }
+ ],
+ "derivedFrom": {
+  "e2c": "explore-e2c-H7.json",
+  "sha256": "42732af728e41a5c2a0cf975a6300938f3abee2fccf18614bdbd95b7fdf976ce"
+ }
+}

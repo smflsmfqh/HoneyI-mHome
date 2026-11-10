@@ -1,0 +1,34 @@
+{
+  "case": "E2_C01_jump",
+  "status": "completed",
+  "jumpInputs": [
+    {
+      "action": "Move+Jump",
+      "value": "W+Space",
+      "requestFixedTime": 158.7198944091797,
+      "requestRealtime": 163.14907836914062,
+      "requiredActions": "Jump",
+      "receivedActions": "Jump",
+      "droppedKeys": "",
+      "firstReceivedFixedTime": 158.7198944091797,
+      "receivedRealtime": 163.149169921875,
+      "receivedFixedTime": 158.7198944091797
+    },
+    {
+      "action": "Jump",
+      "value": "W",
+      "requestFixedTime": 158.81988525390625,
+      "requestRealtime": 163.25050354003906,
+      "requiredActions": "Jump",
+      "receivedActions": "Jump",
+      "droppedKeys": "",
+      "firstReceivedFixedTime": 158.81988525390625,
+      "receivedRealtime": 163.2506561279297,
+      "receivedFixedTime": 158.81988525390625
+    }
+  ],
+  "constraints": [
+    "override:constraints=116->80"
+  ],
+  "legacyScript": "git show d3a98563b6dae62d68f5f08c689ac144b4885886:MiniGameProject/Assets/Scripts/PlayerMovement.cs has OnMove and FixedUpdate only; H0 has OnJump but no OnSprint"
+}

@@ -1,0 +1,64 @@
+{
+ "runDir": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Evidence/M3/runs/M3-H1-mac-int-01",
+ "runState": "running",
+ "inputs": {
+  "trials.jsonl": "ac28327e3b9e0d2196aa2bc3e8f2d0d3b403003a77f0494c22bbb90b6eef95c1",
+  "trace.jsonl": "38142554b03eb45aa43a2b2f8c4bf0d442f6d245d299499f4de9980391cf0b50",
+  "thresholds": "76a2fb073106048ff55235b1c6a1d89a5c68dace4582d5525ccf13c649e8d251"
+ },
+ "thresholds": {
+  "revision": "r1-provisional",
+  "note": "M3 판정기 검증용 잠정값. r=캡슐 월드 반지름. M5 예비 실행 후 M6에서 동결한다.",
+  "fallDepthR": 3.0,
+  "supportNormalY": 0.5,
+  "supportProbeGapR": 0.5,
+  "stableSupportSec": 0.1,
+  "escapeDistR": 2.0,
+  "penetrationSignificantR": 0.25,
+  "penetrationResolvedR": 0.1,
+  "passThroughR": 3.0,
+  "inputReceiveMaxSec": 0.5
+ },
+ "planned": 10,
+ "trials": 3,
+ "missingCases": [
+  "CK08_flat_walk_noinput",
+  "CK01_flat_hold",
+  "CK04_stepdown_walk",
+  "CK02_flat_walk",
+  "CK09_void_hold",
+  "CK07_penetration_move",
+  "CK03_hole_walk_slow"
+ ],
+ "duplicateTrials": [],
+ "harnessErrors": 0,
+ "outcomes": {
+  "rescue_failed": 1,
+  "blocked_escaped": 1,
+  "pass": 1
+ },
+ "classifierChecks": {
+  "total": 3,
+  "matched": 3,
+  "items": [
+   {
+    "caseId": "CK06_trap_move",
+    "expect": "rescue_failed",
+    "outcome": "rescue_failed",
+    "match": true
+   },
+   {
+    "caseId": "CK05_curb_sprint",
+    "expect": "blocked_escaped",
+    "outcome": "blocked_escaped",
+    "match": true
+   },
+   {
+    "caseId": "CK10_flat_jump",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   }
+  ]
+ }
+}

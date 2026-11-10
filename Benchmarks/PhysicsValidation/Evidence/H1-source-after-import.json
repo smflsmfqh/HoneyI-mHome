@@ -1,0 +1,8 @@
+{
+  "version": "H1",
+  "checked_original_files": 5889,
+  "original_files_changed_after_unity_import": [],
+  "compile_exit_code": 0,
+  "log": "Benchmarks/PhysicsValidation/Evidence/H1-import.log",
+  "physics_tests_run": false
+}

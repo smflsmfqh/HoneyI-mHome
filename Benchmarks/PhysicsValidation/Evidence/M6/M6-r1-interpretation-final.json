@@ -1,0 +1,169 @@
+{
+ "experimentId": "M6-r1",
+ "scope": "최종(48 run, 묶음 A+B). 주장 ①~⑤",
+ "recordedUtc": "2026-11-10",
+ "inputs": {
+  "A": {
+   "resultsZip": "Evidence/PhysicsBench-M6A-Results-20261110T002814.zip",
+   "resultsZipSha256": "1bdf17a0f9e98c568d31ed51bfd0bd412bdfd145bf0c260fc60cf0cbaa1c65e1",
+   "extracted": "Evidence/M6/windows/PhysicsBench-M6A-Results-20261110T002814/",
+   "runs": 24,
+   "exitCodeNonZero": 0,
+   "pc": "i5-12500 / GTX 1660 SUPER / Windows 10 19045 (M5와 같은 PC)"
+  },
+  "B": {
+   "resultsZip": "Evidence/PhysicsBench-M6B-Results-20261110T145343.zip",
+   "resultsZipSha256": "3b5c84bb73b58dec7908a98bc570117f237c73ffc7a7f8a6941695b26b589e7b",
+   "extracted": "Evidence/M6/windows/PhysicsBench-M6B-Results-20261110T145343/",
+   "runs": 24,
+   "exitCodeNonZero": 0
+  }
+ },
+ "summary": {
+  "file": "Evidence/M6/M6-r1-summary-final.json",
+  "sha256": "1499c72b6ea65a062fdfcb5cb6423faf0839cb165ec3646c5ad13457026c9598",
+  "runCount": 48,
+  "problems": [],
+  "supersedes": "M6-r1-summary-A-partial.json(①②③ 무의미, ④⑤ 값은 최종과 같음)"
+ },
+ "tools": {
+  "analyzer": "Harness/Tools/analyze_physics_bench.py c9950f0b90f145bc… (동결값과 같음), thresholds-B1 4aca1580… → Evidence/M6/analysis/<run>-a1",
+  "summarizer": "Tools/summarize_M6.py 185241a05baf05b4… (동결값과 같음) → Evidence/M6/M6-r1-summary-A-partial.json"
+ },
+ "provenanceCheck": {
+  "A": "24/24 일치: experimentId M6-r1, case m6-curb.json(9d3037e6…), BASE run은 M6-BASE-win-01·씬 9d0bb583…, CURBFIX run은 M6-CURBFIX-win-01·씬 12ba8273…, p4 dt/CCD override가 run ID와 같음, p5c·p5g는 override 없음(-1), p4·p5c 18개는 profile-H7, p5g 6개는 profile-H7-game(빈 필드 제외 동일), seed·attempt가 RunM6A.cmd와 같음, CK 4/4로 제외 run 0",
+  "B": "24/24: case SHA가 Harness/Cases/M6-r1 파일과 같음, 바닥 run은 M6-<V>-win-01이고 씬 SHA가 Evidence/M6/build 빌드 기록과 같음, dt 0.02/Discrete override, profile-H7. H0 6 run은 M5-H0-win-01(씬 37822e15…), -benchProfile 없음·-benchFps 60, 내장 H0 프로필이 M5 H0 run과 같음. seed·attempt가 RunM6B.cmd와 같음. CK 제외 0"
+ },
+ "manipulationChecks": "S0b 바닥 Read/Write 오류 12/12/12(>0), S0a·S0p·S2 0/0/0 → 무효 변형 없음",
+ "floorFalls_E2C_3attempts": {
+  "S0a": "42/72",
+  "S0b": "72/72",
+  "S0p": "42/72",
+  "S1": "0/72",
+  "S2": "12/72",
+  "S3": "0/72",
+  "note": "M5 트랙 B와 같은 값"
+ },
+ "claim1": {
+  "verdict": "support",
+  "rules": [
+   "S0a·S0b 낙하 ≥1, S3 0",
+   "S0p 낙하 남음 → '설정만으로는 해결되지 않았다' 덧붙임",
+   "H0 낙하 있음 → 보조 문장"
+  ],
+  "H0_perCase": {
+   "E2_C01_jump": "6/6",
+   "E2_C06_walk": "6/6",
+   "E2_C08_walk": "6/6",
+   "E2_C11_jump": "6/6",
+   "E2_C11_walk": "6/6",
+   "E2_C09_jump": "4/6",
+   "others": "0/6 (18 case)",
+   "total": "34/144"
+  },
+  "sentence": "Mesh 바닥은 빌드에서 개미를 받치지 못했다(Mesh Collider 바닥 E2_C 경로 낙하: 당시 설정(H0식) 42/72, cooking 옵션을 바꾼 H1식 72/72). H1식에 Read/Write를 켜도 42/72로, 설정만으로는 해결되지 않았다. 실제 당시 버전(H0) 빌드에서도 같은 경로 낙하가 관측됐다(24 case 중 6 case, case별 4/6~6/6).",
+  "variants": "S0a=H0식(기본 cooking, Read/Write 꺼짐), S0b=H1식(EnableMeshCleaning 제거, Read/Write 꺼짐), S0p=S0b+Read/Write 켬 (trackB-plan §2)"
+ },
+ "claim2": {
+  "verdict": "support",
+  "S2curbP95mm": 200,
+  "S2stepLost": "90/90",
+  "S2runtimeFalls": "12/72(보고만)",
+  "sentence": "Convex Mesh Collider는 연석 경계를 경사면처럼 감싸 지형과 어긋났다(연석 구간 높이 오차 p95 200mm, 단차 90/90 소실). 런타임에서도 E2_C 낙하 12/72가 남았다."
+ },
+ "claim3": {
+  "verdict": "지지 아님(런타임 조건만 충족). freeze에 '부분' 범주가 없으므로 '부분'은 서술 표현으로만 쓴다(M9)",
+  "runtime": "S3 E2_C 낙하 0/72 (충족)",
+  "geometry": {
+   "curbAbsErrP95mm": 100,
+   "criterion": "≤ 5mm",
+   "met": false,
+   "stepLost": "6/90 (≤10% 충족)",
+   "holeRate": "0.03% (≤1% 충족)"
+  },
+  "S1limit": "받침판 S1 단차 소실 84/90·S1z 87/90, 전체 p95 100mm → 받침판 한계 충족, S1 런타임 낙하 0/72",
+  "supplementary": "P5c BASE(원본 씬, 0.01/CCD) E2_C 낙하 0/72",
+  "remaining": "S3 연석 구간 p95 100mm는 freeze의 남은 문제(남쪽 도로 0.1m 단차)와 같은 크기. 소품 관통도 남은 문제",
+  "sentence": "Box로 재구성한 바닥은 낙하가 없었다(E2_C 0/72, 원본 게임 설정에서도 0/72). 단차는 90곳 중 84곳을 보존했다. 다만 연석 구간 높이 오차 p95가 100mm로 사전 기준(5mm)을 넘었으므로 '지형과 완전히 맞는다'고 쓰지 않는다. 남쪽 도로 0.1m 단차는 남은 문제로 함께 적는다.",
+  "note": "기하 기준 미충족은 M5와 같은 결과이며 결과로 보고(사후 기준 변경 없음). 단차 84/90 보존은 stepLost 6/90에서 계산",
+  "m9GeomLocation": "S3 5mm 초과 2,319점 중 2,187점(94%)이 C07 경로 FloorColliders/road_009_floor 위, 단차 소실 6곳·연석 p95>5mm 경로 모두 C07 → '남쪽 도로 0.1m 단차' 연결은 위치로 확인됨(M9-audit.json tables.claim3_geomLocation)"
+ },
+ "claim4": {
+  "table_BASE_curb34x3": {
+   "dt0.02-Discrete": {
+    "passThrough": "72/102",
+    "rescue_failed": "0/102"
+   },
+   "dt0.01-Discrete (dt만)": {
+    "passThrough": "38/102",
+    "rescue_failed": "0/102"
+   },
+   "dt0.02-CCD (CCD만)": {
+    "passThrough": "48/102",
+    "rescue_failed": "0/102"
+   },
+   "dt0.01-CCD": {
+    "passThrough": "19/102",
+    "rescue_failed": "18/102"
+   }
+  },
+  "E2_C": "네 칸 모두 낙하 0/72",
+  "rulesApplied": [
+   "passThrough 감소 & 0.01/CCD에서도 > 0",
+   "끼임: 0.01/CCD rescue_failed > 0.02/Discrete"
+  ],
+  "sentence": "물리 설정(ContinuousDynamic, dt 0.01)은 고속 연석 관통을 줄였지만 없애지는 못했다(72/102 → 19/102). CCD·dt 0.01은 관통을 줄였지만 연석 끼임은 늘렸다(0/102 → 18/102). 남은 관통과 끼임은 연석 콜라이더 밑면 연장(⑤)으로 해결했다.",
+  "note": "끼임은 네 칸 중 dt 0.01과 CCD를 함께 쓴 칸에서만 나왔다. 원인 주장은 하지 않고 수치로만 보고",
+  "m9Note": "0.01/CCD의 끼임 18건은 0.02/D에서 passThrough였던 같은 case(연석 지점 S2 Sprint·Boost × c00·p02·m02)가 rescue_failed로 바뀐 것. 대응표 악화 0이지만 실패 범주 전이(통과→완전 끼임) 18건"
+ },
+ "claim5": {
+  "verdict": "support_eliminate",
+  "ctl_3attempts": {
+   "BASE": {
+    "passThrough": "21/102",
+    "rescue_failed": "18/102",
+    "escaped_by_rescue": "0/102"
+   },
+   "CURBFIX": {
+    "passThrough": "0/102",
+    "rescue_failed": "0/102",
+    "escaped_by_rescue": "0/102"
+   }
+  },
+  "game_3runs": {
+   "BASE": {
+    "passThrough": "20/102",
+    "rescue_failed": "18/102",
+    "escaped_by_rescue": "0/102"
+   },
+   "CURBFIX": {
+    "passThrough": "0/102",
+    "rescue_failed": "0/102",
+    "escaped_by_rescue": "0/102"
+   }
+  },
+  "E2_C_falls": "BASE·CURBFIX 통제·게임 모두 0/72",
+  "passedUnclassified": "BASE 0, CURBFIX 0",
+  "aux_recovered_maxPenWallDepthR": {
+   "BASE_ctl": {
+    "n": 33,
+    "medianR": 0.655,
+    "p90R": 1.696,
+    "maxR": 1.959,
+    "maxCm": 1.84
+   },
+   "CURBFIX_ctl": {
+    "n": 72,
+    "medianR": 2.149,
+    "p90R": 2.251,
+    "maxR": 2.796,
+    "maxCm": 2.63
+   }
+  },
+  "auxNote": "CURBFIX에서 recovered가 33→72로 늘고 깊이 중앙값도 커졌다. BASE에서 관통·끼임이던 case가 '파고든 뒤 밀려남'으로 옮겨 왔기 때문(대응표 pairedDiff 참고). 판정에는 쓰지 않음",
+  "sentence": "연석 BoxCollider 밑면을 도로면 아래(-0.3)까지 연장해, 고속 돌진 측정에서 연석 관통·끼임이 0이 됐다(통제 3회 반복: 관통 21/102·끼임 18/102 → 0/102·0/102, 게임 조건 3 run 합: 관통 20/102·끼임 18/102 → 0/102·0/102). 충돌 직후 최대 2.6cm 연석에 파고든 뒤 밀려난다(사용자 플레이에서도 보임).",
+  "reproduction": "fix1(M5) 통제 결과(21·18 → 0·0, recovered 72, 중앙값 2.15r)와 같은 값",
+  "m9Note": "통제 대응 174쌍: 개선 39, 악화 0, 범주 변화 0(회귀 없음). CURBFIX recovered 144건 모두 첫 후진 단계, 접촉 후 1.19~1.24초에 이탈(BASE recovered와 같음)"
+ },
+ "m9Audit": "Evidence/M6/audit/M9-audit-report.md, M9-audit.json — 48 run 감사 a~e 모두 통과, 잡음 a1↔a2 0~1건"
+}

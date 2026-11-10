@@ -1,0 +1,120 @@
+{
+ "version": "H7",
+ "root_sha": "b8efce3526d3ef85eb0c85a580884369f3f5f48a",
+ "asset_sha": "a160f46591e2af970f47d05603d64ddad4781e59",
+ "workspace": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/project-H7",
+ "checkedUtc": "2026-10-29T16:33:55.653972+00:00",
+ "original_files_checked": 16766,
+ "changed": [],
+ "missing": [],
+ "extra_files": [
+  {
+   "path": "Assets/PhysicsBench.meta",
+   "sha256": "f63d91f805a0199c4964494b363abcb32cb29bc067743119040fa5444c36ecad"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor.meta",
+   "sha256": "a348b9491a1dccfaa83a2c372b269e696d4c9e01407ac677380433541bf73a1e"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs",
+   "sha256": "82643341b91f682e7e314270968ebd717b2cea8403a328b31b429a7688192f97"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs.meta",
+   "sha256": "9997d028aea420c9975a11fbcf251b7ee35891f6429f8d7915f1264ba38e3354"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs",
+   "sha256": "7df863185735f0741d842d92982592578180f06e3fcc73ac2af95bef1a14372e"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs.meta",
+   "sha256": "509eabb028358e110bb2fc5f277a93d68149071c7e8de6e441e23f851d8e30eb"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime.meta",
+   "sha256": "c72dabe270bdddf0da8c350a7f85708fb0c72f3e9cd63fba01ee9039d4bf05d0"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchData.cs",
+   "sha256": "8c12e396668bca25e0e3208045ce2024547c3f6c41080b713a862c2059d6a721"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchData.cs.meta",
+   "sha256": "e8dddb2d80d01c1c7532a626c4b008d9f6a0cea46c0d3f8d08993b9a9353c939"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs",
+   "sha256": "2575dfd4777feb0c810f76fdc98fdbd10980cc313e60daf1d739f73f7ce818d6"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs.meta",
+   "sha256": "5e1d2a136029e538f1228788a6df82f0970e7699202cb1883c0ccaf5d9f2c82d"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs",
+   "sha256": "426af84e1e47875acd80a1042b4736848dd02f2f6d82fccef45a6fffaf659cef"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs.meta",
+   "sha256": "e26124cedc0c0deec6c36a6f8e9508514975a4138b9c5b21ac41b95f76208535"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs",
+   "sha256": "6d109f532dfb9fa0daf1cf2517313819f73de76de08853f27c0b59a1447193de"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs.meta",
+   "sha256": "de31823856d9b63303853c5900cb6d8ba3cfe69d233987c8ba74cfca1ffd71e7"
+  },
+  {
+   "path": "Assets/StreamingAssets.meta",
+   "sha256": "91f8d7fd5b15d434a5fbd41508af23d0aebdb984bb0589876189e89c7d51b211"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench.meta",
+   "sha256": "e0d625fb4e85cee2722965ed40e636b9c40e66428c97511a327b198bf12f11fd"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/build-info.json",
+   "sha256": "03627cda2f5517d739536ba47cc294abc7410da965129fe6f525c6108ca89891"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/build-info.json.meta",
+   "sha256": "eee7392a6f15bbc4a8f5ff46edbefeede01820ff7fc9dd0ede15f900c413a069"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/cases.json",
+   "sha256": "1eb0c7f43f728272ec76e4e238e99750c4298b35d5c03073915da4c8a5a36310"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/cases.json.meta",
+   "sha256": "c48cc7ecdcf637e0034f4587d15c9a64f12f544d9d43e14187b0c6be97ea7a7c"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/profile.json",
+   "sha256": "9ab52aa0db03639027128954912a204d753339466355d922ec317eab240d6b3d"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/profile.json.meta",
+   "sha256": "3695b2634b5af77a9c823d8c5c4606fd7490f8c65bdb521aea59094aa34e8ef3"
+  },
+  {
+   "path": "Packages/Coplay/Editor/CoplayLogs/console_logs_20261029.log",
+   "sha256": "0b0628daafe4b37ec92226de7daf2ade4694c8d3a7db75f614743da726ad0fea"
+  },
+  {
+   "path": "Packages/Coplay/Editor/CoplayLogs/console_logs_20261030.log",
+   "sha256": "d7224c18ed76838cc1b08da911993c6aeb5da9ef9a5c6ecb63c4eb4e079e1590"
+  },
+  {
+   "path": "Packages/Coplay/Editor/CoplayLogs/coplay_settings.json",
+   "sha256": "283bb86eefe4413593088ec64c32365338a9c71b5291be8701be589f2241376d"
+  },
+  {
+   "path": "Packages/Coplay/Editor/CoplayLogs/last_compile_errors.json",
+   "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "revision": "r1",
+ "source": "역사 PlayerMovement의 InputValue 처리 함수(git show)와 Rigidbody constraints. Review-20261030-codex-r3 P2 반영",
+ "note": "분석기는 이 표로 결과(outcome)를 바꾸지 않고 플래그·요약만 추가한다. 미지원 동작이 들어간 trial은 그 동작의 효과 수치에서 뺀다",
+ "versions": {
+  "Hm1": {"actions": ["Move"], "lookPath": "legacy Input Mouse X(FollowCamera), 하네스는 준비 단계 카메라 yaw 설정", "positionYFrozen": true,
+          "evidence": "d3a9856 PlayerMovement: OnMove + MovePosition만. 씬 Rigidbody m_Constraints 116(FreezePositionY 포함)"},
+  "H0": {"actions": ["Move", "Look", "Jump"], "positionYFrozen": false,
+         "evidence": "1a44741 PlayerMovement: OnMove·OnLook·OnJump. Sprint·Roll·SetSpeedBoost 없음. constraints 80"},
+  "H1": {"actions": ["Move", "Look", "Jump", "Sprint", "Roll", "Boost"], "positionYFrozen": false,
+         "evidence": "9b83a24 PlayerMovement: OnMove·OnSprint·OnLook·OnJump·OnRoll, SetSpeedBoost"},
+  "H7": {"actions": ["Move", "Look", "Jump", "Sprint", "Roll", "Boost"], "positionYFrozen": false,
+         "evidence": "b8efce3 PlayerMovement: OnMove·OnSprint·OnLook·OnJump·OnRoll, SetSpeedBoost"}
+ }
+}

@@ -1,0 +1,10 @@
+{
+    "runId": "F-COOK30-c-ctl-mac-01",
+    "state": "completed",
+    "planned": 12,
+    "finished": 12,
+    "harnessErrors": 1,
+    "currentCase": "",
+    "updatedUtc": "2026-11-09T09:39:24.9464740Z",
+    "message": ""
+}

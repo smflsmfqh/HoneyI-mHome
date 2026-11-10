@@ -1,0 +1,84 @@
+{
+ "generatedBy": "Tools/make_cases_r1.py",
+ "source": "Harness/Cases/e2c/explore-e2c-H0.json",
+ "sourceSha256": "e345e736fff14cf0c7c22b949e8dc62309430d36bd926bbb824957eeead3636c",
+ "out": "repeat-r1-H0.json",
+ "outSha256": "4bd36a9862814ce6a05bc9c0630bb09ae52eb148fd134fd4a64c949ae1f1fc1f",
+ "cases": 53,
+ "groups": {
+  "E2_C": {
+   "count": 24,
+   "ids": [
+    "E2_C01_jump",
+    "E2_C01_walk",
+    "E2_C02_jump",
+    "E2_C02_walk",
+    "E2_C03_jump",
+    "E2_C03_walk",
+    "E2_C04_jump",
+    "E2_C04_walk",
+    "E2_C05_jump",
+    "E2_C05_walk",
+    "E2_C06_jump",
+    "E2_C06_walk",
+    "E2_C07_jump",
+    "E2_C07_walk",
+    "E2_C08_jump",
+    "E2_C08_walk",
+    "E2_C09_jump",
+    "E2_C09_walk",
+    "E2_C10_jump",
+    "E2_C10_walk",
+    "E2_C11_jump",
+    "E2_C11_walk",
+    "E2_C12_jump",
+    "E2_C12_walk"
+   ]
+  },
+  "E2_K": {
+   "count": 24,
+   "ids": [
+    "E2_K01_hold",
+    "E2_K01_walk",
+    "E2_K02_hold",
+    "E2_K02_walk",
+    "E2_K03_hold",
+    "E2_K03_walk",
+    "E2_K04_hold",
+    "E2_K04_walk",
+    "E2_K05_hold",
+    "E2_K05_walk",
+    "E2_K06_hold",
+    "E2_K06_walk",
+    "E2_K07_hold",
+    "E2_K07_walk",
+    "E2_K08_hold",
+    "E2_K08_walk",
+    "E2_K09_hold",
+    "E2_K09_walk",
+    "E2_K10_hold",
+    "E2_K10_walk",
+    "E2_K11_hold",
+    "E2_K11_walk",
+    "E2_K12_hold",
+    "E2_K12_walk"
+   ]
+  },
+  "CK": {
+   "count": 4,
+   "ids": [
+    "CK01_flat_hold",
+    "CK03_hole_walk_slow",
+    "CK08_flat_walk_noinput",
+    "CK13_flat_hold_timescale0"
+   ]
+  },
+  "E1": {
+   "count": 1,
+   "ids": [
+    "E1_P11R_hold"
+   ]
+  }
+ },
+ "caseDefinitionsIdenticalToSource": true
+}

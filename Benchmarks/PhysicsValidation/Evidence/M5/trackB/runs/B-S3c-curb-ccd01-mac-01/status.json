@@ -1,0 +1,10 @@
+{
+    "runId": "B-S3c-curb-ccd01-mac-01",
+    "state": "completed",
+    "planned": 22,
+    "finished": 22,
+    "harnessErrors": 1,
+    "currentCase": "",
+    "updatedUtc": "2026-11-08T11:49:37.1000250Z",
+    "message": ""
+}

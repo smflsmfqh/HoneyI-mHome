@@ -1,0 +1,10 @@
+{
+    "runId": "M3-H1-mac-int-01",
+    "state": "running",
+    "planned": 10,
+    "finished": 3,
+    "harnessErrors": 0,
+    "currentCase": "CK08_flat_walk_noinput",
+    "updatedUtc": "2026-10-29T11:42:27.2063530Z",
+    "message": ""
+}

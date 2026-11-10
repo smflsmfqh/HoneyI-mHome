@@ -1,0 +1,5 @@
+{"runState": "completed", "planned": 84, "trials": 84, "missingCases": [], "harnessErrors": 2, "outcomes": {"blocked_escaped": 8, "recovered_after_penetration": 52, "passed_curb": 15, "harness_error:time_scale_zero": 1, "rescue_failed": 4, "escaped_by_rescue": 1, "fall": 1, "harness_error:input_not_received": 1, "pass": 1}}
+OK  CK13_flat_hold_timescale0: expect=harness_error:time_scale_zero outcome=harness_error:time_scale_zero
+OK  CK03_hole_walk_slow: expect=fall outcome=fall
+OK  CK08_flat_walk_noinput: expect=harness_error:input_not_received outcome=harness_error:input_not_received
+OK  CK01_flat_hold: expect=pass outcome=pass

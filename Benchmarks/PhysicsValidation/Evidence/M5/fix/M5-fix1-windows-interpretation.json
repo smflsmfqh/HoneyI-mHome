@@ -1,0 +1,128 @@
+{
+ "recordedUtc": "2026-11-09T13:13:29.092035+00:00",
+ "nature": "M5 탐색(같은 PC 1대, i5-12500). 정식 M6 수치 아님. 판정은 동결 M5-fix1-freeze(+addendum-c, c2) 규칙 그대로",
+ "inputs": {
+  "resultsZip": "Evidence/PhysicsBench-Fix1-Results-20261109T194748.zip",
+  "resultsZipSha256": "63eb9c094a5938a556a93a5ed42393bdb8cebb364a29ec8a830c3b039bb5b6e2",
+  "extracted": "Evidence/M5/windows/PhysicsBench-Fix1-Results-20261109T194748/",
+  "analysis": "Evidence/M5/fix/analysis/W-F-*-a1 (analyze_physics_bench.py c9950f0b…, thresholds-B1 4aca1580…)",
+  "summary": "Evidence/M5/fix/M5-fix1-windows-summary-a1.json",
+  "summarySha256": "faae6526d59b1d319a0197e319049dd13062500b0c255d338e749e367f367464",
+  "summarizer": "Tools/summarize_M5_fix1.py",
+  "summarizerSha256": "29861d520eac4b5cf0f86eab17a1a728e60a8a0413bcf047ba525314be02b382"
+ },
+ "validity": "21 run 모두 completed·종료 코드 0, CK 4/4 전부 통과, 하네스 오류는 의도한 CK08·CK13뿐. 무효 trial: COOK30 c-ctl E2_P03 3건(initialPenDepth 0.0193 > 0.005)",
+ "determinism": "통제 조건은 BASE·CURBFIX 각각 attempt 1·2·3(seed 1,1,2) 결과가 case별로 완전히 같음",
+ "b": {
+  "verdict": "b_support 충족(통제·게임 모두). '해결'이 아니라 '이 case 범위에서 관통·끼임이 사라지고 회귀 신호 없음'",
+  "controlled": {
+   "curbAll_102trials": {
+    "BASE": {
+     "passThrough": 21,
+     "stuck_rescue_failed": 18,
+     "recovered_after_penetration": 33,
+     "blocked_escaped": 30
+    },
+    "CURBFIX": {
+     "passThrough": 0,
+     "stuck": 0,
+     "recovered_after_penetration": 72,
+     "blocked_escaped": 30
+    }
+   },
+   "byGroup": {
+    "straight(54)": "BASE 관통 12·완전 끼임 18 → CURBFIX 0·0",
+    "angled 30°·60°(36)": "BASE 관통 9 → CURBFIX 0, 끼임 둘 다 0",
+    "front Roll·Move(12)": "둘 다 recovered 12, 관통·끼임 0(변화 없음)"
+   },
+   "E2_C(72)": "둘 다 낙하 0·끼임 0(전부 pass)",
+   "pairedDiff": "39건 모두 관통→recovered 21, rescue_failed→recovered 18. 반대 방향 변화 0",
+   "caveat": "바뀐 case는 막힘(blocked)이 아니라 연석 면 안으로 들어갔다가 밀려나는 recovered_after_penetration. recovered trial의 maxPenWallDepthR(반지름 배수) 중앙값 BASE 0.66(n33) → CURBFIX 2.15(n72), 최대 2.80 ≈ 2.6cm. 연석에 몸이 일부 파고든 뒤 되돌아나오는 장면이 보일 수 있음"
+  },
+  "game_3runs": {
+   "BASE": {
+    "passThrough": 18,
+    "rescue_failed": 18,
+    "recovered": 36,
+    "E2C_fall": 0
+   },
+   "CURBFIX": {
+    "passThrough": 0,
+    "stuck": 0,
+    "recovered": 72,
+    "E2C_fall": 0
+   },
+   "regressionSignal": "없음(끼임+E2_C 낙하 BASE 18 vs CURBFIX 0, rescue_failed는 BASE에만)",
+   "note": "동결 b_pairing대로 합계만 비교"
+  }
+ },
+ "c": {
+  "verdict": "부분 지지. 소품 Trash_Can_06·(1)은 cooking 복원으로 막힘(예측 적중). 나머지 소품 예측은 틀렸거나 판정 불가. 조작 확인은 차량에서 일부 실패",
+  "frozenMeasure_c_measure": "E2_P rootOutcome passed_curb: BASE 24/24, COOK30 21/21(유효 trial) → 동결 원 지표로는 차이 없음. addendum-c2가 이 지표가 '돌아서 지나감'을 관통으로 셈을 결과 전에 기록",
+  "c2Measure_perProp": {
+   "P00 Bus_Stop_02": {
+    "prediction": "BASE 관통 → COOK30 막힘",
+    "result": "두 빌드 모두 직진 통과 3/3(접촉 0, 17m 진행)",
+    "match": "틀림(원인 미조사)"
+   },
+   "P01 Trash_Can_06": {
+    "prediction": "BASE 관통 → COOK30 막힘",
+    "result": "BASE 직진 통과 3/3 → COOK30 막힘 3/3(대상 접촉 70스텝, 옆으로 0.37m 돌아감)",
+    "match": "맞음"
+   },
+   "P02 Trash_Can_06 (1)": {
+    "prediction": "BASE 관통 → COOK30 막힘",
+    "result": "BASE 직진 통과 3/3 → COOK30 막힘 3/3",
+    "match": "맞음"
+   },
+   "P03 Trash_02": {
+    "prediction": "BASE 관통 → COOK30 막힘",
+    "result": "BASE 직진 통과 3/3, COOK30 3/3 무효(출발 시 initialPenDepth 0.0193)",
+    "match": "판정 불가(유효 데이터 없음)",
+    "observation": "COOK30 출발 스텝 penId 51468·penDepth 0.0118·penDirY -1. 겹친 콜라이더가 Trash_02인지는 확인하지 않음"
+   },
+   "P04 Fountain_03": {
+    "prediction": "BASE 관통 → COOK30 막힘",
+    "result": "두 빌드 모두 직진 통과 3/3(접촉 0, 20m 진행)",
+    "match": "틀림(원인 미조사)"
+   },
+   "P05 pizzeria house": {
+    "prediction": "두 빌드 모두 관통 유지",
+    "result": "두 빌드 모두 막힘 3/3",
+    "match": "틀림(BASE에서 이미 막힘)"
+   },
+   "P06 plants 2": {
+    "prediction": "두 빌드 모두 관통 유지",
+    "result": "두 빌드 모두 막힘 3/3",
+    "match": "틀림(BASE에서 이미 막힘)"
+   },
+   "P07 table": {
+    "prediction": "두 빌드 모두 관통 유지",
+    "result": "두 빌드 모두 대상 접촉 0·가로 이탈 0·면 너머 2.17m 진행 후 느린 스텝 476(정체)",
+    "match": "판정 불가(c2 straightPassThrough와 obstructed에 동시에 해당. 정의가 배타적이지 않음)"
+   }
+  },
+  "auxMeasureNote": "summary의 obstructedAfterAccel(출발 가속 이후 느린 스텝만 셈)은 addendum에 없는 보조 지표. 이번 결과에서는 obstructed와 같은 값",
+  "manipulationCheck": {
+   "prediction": "COOK30에서 pizzeria 계열 외 소품 Read/Write 오류 0, 런타임 생성 차량 0",
+   "result": "고유 오류 경로 BASE 68 → COOK30 6(통제·게임 같음). 남은 6개는 모두 Manager/CarSpawnManager의 차량 본체(Car_06·13·16·19·Futuristic_Car_1·Van)",
+   "match": "차량 부분 틀림. pizzeria 부분도 틀림(BASE·COOK30 로그 모두 pizzeria Read/Write 오류 0. audit의 nonUniformScale 분류가 실제 오류로 이어지지 않음)",
+   "cause": "실제로 생성되는 차량은 Assets/Prefabs/CarPrefabs/*.prefab 변형(CarMovement 부착)이고 각 파일에 m_CookingOptions: 26 override가 따로 있음(루트 저장소 7aecf5f, 2026-05-27). cook79 목록(에셋 저장소 de8bfd48)과 cook-audit 프리팹 목록에 이 변형이 없어 audit의 '프리팹 0개 필요'는 실제 생성 차량을 감사하지 않은 결과"
+  },
+  "c_regression": {
+   "result": "b-game COOK30 vs BASE(3 run 합): 관통 19 vs 18, rescue_failed 18 vs 18, E2_C 낙하 0 vs 0 → 회귀 신호 없음, 연석 문제도 그대로",
+   "limit": "차량 본체 6종은 COOK30에서도 cooking 26 override 상태라 '차량이 실제 충돌체가 된 조건'의 회귀 확인이 아님(바퀴 등 일부만 복원). B_S3_Boost_m02 a3 한 건 차이는 합계 규칙상 원인 해석하지 않음"
+  }
+ },
+ "forOriginalApply": [
+  "연석: CURBFIX(밑면 -0.3) 적용. 130개가 PostProcessingVolume.prefab 인스턴스 소속 → 프리팹 수정 또는 씬 override 선택",
+  "cooking: 79개 에셋 프리팹 26→30에 더해 Assets/Prefabs/CarPrefabs 변형 6개의 26 override도 고쳐야 오류가 사라짐(이번 빌드에는 미포함, 재검증 필요)",
+  "원본 에디터가 열려 있음 → 저장·종료 여부 사용자 확인"
+ ],
+ "openQuestions": [
+  "P00·P04 직진 통과 원인",
+  "P07 정체 원인(다른 콜라이더)",
+  "P03 COOK30 출발 겹침 대상",
+  "CURBFIX 연석 침투 깊이 2r 수준이 화면에서 어떻게 보이는지"
+ ]
+}

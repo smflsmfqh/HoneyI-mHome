@@ -1,0 +1,12 @@
+OK  {"name": "curb unmodified", "ok": true, "outcome": "blocked_escaped", "rootOutcome": "blocked_escaped", "flags": [], "escapeStep": 96, "childFallStep": null}
+OK  {"name": "child fall during escape phase before escape is confirmed", "ok": true, "outcome": "visual_fall", "rootOutcome": "blocked_escaped", "flags": ["child_fall"], "escapeStep": 96, "childFallStep": 91}
+OK  {"name": "child fall only after escape (rescue phase)", "ok": true, "outcome": "blocked_escaped", "rootOutcome": "blocked_escaped", "flags": ["child_fall", "child_fall_after_escape"], "escapeStep": 96, "childFallStep": 261}
+OK  {"name": "child transient dip", "ok": true, "outcome": "blocked_escaped", "rootOutcome": "blocked_escaped", "flags": ["child_transient_dip"], "escapeStep": 96, "childFallStep": null}
+OK  {"name": "hold with sustained child fall", "ok": true, "outcome": "visual_fall", "rootOutcome": "pass", "flags": ["child_fall"], "escapeStep": null, "childFallStep": 0}
+OK  {"name": "composite input missing Sprint", "ok": true, "outcome": "harness_error:input_not_received", "rootOutcome": "harness_error:input_not_received", "flags": [], "escapeStep": null, "childFallStep": null}
+OK  {"name": "Hm1 curb sprint: Sprint/Jump/Roll unsupported, Y frozen", "ok": true, "outcome": "blocked_escaped", "flags": ["action_unsupported:Jump", "action_unsupported:Roll", "action_unsupported:Sprint", "y_position_frozen"]}
+OK  {"name": "Hm1 with constraints override 80: not Y frozen", "ok": true, "outcome": "blocked_escaped", "flags": ["action_unsupported:Jump", "action_unsupported:Roll", "action_unsupported:Sprint"]}
+OK  {"name": "H1 curb sprint: all supported", "ok": true, "outcome": "blocked_escaped", "flags": []}
+OK  {"name": "H0 hold: no unsupported action", "ok": true, "outcome": "pass", "flags": []}
+OK  {"name": "pass evidence breakdown", "ok": true}
+exit=0

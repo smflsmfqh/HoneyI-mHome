@@ -1,0 +1,1255 @@
+{
+ "analyzer": "Tools/analyze_trackB_geom.py",
+ "results": [
+  {
+   "variant": "S0a",
+   "source": "Evidence/M6/geom/geom-S0a.json",
+   "record": {
+    "floorObjects": 100,
+    "boxesDisabled": 1426,
+    "zonesMadeTrigger": 3,
+    "runtimeTriggerZones": 32,
+    "meshCollidersAdded": 100,
+    "cooking": "30 CookForFasterSimulation, EnableMeshCleaning, WeldColocatedVertices, UseFastMidphase",
+    "convex": false,
+    "plateAdded": false,
+    "plateTopY": 0.0,
+    "floorMeshesReadable": 0
+   },
+   "logWarnings": 0,
+   "points": 33774,
+   "holeRate": 0.00017765144785930004,
+   "absErrMm": {
+    "p50": 7.105427357601002e-12,
+    "p95": 7.450580596923828e-06,
+    "max": 237.29315340197843
+   },
+   "curbAbsErrMm": {
+    "n": 6372,
+    "p50": 7.105427357601002e-12,
+    "p95": 7.450580596923828e-06,
+    "max": 199.99998807907104
+   },
+   "transitions": 90,
+   "stepLost": 0,
+   "perLine": {
+    "C01@-0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 237.29314465982299
+    },
+    "C01@+0.00": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 237.29314903088294
+    },
+    "C01@+0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 5.6843418860808015e-11,
+     "curbAbsErrP95mm": 2.8421709430404007e-11,
+     "absErrMaxmm": 237.29315340197843
+    },
+    "C03@-0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 199.9986469745636
+    },
+    "C03@+0.00": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 199.9986469745636
+    },
+    "C03@+0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 199.9986618757248
+    },
+    "C05@-0.10": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 1.4901161193847656e-05,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 2.2351741790771484e-05
+    },
+    "C05@+0.00": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 1.4901161193847656e-05,
+     "curbAbsErrP95mm": 1.4901161193847656e-05,
+     "absErrMaxmm": 2.2351741790771484e-05
+    },
+    "C05@+0.10": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 1.4901161193847656e-05,
+     "curbAbsErrP95mm": 1.4901161193847656e-05,
+     "absErrMaxmm": 2.2351741790771484e-05
+    },
+    "C07@-0.10": {
+     "points": 1301,
+     "holes": 2,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 199.99998062849045
+    },
+    "C07@+0.00": {
+     "points": 1301,
+     "holes": 2,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 1.4901161193847656e-05,
+     "absErrMaxmm": 199.99998062849045
+    },
+    "C07@+0.10": {
+     "points": 1301,
+     "holes": 2,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 199.99998807907104
+    },
+    "C09@-0.10": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 1.4901161193847656e-05
+    },
+    "C09@+0.00": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 0.0006556510925292969,
+     "absErrMaxmm": 0.0006556510925292969
+    },
+    "C09@+0.10": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 1.4901161193847656e-05
+    },
+    "C11@-0.10": {
+     "points": 2151,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 1.1368683772161603e-10,
+     "curbAbsErrP95mm": 1.7053025658242404e-10,
+     "absErrMaxmm": 7.450580596923828e-06
+    },
+    "C11@+0.00": {
+     "points": 2151,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 1.7053025658242404e-10,
+     "curbAbsErrP95mm": 2.2737367544323206e-10,
+     "absErrMaxmm": 7.450580596923828e-06
+    },
+    "C11@+0.10": {
+     "points": 2151,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 1.7053025658242404e-10,
+     "curbAbsErrP95mm": 1.7053025658242404e-10,
+     "absErrMaxmm": 7.450580596923828e-06
+    },
+    "S2@-0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 5.595524044110789e-11,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 1.4901161193847656e-05
+    },
+    "S2@+0.00": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 7.450580596923828e-06
+    },
+    "S2@+0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 7.450580596923828e-06
+    },
+    "S3@-0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 1.4901161193847656e-05
+    },
+    "S3@+0.00": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 7.450580596923828e-06,
+     "absErrMaxmm": 7.450580596923828e-06
+    },
+    "S3@+0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 7.450580596923828e-06,
+     "curbAbsErrP95mm": 3.2862601528904634e-11,
+     "absErrMaxmm": 7.450580596923828e-06
+    }
+   }
+  },
+  {
+   "variant": "S1",
+   "source": "Evidence/M6/geom/geom-S1.json",
+   "record": {
+    "floorObjects": 100,
+    "boxesDisabled": 1426,
+    "zonesMadeTrigger": 3,
+    "runtimeTriggerZones": 32,
+    "meshCollidersAdded": 0,
+    "cooking": "",
+    "convex": false,
+    "plateAdded": true,
+    "plateTopY": -0.10000000149011612,
+    "floorMeshesReadable": 0
+   },
+   "logWarnings": 0,
+   "points": 33774,
+   "holeRate": 0.5596020607567952,
+   "absErrMm": {
+    "p50": 99.9990701675415,
+    "p95": 100.00034730612128,
+    "max": 237.29315340197843
+   },
+   "curbAbsErrMm": {
+    "n": 6372,
+    "p50": 99.99959835622008,
+    "p95": 200.0001072883606,
+    "max": 200.0003308057785
+   },
+   "transitions": 90,
+   "stepLost": 84,
+   "perLine": {
+    "C01@-0.10": {
+     "points": 2001,
+     "holes": 1260,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00013749139924,
+     "curbAbsErrP95mm": 200.0001147389412,
+     "absErrMaxmm": 237.29314465982299
+    },
+    "C01@+0.00": {
+     "points": 2001,
+     "holes": 1260,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00013312034639,
+     "curbAbsErrP95mm": 200.0001147389412,
+     "absErrMaxmm": 237.29314903088294
+    },
+    "C01@+0.10": {
+     "points": 2001,
+     "holes": 1260,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00012874927222,
+     "curbAbsErrP95mm": 200.0001072883606,
+     "absErrMaxmm": 237.29315340197843
+    },
+    "C03@-0.10": {
+     "points": 2001,
+     "holes": 752,
+     "transitions": 6,
+     "stepLost": 4,
+     "absErrP95mm": 100.00033419274246,
+     "curbAbsErrP95mm": 199.99971240758896,
+     "absErrMaxmm": 200.0003159046173
+    },
+    "C03@+0.00": {
+     "points": 2001,
+     "holes": 752,
+     "transitions": 6,
+     "stepLost": 4,
+     "absErrP95mm": 100.00032982162566,
+     "curbAbsErrP95mm": 199.99971240758896,
+     "absErrMaxmm": 200.0003084540367
+    },
+    "C03@+0.10": {
+     "points": 2001,
+     "holes": 752,
+     "transitions": 6,
+     "stepLost": 4,
+     "absErrP95mm": 100.00032545048043,
+     "curbAbsErrP95mm": 199.99971985816956,
+     "absErrMaxmm": 200.00030100345612
+    },
+    "C05@-0.10": {
+     "points": 1801,
+     "holes": 571,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 100.0003254507078,
+     "curbAbsErrP95mm": 200.00030100345612,
+     "absErrMaxmm": 200.00030100345612
+    },
+    "C05@+0.00": {
+     "points": 1801,
+     "holes": 571,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 100.00032982185303,
+     "curbAbsErrP95mm": 200.0003084540367,
+     "absErrMaxmm": 200.0003084540367
+    },
+    "C05@+0.10": {
+     "points": 1801,
+     "holes": 571,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 100.00033419302667,
+     "curbAbsErrP95mm": 200.0003159046173,
+     "absErrMaxmm": 200.0003159046173
+    },
+    "C07@-0.10": {
+     "points": 1301,
+     "holes": 572,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99991019230237,
+     "curbAbsErrP95mm": 199.99989122152328,
+     "absErrMaxmm": 199.99989122152328
+    },
+    "C07@+0.00": {
+     "points": 1301,
+     "holes": 572,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.9999145634618,
+     "curbAbsErrP95mm": 199.99989122152328,
+     "absErrMaxmm": 199.99989867210388
+    },
+    "C07@+0.10": {
+     "points": 1301,
+     "holes": 572,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99991893462123,
+     "curbAbsErrP95mm": 199.99989867210388,
+     "absErrMaxmm": 199.99989867210388
+    },
+    "C09@-0.10": {
+     "points": 1401,
+     "holes": 672,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99971731033952,
+     "curbAbsErrP95mm": 199.99968260526657,
+     "absErrMaxmm": 199.99968260526657
+    },
+    "C09@+0.00": {
+     "points": 1401,
+     "holes": 672,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00035167726651,
+     "curbAbsErrP95mm": 199.99967515468597,
+     "absErrMaxmm": 199.99967515468597
+    },
+    "C09@+0.10": {
+     "points": 1401,
+     "holes": 672,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00034730612128,
+     "curbAbsErrP95mm": 200.0003233551979,
+     "absErrMaxmm": 200.0003308057785
+    },
+    "C11@-0.10": {
+     "points": 2151,
+     "holes": 2151,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00002384185782,
+     "curbAbsErrP95mm": 200.00001788139343,
+     "absErrMaxmm": 200.00001788139343
+    },
+    "C11@+0.00": {
+     "points": 2151,
+     "holes": 2151,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00002384185781,
+     "curbAbsErrP95mm": 200.00001788139343,
+     "absErrMaxmm": 200.00001788139343
+    },
+    "C11@+0.10": {
+     "points": 2151,
+     "holes": 2151,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00002384185781,
+     "curbAbsErrP95mm": 200.00001788139343,
+     "absErrMaxmm": 200.00001788139343
+    },
+    "S2@-0.10": {
+     "points": 301,
+     "holes": 186,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 200.00000298023224,
+     "curbAbsErrP95mm": 200.00001043081284,
+     "absErrMaxmm": 200.00001043081284
+    },
+    "S2@+0.00": {
+     "points": 301,
+     "holes": 186,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 200.00000298023224,
+     "curbAbsErrP95mm": 200.00000298023224,
+     "absErrMaxmm": 200.00000298023224
+    },
+    "S2@+0.10": {
+     "points": 301,
+     "holes": 186,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99999552965164,
+     "curbAbsErrP95mm": 199.99999552965164,
+     "absErrMaxmm": 200.00000298023224
+    },
+    "S3@-0.10": {
+     "points": 301,
+     "holes": 136,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99999552965164,
+     "curbAbsErrP95mm": 199.99999552965164,
+     "absErrMaxmm": 200.00000298023224
+    },
+    "S3@+0.00": {
+     "points": 301,
+     "holes": 136,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99999552965164,
+     "curbAbsErrP95mm": 199.99999552965164,
+     "absErrMaxmm": 199.99999552965164
+    },
+    "S3@+0.10": {
+     "points": 301,
+     "holes": 136,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99998807907104,
+     "curbAbsErrP95mm": 199.99998807907104,
+     "absErrMaxmm": 199.99998807907104
+    }
+   }
+  },
+  {
+   "variant": "S1z",
+   "source": "Evidence/M6/geom/geom-S1z.json",
+   "record": {
+    "floorObjects": 100,
+    "boxesDisabled": 1426,
+    "zonesMadeTrigger": 3,
+    "runtimeTriggerZones": 32,
+    "meshCollidersAdded": 0,
+    "cooking": "",
+    "convex": false,
+    "plateAdded": true,
+    "plateTopY": 0.0,
+    "floorMeshesReadable": 0
+   },
+   "logWarnings": 0,
+   "points": 33774,
+   "holeRate": 0.02575945993959851,
+   "absErrMm": {
+    "p50": 0.00095367431640625,
+    "p95": 100.00012069940567,
+    "max": 237.29315340197843
+   },
+   "curbAbsErrMm": {
+    "n": 6372,
+    "p50": 0.0011827220305349329,
+    "p95": 100.0002771615982,
+    "max": 199.9986618757248
+   },
+   "transitions": 90,
+   "stepLost": 87,
+   "perLine": {
+    "C01@-0.10": {
+     "points": 2001,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99989718198776,
+     "curbAbsErrP95mm": 100.00009089708328,
+     "absErrMaxmm": 237.29314465982299
+    },
+    "C01@+0.00": {
+     "points": 2001,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99990463256836,
+     "curbAbsErrP95mm": 100.00009089708328,
+     "absErrMaxmm": 237.29314903088294
+    },
+    "C01@+0.10": {
+     "points": 2001,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99990463256836,
+     "curbAbsErrP95mm": 100.00008344650269,
+     "absErrMaxmm": 237.29315340197843
+    },
+    "C03@-0.10": {
+     "points": 2001,
+     "holes": 41,
+     "transitions": 6,
+     "stepLost": 5,
+     "absErrP95mm": 99.99970346689224,
+     "curbAbsErrP95mm": 100.0002920627594,
+     "absErrMaxmm": 199.9986469745636
+    },
+    "C03@+0.00": {
+     "points": 2001,
+     "holes": 41,
+     "transitions": 6,
+     "stepLost": 5,
+     "absErrP95mm": 99.99970346689224,
+     "curbAbsErrP95mm": 100.0002846121788,
+     "absErrMaxmm": 199.9986469745636
+    },
+    "C03@+0.10": {
+     "points": 2001,
+     "holes": 41,
+     "transitions": 6,
+     "stepLost": 5,
+     "absErrP95mm": 99.99971091747284,
+     "curbAbsErrP95mm": 100.0002771615982,
+     "absErrMaxmm": 199.9986618757248
+    },
+    "C05@-0.10": {
+     "points": 1801,
+     "holes": 60,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 99.99971091747284,
+     "curbAbsErrP95mm": 100.0002771615982,
+     "absErrMaxmm": 100.0002771615982
+    },
+    "C05@+0.00": {
+     "points": 1801,
+     "holes": 60,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 99.99970346689224,
+     "curbAbsErrP95mm": 100.0002846121788,
+     "absErrMaxmm": 100.0002846121788
+    },
+    "C05@+0.10": {
+     "points": 1801,
+     "holes": 60,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 99.99970346689224,
+     "curbAbsErrP95mm": 100.0002920627594,
+     "absErrMaxmm": 100.0002920627594
+    },
+    "C07@-0.10": {
+     "points": 1301,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00012069940567,
+     "curbAbsErrP95mm": 100.00012069940567,
+     "absErrMaxmm": 100.00012814998627
+    },
+    "C07@+0.00": {
+     "points": 1301,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00012069940567,
+     "curbAbsErrP95mm": 100.00012069940567,
+     "absErrMaxmm": 100.00012069940567
+    },
+    "C07@+0.10": {
+     "points": 1301,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00011324882507,
+     "curbAbsErrP95mm": 100.00011324882507,
+     "absErrMaxmm": 100.00011324882507
+    },
+    "C09@-0.10": {
+     "points": 1401,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 100.00032931566238,
+     "curbAbsErrP95mm": 100.00033676624298,
+     "absErrMaxmm": 100.00033676624298
+    },
+    "C09@+0.00": {
+     "points": 1401,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99968111515045,
+     "curbAbsErrP95mm": 99.99968111515045,
+     "absErrMaxmm": 99.99968111515045
+    },
+    "C09@+0.10": {
+     "points": 1401,
+     "holes": 42,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 99.99968856573105,
+     "curbAbsErrP95mm": 100.00029951334,
+     "absErrMaxmm": 100.0003069639206
+    },
+    "C11@-0.10": {
+     "points": 2151,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 99.99999403953552,
+     "absErrMaxmm": 99.99999403953552
+    },
+    "C11@+0.00": {
+     "points": 2151,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 99.99999403953552,
+     "absErrMaxmm": 99.99999403953552
+    },
+    "C11@+0.10": {
+     "points": 2151,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 99.99999403953552,
+     "absErrMaxmm": 99.99999403953552
+    },
+    "S2@-0.10": {
+     "points": 301,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00000149011612,
+     "curbAbsErrP95mm": 100.00000149011612,
+     "absErrMaxmm": 100.00000149011612
+    },
+    "S2@+0.00": {
+     "points": 301,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00000894069672,
+     "curbAbsErrP95mm": 100.00000894069672,
+     "absErrMaxmm": 100.00000894069672
+    },
+    "S2@+0.10": {
+     "points": 301,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00001639127731,
+     "curbAbsErrP95mm": 100.00001639127731,
+     "absErrMaxmm": 100.00001639127731
+    },
+    "S3@-0.10": {
+     "points": 301,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00001639127731,
+     "curbAbsErrP95mm": 100.00001639127731,
+     "absErrMaxmm": 100.00001639127731
+    },
+    "S3@+0.00": {
+     "points": 301,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00001639127731,
+     "curbAbsErrP95mm": 100.00001639127731,
+     "absErrMaxmm": 100.00001639127731
+    },
+    "S3@+0.10": {
+     "points": 301,
+     "holes": 21,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 100.00002384185791,
+     "curbAbsErrP95mm": 100.00002384185791,
+     "absErrMaxmm": 100.00002384185791
+    }
+   }
+  },
+  {
+   "variant": "S2",
+   "source": "Evidence/M6/geom/geom-S2.json",
+   "record": {
+    "floorObjects": 100,
+    "boxesDisabled": 1426,
+    "zonesMadeTrigger": 3,
+    "runtimeTriggerZones": 32,
+    "meshCollidersAdded": 100,
+    "cooking": "30 CookForFasterSimulation, EnableMeshCleaning, WeldColocatedVertices, UseFastMidphase",
+    "convex": true,
+    "plateAdded": false,
+    "plateTopY": 0.0,
+    "floorMeshesReadable": 0
+   },
+   "logWarnings": 0,
+   "points": 33774,
+   "holeRate": 0.0001184342985728667,
+   "absErrMm": {
+    "p50": 199.99990612268448,
+    "p95": 750.0000000000001,
+    "max": 750.00002979246
+   },
+   "curbAbsErrMm": {
+    "n": 6372,
+    "p50": 95.20006119880975,
+    "p95": 199.99991357326508,
+    "max": 199.99993592500687
+   },
+   "transitions": 90,
+   "stepLost": 90,
+   "perLine": {
+    "C01@-0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 750.0000055597482,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 750.0000055597553
+    },
+    "C01@+0.00": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 750.0000099308081,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 750.0000099308153
+    },
+    "C01@+0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 750.0000143019037,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 750.0000143019108
+    },
+    "C03@-0.10": {
+     "points": 2001,
+     "holes": 1,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 199.99992102384567,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99992102384567
+    },
+    "C03@+0.00": {
+     "points": 2001,
+     "holes": 1,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "C03@+0.10": {
+     "points": 2001,
+     "holes": 1,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "C05@-0.10": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "C05@+0.00": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 199.99992102384567,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99992102384567
+    },
+    "C05@+0.10": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 6,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99992102384567
+    },
+    "C07@-0.10": {
+     "points": 1301,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 199.99992102384567,
+     "curbAbsErrP95mm": 199.99992102384567,
+     "absErrMaxmm": 199.99993592500687
+    },
+    "C07@+0.00": {
+     "points": 1301,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 199.99992102384567,
+     "curbAbsErrP95mm": 199.99992102384567,
+     "absErrMaxmm": 199.99992847442627
+    },
+    "C07@+0.10": {
+     "points": 1301,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 199.99992102384567,
+     "curbAbsErrP95mm": 199.99992102384567,
+     "absErrMaxmm": 199.99992102384567
+    },
+    "C09@-0.10": {
+     "points": 1401,
+     "holes": 1,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99992102384567,
+     "absErrMaxmm": 199.99992102384567
+    },
+    "C09@+0.00": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 750.00002979246,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 750.00002979246
+    },
+    "C09@+0.10": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 4,
+     "absErrP95mm": 749.9999745589605,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 749.9999745589605
+    },
+    "C11@-0.10": {
+     "points": 2151,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 750.0000000000001,
+     "curbAbsErrP95mm": 100.00085830688477,
+     "absErrMaxmm": 750.0000000000001
+    },
+    "C11@+0.00": {
+     "points": 2151,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 750.0000000000001,
+     "curbAbsErrP95mm": 100.00085830688477,
+     "absErrMaxmm": 750.0000000000001
+    },
+    "C11@+0.10": {
+     "points": 2151,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 750.0000000000001,
+     "curbAbsErrP95mm": 100.00085830688477,
+     "absErrMaxmm": 750.0000000000001
+    },
+    "S2@-0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "S2@+0.00": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "S2@+0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "S3@-0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "S3@+0.00": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    },
+    "S3@+0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 2,
+     "absErrP95mm": 199.99991357326508,
+     "curbAbsErrP95mm": 199.99991357326508,
+     "absErrMaxmm": 199.99991357326508
+    }
+   }
+  },
+  {
+   "variant": "S3",
+   "source": "Evidence/M6/geom/geom-S3.json",
+   "record": {
+    "floorObjects": 100,
+    "boxesDisabled": 0,
+    "zonesMadeTrigger": 3,
+    "runtimeTriggerZones": 32,
+    "meshCollidersAdded": 0,
+    "cooking": "",
+    "convex": false,
+    "plateAdded": false,
+    "plateTopY": 0.0,
+    "floorMeshesReadable": 0
+   },
+   "logWarnings": 0,
+   "points": 33774,
+   "holeRate": 0.0002664771717889501,
+   "absErrMm": {
+    "p50": 0.00048428773880004883,
+    "p95": 100.00011324882507,
+    "max": 237.29315340197843
+   },
+   "curbAbsErrMm": {
+    "n": 6372,
+    "p50": 0.0003650784492492676,
+    "p95": 100.00011324882507,
+    "max": 200.00003278255463
+   },
+   "transitions": 90,
+   "stepLost": 6,
+   "perLine": {
+    "C01@-0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 0.00048428773880004883,
+     "absErrMaxmm": 237.29314465982299
+    },
+    "C01@+0.00": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 0.00048428773880004883,
+     "absErrMaxmm": 237.29314903088294
+    },
+    "C01@+0.10": {
+     "points": 2001,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 0.000476837158203125,
+     "absErrMaxmm": 237.29315340197843
+    },
+    "C03@-0.10": {
+     "points": 2001,
+     "holes": 2,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 0.0006991483019191946,
+     "curbAbsErrP95mm": 0.0006854534149169922,
+     "absErrMaxmm": 200.00003278255463
+    },
+    "C03@+0.00": {
+     "points": 2001,
+     "holes": 2,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 0.0007154231411732326,
+     "curbAbsErrP95mm": 0.0006780028343200684,
+     "absErrMaxmm": 200.00003278255463
+    },
+    "C03@+0.10": {
+     "points": 2001,
+     "holes": 2,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 0.0007316979235838517,
+     "curbAbsErrP95mm": 0.0006780028343200684,
+     "absErrMaxmm": 200.00003278255463
+    },
+    "C05@-0.10": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 0.0011578065368667012,
+     "curbAbsErrP95mm": 0.0011879674275405705,
+     "absErrMaxmm": 200.00000298023224
+    },
+    "C05@+0.00": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 0.0011578065368667012,
+     "curbAbsErrP95mm": 0.0011879674275405705,
+     "absErrMaxmm": 200.00001043081284
+    },
+    "C05@+0.10": {
+     "points": 1801,
+     "holes": 0,
+     "transitions": 6,
+     "stepLost": 0,
+     "absErrP95mm": 0.0011578065368667012,
+     "curbAbsErrP95mm": 0.0011879674275405705,
+     "absErrMaxmm": 200.00001043081284
+    },
+    "C07@-0.10": {
+     "points": 1301,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 2,
+     "absErrP95mm": 100.00012069940567,
+     "curbAbsErrP95mm": 100.00012069940567,
+     "absErrMaxmm": 100.00012814998627
+    },
+    "C07@+0.00": {
+     "points": 1301,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 2,
+     "absErrP95mm": 100.00012069940567,
+     "curbAbsErrP95mm": 100.00012069940567,
+     "absErrMaxmm": 100.00012069940567
+    },
+    "C07@+0.10": {
+     "points": 1301,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 2,
+     "absErrP95mm": 100.00011324882507,
+     "curbAbsErrP95mm": 100.00011324882507,
+     "absErrMaxmm": 100.00011324882507
+    },
+    "C09@-0.10": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 0.000383068908149653,
+     "curbAbsErrP95mm": 0.00038306893657136243,
+     "absErrMaxmm": 100.00000457944225
+    },
+    "C09@+0.00": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 0.0007003545761108398,
+     "curbAbsErrP95mm": 0.0007003545761108398,
+     "absErrMaxmm": 100.00000148025379
+    },
+    "C09@+0.10": {
+     "points": 1401,
+     "holes": 0,
+     "transitions": 4,
+     "stepLost": 0,
+     "absErrP95mm": 0.0007003545761108398,
+     "curbAbsErrP95mm": 0.0007003545761108398,
+     "absErrMaxmm": 99.99999840081841
+    },
+    "C11@-0.10": {
+     "points": 2151,
+     "holes": 1,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 0.00095367431640625,
+     "absErrMaxmm": 99.99999403953552
+    },
+    "C11@+0.00": {
+     "points": 2151,
+     "holes": 1,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 0.00095367431640625,
+     "absErrMaxmm": 99.99999403953552
+    },
+    "C11@+0.10": {
+     "points": 2151,
+     "holes": 1,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.00095367431640625,
+     "curbAbsErrP95mm": 0.00095367431640625,
+     "absErrMaxmm": 99.99999403953552
+    },
+    "S2@-0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.00037997961044311523,
+     "curbAbsErrP95mm": 0.00037997961044311523,
+     "absErrMaxmm": 100.00000456962255
+    },
+    "S2@+0.00": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.0003725290298461914,
+     "curbAbsErrP95mm": 0.0003725290298461914,
+     "absErrMaxmm": 100.00000149011795
+    },
+    "S2@+0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.0003650784492492676,
+     "curbAbsErrP95mm": 0.0003650784492492676,
+     "absErrMaxmm": 99.9999984105937
+    },
+    "S3@-0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.0003650784492492676,
+     "curbAbsErrP95mm": 0.0003650784492492676,
+     "absErrMaxmm": 200.00002533197403
+    },
+    "S3@+0.00": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.0003650784492492676,
+     "curbAbsErrP95mm": 0.0003650784492492676,
+     "absErrMaxmm": 200.00001043081284
+    },
+    "S3@+0.10": {
+     "points": 301,
+     "holes": 0,
+     "transitions": 2,
+     "stepLost": 0,
+     "absErrP95mm": 0.00035762786865234375,
+     "curbAbsErrP95mm": 0.00035762786865234375,
+     "absErrMaxmm": 200.00001043081284
+    }
+   }
+  }
+ ]
+}

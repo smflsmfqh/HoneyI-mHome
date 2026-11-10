@@ -1,0 +1,170 @@
+{
+  "bytes": 445604785,
+  "sha256": "f118b17236f7e3534ac06934344f92b73592d7d83dfeef0e7993196aaaf5fd31",
+  "externalShaMatch": true,
+  "mismatches": [],
+  "builds": {
+    "Hm1": {
+      "buildId": "M5-Hm1-win-03",
+      "machine": "0x8664",
+      "harness": [
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchBuild.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchProbe.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchData.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchFixtures.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchInput.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchPlayerApi.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchRunner.cs",
+          "matchesCurrent": true
+        }
+      ],
+      "externalCases": 146,
+      "externalCasesMatchCurrent": true,
+      "embeddedCasesMatchBuildInfo": true,
+      "embeddedProfileMatch": true,
+      "jumpCases": 26,
+      "sprintCases": 4
+    },
+    "H0": {
+      "buildId": "M5-H0-win-01",
+      "machine": "0x8664",
+      "harness": [
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchBuild.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchProbe.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchData.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchFixtures.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchInput.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchPlayerApi.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchRunner.cs",
+          "matchesCurrent": false
+        }
+      ],
+      "externalCases": 146,
+      "externalCasesMatchCurrent": true,
+      "embeddedCasesMatchBuildInfo": true,
+      "embeddedProfileMatch": true,
+      "jumpCases": 26,
+      "sprintCases": 4
+    },
+    "H1": {
+      "buildId": "M5-H1-win-01",
+      "machine": "0x8664",
+      "harness": [
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchBuild.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchProbe.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchData.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchFixtures.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchInput.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchPlayerApi.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchRunner.cs",
+          "matchesCurrent": false
+        }
+      ],
+      "externalCases": 146,
+      "externalCasesMatchCurrent": true,
+      "embeddedCasesMatchBuildInfo": true,
+      "embeddedProfileMatch": true,
+      "jumpCases": 26,
+      "sprintCases": 4
+    },
+    "H7": {
+      "buildId": "M5-H7-win-01",
+      "machine": "0x8664",
+      "harness": [
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchBuild.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Editor/PhysicsBenchProbe.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchData.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchFixtures.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchInput.cs",
+          "matchesCurrent": true
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchPlayerApi.cs",
+          "matchesCurrent": false
+        },
+        {
+          "path": "Benchmarks/PhysicsValidation/Harness/Runtime/PhysicsBenchRunner.cs",
+          "matchesCurrent": false
+        }
+      ],
+      "externalCases": 154,
+      "externalCasesMatchCurrent": true,
+      "embeddedCasesMatchBuildInfo": true,
+      "embeddedProfileMatch": true,
+      "jumpCases": 26,
+      "sprintCases": 12
+    }
+  },
+  "checkedFiles": 1243,
+  "crcError": null
+}

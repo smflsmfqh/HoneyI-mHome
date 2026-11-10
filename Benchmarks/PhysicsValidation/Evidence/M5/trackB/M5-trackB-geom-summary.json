@@ -1,0 +1,89 @@
+{
+ "summaryId": "M5-trackB-geom-summary",
+ "createdLocal": "2026-11-08",
+ "nature": "Mac 에디터 기하 감사(결정적 형상). 런타임·Windows 결과 아님",
+ "inputs": {
+  "S3": {
+   "file": "Evidence/M5/trackB/geom-S3.json",
+   "sha256": "7c60e1dc221f7762d5420f099762ce72157142912ce0626227bcd7fc5a6aee2e"
+  },
+  "S1": {
+   "file": "Evidence/M5/trackB/geom-S1.json",
+   "sha256": "5670f0cbb54276b2f1b1c9c1083c8e418b1b6e254363957528d7f982ee35275d"
+  },
+  "S1z": {
+   "file": "Evidence/M5/trackB/geom-S1z.json",
+   "sha256": "41a38c03534abd093ade50ca407fe9961df506e502b4e9f4fe56f55f3ec3dfeb"
+  },
+  "S0a": {
+   "file": "Evidence/M5/trackB/geom-S0a.json",
+   "sha256": "19da938c660109f6d7f69ce8e20847d4725c8c2141192c2cd5d8095aaca9a779"
+  },
+  "S2": {
+   "file": "Evidence/M5/trackB/geom-S2.json",
+   "sha256": "86a758c8ae9d2dbd2db52fbf605f2788bb0a033d479d3016ded9673049126a4a"
+  }
+ },
+ "analysis": {
+  "file": "Evidence/M5/trackB/geom-analysis-a1.json",
+  "analyzerSha256": "4d93b60f9a718f3bacf490849ceea363079aa84379c35c7454e2487bdcb13dd5"
+ },
+ "workspace": "Benchmarks/.physics-work/project-H7B (H7 APFS 복제, harness-sync-H7B-02), 씬 저장 안 함(SHA 9d0bb583… 불변 확인)",
+ "metrics": {
+  "S0a": {
+   "holeRate": 0.0002,
+   "absErrP95mm": 0.0,
+   "curbAbsErrP95mm": 0.0,
+   "stepLost": "0/90"
+  },
+  "S1": {
+   "holeRate": 0.5596,
+   "absErrP95mm": 100.0,
+   "curbAbsErrP95mm": 200.0,
+   "stepLost": "84/90"
+  },
+  "S1z": {
+   "holeRate": 0.0258,
+   "absErrP95mm": 100.0,
+   "curbAbsErrP95mm": 100.0,
+   "stepLost": "87/90"
+  },
+  "S2": {
+   "holeRate": 0.0001,
+   "absErrP95mm": 750.0,
+   "curbAbsErrP95mm": 200.0,
+   "stepLost": "90/90"
+  },
+  "S3": {
+   "holeRate": 0.0003,
+   "absErrP95mm": 100.0,
+   "curbAbsErrP95mm": 100.0,
+   "stepLost": "6/90"
+  }
+ },
+ "verdicts": {
+  "② Convex 부적합": {
+   "rule": "S2 연석 구간 p95 ≥ 50mm 또는 단차 소실 ≥ 50%",
+   "result": "지지",
+   "detail": "연석 구간 p95 200mm, 단차 소실 90/90(100%). 도로 hull 윗면이 시각 도로(-0.1)가 아니라 연석 윗면(+0.1) 높이로 도로 전체를 덮고, 도로 가장자리는 약 0.76m에 걸쳐 0→0.1m 경사로가 된다(C01 road_009). Set_B_Tiles_09는 hull 윗면이 시각면보다 0.75m 높다(C01·C09·C11 전체 p95 750mm). 255면 제한 경고 0"
+  },
+  "③ S1 받침판 한계": {
+   "rule": "S1·S1z 모두 단차 소실 ≥ 90%, 전체 p95 ≥ 50mm",
+   "result": "지지",
+   "detail": "S1(윗면 -0.1): 단차 소실 84/90(93%), 인도·연석 시각면보다 충돌면이 낮은 점 56%(개미가 인도에 10cm·연석에 20cm 파묻힘), p95 100mm. S1z(윗면 0): 단차 소실 87/90(97%), 도로 위 10cm 뜸, p95 100mm. 한 장의 평평한 판으로는 도로(-0.1)·인도(0)·연석(+0.1)을 동시에 맞출 수 없다"
+  },
+  "③ S3 현재 Box 일치": {
+   "rule": "연석 구간 p95 ≤ 5mm, 단차 소실 ≤ 10%, 구멍 ≤ 1%",
+   "result": "규칙상 미달(p95 100mm). 원인은 한 곳",
+   "detail": "단차 소실 6/90(7%), 구멍 0%. 연석 구간 p95 100mm는 C07(남쪽 도로) 한 선에서만 나온다: FloorColliders/road_009_floor Box가 시각 도로보다 0.1m 높음(729점×3선, 전체 점의 6.5%). C07을 빼면 모든 단면의 p95 ≈ 0mm. 그 밖에 연석 Box 모서리 1~4cm 어긋남 몇 점, C01 선 위 건물 테라스(소품) 12점. 남은 문제로 보고"
+  },
+  "S0a 확인": {
+   "result": "에디터 형상은 시각면과 일치(p95 0mm, 단차 소실 0). Mesh 바닥의 '의도한 모양'은 정확하다 → 빌드에서 비는지가 문제(런타임 실험에서 판단)"
+  }
+ },
+ "portfolioSentences": [
+  "Convex로 감싸면 도로 전체가 연석 높이(+0.1m)로 메워지고 가장자리가 경사로가 되어, 측정한 연석 90곳에서 단차가 모두 사라졌다(에디터 형상 측정).",
+  "맵 전체 받침판 한 장으로는 도로·인도·연석 높이를 동시에 맞출 수 없어, 연석 90곳 중 84~87곳에서 단차가 사라졌다.",
+  "타일·도로·연석 단위 Box는 측정 단면의 시각면과 일치했고(남쪽 도로 1구간의 0.1m 오차 제외), 그 1구간은 현재 남은 문제로 기록했다."
+ ]
+}

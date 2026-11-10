@@ -1,0 +1,20 @@
+{
+ "recordedUtc": "2026-11-09T09:57:43.878183+00:00",
+ "windowsResultsSeen": false,
+ "trigger": "Mac 점검(결과로 인용 안 함) F-BASE-c-ctl-mac-01·F-COOK30-c-ctl-mac-01에서 두 빌드 모두 E2_P 8/8 rootOutcome passed_curb. 궤적을 보니 COOK30의 P01·P02는 소품에 막힌 뒤 옆으로 미끄러져 돌아감(가로 0.36m), P03은 막힘 → 분석기의 '벽 평면 너머' 정의가 '돌아서 지나감'을 관통으로 셈. 동결 지표 c_measure(passed_curb 수)는 소품 관통을 가리지 못한다",
+ "revisedMeasure": {
+  "straightPassThrough": "approach·push 구간에서 targetWallContact 스텝 0, 가로 이탈 max|Δ(진행 수직)| < 0.05m, 소품 면 너머 진행 > 1m. 소품을 아무 저항 없이 통과",
+  "obstructed": "targetWallContact 스텝 ≥1 이거나 진행 방향 속도 0.2m/s 미만 스텝이 10 이상(막힘·돌아감)",
+  "reportedPerProp": "소품별 BASE vs COOK30, 3 run",
+  "tool": "분석기(c9950f0b…)는 그대로 쓰고 이 지표는 trace에서 따로 계산(집계 스크립트에 기록)"
+ },
+ "macObservationNotCited": {
+  "P00 Bus_Stop_02": "두 빌드 모두 접촉 0으로 직진 통과(예측 '막힘'과 다름, 원인 미조사: 구조물 개방부·높이 가능성)",
+  "P04 Fountain_03": "두 빌드 모두 직진 통과(예측과 다름, 원인 미조사)",
+  "P01·P02·P03": "BASE 직진 통과 → COOK30 막힘(예측대로)",
+  "P05·P06 pizzeria": "BASE에서도 이미 막힘(예측 '관통 유지'와 다름: 비균일 스케일 경고가 있어도 충돌면이 비지 않음)",
+  "P07 table": "두 빌드 모두 대상 접촉 없이 정체(다른 콜라이더에 막힘 추정)",
+  "RW오류": "BASE 고유 경로 68 → COOK30 6"
+ },
+ "predictionsKept": "addendum-c 예측은 바꾸지 않고, Windows 결과에서 예측 대비 맞음/틀림을 그대로 보고한다"
+}

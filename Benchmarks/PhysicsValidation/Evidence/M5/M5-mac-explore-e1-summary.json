@@ -1,0 +1,31 @@
+{
+ "recordedAt": "2026-10-30 (Asia/Seoul)",
+ "kind": "Mac 진단(Windows 결과 아님). 탐색용, 정식 수치 아님",
+ "cases": "Harness/Cases/explore-e1.json (H0 4m 격자에서 고른 도로 24·타일 16지점: 정지 40, Move 1초 보행 14, 제자리 점프 14, 하네스 확인 4)",
+ "thresholds": "Harness/Cases/thresholds-r4.json (정지 상태 지지 추론 추가)",
+ "runs": {
+  "M5-H0-base-mac-e1-01": {
+   "build": "M5-H0-mac-01 (PHYSICS_BENCH_H0 어댑터)",
+   "result": "탐색 68건 모두 pass(정지 지지는 support_inferred_from_rest). 낙하 0",
+   "note": "H0 플레이어는 CapsuleCollider+CharacterController+Rigidbody(Discrete) 'Capsule'. 캡슐 바닥이 지지면 위 약 3.6r(5.5cm)에서 정지하고 Rigidbody 접촉 콜백이 없음 — H0 실제 물리 상태"
+  },
+  "M5-H1-base-mac-e1-01": {
+   "build": "M5-H1-mac-01",
+   "result": "66/68 pass. 시각 표면이 받침판(y=0)보다 높은 타일 두 지점(y=0.1, E1_P27T·P30T)만 10cm 떨어져 받침판에 걸림 → 그 타일 MeshCollider가 빌드에서 작동하지 않음"
+  },
+  "M5-H1-nocatch-mac-e1-01": {
+   "status": "무효(하네스 실행 인수 오류)",
+   "reason": "zsh가 따옴표 없는 변수를 분리하지 않아 '-benchProfile 경로'가 한 인수로 전달됨 → 기본 profile로 실행. 결과는 base와 동일. 보존만 하고 해석에 쓰지 않음"
+  },
+  "M5-H1-nocatch-mac-e1-02": {
+   "build": "M5-H1-mac-01 + profile-H1-nocatch.json(PostProcessingVolume/Ground 비활성, 통제 조건)",
+   "result": "탐색 68건 중 35건 정착 2~9스텝에 수직 낙하(직전 지지 없음). 버틴 33건은 모두 Surface/*, CarDrivingZone/Zone*, Road* 등 보조 BoxCollider가 받침. 도로·타일 MeshCollider 접촉 0"
+  }
+ },
+ "interpretation": [
+  "H1(비기본 cooking + Read/Write 꺼짐) Mac 빌드에서 도로·타일 MeshCollider는 충돌면으로 작동하지 않았다. 받침판이 이를 가렸다",
+  "H0(기본 cooking) Mac 빌드에서는 같은 지점·행동에서 낙하가 없었다. 따라서 H0의 원래 낙하는 이 메커니즘으로 설명되지 않으며, 원래 위치·조건이 아직 재현되지 않았다",
+  "이 결과는 Mac이다. Windows에서 같은 양상인지 M5-pilot-01로 확인한다"
+ ],
+ "correction-20261030-pilot01": "M5-H1-base-mac-e1-01의 E1_P27T·P30T 해석 정정: H1·H7 probe(probe-H1-tiles01.json, probe-H7-tiles01.json) 결과 두 지점의 시각 타일면은 y=0이다. y=0.1은 H0 맵의 타일 높이이며 e1 case 시작·minAllowedY가 H0 probe 기준이라 H1·H7에서는 시각면 10cm 위에서 시작해 시각면 높이로 내려온 것. '타일 MeshCollider가 빌드에서 작동하지 않음'의 근거로 쓰지 않는다. MeshCollider 비작동 근거는 받침판 제거 통제(nocatch-e1-02)만 사용"
+}

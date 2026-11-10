@@ -1,0 +1,67 @@
+{
+  "note": "Analyzer-only mutation of copied trace. No Unity replay; not a claim original run had this fall. Original root/support/input retained. Child fall starts at beginning of reverse while root has not met escape distance.",
+  "case": "CK05_curb_sprint",
+  "original": {
+    "caseId": "CK05_curb_sprint",
+    "attempt": 1,
+    "scenario": "curb",
+    "moveMode": "Sprint",
+    "expect": "blocked_escaped",
+    "flags": [],
+    "minBottomY": -100.00707244873047,
+    "maxPenWallDepthR": 0.0,
+    "firstWallContactTime": 58.739959716796875,
+    "otherWallContactSteps": 0,
+    "preContactSpeed": 2.195835828781128,
+    "approachSpeedBeforeContact": 2.19583583574667,
+    "pushProgressR": 0.24410196758783353,
+    "maxBeyondWallR": -1.2212707752990617,
+    "maxChildPenWallDepthR": 0.21250161624878688,
+    "maxSelfPenDepthR": 1.3733803700949636,
+    "maxChildSeparationR": 4.3594608639908685,
+    "initialPenWallDepthR": 0.0,
+    "escapePhase": "reverse",
+    "significantPenetration": false,
+    "outcome": "blocked_escaped",
+    "rootOutcome": "blocked_escaped"
+  },
+  "synthetic": {
+    "caseId": "CK05_curb_sprint",
+    "attempt": 1,
+    "scenario": "curb",
+    "moveMode": "Sprint",
+    "expect": "blocked_escaped",
+    "flags": [
+      "child_fall"
+    ],
+    "childFallStep": 91,
+    "minBottomY": -100.00707244873047,
+    "maxPenWallDepthR": 0.0,
+    "firstWallContactTime": 58.739959716796875,
+    "otherWallContactSteps": 0,
+    "preContactSpeed": 2.195835828781128,
+    "approachSpeedBeforeContact": 2.19583583574667,
+    "pushProgressR": 0.24410196758783353,
+    "maxBeyondWallR": -1.2212707752990617,
+    "maxChildPenWallDepthR": 0.21250161624878688,
+    "maxSelfPenDepthR": 1.3733803700949636,
+    "maxChildSeparationR": 6.584346190829813,
+    "initialPenWallDepthR": 0.0,
+    "escapePhase": "reverse",
+    "significantPenetration": false,
+    "outcome": "blocked_escaped",
+    "rootOutcome": "blocked_escaped"
+  },
+  "escapePhaseStartStep": 91,
+  "modifiedChildSteps": 6,
+  "firstEscapePhasePosition": [
+    -0.0069452193565666676,
+    -99.99871826171875,
+    0.027273230254650116
+  ],
+  "pushEndPosition": [
+    -0.0067728664726018906,
+    -99.99871826171875,
+    0.03388741984963417
+  ]
+}

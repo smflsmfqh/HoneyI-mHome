@@ -1,0 +1,41 @@
+{
+ "purpose": "H0 반복 확인(repeat-01) 조건 동결. 묶음 제작·Windows 실행 전에 기록(결과 보고 조정 금지)",
+ "recordedUtc": "2026-11-08T09:27:08.563378+00:00",
+ "userApproval": "2026-11-08 사용자 \"1번으로 진행해줘\"(H0 재현성 확인)",
+ "experimentId": "M5-repeat-H0",
+ "caseSetRevision": "r1",
+ "build": "M5-H0-win-01 재사용(재빌드 없음, runner 69902f0a…= harness-sync-H0-02판, -benchSeed·-benchAttempt·-benchCaseFilter·-benchFps 지원을 그 판 소스로 확인). profile은 빌드 내장(02c H0 base와 같음)",
+ "cases": "repeat-r1-H0.json 53건 = E2_C 24(미리 정한 연석 횡단 경로, 02c 통과 case 포함) + E2_K 24(사후 표적) + CK 4 + E1_P11R_hold. case 정의는 e2c H0와 값 동일(생성기가 대조)",
+ "runs": {
+  "full": "6 run, attempt 1~6, seed 1,1,2,3,4,5, 60fps. 같은 seed 2회(a1·a2)로 순수 비결정성과 순서 효과를 구분",
+  "p11r": "10 run, -benchCaseFilter E1_P11R_hold, seed 1, attempt 1~6 60fps, 7~8 30fps, 9~10 120fps. 이 run들에는 CK 판정 검증이 없다",
+  "runIdPattern": "W-H0-r1-<full|p11r>-a<N>-s<seed>-f<fps>-<시각>",
+  "expectedMinutes": "약 40(full 각 5~6분, p11r 각 30초 안팎)"
+ },
+ "rules": [
+  "02c 결과는 case 선택에 쓴 run이므로 반복 집계에서 제외한다",
+  "판정은 thresholds-r4·analyze_physics_bench.py(+capabilities-r1) 그대로. 낙하 경로는 summarize_falls_e2.py + probe-H0-e2c.json(보조)",
+  "full run은 각 run의 CK 판정 검증 4/4가 아니면 그 run을 집계에서 빼고 이유를 기록한다",
+  "하네스 오류(의도한 CK08·CK13 제외) trial은 분모에서 뺀다",
+  "case별 낙하 k/n(full 6 run 기준). 라벨: k>=5 안정 재현, 1<=k<=4 간헐, k=0 미재현(n<6이면 라벨 대신 k/n만)",
+  "E2_C(미리 정한 경로)와 E2_K(사후 표적)는 따로 보고하고 합산하지 않는다",
+  "같은 seed(a1·a2) 사이에 outcome이 다르면 비결정성, 다른 seed에서만 다르면 순서·상태 효과 후보로 기록한다",
+  "PC가 여러 대면 PC별로 따로 집계하고 합치지 않는다(windows-environment.txt로 구분)",
+  "P11R: run마다 outcome, initialPenDepth, step0~3의 p.y·penDepth·penDirY, run 안 실행 순서 위치를 기록. fps별로 나눠 k/n 보고",
+  "이번 결과도 Windows 탐색 결과이며 정식(M6 이후) 수치가 아니다"
+ ],
+ "p11rPriorFinding": "pilot-01과 02c 모두 initialPenDepth 0.0605m(convex road_001 내부에서 시작), penDirY -1. pilot-01은 위로 이동하며 hull 안에 머묾(pass), 02c는 아래로 빠져나가 낙하. 접촉 0으로 바닥을 통과한 이동 중 낙하 13건과 기전이 다르므로 따로 분리한다",
+ "files": {
+  "Harness/Cases/r1/repeat-r1-H0.json": "4bd36a9862814ce6a05bc9c0630bb09ae52eb148fd134fd4a64c949ae1f1fc1f",
+  "Harness/Cases/r1/r1-derivation.json": "dd1c76fa503f48dcf3e84697fb40cfda035424b93b4039102eb913b62b14f8b3",
+  "Harness/Cases/e2c/explore-e2c-H0.json": "e345e736fff14cf0c7c22b949e8dc62309430d36bd926bbb824957eeead3636c",
+  "Tools/make_cases_r1.py": "72f7ef0f7e9191dbb43ef0b30d07f82f3956125dc3e398e7a6990839585b7e63",
+  "Harness/Windows/RunRepeat01.cmd": "f0e8bd512ac5c07e648bc8816308533d48675287859ac1192a2dc3ed477e1b4b",
+  "Harness/Windows/README-Windows-repeat01.txt": "96e81f22a07881b52642581610d517d65360036a909ab8eeb348c64c97064fea",
+  "Harness/Tools/analyze_physics_bench.py": "c9950f0b90f145bcaaeb8e1888fe4317897308da293c5e8d37c5533cf5103d97",
+  "Harness/Cases/thresholds-r4.json": "1fcdffdd2abb013178be48b82ac12b2c40cc794700cdd7c29af9bbd9257aecb1",
+  "Harness/Cases/capabilities-r1.json": "7b06581feccc77bbe7abfecc50e26939b3cf40670e728f9c591f9931255b42ac",
+  "Tools/summarize_falls_e2.py": "57285099ab9bda674348b02595aca3994f0ed4abafe7e96febd237a1c599ce7e",
+  "Evidence/M5/e2/probe-H0-e2c.json": "91411f1f15ae26c1e2d86a5c6a5cdd0d3f8d42c1c35a433d06c9910226c7e12e"
+ }
+}

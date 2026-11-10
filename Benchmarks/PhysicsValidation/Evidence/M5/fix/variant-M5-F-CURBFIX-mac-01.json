@@ -1,0 +1,14 @@
+{
+    "variant": "CurbFix",
+    "scene": "Assets/Scenes/AntDemoScene.unity",
+    "candidates": 820,
+    "extended": 820,
+    "skippedShape": 0,
+    "skippedNotAxisAligned": 0,
+    "inPrefabInstance": 130,
+    "prefabRoots": [
+        "PostProcessingVolume <- Assets/Prefabs/PostProcessingVolume.prefab"
+    ],
+    "newBottomY": -0.30000001192092898,
+    "appliedUtc": "2026-11-09T09:29:36.5975360Z"
+}

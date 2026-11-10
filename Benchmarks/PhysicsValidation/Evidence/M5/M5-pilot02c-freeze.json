@@ -1,0 +1,23 @@
+{
+ "purpose": "pilot-02c 조건 동결. Mac 112 검증 실행 전에 기록(결과 보고 조정 금지)",
+ "recordedUtc": "2026-11-02T08:28:13.401511+00:00",
+ "constraints": {
+  "116": "FreezePositionY+FreezeRotationX/Y/Z (Hm1 원본)",
+  "80": "FreezeRotationX/Z (H0 값, 116에서 PositionY+RotationY 해제)",
+  "112": "FreezeRotationX/Y/Z (116에서 PositionY만 해제)"
+ },
+ "files": {
+  "Harness/Cases/e2c/explore-e2c-Hm1.json": "a77a34c75ad004cd51a80f02f24db637bf885b8ee6e9a17db67eb14e27e976bd",
+  "Harness/Cases/e2c/explore-e2c-H0.json": "e345e736fff14cf0c7c22b949e8dc62309430d36bd926bbb824957eeead3636c",
+  "Harness/Cases/e2c/explore-e2c-H1.json": "3a91d809bda7c957982dbe5b62129df614059d43a4f95a3630c59a382421580c",
+  "Harness/Cases/e2c/explore-e2c-H7.json": "42732af728e41a5c2a0cf975a6300938f3abee2fccf18614bdbd95b7fdf976ce",
+  "Harness/Cases/e2c/e2c-derivation.json": "cc21944e39bdb6d917d8c5d2c6adc21a058838d9f563b804ab0127abbcf4ac2b",
+  "Harness/Cases/profile-Hm1-unfreezePosY.json": "3688d939fb590a3717a5489274e5cd77cda1e716a602c9d8771188b36ae66ba6",
+  "Harness/Cases/profile-Hm1-unfreezeY.json": "05745f1963f19883ff0fc04ccbc2a5148b1f1e4a4dc3d6d12a2fd8c3ec0dedb6",
+  "Harness/Cases/profile-Hm1.json": "ac0d2d66e310718517b5786fe4327e6099ac4507479fe7ab201b8d6553d0d8bc",
+  "Tools/make_cases_e2c.py": "58bb19402e771bf86b45e90f5182085547cbc8d09354fa2435efb93a16a0399d",
+  "Harness/Cases/capabilities-r1.json": "7b06581feccc77bbe7abfecc50e26939b3cf40670e728f9c591f9931255b42ac",
+  "Harness/Tools/analyze_physics_bench.py": "c9950f0b90f145bcaaeb8e1888fe4317897308da293c5e8d37c5533cf5103d97",
+  "Harness/Cases/thresholds-r4.json": "1fcdffdd2abb013178be48b82ac12b2c40cc794700cdd7c29af9bbd9257aecb1"
+ }
+}

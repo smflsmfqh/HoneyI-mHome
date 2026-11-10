@@ -1,0 +1,380 @@
+{
+ "runs": [
+  "M3-H1-mac-ck-02",
+  "M3-H1-mac-ck-03",
+  "M3-H1-mac-ck-04",
+  "M3-H1-mac-ck-05"
+ ],
+ "orders": {
+  "M3-H1-mac-ck-02": [
+   "CK07_penetration_move",
+   "CK09_void_hold",
+   "CK05_curb_sprint",
+   "CK02_flat_walk",
+   "CK10_flat_jump",
+   "CK08_flat_walk_noinput",
+   "CK06_trap_move",
+   "CK04_stepdown_walk",
+   "CK01_flat_hold",
+   "CK03_hole_walk_slow"
+  ],
+  "M3-H1-mac-ck-03": [
+   "CK03_hole_walk_slow",
+   "CK06_trap_move",
+   "CK05_curb_sprint",
+   "CK09_void_hold",
+   "CK10_flat_jump",
+   "CK01_flat_hold",
+   "CK07_penetration_move",
+   "CK02_flat_walk",
+   "CK04_stepdown_walk",
+   "CK08_flat_walk_noinput"
+  ],
+  "M3-H1-mac-ck-04": [
+   "CK04_stepdown_walk",
+   "CK08_flat_walk_noinput",
+   "CK02_flat_walk",
+   "CK07_penetration_move",
+   "CK06_trap_move",
+   "CK01_flat_hold",
+   "CK03_hole_walk_slow",
+   "CK05_curb_sprint",
+   "CK10_flat_jump",
+   "CK09_void_hold"
+  ],
+  "M3-H1-mac-ck-05": [
+   "CK10_flat_jump",
+   "CK02_flat_walk",
+   "CK06_trap_move",
+   "CK01_flat_hold",
+   "CK07_penetration_move",
+   "CK08_flat_walk_noinput",
+   "CK05_curb_sprint",
+   "CK09_void_hold",
+   "CK03_hole_walk_slow",
+   "CK04_stepdown_walk"
+  ]
+ },
+ "cases": {
+  "CK01_flat_hold": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     80,
+     80
+    ],
+    "maxPosDiff": 0.012615472078323364,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     80,
+     80
+    ],
+    "maxPosDiff": 0.0008577704429626465,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     80,
+     80
+    ],
+    "maxPosDiff": 0.010718107223510742,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK02_flat_walk": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.0031076520681381226,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.002077460289001465,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.05646320804953575,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK03_hole_walk_slow": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     130,
+     130
+    ],
+    "maxPosDiff": 1.2560272216796875,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     130,
+     130
+    ],
+    "maxPosDiff": 0.282012939453125,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     130,
+     130
+    ],
+    "maxPosDiff": 0.04914441704750061,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK04_stepdown_walk": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.011721089482307434,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.05833326233550906,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.01777658984065056,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK05_curb_sprint": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     421,
+     421
+    ],
+    "maxPosDiff": 0.11289181932806969,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     421,
+     421
+    ],
+    "maxPosDiff": 0.09768199920654297,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     421,
+     421
+    ],
+    "maxPosDiff": 0.16993331909179688,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK06_trap_move": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     416,
+     416
+    ],
+    "maxPosDiff": 0.016184362582862377,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     416,
+     416
+    ],
+    "maxPosDiff": 0.01557159423828125,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     416,
+     416
+    ],
+    "maxPosDiff": 0.01659393310546875,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK07_penetration_move": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     416,
+     418
+    ],
+    "maxPosDiff": 0.16190266609191895,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     416,
+     416
+    ],
+    "maxPosDiff": 0.11084858700633049,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     416,
+     417
+    ],
+    "maxPosDiff": 0.12807226181030273,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK08_flat_walk_noinput": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.003979597939178348,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.0026796272140927613,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     105,
+     105
+    ],
+    "maxPosDiff": 0.0014538168907165527,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK09_void_hold": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     80,
+     80
+    ],
+    "maxPosDiff": 0.06764453137293458,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     80,
+     80
+    ],
+    "maxPosDiff": 0.12372907623648643,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     80,
+     80
+    ],
+    "maxPosDiff": 0.04286009073257446,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  },
+  "CK10_flat_jump": {
+   "M3-H1-mac-ck-03": {
+    "steps": [
+     165,
+     165
+    ],
+    "maxPosDiff": 0.02891993522644043,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-04": {
+    "steps": [
+     165,
+     165
+    ],
+    "maxPosDiff": 0.06386247277259827,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   },
+   "M3-H1-mac-ck-05": {
+    "steps": [
+     165,
+     165
+    ],
+    "maxPosDiff": 0.029083251953125,
+    "firstDiffStep": 0,
+    "firstDiffPhase": "settle",
+    "phaseStartsEqual": true
+   }
+  }
+ }
+}

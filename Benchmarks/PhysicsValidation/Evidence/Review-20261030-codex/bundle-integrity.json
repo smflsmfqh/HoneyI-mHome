@@ -1,0 +1,26 @@
+{
+  "zip": "Benchmarks/PhysicsValidation/Builds/M4-smoke-01.zip",
+  "bytes": 279235113,
+  "external_sha_matches": true,
+  "internal_files_checked": 654,
+  "internal_hash_mismatches": [],
+  "builds": {
+    "H1": {
+      "buildId": "M4-H1-win-01",
+      "pe_machine": "0x8664",
+      "win_x64": true,
+      "case_count": 20,
+      "cases_hash_matches_buildinfo": true,
+      "profile_hash_matches_buildinfo": true
+    },
+    "H7": {
+      "buildId": "M4-H7-win-01",
+      "pe_machine": "0x8664",
+      "win_x64": true,
+      "case_count": 20,
+      "cases_hash_matches_buildinfo": true,
+      "profile_hash_matches_buildinfo": true
+    }
+  },
+  "integrity_crc_failure": null
+}

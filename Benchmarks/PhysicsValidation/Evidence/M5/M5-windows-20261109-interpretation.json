@@ -1,0 +1,49 @@
+{
+ "id": "M5-windows-20261109-interpretation",
+ "createdLocal": "2026-11-09",
+ "inputs": {
+  "PhysicsBench-Repeat01-Results-20261108T212652.zip": "af3d52ea5c3ceec635122519c6554be29b758c007712ea3bba3c4ba81ba63588",
+  "PhysicsBench-TrackB01-Results-20261109T122558.zip": "77854506250319025bc9930dccba417bd983186f06057edbe6bb011df90269ee",
+  "PhysicsBench-TrackB02-Results-20261109T144637.zip": "0ea728108ecc8f526855ed507a8b1235141ba91521ecdde45b079aa585f3ae1e",
+  "summary": "Evidence/M5/M5-windows-20261109-summary-a1.json",
+  "summarySha256": "4ccb580c7a2b6fcd151bc917b6c5b290fc7e0280d16ddda5100ed140ae4de948",
+  "aggregator": "Tools/summarize_M5_20261109.py",
+  "aggregatorSha256": "94db3426d0fb28aad4136cfd7c8065e83bd7d543b202841a8a6f63b60d46be1a"
+ },
+ "validity": "52 run 모두 completed·exit 0. 동결 도구 SHA 일치(analyze c9950f0b…, thresholds-r4/B1, capabilities-r1, case 파일). CK 포함 run 42개 모두 4/4(P11R 단독 10 run은 동결대로 CK 없음). 초기 침투 무효 0(initialPenDepth 기준, 연석 run은 initialPenWallDepth도 0), 의도 외 하네스 오류 0. PC 1대(Win10 Education, i5-12500, GTX 1660 SUPER = 02c와 같은 PC). 다른 PC에서 연석 횡단 case를 돌린 적 없음 → 'PC와 무관하게 재현'이라고 쓰지 않는다",
+ "repeat01": {
+  "E2_C": "낙하 case 7/24. 안정 재현(6/6) 5건: C01_jump·C06_walk·C08_walk·C11_walk·C11_jump. 간헐: C09_jump 2/6(02c 낙하), C09_walk 2/6(02c pass, 새로 나온 간헐)",
+  "E2_K": "낙하 7/24 모두 6/6(K01·K02·K04·K05·K06·K11·K12 walk) = 02c와 같은 집합. 사후 표적이므로 E2_C와 합산하지 않음",
+  "determinism": "같은 seed(a1·a2) 사이 outcome 차이 0. 그러나 P11R은 같은 seed·fps에서도 갈렸고 같은 seed 쌍은 하나뿐이라, C09 간헐이 비결정성인지 seed 효과인지 구분할 수 없다",
+  "P11R": "6/10 낙하(60fps 3/6, 30fps 1/2, 120fps 2/2). 같은 seed·fps에서도 갈림 → 비결정. step3에서 두 갈래(위로 머묾 penDepth 0.114 / 아래로 빠짐 py -0.12). 초기 침투 0.0605m 인위 조건이라 포트폴리오 제외 유지"
+ },
+ "trackB01_floor (dt 0.02 / Discrete = 수정 전 시기 물리 설정)": {
+  "S0a 기본 Mesh": "E2_C root 낙하 42/72(14 case × 3/3). jump 12 + C02·C06 walk. 연석에서 내려오거나 점프 착지 때 하강 속도 약 1.4~2.8m/s에서 바닥 메시 접촉(법선 +1)이 잡힌 다음 스텝에 통과",
+  "S0b H1식(cooking 26, Read/Write 꺼짐)": "72/72 낙하, 바닥 Read/Write 오류 메시 12종 → 조작 확인 통과",
+  "S0p (S0b + Read/Write 켬)": "42/72, S0a와 낙하 case 집합 동일 → cooking 30/26 차이는 낙하에 영향 없음. H1 구성 100% 낙하는 Read/Write 꺼짐으로 콜라이더가 빈 것. 단서: S0a·S0p는 cooking과 Read/Write 두 요인이 함께 다르며, 이 추론은 S0a 로그의 바닥 Read/Write 오류 0(정상 cooking)에 기댄다",
+  "S1 받침판": "0/72(낙하는 막지만 기하 감사에서 연석 단차 84~87/90 소실)",
+  "S2 Convex": "12/72(C01·C07 walk·jump, 3/3). 볼록 껍질 윗면(y≈0.03)을 걷다 가장자리에서 떨어지며 법선 -1 접촉 후 통과(기전 추정). 기하: 연석 단차 90/90 소실",
+  "S3 Box": "0/72",
+  "manipulationChecks": "S0b 오류>0·전부 낙하, S0a·S0p·S2 오류 0 → 모두 통과"
+ },
+ "claims": {
+  "①": "지지(addendum 'S0a 낙하≥1' 문장), 조건부: 수정 전 물리 설정(dt 0.02/Discrete)에서 얇은 Mesh 바닥이 연석 하강·점프 착지 때 뚫렸다(S0a 42/72). 같은 설정에서 Box는 0/72. 트랙 A H0 관측(repeat-01 5경로 안정 재현)과 같은 방향. 'Mesh 자체가 어떤 설정에서도 불안정'이라고 쓰지 않는다. 정리: Mesh를 버린 판단은 정당했고, 이후 H1 설정 변경(Read/Write 꺼짐+비기본 cooking)은 상황을 더 나쁘게 만들었다(72/72)",
+  "②": "지지: 기하(단차 전부 소실·경사로) + 런타임 낙하 12/72",
+  "③": "지지: 같은 수정 전 물리 설정에서도 S3 0/72, 기하 오차 ≈0(C07 한 구간 예외는 기하 판정 미달로 그대로 보고)",
+  "④": "규칙상 지지(관통 0.02/Discrete 54/54 → 0.01/CCD 27/54). 분해: dt 0.01만으로 28/54(Discrete), 0.01에서 CCD 추가 효과 없음(27 vs 28), 0.02에서는 CCD가 54→36. 기전 차이: 0.02의 관통은 통과 시점 bottomY -0.1(도로면 높이에서 수평으로 뚫음), 0.01/CCD는 -0.104~-0.116(밑으로 밀려 통과). 끼임은 4 설정 모두 0 → 10/23 에디터 결과(Box+CCD S2 끼임 6/9)와 상충. 프로토콜(에디터 Play Mode·Coplay·리플렉션 초기화)·환경 차이 가능성. 이 데이터로는 '연석 끼임'을 ④의 이유로 인용할 수 없다. 현재 설정에서도 관통 50% 남음"
+ },
+ "trackB02": {
+  "rule": "주 설정 0.01/CCD에서 S3c 관통 < S3, 끼임 증가 없음",
+  "result": "S3 27/54 → S3c 0/54, 끼임 0/0. 바뀐 27건은 모두 S3 관통 case(대응 비교). 36건 recovered_after_penetration(진입 후 뒤로 밀려남), 18건 blocked_escaped",
+  "auxiliary": "0.02/Discrete에서는 S3·S3c 모두 54/54 관통, 차이 0. 이 설정의 관통은 도로면 높이 수평 관통(통과 시 bottomY -0.1)이라 밑면을 내리는 S3c와 무관 → S3c 효과는 현재 물리 설정에서만",
+  "verdict": "지지: 기전 가설(연석 Box 밑면 근처 진입 → 아래로 밀림)과 맞는 결과",
+  "scope": "통제 조건(NPC 등 꺼짐, 연석 2곳 정면 직진, 일정 속도) 테스트 복제 빌드. 실제 게임 적용·회귀 확인 전에는 '고쳤다'고 쓰지 않음"
+ },
+ "limits": [
+  "PC 1대",
+  "트랙 B 바닥은 dt 0.02/Discrete 한 설정만",
+  "끼임 재현 case 없음",
+  "탐색 결과(M6 정식 수치 아님)"
+ ],
+ "revision": "a1 + advisor 검토 반영(CK 문구, C09 해석, ④ 끼임 상충, 0.02 관통 기전 확인)"
+}

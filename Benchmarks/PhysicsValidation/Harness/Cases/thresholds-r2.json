@@ -1,0 +1,13 @@
+{
+ "revision": "r2-provisional",
+ "note": "M3 판정기 검증용 잠정값. r=캡슐 월드 반지름. 입력 수신은 물리 시간 기준. M5 예비 실행 후 M6에서 동결한다.",
+ "fallDepthR": 3.0,
+ "supportNormalY": 0.5,
+ "supportProbeGapR": 0.5,
+ "stableSupportSec": 0.1,
+ "escapeDistR": 2.0,
+ "penetrationSignificantR": 0.25,
+ "penetrationResolvedR": 0.1,
+ "passThroughR": 3.0,
+ "inputReceiveMaxFixedSec": 0.4
+}

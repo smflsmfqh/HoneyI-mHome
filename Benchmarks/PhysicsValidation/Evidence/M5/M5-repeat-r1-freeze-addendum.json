@@ -1,0 +1,18 @@
+{
+ "purpose": "repeat-01 결과 회수 전 해석 규칙 보충(받침판·convex 이력 검토 반영). 원 동결 기록·묶음·case는 바꾸지 않는다",
+ "recordedUtc": "2026-11-08T09:43:46.642207+00:00",
+ "resultsReceived": false,
+ "bundleUnchanged": "Builds/M5-repeat-01.zip (SHA-256 f2217de8…c4ca) 그대로 실행",
+ "rules": [
+  "trial의 initialPenDepth > 0.005m(start_embedded)는 outcome을 바꾸지 않고 따로 집계한다. 02c H0의 C·K case는 모두 0이었으므로 repeat에서 0이 아니게 나오면 그 사실 자체를 기록한다",
+  "E1_P11R_hold는 convex road_001 내부(약 0.06m) 시작이라는 인위 조건의 스트레스 관찰로만 보고한다. 이동 중 낙하(C·K)와 합치지 않고, 포트폴리오 주장에 쓰지 않는다",
+  "C·K 낙하의 기전 분류는 직전 지지 콜라이더 종류(convex 여부)와 접촉 0 여부로 기록한다",
+  "이후 H7과의 수정 전후 비교는 두 버전 모두 initialPenDepth<=0.005m인 case ID만 쓴다(02c 기준 H7 K03·K04는 road_009_floor Box 안 0.1m 시작으로 제외 대상, C 24건은 양쪽 모두 해당 없음)",
+  "H1 기본 run은 받침판 안 약 0.1m 시작(45건) 때문에 Mesh 바닥 기준선으로 쓰지 않는다. H1은 받침판 제거 통제(pilot-01)만 쓴다"
+ ],
+ "m6Inputs": [
+  "case 시작 높이를 시각 메시가 아니라 충돌면(물리 probe)으로 잡고, 시각면-충돌면 차이를 따로 기록",
+  "분석기에 start_embedded 플래그 추가(새 revision으로)"
+ ],
+ "source": "Docs/physics-collider-ground-plate-history.md, Evidence/M5/M5-audit-06-ground-plate-history.json"
+}

@@ -1,0 +1,62 @@
+{
+ "milestone": "M3",
+ "state": "DONE",
+ "recordedAt": "2026-10-29 (Asia/Seoul)",
+ "worker": "Claude Code session",
+ "scope": "H1 복원본 기준 하네스·판정기 구현과 Mac Standalone 실행 경로 검증. Windows 결과 아님",
+ "harnessSources": {
+  "Harness/Cases/classifier-checks.json": "e4c584cc9ac096c63c66f3e3d55ec07d1106fdc271269e8a2e84fbe2ab0f5346",
+  "Harness/Cases/profile-H1.json": "a8e8ea1a72b277f6b0fba2d1185515ed060da111f0606eb39680e1483c74e5e3",
+  "Harness/Cases/thresholds-r1.json": "76a2fb073106048ff55235b1c6a1d89a5c68dace4582d5525ccf13c649e8d251",
+  "Harness/Editor/PhysicsBenchBuild.cs": "82643341b91f682e7e314270968ebd717b2cea8403a328b31b429a7688192f97",
+  "Harness/README.md": "9833d626a3f891f107bbe723cfd2b098c434d12446c8bc8d0266beea84cf4307",
+  "Harness/Runtime/PhysicsBenchData.cs": "93a7c27da428b0db2d1b5a34d8b715487929a4450ac8110b5106b3f8c41c8d22",
+  "Harness/Runtime/PhysicsBenchFixtures.cs": "e1f5a1277ebbe956ce004fa16828e1bcda0c523749fd56738983c84591b56013",
+  "Harness/Runtime/PhysicsBenchInput.cs": "fce1c07d47700b291d3ffa2621650ad4949545bd5c608c4c778484d6e61a82dd",
+  "Harness/Runtime/PhysicsBenchRunner.cs": "b1022b5b5d1a57a3d008602a729991fe82490a53a7b3ab08e0e51b4278cb34ed",
+  "Harness/Tools/analyze_physics_bench.py": "01f4c2a1e57cd1137d785c4f4b2c4a98be6678f205fad867d2801bf53b6f0076",
+  "Tools/sync_harness.py": "62c7690b2bae31f3da10a35b63ce1d288c4d6ec10e2fb6084f76553760b1f451"
+ },
+ "workspaceInstall": "Benchmarks/.physics-work/project/Assets/PhysicsBench (sync 기록: Evidence/M3/harness-sync-05.json)",
+ "finalBuild": {
+  "buildId": "M3-H1-mac-05",
+  "target": "StandaloneOSX",
+  "backend": "Mono2x",
+  "development": true,
+  "defines": "PHYSICS_BENCH",
+  "result": "Succeeded, 0 errors",
+  "report": "Evidence/M3/builds/M3-H1-mac-05.build-result.json",
+  "log": "Evidence/M3/build-M3-H1-mac-05.log",
+  "location": "Benchmarks/.physics-work/builds/M3-H1-mac-05 (재생성 가능 임시 빌드)"
+ },
+ "classifierChecks": {
+  "run": "Evidence/M3/runs/M3-H1-mac-ck-05",
+  "analysis": "Evidence/M3/analysis/M3-H1-mac-ck-05-a1/summary.json",
+  "matched": "10/10",
+  "summarySha256": "87c389e5e34a3c92920d0f060faf4211adeaec333387c44f9055054f335e7587",
+  "repeat": "ck-03(seed 2)·ck-04(seed 4)도 10/10. ck-01(8/10)·ck-02는 하네스 결함 수정 전후 기록으로 보존"
+ },
+ "robustnessChecks": {
+  "sameRunIdRefused": "ck-03 재실행: 종료 코드 1, run_dir_exists, 기존 trials.jsonl SHA 불변",
+  "interrupt": "int-01: 25초 뒤 SIGTERM. 완료 3건 보존. status는 running으로 남음(강제 종료는 OnApplicationQuit 미호출). 분석기 종료 코드 3, 누락 7건",
+  "inputNotDelivered": "CK08: harness_error:input_not_received (정지/끼임으로 세지 않음)",
+  "lowSpeedAndSettleFall": "CK03(Move 0.8m/s)·CK09(지지면 없음) 모두 fall. 무효 처리 없음",
+  "capture": "-benchCapture end, ck-05 captures 10장"
+ },
+ "harnessDefectsFoundAndFixed": [
+  "H1 개미의 자식 body Rigidbody(다리·머리·더듬이 콜라이더)가 연석에 먼저 닿음. 주 캡슐만 기록하면 연석 접촉을 놓치고 주 캡슐-자식 자기 접촉을 벽으로 오인(ck-01 CK05 passed_curb). 모든 플레이어 Rigidbody 기록·자기 접촉 분리로 수정",
+  "초기 침투가 첫 물리 스텝에 해소되어 trace에 안 남음(ck-01 CK07). 배치 직후 침투 기록 추가",
+  "출발 재배치 시 자식 body 속도 미초기화. 전체 Rigidbody 정지로 수정",
+  "Development 콘솔·기본 머티리얼 누락으로 캡처 불가. 콘솔 숨김·URP Lit 표시 재질로 수정"
+ ],
+ "observationsForM5": [
+  "H1 Mac 빌드 Player 로그에 MeshCollider Read/Write 미설정 오류 140개 오브젝트(road_009·road_019·Set_B_Tiles 등 바닥 포함). 목록: Evidence/M3/H1-mac-player-meshcollider-readwrite-errors.txt. 빌드에서 해당 충돌체가 실제로 동작하는지는 미확인. 원래 'Windows 빌드에서만 낙하' 증상의 후보 가설로 M5에서 우선 확인",
+  "H1 주 캡슐은 자식 body 콜라이더와 상시 자기 접촉(스텝당 약 8~9건)"
+ ],
+ "notDone": [
+  "Windows 컴파일·실행(M4)",
+  "실제 맵 case 실행",
+  "H2~H7 profile·키 바인딩 확인",
+  "임계값 동결(M6)"
+ ]
+}

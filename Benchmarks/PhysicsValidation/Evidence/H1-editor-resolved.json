@@ -1,0 +1,438 @@
+{
+    "schemaVersion": 1,
+    "observedAtUtc": "2026-10-29T10:38:11.3390440Z",
+    "unity": "6000.3.15f1",
+    "projectPath": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/project",
+    "scene": "Assets/Scenes/AntDemoScene.unity",
+    "standaloneBackend": "Mono2x",
+    "activeBuildTarget": "StandaloneOSX",
+    "observation": "editor_resolved_before_runtime_Awake",
+    "playMode": false,
+    "sceneDirty": false,
+    "physicsTestsRun": false,
+    "fixedDeltaTime": 0.019999992102384568,
+    "maximumDeltaTime": 0.3333333432674408,
+    "contactOffset": 0.00009999999747378752,
+    "gravity": {
+        "x": 0.0,
+        "y": -9.8100004196167,
+        "z": 0.0
+    },
+    "solverIterations": 6,
+    "solverVelocityIterations": 1,
+    "player": "Player",
+    "playerScript": "Assets/Scripts/Player/PlayerMovement.cs",
+    "playerSerializedFields": "{\"MonoBehaviour\":{\"m_Enabled\":true,\"m_EditorHideFlags\":0,\"m_Name\":\"\",\"m_EditorClassIdentifier\":\"Assembly-CSharp::PlayerMovement\",\"_playerHealth\":{\"instanceID\":0},\"_animator\":{\"instanceID\":0},\"_moveSpeed\":0.800000011920929,\"_jumpForce\":6.0,\"_mouseSensitivity\":0.15000000596046449,\"_minPitch\":-20.0,\"_maxPitch\":10.0,\"_rollSpeed\":2.0,\"_rollDuration\":0.699999988079071,\"_rollCoolDown\":5.0,\"_crouchSpeed\":0.5,\"_isCrouching\":false,\"_sprintSpeed\":1.7000000476837159,\"_sprintTotalTime\":7.0,\"yNormal\":0.10000000149011612}}",
+    "collisionLayers": [
+        "0:Default",
+        "1:TransparentFX",
+        "2:Ignore Raycast",
+        "3:Player",
+        "4:Water",
+        "5:UI",
+        "6:",
+        "7:Obstacle",
+        "8:Character Preview",
+        "9:NPC",
+        "10:Ground",
+        "11:",
+        "12:",
+        "13:",
+        "14:",
+        "15:",
+        "16:",
+        "17:",
+        "18:",
+        "19:",
+        "20:",
+        "21:",
+        "22:",
+        "23:",
+        "24:",
+        "25:",
+        "26:",
+        "27:",
+        "28:",
+        "29:",
+        "30:",
+        "31:"
+    ],
+    "buildScenes": [],
+    "playerBodies": [
+        {
+            "path": "Player",
+            "mode": "Continuous",
+            "interpolation": "Interpolate",
+            "constraints": "FreezeRotation",
+            "mass": 1.0,
+            "linearDamping": 0.0,
+            "angularDamping": 0.05000000074505806,
+            "isKinematic": false,
+            "useGravity": true
+        },
+        {
+            "path": "Player/Rig/root/body",
+            "mode": "Discrete",
+            "interpolation": "None",
+            "constraints": "FreezeRotation",
+            "mass": 1.0,
+            "linearDamping": 0.0,
+            "angularDamping": 0.05000000074505806,
+            "isKinematic": false,
+            "useGravity": true
+        }
+    ],
+    "playerColliders": [
+        {
+            "path": "Player",
+            "type": "CapsuleCollider",
+            "tag": "Player",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 0.0,
+                "y": 0.05411617457866669,
+                "z": 0.0019655227661132814
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.15000000596046449,
+                "y": 0.15000000596046449,
+                "z": 0.15000000596046449
+            },
+            "radius": 0.0626644417643547,
+            "height": 0.11960572004318237,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 0.0,
+                "y": -0.004190188366919756,
+                "z": 0.0
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07500000298023224,
+                "y": 0.07499999552965164,
+                "z": 0.07499999552965164
+            },
+            "radius": 0.04910542443394661,
+            "height": 0.09821086376905441,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/head",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": -9.967214567260276e-16,
+                "y": 0.005285237450152636,
+                "z": -0.0031859769951552154
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07500000298023224,
+                "y": 0.07499998807907105,
+                "z": 0.07499998807907105
+            },
+            "radius": 0.046744417399168017,
+            "height": 0.09348885715007782,
+            "direction": 2
+        },
+        {
+            "path": "Player/Rig/root/body/head/antenna.L",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 0.0,
+                "y": 0.05000000074505806,
+                "z": 0.0
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07500000298023224,
+                "y": 0.07499998807907105,
+                "z": 0.07499999552965164
+            },
+            "radius": 0.008135929703712464,
+            "height": 0.10000000149011612,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/head/antenna.R",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 0.0,
+                "y": 0.05000000074505806,
+                "z": 0.0
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07500000298023224,
+                "y": 0.07499998062849045,
+                "z": 0.07499998062849045
+            },
+            "radius": 0.008135933429002762,
+            "height": 0.10000000149011612,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/leg.01.L",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 0.007264738902449608,
+                "y": 0.05089417099952698,
+                "z": 0.003990836441516876
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07468340545892716,
+                "y": 0.07563713937997818,
+                "z": 0.07468343526124954
+            },
+            "radius": 0.010589056648314,
+            "height": 0.10178835690021515,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/leg.01.R",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": -0.005967437289655209,
+                "y": 0.05089417099952698,
+                "z": 0.004330221563577652
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07468340545892716,
+                "y": 0.07563713937997818,
+                "z": 0.07468343526124954
+            },
+            "radius": 0.01018149871379137,
+            "height": 0.10178835690021515,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/leg.02.L",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 0.009700372815132141,
+                "y": 0.04999975115060806,
+                "z": -0.0003840395074803382
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07406266033649445,
+                "y": 0.07691033184528351,
+                "z": 0.07406269013881684
+            },
+            "radius": 0.011331556364893914,
+            "height": 0.10000000149011612,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/leg.02.R",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": -0.010546105913817883,
+                "y": 0.04999973624944687,
+                "z": 0.00038403613143600523
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07406266033649445,
+                "y": 0.07691033184528351,
+                "z": 0.07406269013881684
+            },
+            "radius": 0.01030571199953556,
+            "height": 0.10000000149011612,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/leg.03.L",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 0.00950726866722107,
+                "y": 0.04999908059835434,
+                "z": -0.004405218642205
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.0751504898071289,
+                "y": 0.07469990849494934,
+                "z": 0.07515048235654831
+            },
+            "radius": 0.009680512361228466,
+            "height": 0.09999999403953552,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/leg.03.R",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": -0.009551865048706532,
+                "y": 0.04999963194131851,
+                "z": -0.004929571878165007
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.0751504898071289,
+                "y": 0.07469990849494934,
+                "z": 0.07515048235654831
+            },
+            "radius": 0.009962722659111023,
+            "height": 0.09999999403953552,
+            "direction": 1
+        },
+        {
+            "path": "Player/Rig/root/body/tail",
+            "type": "CapsuleCollider",
+            "tag": "Untagged",
+            "layer": "3:Player",
+            "material": "<default>",
+            "attachedBody": "Player/Rig/root/body",
+            "enabled": true,
+            "trigger": false,
+            "convex": false,
+            "center": {
+                "x": 4.937168172901329e-16,
+                "y": 0.02565697394311428,
+                "z": -0.004094604402780533
+            },
+            "size": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.07499998807907105,
+                "y": 0.07499996572732926,
+                "z": 0.07499998062849045
+            },
+            "radius": 0.05939137563109398,
+            "height": 0.13701406121253968,
+            "direction": 1
+        }
+    ],
+    "sceneMeshColliders": 312,
+    "sceneBoxColliders": 118,
+    "sceneCapsuleColliders": 15
+}

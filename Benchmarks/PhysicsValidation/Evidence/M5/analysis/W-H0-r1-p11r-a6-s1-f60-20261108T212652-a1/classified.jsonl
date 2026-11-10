@@ -1,0 +1,1 @@
+{"caseId": "E1_P11R_hold", "attempt": 6, "scenario": "hold", "moveMode": "Move", "expect": "", "flags": ["support_inferred_from_rest"], "minBottomY": -0.0779000073671341, "maxPenWallDepthR": 0.0, "outcome": "pass", "restGapAboveMinAllowedR": 3.633333327124516, "rootOutcome": "pass"}

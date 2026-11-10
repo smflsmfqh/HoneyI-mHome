@@ -1,0 +1,37 @@
+{
+ "review": "Evidence/Review-20261030-codex-r3/review.md",
+ "reviewSha256": "ca4d0cff1ce2dfd86129b9f83e4df6c901f0685fe43eb84b13d6c2b93272b542",
+ "respondedLocal": "2026-10-30 (Asia/Seoul)",
+ "items": {
+  "P2-unsupported-actions": {
+   "verified": "Hm1 PlayerMovement는 OnMove만, H0는 OnMove·OnLook·OnJump. e2b Hm1 case 146개 중 jump 26·Sprint 4·구제 점프 4. H0는 Sprint 4",
+   "action": "Harness/Cases/capabilities-r1.json 추가, analyze_physics_bench.py --capabilities가 요청 입력 기준으로 action_unsupported:<동작> 플래그·요약(outcome 불변). pilot-02b 묶음·case는 그대로 두고 해석에서 분리(리뷰가 허용한 방식)"
+  },
+  "P2-rest-inferred-pass": {
+   "verified": "analyze_physics_bench.py support_inferred_from_rest 분기가 FreezePositionY 공중 고정도 pass로 집계(Hm1 E2_S05_drop 등)",
+   "action": "summary.passEvidence로 pass_contact_or_probe / pass_rest_inferred / pass_rest_inferred_y_frozen 분리, y_position_frozen 플래그(버전 기본값 + override:constraints 반영). outcome 규칙과 thresholds-r4는 변경하지 않음. 정식 지지 성공 기준은 M6에서 정함"
+  },
+  "constraints-116-80": {
+   "verified": "116 & ~80 = 36 = FreezePositionY + FreezeRotationY",
+   "action": "진행 문서·요약·audit-04 표현 정정. 단일 요인 해석 금지"
+  },
+  "stale-wording": {
+   "verified": "진행 문서 49·85·204행, PhysicsValidation/README.md 23행, audit-04 adapter 설명",
+   "action": "용어를 'M5 탐색 pilot-01 완료 / pilot-02b 대기 / M6 이후 정식 실행 미수행'으로 통일, audit-04에 정정 필드"
+  },
+  "build-revisions": {
+   "verified": "리뷰 확인 5와 같음",
+   "action": "진행 문서에 이미 기록(H0·H1·H7 win-01 재사용, harness SHA 다름). 정식 실험에서는 공통 계측 revision으로 재빌드"
+  },
+  "source-integrity": {
+   "verified": "H0·Hm1 원본 중 설정 파일 5개 재저장",
+   "action": "'원본 전 파일 불변'이라고 쓰지 않음(진행 문서 기존 기록 유지)"
+  }
+ },
+ "tests": "Evidence/M5/analyzer-regression-r5.txt (test_analyzer.py 11/11: 기존 6 + capability 5)",
+ "toolSha256": {
+  "analyze_physics_bench.py": "c9950f0b90f145bcaaeb8e1888fe4317897308da293c5e8d37c5533cf5103d97",
+  "test_analyzer.py": "76b5923a6eebe1fc596c97bcd0eb7f63df75c390bd55c77952b333702ad21140",
+  "capabilities-r1.json": "7b06581feccc77bbe7abfecc50e26939b3cf40670e728f9c591f9931255b42ac"
+ }
+}

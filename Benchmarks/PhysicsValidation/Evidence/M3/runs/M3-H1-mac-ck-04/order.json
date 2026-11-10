@@ -1,0 +1,15 @@
+{
+    "seed": 4,
+    "caseIds": [
+        "CK04_stepdown_walk",
+        "CK08_flat_walk_noinput",
+        "CK02_flat_walk",
+        "CK07_penetration_move",
+        "CK06_trap_move",
+        "CK01_flat_hold",
+        "CK03_hole_walk_slow",
+        "CK05_curb_sprint",
+        "CK10_flat_jump",
+        "CK09_void_hold"
+    ]
+}

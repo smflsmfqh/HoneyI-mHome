@@ -1,0 +1,253 @@
+{
+ "freezeId": "M6-r1-freeze",
+ "status": "동결(Windows 정식 빌드·실행 전). 이후 판정·case·빌드·집계 규칙을 바꾸면 새 revision(M6-r2)",
+ "recordedUtc": "2026-11-09T14:29:27.546043+00:00",
+ "approval": "2026-11-09 사용자 \"커밋하고 e 진행해줘\" → 범위 질문에 \"권장안대로 진행해줘\"(포트폴리오 주장 ①~④ + ⑤ 연석 수정만 정식 측정, ⑤ 추가 승인)",
+ "nature": "M6 정식 조건. M5 탐색 결과(빌드·Mac 점검·Windows 탐색 run)는 정식 수치로 인용하지 않음. 정식 수치는 이 동결 뒤 새로 만든 빌드와 새 run ID(W-M6-*)에서만 나온다. 예외: H0은 역사 버전 바이너리 M5-H0-win-01을 그대로 씀(새 빌드 아님)",
+ "scope": {
+  "in": [
+   "① Mesh 바닥은 빌드에서 개미를 받치지 못했다",
+   "② Convex는 경계를 경사면처럼 감싸 지형과 어긋났다",
+   "③ Box 재구성은 낙하가 없고 지형과 맞는다(+받침판 한계)",
+   "④ 물리 설정(ContinuousDynamic, dt 0.01)은 고속 연석 관통과 연석 끼임을 줄였다",
+   "⑤ 연석 BoxCollider 밑면을 -0.3까지 연장해 연석 관통·끼임을 없앴다(커밋 6c26d2a)"
+  ],
+  "outOfScope": {
+   "H2~H6 복원·역사 비교 트랙, 계획상 A·B 통제 트랙 전체": "복원하지 않음(사용자 범위 결정)",
+   "다른 PC 반복(d)": "건너뜀. 모든 수치는 PC 1대(i5-12500, GTX 1660 SUPER, Win10) 결과",
+   "건물 관통": "별도 미해결 버그. 개선 수치에 섞지 않음",
+   "화단(fir tree group) 돌진 관통": "기존 버그, 1회 재현 시도 미재현. 측정 안 함",
+   "cooking 30 복원·소품 관통": "차량 변형 6개 미검증. 측정 안 함",
+   "30·120 FPS, 배포 빌드 흐름(M10)": "이번 revision에 없음"
+  }
+ },
+ "cases": {
+  "dir": "Harness/Cases/M6-r1/",
+  "generator": "Tools/make_cases_m6.py",
+  "generatorSha256": "11a0e558e120cbfa5995a45903bafbbce6bfd36a04555ebf06a2e25068cf804b",
+  "derivationSha256": "a8077919ea0a9dbf5991e0df8c4addce22817fb51a2998425943e43553aa2f6f",
+  "files": {
+   "m6-floor-S0a.json": {
+    "sha256": "91bf61ba7c8b0bebdb217995cd886cd92b5b7bd030d28ced214567c63712fb9a",
+    "cases": 28,
+    "source": "Harness/Cases/trackB/trackB-floor-S0a.json",
+    "sourceSha256": "db98786f91f2be877c10c1fb1e34b7d16b6d64bc05ea84eaf178e127529d3f29"
+   },
+   "m6-floor-S0b.json": {
+    "sha256": "4f15a7d69bc5ad454d85ad6806cd096cde0f178031e640ba2ab9afd3bda3f61a",
+    "cases": 28,
+    "source": "Harness/Cases/trackB/trackB-floor-S0b.json",
+    "sourceSha256": "2c40748a09cb9c05db04e8279210d505eca894df1c6e178ccecc2e61fcd9c0be"
+   },
+   "m6-floor-S0p.json": {
+    "sha256": "4d6a822f6ba56e3ad249ac87d54a3c402335ce5b0350d55bb5054351aed826af",
+    "cases": 28,
+    "source": "Harness/Cases/trackB/trackB-floor-S0p.json",
+    "sourceSha256": "b27b1490e9c83ef8410bfef58f9861985145530e8ba766fdb4995f6323687be7"
+   },
+   "m6-floor-S1.json": {
+    "sha256": "9636834ff29ae01d2596d1e78e67a0f5401b1ec539838cc285ccf345544746be",
+    "cases": 28,
+    "source": "Harness/Cases/trackB/trackB-floor-S1.json",
+    "sourceSha256": "a5949eb8a57a6d67c65f8c799f89eb0c8878e6083bc52de6f4cd329a6320ea30"
+   },
+   "m6-floor-S2.json": {
+    "sha256": "33653df6740694c960bf4a40b774c481055918624223ee4c15a2fe95e4e8c506",
+    "cases": 28,
+    "source": "Harness/Cases/trackB/trackB-floor-S2.json",
+    "sourceSha256": "ffe990e1c95fead7f673eea3a685730606a93607df46894678518e2e9089dbdc"
+   },
+   "m6-floor-S3.json": {
+    "sha256": "bc18ebd7eab6fa4e97120be0c96e93d1e2f85948ad705384984791dc190219ae",
+    "cases": 28,
+    "source": "Harness/Cases/trackB/trackB-floor-S3.json",
+    "sourceSha256": "44d25b571c567a3e37fde5a0f38a761cc0ba33cebf6c29015b3248d4740aedf8"
+   },
+   "m6-curb.json": {
+    "sha256": "9d3037e6ac9cd2b8657933d3cbde9c4e266a1739ea5e8300f9c6ac6fb7503d70",
+    "cases": 62,
+    "source": "Harness/Cases/fix1/fix1-b.json",
+    "sourceSha256": "d94e17827dcbe06d2d11948f13021f92d46f5478fd77d6b9a02ae79c1d966157"
+   },
+   "m6-H0.json": {
+    "sha256": "5b971c3fa42261be665cb9964538d2a51d167568b8a3bbc44a6539042c9b678f",
+    "cases": 28,
+    "source": "Harness/Cases/r1/repeat-r1-H0.json",
+    "sourceSha256": "4bd36a9862814ce6a05bc9c0630bb09ae52eb148fd134fd4a64c949ae1f1fc1f"
+   }
+  }
+ },
+ "builds_M7": {
+  "rule": "M7에서 새 build ID로 빌드. 각 변형의 씬 SHA-256이 아래 M5 기록값과 같아야 함(다르면 중단·보고). 모든 H7B 빌드는 같은 하네스 동기화 판(harness-sync-H7B 최신 1개)",
+  "H7B-floor": {
+   "S0a": {
+    "buildId": "M6-S0a-win-01",
+    "expectedSceneSha256": "5ad9d7afeac72560af7a1ea8639b6308ea8456d930b41e65a38dfba63c36fd13",
+    "readable": 0
+   },
+   "S0b": {
+    "buildId": "M6-S0b-win-01",
+    "expectedSceneSha256": "1533788eb63164f3e4c025e0968c075df9846cbe26b74e16401350bc0bd94337",
+    "readable": 0
+   },
+   "S0p": {
+    "buildId": "M6-S0p-win-01",
+    "expectedSceneSha256": "93bf05068781e071c9b4361e55189aab7b6eb517ce8ec119c0fa5a3a0234a0a3",
+    "readable": 100
+   },
+   "S1": {
+    "buildId": "M6-S1-win-01",
+    "expectedSceneSha256": "9ab89b887f0054b2b5749ca270c141738164fc27f749d789f8a0f2952ce020eb",
+    "readable": 0
+   },
+   "S2": {
+    "buildId": "M6-S2-win-01",
+    "expectedSceneSha256": "26c82f5762d2a7939183349281b955554919aa50793d1606cbe397c937fd6337",
+    "readable": 100
+   },
+   "S3": {
+    "buildId": "M6-S3-win-01",
+    "expectedSceneSha256": "2bee09ccb698467377bd12c08ea1fd51e036482f706882bff95d205c741f4575",
+    "readable": 0
+   }
+  },
+  "floorNote": "트랙 B 변형 도구(PhysicsBenchVariants) 그대로. 공통 통제(Zone/CarDrivingZone 비트리거 콜라이더 트리거화 등)가 들어 있음 → 바닥 지지만 분리하는 통제 조건. S0p·S2는 바닥 메시 Read/Write 켬 후 빌드, 빌드 뒤 끔",
+  "BASE": {
+   "buildId": "M6-BASE-win-01",
+   "expectedSceneSha256": "9d0bb583cc4f4f0e5fe6185012204e9e2d0ac60623f3e4fec660dc390eacfddb",
+   "rootSha": "ceb0bd9",
+   "note": "원본 씬(루트 b8efce3~ceb0bd9 동일, 복제본 H7B-AntDemoScene.unity.orig와 같음)"
+  },
+  "CURBFIX": {
+   "buildId": "M6-CURBFIX-win-01",
+   "expectedSceneSha256": "12ba8273bf267fd773693cab49d70ae6eaaaa6bfb1d55f0315998dbf0807d043",
+   "rootSha": "6c26d2a(브랜치 fix/curb-collider-bottom, main 미병합)",
+   "note": "원본 프로젝트에서 배치 빌드하지 않음. 복제본 H7B에서 PhysicsBenchCurbFix.ApplyAndSave로 만든 씬이 커밋 6c26d2a 씬과 바이트 동일함을 SHA로 확인하고 빌드"
+  },
+  "H0": {
+   "buildId": "M5-H0-win-01 재사용(예외)",
+   "reason": "역사 버전 바이너리. 다시 빌드하면 당시 바이너리와 달라질 위험만 있고 얻는 것이 없음",
+   "identity": "게임 파일 292개 SHA가 Builds/M5-repeat-01.zip 안 H0 폴더와 전부 같음(빌드 폴더에만 build-result.json·BurstDebugInformation 2개 추가). 파일 목록 해시 65407609…(scratchpad 비교)",
+   "note": "하네스 revision이 H7B 빌드보다 이전 판. repeat-01에서 같은 분석기로 판정 가능 확인"
+  },
+  "toolCheck": "PhysicsBenchVariants.cs·PhysicsBenchGeom.cs·analyze_trackB_geom.py·trackB-geom-lines.txt SHA가 트랙 B 동결값과 같음(2026-11-09 확인) → 기대 씬 SHA 유지"
+ },
+ "runs": {
+  "F (①②③ 런타임)": {
+   "builds": "S0a,S0b,S0p,S1,S2,S3",
+   "cases": "m6-floor-<V>.json",
+   "profile": "profile-H7.json",
+   "physics": "-benchDt 0.02 -benchCcd Discrete(수정 전 시기 설정)",
+   "attempts": "1,2,3 / seed 1,1,2",
+   "runCount": 18
+  },
+  "P4 (④)": {
+   "builds": "BASE(원본 씬, Zone 통제 없음)",
+   "cases": "m6-curb.json",
+   "profile": "profile-H7.json",
+   "physics": "(dt 0.02|0.01) × (Discrete|ContinuousDynamic) 명시 인자",
+   "attempts": "1,2,3 / seed 1,1,2",
+   "runCount": 12
+  },
+  "P5c (⑤ 통제)": {
+   "builds": "BASE, CURBFIX",
+   "cases": "m6-curb.json",
+   "profile": "profile-H7.json",
+   "physics": "인자 없음(빌드 기본 = 게임 실제 0.01/ContinuousDynamic)",
+   "attempts": "1,2,3 / seed 1,1,2",
+   "runCount": 6,
+   "note": "BASE 기본값 run과 P4 BASE 0.01/CCD 명시 run은 같은 결과가 기대됨. 다르면 그대로 보고(인자 경로 확인용)"
+  },
+  "P5g (⑤ 게임 조건)": {
+   "builds": "BASE, CURBFIX",
+   "cases": "m6-curb.json",
+   "profile": "profile-H7-game.json(NPC·고양이·차량 켬, 무적)",
+   "physics": "인자 없음",
+   "attempts": "1,2,3 / seed 1,2,3",
+   "runCount": 6
+  },
+  "H0 (① 역사 버전 보조)": {
+   "builds": "H0",
+   "cases": "m6-H0.json",
+   "profile": "없음(repeat-01과 같음)",
+   "physics": "빌드 기본",
+   "attempts": "1..6 / seed 1,1,2,3,4,5",
+   "runCount": 6
+  },
+  "total": 48,
+  "order": "묶음 A(④⑤, 24 run, 62건): P5c → P4 → P5g. 묶음 B(①②③·H0, 24 run, 28건): F(S3→S0a→S0b→S0p→S1→S2) → H0. 예상 시간은 M7에서 M5 실측(62건 run 약 7분, 28건 run 약 3분)으로 안내",
+  "geometry (②③)": "Mac 에디터 기하 감사를 M7에서 동결 도구(PhysicsBenchGeom.cs 75f11b24…, analyze_trackB_geom.py 4d93b60f…, 단면 ee755cce…)로 새로 실행. 결정적 측정이므로 M5 geom 결과와 같아야 하며, 다르면 차이를 보고"
+ },
+ "rules": {
+  "analyzer": "Harness/Tools/analyze_physics_bench.py c9950f0b… + thresholds-B1 4aca1580…(변경 없음)",
+  "summarizer": "Tools/summarize_M6.py를 M7 묶음 ZIP SHA를 사용자에게 알리기 전에 완성하고 SHA를 addendum(M6-r1-freeze-addendum-summarizer.json)으로 기록. 그 뒤 수정은 새 revision",
+  "primaryOutcome": "rootOutcome(주 캡슐)",
+  "validity": "run: CK 4/4 아니면 run 제외, 중단 run은 interrupted로 보존 후 새 attempt로 재실행. trial: initialPenDepth·initialPenWallDepth > 0.005m 무효, 의도 외 harness_error 무효(분모 제외). 칸마다 유효 분모를 함께 보고",
+  "curbCategories(배타적)": "연석 case rootOutcome 그대로, passed_curb만 통과 시점 bottomY로 나눔: passThrough(bottomY < wallTopY 0.1) / passedOver(≥ 0.1) / passed_unclassified(passStep 또는 해당 스텝 bottomY 없음, 0건이 아니면 그대로 보고하고 관통·넘어감 어느 쪽에도 넣지 않음). 나머지: pass, blocked_escaped, recovered_after_penetration, escaped_by_rescue, rescue_failed, fall, 기타. 각 trial은 정확히 하나의 범주",
+  "stuck": "완전 끼임 = rescue_failed, 방향 탈출 실패 = escaped_by_rescue + rescue_failed",
+  "floorFall": "E2_C rootOutcome fall(thresholds-B1: 선의 시각 최저보다 0.5m 이상 하강)",
+  "auxPenetration": "recovered_after_penetration trial의 maxPenWallDepthR(반지름 r=0.0094m 배수) 중앙값·p90·최대, cm 환산. 판정에는 쓰지 않음",
+  "pairing": "통제 조건은 같은 attempt·seed·case ID끼리 대응표. 게임 조건은 합계만",
+  "intermittent": "H0 E2_C는 case별 k/6으로만 보고(안정/간헐 라벨 붙이지 않음)",
+  "manipulationChecks": "트랙 B와 같음: S0b player log 바닥(road_/Set_B_Tiles) Read/Write 오류 > 0, S0a·S0p·S2는 0. 미충족 변형 무효"
+ },
+ "claims": {
+  "①": {
+   "support": "S0a 또는 S0b의 E2_C root 낙하 합(3 attempt) ≥ 1이고 S3는 0. 조작 체크 통과 전제",
+   "S0p": "S0p에서 낙하가 남으면 '설정만으로는 해결되지 않았다'를 덧붙임. S0p 0이면 대체 문장 A",
+   "alt_A": "에셋 임포트 설정(Read/Write 꺼짐 + cooking 옵션 변경)으로 빌드에서 Mesh 바닥이 비어 있었다. 설정에 의존하지 않는 Box를 택했다.",
+   "alt_B(S0a·S0b 모두 0)": "통제 조건에서는 Mesh 바닥 낙하가 재현되지 않았다. 역사 버전 H0 관측만 근거로 쓴다.",
+   "H0": "H0 E2_C 낙하가 있으면 '실제 당시 버전(H0) 빌드에서도 같은 경로 낙하가 관측됐다(case별 k/6)'를 보조 문장으로. 0이면 언급하지 않음"
+  },
+  "②": {
+   "support": "S2 연석 구간 |e| p95 ≥ 50mm 또는 단차 소실 ≥ 전환점의 50%(트랙 B 계획 5절 그대로)",
+   "against": "p95 < 5mm이고 단차 소실 < 10%이면 '에디터에서 convex 모양을 보고 판단했다' 수준으로만",
+   "runtime": "S2 E2_C 낙하 수는 함께 보고(판정 기준 아님)"
+  },
+  "③": {
+   "support": "S3 E2_C root 낙하 0, 기하 S3 연석 구간 p95 ≤ 5mm·단차 소실 ≤ 10%·구멍 ≤ 1%",
+   "S1": "받침판 한계: S1·S1z 단차 소실 ≥ 90%이고 전체 |e| p95 ≥ 50mm. S1 런타임 낙하·연석 접촉 수 보고",
+   "remaining": "남쪽 도로 0.1m 단차, 소품 관통은 남은 문제로 함께 보고",
+   "supplementary": "P5c BASE(원본 씬, 게임 실제 0.01/CCD) E2_C 24 × 3 attempt 낙하 수를 ③ 보조 보고로 씀(판정 기준 아님. 결과 전 결정)"
+  },
+  "④": {
+   "design": "원본 씬(BASE, Zone 통제 없음)에서 2×2. M5 트랙 B의 Zone 통제 조건은 끼임을 관통으로 바꿨으므로(trackB-correction-01) 쓰지 않음",
+   "support_passThrough": "0.01/CCD의 passThrough < 0.02/Discrete(같은 case 대응 합). 각 요인(dt만, CCD만) 칸도 보고",
+   "sentence_rules": {
+    "passThrough 감소 & 0.01/CCD에서도 > 0": "물리 설정(ContinuousDynamic, dt 0.01)은 고속 연석 관통을 줄였지만 없애지는 못했다(k/n → k/n).",
+    "끼임: 0.01/CCD rescue_failed > 0.02/Discrete": "CCD·dt 0.01은 관통을 줄였지만 연석 끼임은 남겼다(또는 늘렸다). 남은 관통과 끼임은 연석 콜라이더 밑면 연장(⑤)으로 해결했다.",
+    "끼임: 0.01/CCD ≤ 0.02/Discrete": "끼임에 대해서는 수치 그대로 보고(감소면 '줄였다', 같으면 '변화 없음')",
+    "passThrough 감소 없음": "통제 조건에서 물리 설정의 관통 개선은 확인되지 않았다. ④는 포트폴리오에서 뺀다."
+   },
+   "note": "원래 ④ 대체 문장 중 '끼임은 접촉 법선 처리 코드(H5)로 대응했다'는 H5를 측정하지 않으므로 쓰지 않는다"
+  },
+  "⑤": {
+   "support_eliminate": "CURBFIX 통제(3 attempt)와 게임 조건(3 run 합) 모두 연석 34 case에서 passThrough 0, rescue_failed 0, escaped_by_rescue 0, 그리고 E2_C 낙하·연석 case fall이 BASE보다 많지 않음",
+   "sentence_eliminate": "연석 BoxCollider 밑면을 도로면 아래(-0.3)까지 연장해, 고속 돌진 측정에서 연석 관통·끼임이 BASE k/n → 0/n이 됐다(통제: 유효 n, 3회 반복 / 게임 조건: 유효 n, 3 run 합을 따로 표기).",
+   "partial": "0이 아니지만 BASE보다 줄면: '연석 관통·끼임을 줄였다(BASE k/n → CURBFIX k/n)'",
+   "against": "줄지 않거나, 게임 조건 CURBFIX 끼임+E2_C 낙하가 BASE보다 3 이상 많거나 rescue_failed가 CURBFIX에만 있으면 ⑤를 쓰지 않고 trace 조사",
+   "aux": "recovered maxPenWallDepthR 최대가 1r 이상이면 '충돌 직후 최대 X cm 연석에 파고든 뒤 밀려난다(사용자 플레이에서도 보임)'를 함께 쓴다",
+   "pairing": "BASE vs CURBFIX 통제는 attempt·seed·case 대응표"
+  }
+ },
+ "m6InputsDisposition": {
+  "P24T 시작 높이 probe 결함": "해당 없음(H7 E1 case를 M6에 쓰지 않음)",
+  "H0 낙하 경로 승격": "E2_C 24 정의 그대로 6회 반복으로 승격. E2_K(사후 표적)·E1_P11R(인위 초기 침투)은 제외",
+  "H1 일시 하강 분리 지표": "해당 없음(H1을 M6에 쓰지 않음)",
+  "Hm1-80 unsupported_end": "해당 없음(Hm1을 M6에 쓰지 않음)"
+ },
+ "macChecks": "M7 빌드 뒤 Mac 점검은 묶음 확인용이며 결과로 인용하지 않음",
+ "files": {
+  "Harness/Tools/analyze_physics_bench.py": "c9950f0b90f145bcaaeb8e1888fe4317897308da293c5e8d37c5533cf5103d97",
+  "Harness/Cases/thresholds-B1.json": "4aca1580da61ed369b45865666f1dd60f963cddd59960a1178423e09e3f979b3",
+  "Harness/Cases/profile-H7.json": "e39ac25655e41e36eda401db6ef8eb98ef63dad5bbbb222383dd99d1f5f22c02",
+  "Harness/Cases/profile-H7-game.json": "58d80382832a21a3e14c83ee9531722e7db4430ed94fe3c2e6e6d3be8f6add80",
+  "Harness/Editor/PhysicsBenchVariants.cs": "ae7db86d1961f2efbc073b11116b5d3a479c89e5aec46328f8474559c7334a6b",
+  "Harness/Editor/PhysicsBenchCurbFix.cs": "d67866432a9fafabf48102dc2d13c23a6b435001e8cd1a15932ed5011925eebd",
+  "Harness/Editor/PhysicsBenchGeom.cs": "75f11b24b1109a23aa41210c3144ccfa15153e78fd3fdac34f18ad36305d3fbc",
+  "Tools/analyze_trackB_geom.py": "4d93b60f9a718f3bacf490849ceea363079aa84379c35c7454e2487bdcb13dd5",
+  "Harness/Cases/trackB-geom-lines.txt": "ee755cce6a319d1fef469f91c437bcb4fc572fb48b01dc85ae1be073d6ebdfa3",
+  "Tools/make_cases_m6.py": "11a0e558e120cbfa5995a45903bafbbce6bfd36a04555ebf06a2e25068cf804b"
+ },
+ "draftReviewed": "Evidence/M6/M6-r1-freeze-draft.json(초안) → 어드바이저 검토 반영: 도구 SHA 대조, BASE SHA 전체값, H0 예외 명시, passed_unclassified, 집계 동결 시점, ⑤ 분모, ③ 보조 보고"
+}

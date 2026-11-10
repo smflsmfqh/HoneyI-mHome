@@ -1,0 +1,21 @@
+{
+ "bundle": {
+  "path": "Builds/M5-repeat-01.zip",
+  "bytes": 83175485,
+  "sha256": "f2217de87bf46decb75f21fb3222d100a3c1a1b33c8c94b2b0cd85b2686cc4ca",
+  "files": 297,
+  "builds": {
+   "H0": "M5-H0-win-01"
+  },
+  "script": "RunRepeat01.cmd",
+  "readme": "README-Windows-repeat01.txt",
+  "cases": "cases/repeat-r1-H0.json",
+  "verified": "압축 해제 후 SHA256SUMS 296개 일치, cases 파일 원본과 바이트 동일, H0 폴더 292개 파일이 .physics-work/builds/M5-H0-win-01(DoNotShip·build-result 제외)과 SHA 일치, cmd CRLF·ASCII, README UTF-8 BOM·CRLF",
+  "runs": 16,
+  "expectedMinutes": 40
+ },
+ "freezeRecord": "Evidence/M5/M5-repeat-r1-freeze.json (묶음 제작 전 기록)",
+ "freezeRecordSha256": "8c1e5b47f4f0259b4a5492a417da30a27a22ad85932d29af4f2b1f5e4f922aa0",
+ "notVerifiedOnMac": "H0 Mac 빌드가 없어 r1 case·cmd를 런타임으로 미리 돌려 보지 못함. -benchCaseFilter·-benchFps는 빌드 runner 소스(69902f0a, checkpoint-M5a 사본)로 정적 확인만. 결과에서 order.json 건수(53 / 1)와 manifest의 fps·seed·attempt로 확인한다",
+ "plan": "사용자가 Windows에서 실행(가능하면 i5 데스크톱·i9 노트북 두 PC) → 결과 ZIP 회수 → 동결 규칙대로 PC별 집계"
+}

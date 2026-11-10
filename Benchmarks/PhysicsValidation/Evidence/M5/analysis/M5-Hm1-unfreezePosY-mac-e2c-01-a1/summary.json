@@ -1,0 +1,76 @@
+{
+ "runDir": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Evidence/M5/runs/M5-Hm1-unfreezePosY-mac-e2c-01",
+ "runState": "completed",
+ "inputs": {
+  "trials.jsonl": "ac76d87208356bd23a345148e55ae7c63dec26453024e653f3fae2d72600e82d",
+  "trace.jsonl": "09ee5c2dac1a7cb488e6507b5ae89ceca25fab28ec05cf9abf0b071882c5bedc",
+  "thresholds": "1fcdffdd2abb013178be48b82ac12b2c40cc794700cdd7c29af9bbd9257aecb1"
+ },
+ "thresholds": {
+  "revision": "r4-provisional",
+  "note": "M3 판정기 검증용 잠정값. r=캡슐 월드 반지름. 입력 수신은 물리 시간 기준. M5 예비 실행 후 M6에서 동결한다.",
+  "fallDepthR": 3.0,
+  "supportNormalY": 0.5,
+  "supportProbeGapR": 0.5,
+  "stableSupportSec": 0.1,
+  "escapeDistR": 2.0,
+  "penetrationSignificantR": 0.25,
+  "penetrationResolvedR": 0.1,
+  "passThroughR": 3.0,
+  "inputReceiveMaxFixedSec": 0.4,
+  "preContactWindowSec": 0.06,
+  "restVerticalSpeed": 0.02
+ },
+ "planned": 120,
+ "trials": 120,
+ "missingCases": [],
+ "duplicateTrials": [],
+ "harnessErrors": 9,
+ "outcomes": {
+  "pass": 80,
+  "fall": 27,
+  "passed_curb": 4,
+  "harness_error:input_not_received": 1,
+  "harness_error:time_scale_zero": 1,
+  "harness_error:yaw_align_failed": 7
+ },
+ "passEvidence": {
+  "pass_rest_inferred": 63,
+  "pass_contact_or_probe": 17
+ },
+ "capabilities": {
+  "file": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Harness/Cases/capabilities-r1.json",
+  "sha256": "7b06581feccc77bbe7abfecc50e26939b3cf40670e728f9c591f9931255b42ac",
+  "unsupportedTrials": {}
+ },
+ "classifierChecks": {
+  "total": 4,
+  "matched": 4,
+  "items": [
+   {
+    "caseId": "CK01_flat_hold",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK08_flat_walk_noinput",
+    "expect": "harness_error:input_not_received",
+    "outcome": "harness_error:input_not_received",
+    "match": true
+   },
+   {
+    "caseId": "CK03_hole_walk_slow",
+    "expect": "fall",
+    "outcome": "fall",
+    "match": true
+   },
+   {
+    "caseId": "CK13_flat_hold_timescale0",
+    "expect": "harness_error:time_scale_zero",
+    "outcome": "harness_error:time_scale_zero",
+    "match": true
+   }
+  ]
+ }
+}
