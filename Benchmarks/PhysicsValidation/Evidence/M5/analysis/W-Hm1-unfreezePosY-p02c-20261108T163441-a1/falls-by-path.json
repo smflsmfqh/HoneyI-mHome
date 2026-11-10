@@ -1,0 +1,712 @@
+{
+ "run": "Evidence/M5/windows/PhysicsBench-Pilot02c-Results-20261108T163441/W-Hm1-unfreezePosY-p02c-20261108T163441",
+ "classified": "Evidence/M5/analysis/W-Hm1-unfreezePosY-p02c-20261108T163441-a1/classified.jsonl",
+ "probe": "probe-Hm1-e2c.json",
+ "counts": {
+  "point_case": 8,
+  "beyond_probed_path": 8,
+  "within_probed_path": 12
+ },
+ "falls": [
+  {
+   "caseId": "E2_K06_walk",
+   "fallPos": [
+    48.356,
+    -0.117,
+    -0.014
+   ],
+   "phase": "move",
+   "t": 8.28,
+   "contactsAtFall": [],
+   "start": [
+    49.75,
+    -0.10000000149011612,
+    0.0
+   ],
+   "category": "point_case"
+  },
+  {
+   "caseId": "E2_K02_walk",
+   "fallPos": [
+    -56.738,
+    -0.129,
+    -40.0
+   ],
+   "phase": "move",
+   "t": 11.08,
+   "contactsAtFall": [],
+   "start": [
+    -55.25,
+    -0.10000000149011612,
+    -40.0
+   ],
+   "category": "point_case"
+  },
+  {
+   "caseId": "E1_W08T_walk",
+   "fallPos": [
+    -84.609,
+    -0.133,
+    64.998
+   ],
+   "phase": "move",
+   "t": 16.42,
+   "contactsAtFall": [],
+   "start": [
+    -86.0,
+    0.0,
+    65.0
+   ],
+   "category": "point_case"
+  },
+  {
+   "caseId": "E2_M02_walk",
+   "fallPos": [
+    -30.015,
+    -0.129,
+    30.5
+   ],
+   "phase": "move",
+   "t": 46.5,
+   "contactsAtFall": [],
+   "start": [
+    -30.0,
+    0.0,
+    15.5
+   ],
+   "alongPath": 15.0,
+   "probedPathLength": 14.0,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 13.5,
+    "from": "road_020",
+    "to": "road_020",
+    "dy": -0.1,
+    "distanceAfter": 1.5
+   },
+   "nearestStepAlong": 13.5,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C04_walk",
+   "fallPos": [
+    -15.493,
+    -0.129,
+    0.5
+   ],
+   "phase": "move",
+   "t": 56.94,
+   "contactsAtFall": [],
+   "start": [
+    4.0,
+    0.0,
+    0.5
+   ],
+   "alongPath": 19.493,
+   "probedPathLength": 20.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 18.0,
+    "from": "road_020",
+    "to": "road_020",
+    "dy": -0.1,
+    "distanceAfter": 1.493
+   },
+   "nearestStepAlong": 18.0,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C01_walk",
+   "fallPos": [
+    -48.3,
+    -0.129,
+    -40.0
+   ],
+   "phase": "move",
+   "t": 73.68,
+   "contactsAtFall": [],
+   "start": [
+    -62.0,
+    0.0,
+    -40.0
+   ],
+   "alongPath": 13.7,
+   "probedPathLength": 20.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 13.5,
+    "from": "road_009",
+    "to": "road_009",
+    "dy": -0.1,
+    "distanceAfter": 0.2
+   },
+   "nearestStepAlong": 13.5,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C12_walk",
+   "fallPos": [
+    -81.6,
+    -0.018,
+    39.0
+   ],
+   "phase": "move",
+   "t": 86.78,
+   "contactsAtFall": [
+    89038,
+    89038,
+    88960
+   ],
+   "start": [
+    -60.0,
+    0.10000000149011612,
+    39.0
+   ],
+   "alongPath": 21.6,
+   "probedPathLength": 21.5,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 15.25,
+    "from": "Set_B_Tiles_04",
+    "to": "Set_B_Tiles_09",
+    "dy": -0.1,
+    "distanceAfter": 6.35
+   },
+   "nearestStepAlong": 15.25,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C02_walk",
+   "fallPos": [
+    -56.7,
+    -0.129,
+    -40.0
+   ],
+   "phase": "move",
+   "t": 112.06,
+   "contactsAtFall": [],
+   "start": [
+    -42.0,
+    0.2370000034570694,
+    -40.0
+   ],
+   "alongPath": 14.7,
+   "probedPathLength": 20.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 14.5,
+    "from": "road_009",
+    "to": "road_009",
+    "dy": -0.1,
+    "distanceAfter": 0.2
+   },
+   "nearestStepAlong": 14.5,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_L02_walk",
+   "fallPos": [
+    -6.0,
+    -0.129,
+    75.499
+   ],
+   "phase": "move",
+   "t": 175.3,
+   "contactsAtFall": [],
+   "start": [
+    -6.0,
+    -0.10000000149011612,
+    -65.0
+   ],
+   "alongPath": 140.499,
+   "probedPathLength": 128.0,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 125.0,
+    "from": "road_020",
+    "to": "road_019",
+    "dy": 0.0,
+    "distanceAfter": 15.499
+   },
+   "nearestStepAlong": 74.25,
+   "stepDyThere": -0.198
+  },
+  {
+   "caseId": "E2_C08_walk",
+   "fallPos": [
+    20.0,
+    -0.129,
+    -63.3
+   ],
+   "phase": "move",
+   "t": 194.0,
+   "contactsAtFall": [],
+   "start": [
+    20.0,
+    0.0,
+    -73.0
+   ],
+   "alongPath": 9.7,
+   "probedPathLength": 13.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 9.5,
+    "from": "road_009",
+    "to": "road_009",
+    "dy": -0.1,
+    "distanceAfter": 0.2
+   },
+   "nearestStepAlong": 9.5,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_L01_walk",
+   "fallPos": [
+    -52.0,
+    -0.129,
+    75.499
+   ],
+   "phase": "move",
+   "t": 226.66,
+   "contactsAtFall": [],
+   "start": [
+    -52.0,
+    -0.10000000149011612,
+    -65.0
+   ],
+   "alongPath": 140.499,
+   "probedPathLength": 128.0,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 125.25,
+    "from": "road_009",
+    "to": "road_013",
+    "dy": -0.0,
+    "distanceAfter": 15.249
+   },
+   "nearestStepAlong": null,
+   "stepDyThere": null
+  },
+  {
+   "caseId": "E2_L05_walk",
+   "fallPos": [
+    -60.501,
+    -0.129,
+    66.999
+   ],
+   "phase": "move",
+   "t": 272.06,
+   "contactsAtFall": [],
+   "start": [
+    56.0,
+    0.0,
+    67.0
+   ],
+   "alongPath": 116.501,
+   "probedPathLength": 144.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 116.25,
+    "from": "road_013",
+    "to": "Set_B_Tiles_01",
+    "dy": 0.1,
+    "distanceAfter": 0.251
+   },
+   "nearestStepAlong": 116.25,
+   "stepDyThere": 0.1
+  },
+  {
+   "caseId": "E2_M01_walk",
+   "fallPos": [
+    0.5,
+    -0.129,
+    -0.015
+   ],
+   "phase": "move",
+   "t": 326.92,
+   "contactsAtFall": [],
+   "start": [
+    -16.0,
+    0.0,
+    0.0
+   ],
+   "alongPath": 16.5,
+   "probedPathLength": 15.0,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 15.0,
+    "from": "road_001",
+    "to": "road_001",
+    "dy": -0.1,
+    "distanceAfter": 1.5
+   },
+   "nearestStepAlong": 15.0,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_K04_walk",
+   "fallPos": [
+    20.0,
+    -0.129,
+    -63.262
+   ],
+   "phase": "move",
+   "t": 371.72,
+   "contactsAtFall": [],
+   "start": [
+    20.0,
+    -0.10000000149011612,
+    -64.75
+   ],
+   "category": "point_case"
+  },
+  {
+   "caseId": "E2_K01_walk",
+   "fallPos": [
+    -48.262,
+    -0.129,
+    -40.0
+   ],
+   "phase": "move",
+   "t": 374.48,
+   "contactsAtFall": [],
+   "start": [
+    -49.75,
+    -0.10000000149011612,
+    -40.0
+   ],
+   "category": "point_case"
+  },
+  {
+   "caseId": "E2_L03_walk",
+   "fallPos": [
+    52.0,
+    -0.129,
+    -75.499
+   ],
+   "phase": "move",
+   "t": 404.66,
+   "contactsAtFall": [],
+   "start": [
+    52.0,
+    -0.10000000149011612,
+    63.0
+   ],
+   "alongPath": 138.499,
+   "probedPathLength": 128.0,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 123.25,
+    "from": "road_009",
+    "to": "road_013",
+    "dy": -0.0,
+    "distanceAfter": 15.249
+   },
+   "nearestStepAlong": null,
+   "stepDyThere": null
+  },
+  {
+   "caseId": "E2_K12_walk",
+   "fallPos": [
+    -74.5,
+    -0.029,
+    39.0
+   ],
+   "phase": "move",
+   "t": 504.44,
+   "contactsAtFall": [],
+   "start": [
+    -76.0,
+    0.0,
+    39.0
+   ],
+   "category": "point_case"
+  },
+  {
+   "caseId": "E2_L04_walk",
+   "fallPos": [
+    60.494,
+    -0.129,
+    -69.0
+   ],
+   "phase": "move",
+   "t": 542.96,
+   "contactsAtFall": [],
+   "start": [
+    -88.0,
+    0.0,
+    -69.0
+   ],
+   "alongPath": 148.494,
+   "probedPathLength": 144.0,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 140.0,
+    "from": "road_013",
+    "to": "road_013",
+    "dy": -0.1,
+    "distanceAfter": 8.494
+   },
+   "nearestStepAlong": 140.0,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_K11_walk",
+   "fallPos": [
+    -60.5,
+    -0.029,
+    67.0
+   ],
+   "phase": "move",
+   "t": 563.78,
+   "contactsAtFall": [],
+   "start": [
+    -59.0,
+    0.0,
+    67.0
+   ],
+   "category": "point_case"
+  },
+  {
+   "caseId": "E2_C10_walk",
+   "fallPos": [
+    48.3,
+    -0.129,
+    -0.015
+   ],
+   "phase": "move",
+   "t": 580.08,
+   "contactsAtFall": [],
+   "start": [
+    58.0,
+    0.0,
+    0.0
+   ],
+   "alongPath": 9.7,
+   "probedPathLength": 14.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 9.5,
+    "from": "road_009",
+    "to": "road_009",
+    "dy": -0.1,
+    "distanceAfter": 0.2
+   },
+   "nearestStepAlong": 9.5,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C09_walk",
+   "fallPos": [
+    56.7,
+    -0.129,
+    0.015
+   ],
+   "phase": "move",
+   "t": 591.24,
+   "contactsAtFall": [],
+   "start": [
+    44.0,
+    0.0,
+    0.0
+   ],
+   "alongPath": 12.7,
+   "probedPathLength": 14.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 12.5,
+    "from": "road_009",
+    "to": "road_009",
+    "dy": -0.1,
+    "distanceAfter": 0.2
+   },
+   "nearestStepAlong": 12.5,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C05_walk",
+   "fallPos": [
+    -29.5,
+    -0.129,
+    30.494
+   ],
+   "phase": "move",
+   "t": 620.5,
+   "contactsAtFall": [],
+   "start": [
+    -29.5,
+    0.0,
+    12.0
+   ],
+   "alongPath": 18.494,
+   "probedPathLength": 18.0,
+   "category": "beyond_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 18.0,
+    "from": "road_020",
+    "to": "Set_B_Tiles_01",
+    "dy": -0.0,
+    "distanceAfter": 0.494
+   },
+   "nearestStepAlong": 17.0,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_L06_walk",
+   "fallPos": [
+    0.5,
+    -0.129,
+    21.0
+   ],
+   "phase": "move",
+   "t": 638.36,
+   "contactsAtFall": [],
+   "start": [
+    -48.0,
+    -0.10000000149011612,
+    21.0
+   ],
+   "alongPath": 48.5,
+   "probedPathLength": 96.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 48.0,
+    "from": "road_003",
+    "to": "Set_B_Tiles_06",
+    "dy": -0.0,
+    "distanceAfter": 0.5
+   },
+   "nearestStepAlong": 47.0,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C03_walk",
+   "fallPos": [
+    0.5,
+    -0.129,
+    0.5
+   ],
+   "phase": "move",
+   "t": 669.82,
+   "contactsAtFall": [],
+   "start": [
+    -16.0,
+    0.0,
+    0.5
+   ],
+   "alongPath": 16.5,
+   "probedPathLength": 20.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 16.0,
+    "from": "road_020",
+    "to": "Set_B_Tiles_04",
+    "dy": -0.0,
+    "distanceAfter": 0.5
+   },
+   "nearestStepAlong": 15.0,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C07_walk",
+   "fallPos": [
+    20.0,
+    -0.129,
+    -71.7
+   ],
+   "phase": "move",
+   "t": 677.74,
+   "contactsAtFall": [],
+   "start": [
+    20.0,
+    0.0,
+    -60.0
+   ],
+   "alongPath": 11.7,
+   "probedPathLength": 13.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 11.5,
+    "from": "road_009",
+    "to": "road_009",
+    "dy": -0.1,
+    "distanceAfter": 0.2
+   },
+   "nearestStepAlong": 11.5,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C06_walk",
+   "fallPos": [
+    -29.5,
+    -0.129,
+    14.5
+   ],
+   "phase": "move",
+   "t": 696.74,
+   "contactsAtFall": [],
+   "start": [
+    -29.5,
+    0.0,
+    30.0
+   ],
+   "alongPath": 15.5,
+   "probedPathLength": 18.0,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 15.25,
+    "from": "road_020",
+    "to": "Set_B_Tiles_01",
+    "dy": -0.0,
+    "distanceAfter": 0.25
+   },
+   "nearestStepAlong": 14.0,
+   "stepDyThere": -0.1
+  },
+  {
+   "caseId": "E2_C11_walk",
+   "fallPos": [
+    -74.5,
+    -0.029,
+    39.0
+   ],
+   "phase": "move",
+   "t": 716.94,
+   "contactsAtFall": [],
+   "start": [
+    -81.5,
+    0.0,
+    39.0
+   ],
+   "alongPath": 7.0,
+   "probedPathLength": 21.5,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": {
+    "along": 6.5,
+    "from": "Set_B_Tiles_09",
+    "to": "Set_B_Tiles_04",
+    "dy": 0.1,
+    "distanceAfter": 0.5
+   },
+   "nearestStepAlong": 6.5,
+   "stepDyThere": 0.1
+  },
+  {
+   "caseId": "E2_K05_walk",
+   "fallPos": [
+    56.738,
+    -0.126,
+    -0.014
+   ],
+   "phase": "move",
+   "t": 725.18,
+   "contactsAtFall": [],
+   "start": [
+    55.25,
+    -0.10000000149011612,
+    0.0
+   ],
+   "category": "point_case"
+  }
+ ]
+}

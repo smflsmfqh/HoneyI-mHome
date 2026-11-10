@@ -1,0 +1,85 @@
+{
+ "summaryId": "M5-windows-pilot-02c-summary",
+ "createdLocal": "2026-11-08 (Asia/Seoul)",
+ "author": "Claude Code 세션",
+ "nature": "M5 탐색 pilot. 정식(M6 이후) 수치가 아니다. case당 1회 실행, Windows PC 1대",
+ "source": {
+  "resultZip": "Evidence/PhysicsBench-Pilot02c-Results-20261108T163441.zip",
+  "resultZipSha256": "85d383cdcd3023cdf7bbc412a862fd719612438a9fb0e89fe5713079067ce515",
+  "extracted": "Evidence/M5/windows/PhysicsBench-Pilot02c-Results-20261108T163441/",
+  "bundle": "Builds/M5-pilot-02c.zip (SHA-256 e388092a8bc72478ec8d6f007a56aee29d0b785eb101b29af4ebf18178370833)",
+  "windowsPc": "Windows 10 Education 10.0.19045, i5-12500, GTX 1660 SUPER 드라이버 32.0.15.6094 (M4 smoke PC와 같은 사양). pilot-01 PC(Win11, i9-14900HX, RTX 4060 Laptop)와 다르다",
+  "runStartedLocal": "2026-11-08 16:34:42 ~ H7 종료 18:00 경"
+ },
+ "integrity": {
+  "allRunsCompleted": "6/6 state=completed, 종료 코드 모두 0, planned=finished (Hm1 3종 120, H0·H1 146, H7 154)",
+  "caseHashes": "6 run의 manifest casesSha256이 M5-pilot02c-freeze.json과 일치. H1·H7 manifest caseSetRevision이 'e2'로 찍힌 것은 e2c의 H1·H7 파일이 e2b 바이트 복사본이기 때문(해시 일치, 잘못된 case 집합 아님)",
+  "profiles": "Hm1 base constraints 미지정(116 원본), unfreezePosY 112, unfreezeY 80. deactivatePaths 없음",
+  "toolHashes": "analyze_physics_bench.py c9950f0b…3d97, thresholds-r4 1fcdffdd…ecb1, capabilities-r1 7b06581f…42ac, summarize_falls_e2.py 57285099…ce7e 모두 동결값 그대로 사용",
+  "analysis": "Evidence/M5/analysis/W-<V>-<variant>-p02c-20261108T163441-a1/ (classified.jsonl, summary.json, 낙하 run은 falls-by-path.json)",
+  "analyzerExit": "Hm1 base만 종료 코드 3: 판정 검증 3/4(CK03 구멍 낙하 기대가 Y 고정으로 pass). 사전 비교 규칙 (3)에서 예상한 정상 결과. 재실행해도 classified.jsonl 바이트 동일",
+  "classifierChecks": "Hm1 base 3/4(예상), 나머지 5 run 4/4",
+  "unsupportedTrials": "6 run 모두 없음(e2c가 미지원 동작을 제거함을 Windows에서 확인. H0 연석 Move 변환 포함)",
+  "harnessErrors": "각 run 2건 = 의도한 CK08(input_not_received)·CK13(time_scale_zero)뿐. yaw_align_failed 0건"
+ },
+ "hm1Comparison": {
+  "rule": "사전 규칙(진행 문서 2026-11-02 기록): 세 run 모두 하네스 오류 없이 끝난 case만, 미리 정한 경로와 K 표적 분리",
+  "commonCompleteCases": 118,
+  "falls": {
+   "preRegistered(E1·E2 경로, 92건)": {"116": 0, "112": 21, "80": 21},
+   "K사후표적(24건)": {"116": 0, "112": 7, "80": 7},
+   "CK(2건)": {"116": 0, "112": 1, "80": 1}
+  },
+  "fallsByPathCategory": {
+   "112·80 각각": {"within_probed_path": 12, "beyond_probed_path": 8, "point_case(K 7 + E1_W08T 1)": 8, "CK03": 1},
+   "beyondNote": "beyond_probed_path 8건(L01~L04, M01·M02, C05, C12)은 probe한 경로 끝을 지나 떨어진 것으로 바닥 콜라이더 실패 근거로 쓰지 않는다"
+  },
+  "112vs80": "낙하 집합 완전히 동일. 차이는 80에서만 unsupported_end 7건(E2_K03·K07·K08, E1_W13T·P33T·W05R·W11T)이며 112에서는 모두 pass. 7건 모두 끝 시점에 y 1.0~3.9m 공중에서 접촉 0·수직 속도 0으로 멈춤. 이 중 Mac 80 e2에 있던 4건(W13T·P33T·W05R·W11T)은 Mac에서도 unsupported_end, K03·K07·K08은 Mac e2에 없던 case. 결론: Y 위치 고정 해제만으로 낙하가 모두 나타나고 Y 회전 해제는 낙하 수를 바꾸지 않는다. 80에만 있는 비낙하 이상 종료는 원인 미조사(낙하 결론과 무관)",
+  "windowsVsMac112": "Mac 112 e2c와 120건 중 113건 일치. 다른 7건은 모두 Mac 쪽 yaw_align_failed(Windows는 결과 있음: pass 5, fall 2). Windows에 yaw_align_failed가 없어 Mac 오류가 실행 중 실제 마우스 입력 때문이라는 가설과 맞는다(확정 아님)"
+ },
+ "h0": {
+  "headline": "원래 낙하가 일어났던 H0(수정 전 원본, 통제 없음)에서 Windows 바닥 관통 낙하가 처음 관측됐다. pilot-01(e1, 지점 case만) 0건 → 02c(e2c, 연석 횡단·장거리 경로 추가) 15건",
+  "outcomes": {"pass": 125, "fall": 15, "passed_curb": 4, "harness_error(의도)": 2},
+  "byGroup": {
+   "E2 연석 횡단 C(24건, 미리 정한 경로)": "fall 6 = C06_walk, C08_walk, C11_walk, C01_jump, C09_jump, C11_jump (모두 within_probed_path)",
+   "E2 장거리 L(6)·이음매 M(2)·정지/낙하 S(14)": "fall 0",
+   "E2 Box 단차 B(4)": "passed_curb 4 (H0에는 해당 Box 없음, 대조군 정상)",
+   "E1 지점(68)": "fall 1 = E1_P11R_hold (아래 별도)",
+   "K 사후 표적(24, Mac 80 낙하 지점에서 고름 → 해석 시 유리한 표본)": "fall 7 = K01·K02·K04·K05·K06·K11·K12 walk",
+   "CK(4)": "4/4, CK03 fall은 기대값"
+  },
+  "fallMechanism": "이동 중 낙하 13건(C 6 + K 7)은 모두 낙하 시점 접촉 0, 마지막 메시 전환(연석 내려옴 dy -0.1 또는 타일 이음매) 뒤 0.07~0.39m에서 바닥을 통과해 y -20 ~ -237m까지 계속 낙하(회복 없음)",
+  "vsHm1_80": "H0 낙하 15건 중 Hm1 case 집합에 있는 것은 12건(C01·C09·C11 jump 3건은 Hm1에 없음). 이 12건 중 11건(CK03 포함)은 Hm1-80에서도 낙하, 나머지 1건은 E1_P11R_hold(Hm1-80 pass). 반대로 Hm1-80에서만 떨어진 case 18건(C01·C02·C03·C04·C05·C07·C09·C10·C12 walk, L01~L06, M01·M02, E1_W08T)은 H0에서 pass. 재구성 통제가 H0보다 넓게 떨어진다. H0 C01·C09는 walk pass, jump fall",
+  "p11r": {
+   "observation": "E1_P11R_hold: 정지 상태에서 정착 3스텝 만에 convex MeshCollider PostProcessingVolume/Demonstration/BasicSettingsMap/road_001과 접촉이 기록된 채 받쳐지지 않고 중력 가속으로 통과, y -62.6m까지 낙하",
+   "pilot01": "같은 빌드 M5-H0-win-01, 같은 case 정의(e1과 e2c의 해당 항목은 notes 문구 외 동일)에서 pilot-01은 같은 road_001 위에 정지(pass). step 0 중심 y가 이미 다름(pilot-01 -0.048, 02c -0.082)",
+   "status": "PC에 따라 다르거나 비결정적인 낙하. 원인 미확정. 반복 실행 없이 원인으로 쓰지 않는다"
+  },
+  "limits": [
+   "case당 1회, Windows PC 1대. 확률·비율로 보고하지 않는다",
+   "H0 e2c의 Mac 대조 run 없음(H0 Mac 빌드 없음)",
+   "H0가 원래 낙하를 본 Windows exe와 같은 소스라는 확증 없음",
+   "H0 빌드(win-01)의 하네스 revision은 이전 판(harness-sync-*-03)",
+   "K 표적 결과는 사후 선택이므로 미리 정한 경로 결과와 합산하지 않는다"
+  ]
+ },
+ "h1": {
+  "outcomes": {"pass": 138, "fall": 2, "passed_curb": 4, "harness_error(의도)": 2},
+  "falls": "CK03(기대) + E2_C11_jump 1건",
+  "c11Jump": "outcome은 r4 규칙대로 fall이지만 실제로는 착지 시 숨은 PostProcessingVolume/Ground 받침판(BoxCollider) 위로 최저 bottomY -0.043까지 잠깐 내려갔다 회복(endY 0.001). 바닥 관통 후 계속 낙하한 것이 아니다. 시각 타일 Set_B_Tiles_04는 MeshCollider Read/Write 오류 목록에 있음 → 받침판이 Mesh 바닥 실패를 가린다는 기존 결론(pilot-01 받침판 제거 35/68)과 같은 방향의 관측"
+ },
+ "h7": {
+  "outcomes": {"pass": 138, "fall": 2, "passed_curb": 8, "recovered_after_penetration": 4, "harness_error(의도)": 2},
+  "falls": "CK03(기대) + E1_P24T_hold 1건",
+  "p24t": "case 결함. 시작 높이 0.42가 비충돌 장식면(audit-05 other 항목, x -88~-81 z 65~67 구역)에서 잡혀 Building_Fruits Shop convex를 스치며 0.42m 아래 Set_B_Tiles_05 (2)_floor Box(y 0)에 정상 착지(endY 0.001). 바닥 결함 아님. M6 입력: 시작 높이 probe에서 비충돌 면 제외",
+  "props": "E2_P00~P07 8건 모두 passed_curb. case별 결과·플래그(no_wall_contact 5건 등)가 Mac e2와 일치 → H7 소품 관통을 Windows에서 확인",
+  "boxStep": "E2_B01~B04 4건 모두 recovered_after_penetration, Mac과 일치 → 남쪽 road_009_floor Box 0.1m 단차(침투 후 막힘)를 Windows에서 확인"
+ },
+ "m6Inputs": [
+  "시작 높이 probe에서 비충돌(장식) 면 제외(H7 P24T)",
+  "H0 낙하 경로(C06·C08·C11, jump C01·C09)와 P11R을 반복 횟수 있는 case로 승격할지 결정",
+  "H1 판정에서 받침판 위 일시 하강(회복)과 실제 관통 낙하를 분리하는 보조 지표(outcome 규칙 변경은 새 revision)",
+  "Hm1-80 unsupported_end(공중 정지 종료) 원인 조사 여부"
+ ],
+ "notChanged": "thresholds-r4, 분석기, case e2b·e2c, capabilities-r1, profile, 02c 묶음 모두 변경 없음"
+}

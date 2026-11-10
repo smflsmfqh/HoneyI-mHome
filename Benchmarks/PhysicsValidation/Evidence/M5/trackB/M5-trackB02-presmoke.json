@@ -1,0 +1,10 @@
+{
+ "purpose": "S3c Mac 확인 실행 전 판단 기준(결과 전 기록)",
+ "recordedUtc": "2026-11-08T11:46:48.103794+00:00",
+ "compare": "B-S3-curb-ccd01-mac-01(S3, 0.01/CCD) vs B-S3c-curb-ccd01-mac-01(S3c, 같은 case·설정·seed 1)",
+ "gate": "관통(rootOutcome passed_curb, bottomY<wallTopY)이 9/18보다 줄고, 방향 탈출 실패(escaped_by_rescue|rescue_failed)가 늘지 않으면 trackB-02 묶음 제작. 아니면 중단·보고",
+ "files": {
+  "Harness/Editor/PhysicsBenchVariantCurbExt.cs": "3afad00714cea51ec9988837ff2e595725f5219140769740d86d31f89fc71862",
+  "Tools/build_trackB_S3c.sh": "dfe5e26f2da11de0dbf5957ce74424e78807af3bbb529c63387136f3cf9af81d"
+ }
+}

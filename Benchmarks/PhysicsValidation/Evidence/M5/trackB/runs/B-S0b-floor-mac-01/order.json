@@ -1,0 +1,33 @@
+{
+    "seed": 1,
+    "caseIds": [
+        "E2_C09_walk",
+        "E2_C07_walk",
+        "E2_C10_jump",
+        "E2_C04_jump",
+        "CK03_hole_walk_slow",
+        "E2_C08_walk",
+        "E2_C07_jump",
+        "E2_C05_jump",
+        "E2_C04_walk",
+        "E2_C09_jump",
+        "E2_C12_jump",
+        "CK13_flat_hold_timescale0",
+        "E2_C03_walk",
+        "E2_C10_walk",
+        "E2_C06_walk",
+        "E2_C01_jump",
+        "E2_C01_walk",
+        "CK01_flat_hold",
+        "E2_C11_jump",
+        "E2_C12_walk",
+        "E2_C11_walk",
+        "E2_C02_jump",
+        "E2_C03_jump",
+        "E2_C06_jump",
+        "E2_C08_jump",
+        "E2_C05_walk",
+        "CK08_flat_walk_noinput",
+        "E2_C02_walk"
+    ]
+}

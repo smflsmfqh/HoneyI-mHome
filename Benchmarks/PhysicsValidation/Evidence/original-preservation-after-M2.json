@@ -1,0 +1,14 @@
+{
+  "baseline_id": "physics-baseline-20261029-01",
+  "after_milestone": "M2",
+  "protected_file_hashes_verified": 16885,
+  "changed": [],
+  "allowed_document_updates": [
+    "Docs/physics-collider-execution-plan.md",
+    "Docs/physics-collider-handoff.zip.sha256",
+    "Docs/physics-collider-history-audit.md",
+    "Docs/physics-collider-progress.md",
+    "Docs/physics-collider-validation-plan.md"
+  ],
+  "original_last_scene_setup_unchanged": true
+}

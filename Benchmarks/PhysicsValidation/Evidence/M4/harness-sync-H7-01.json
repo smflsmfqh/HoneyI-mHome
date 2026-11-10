@@ -1,0 +1,31 @@
+{
+ "syncedUtc": "2026-10-29T13:22:37.229412Z",
+ "workspace": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/project-H7",
+ "purpose": "PHYSICS_BENCH define 빌드 전용 계측. 게임 이동·충돌 코드 변경 없음",
+ "files": [
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchData.cs",
+   "sha256": "f4ce03b11ef2217399563c76cb8a58e0ae81389aa2a6a49dec4d6e068e21c67e"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs",
+   "sha256": "0f87704e737191944d83fec35e821b31cbc946d15558ada2eb7230e8c8e3305c"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs",
+   "sha256": "fce1c07d47700b291d3ffa2621650ad4949545bd5c608c4c778484d6e61a82dd"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs",
+   "sha256": "83ca42e56105ad65cf900928b9bbc03d4f238fd9856dcbc1d1f385a8196cea5c"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs",
+   "sha256": "82643341b91f682e7e314270968ebd717b2cea8403a328b31b429a7688192f97"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs",
+   "sha256": "7df863185735f0741d842d92982592578180f06e3fcc73ac2af95bef1a14372e"
+  }
+ ]
+}

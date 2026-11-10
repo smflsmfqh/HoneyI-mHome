@@ -1,0 +1,82 @@
+{
+ "summaryId": "M5-windows-pilot-01",
+ "createdUtc": "2026-10-30",
+ "source": {
+  "zip": "Evidence/PhysicsBench-Pilot-Results-20261030T150726.zip",
+  "zipSha256": "8adb61e71b08640273d2e5b1ee8e8dd7299fcbf61420fbefcc792d4e846c3a9b",
+  "bundle": "Builds/M5-pilot-01.zip",
+  "bundleSha256": "afb06546caf25bd3e9f646ce4edb0484206cb7772b57fa952489d29b301a5cc8"
+ },
+ "windowsMachine": "Windows 11 Pro 10.0.26200, i9-14900HX 24코어, RTX 4060 Laptop(드라이버 32.0.16.1062, 239Hz) + Parsec Virtual Display Adapter. M4 smoke PC(Win10 Edu, i5-12500, GTX 1660 SUPER)와 다른 기기",
+ "analysis": {
+  "thresholds": "Harness/Cases/thresholds-r4.json",
+  "dirs": [
+   "Evidence/M5/analysis/W-H0-base-pilot-a1",
+   "Evidence/M5/analysis/W-H1-base-pilot-a1",
+   "Evidence/M5/analysis/W-H1-nocatch-pilot-a1",
+   "Evidence/M5/analysis/W-H7-base-pilot-a1"
+  ],
+  "testAnalyzer": "6/6 OK (M4 Windows H1 smoke-02 기준)"
+ },
+ "runs": {
+  "H0-base": {
+   "exit": 0,
+   "finished": "72/72",
+   "classifierChecks": "4/4",
+   "outcomes": {
+    "pass": 69,
+    "fall": 1,
+    "harness_error(의도)": 2
+   },
+   "vsMac": "M5-H0-base-mac-e1-01 72건 case별 결과 일치",
+   "readWriteErrors": 0
+  },
+  "H1-base": {
+   "exit": 0,
+   "finished": "72/72",
+   "classifierChecks": "4/4",
+   "outcomes": {
+    "pass": 67,
+    "fall": 3,
+    "harness_error(의도)": 2
+   },
+   "vsMac": "M5-H1-base-mac-e1-01 72건 일치",
+   "readWriteErrors": 20608
+  },
+  "H1-nocatch": {
+   "exit": 0,
+   "finished": "72/72",
+   "classifierChecks": "4/4",
+   "outcomes": {
+    "pass": 34,
+    "fall": 36,
+    "harness_error(의도)": 2
+   },
+   "vsMac": "M5-H1-nocatch-mac-e1-02 72건 일치",
+   "readWriteErrors": 20608
+  },
+  "H7-base": {
+   "exit": 0,
+   "finished": "72/72",
+   "classifierChecks": "4/4",
+   "outcomes": {
+    "pass": 67,
+    "fall": 3,
+    "harness_error(의도)": 2
+   },
+   "vsMac": "Mac e1 없음",
+   "readWriteErrors": 2939
+  }
+ },
+ "falls": {
+  "CK03_hole_walk_slow": "모든 버전에서 의도된 sanity 낙하",
+  "E1_P27T_hold/E1_P30T_hold (H1, H7)": "case 설정 문제. H0 probe 기준 시작 y=0.1이지만 H1·H7의 시각 타일면은 y=0(probe-H1-tiles01, probe-H7-tiles01). 10cm 위에서 시작해 시각면 높이(H1 받침판, H7 FloorColliders/Set_B_Tiles_*_floor Box)에 착지. 버그 아님",
+  "H1-nocatch 35건": "받침판 제거 시 Windows에서도 정착 중 수직 낙하. 도로·타일 MeshCollider 접촉 0"
+ },
+ "findings": [
+  "Windows에서 H1 빌드 바닥 MeshCollider 비작동 재현(받침판 제거 통제, Mac과 동일 35/68)",
+  "H0 Windows 빌드는 Read/Write 오류 0, 탐색 68지점 낙하 0 → 원래 H0 낙하는 이 탐색 범위(정지·보행·점프, 4m 격자)에서 미재현",
+  "H7은 낙하 0(case 설정 문제 2건 제외)"
+ ],
+ "caseIssue": "e1의 y=0.1 지점(P27T, P30T, W09T, W10T)은 H0 맵 기준. H1 이후 버전에는 버전별 probe로 시작 높이를 다시 잡아야 함"
+}

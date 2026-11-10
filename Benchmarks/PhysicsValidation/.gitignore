@@ -1,0 +1,34 @@
+# 대용량·재생성 가능 자료는 Git에 넣지 않는다(위치·SHA는 Docs/physics-collider-portfolio-evidence.md와 각 freeze·해석 파일에 기록)
+Builds/
+*.zip
+Evidence/**/windows/
+trace.jsonl
+*.player.log
+*.log
+Evidence/**/*.png
+trials.jsonl
+__pycache__/
+*.pyc
+# 1MB 넘는 기하·탐침 원시 JSON(로컬 보관)
+/Evidence/H7/prepared-source-files.json
+/Evidence/M5/e2/probe-H0-e2.json
+/Evidence/M5/e2/probe-H0-e2c.json
+/Evidence/M5/e2/probe-H1-e2.json
+/Evidence/M5/e2/probe-H1-e2c.json
+/Evidence/M5/e2/probe-H7-e2.json
+/Evidence/M5/e2/probe-H7-e2c.json
+/Evidence/M5/e2/probe-Hm1-e2c.json
+/Evidence/M5/probe-H0-grid4m.json
+/Evidence/M5/trackB/geom-S0a.json
+/Evidence/M5/trackB/geom-S1.json
+/Evidence/M5/trackB/geom-S1z.json
+/Evidence/M5/trackB/geom-S2.json
+/Evidence/M5/trackB/geom-S3-pre01.INVALID.json
+/Evidence/M5/trackB/geom-S3.json
+/Evidence/M5/trackB/geom-S3c.json
+/Evidence/M6/geom/geom-S0a.json
+/Evidence/M6/geom/geom-S1.json
+/Evidence/M6/geom/geom-S1z.json
+/Evidence/M6/geom/geom-S2.json
+/Evidence/M6/geom/geom-S3.json
+/Evidence/baseline-files.json

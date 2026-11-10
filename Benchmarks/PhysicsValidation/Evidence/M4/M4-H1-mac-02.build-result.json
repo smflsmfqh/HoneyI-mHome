@@ -1,0 +1,10 @@
+{
+    "buildId": "M4-H1-mac-02",
+    "result": "Succeeded",
+    "totalErrors": 0,
+    "totalWarnings": 2,
+    "totalSizeBytes": 467563348,
+    "outputPath": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/builds/M4-H1-mac-02/PhysicsBench.app",
+    "durationSec": 79.5284652709961,
+    "buildInfo": "{\"buildId\":\"M4-H1-mac-02\",\"versionId\":\"H1\",\"target\":\"StandaloneOSX\",\"scriptingBackend\":\"Mono2x\",\"apiCompatibility\":\"NET_Standard_2_0\",\"managedStripping\":\"Disabled\",\"projectDefines\":\"UNITY_POST_PROCESSING_STACK_V2;DOTWEEN\",\"extraDefines\":\"PHYSICS_BENCH\",\"development\":true,\"unityVersion\":\"6000.3.15f1\",\"rootSha\":\"9b83a248d281173446c0640ae1d6740506150c4d\",\"assetSha\":\"ffd2c2e0be38f63f7ff4ad6d88514f8ffb3d93aa\",\"scene\":\"Assets/Scenes/AntDemoScene.unity\",\"sceneSha256\":\"2b0bafa8ca29cf7630a49458138e26182ece8f569f210d07a8ab661793358c66\",\"casesSha256\":\"1eb0c7f43f728272ec76e4e238e99750c4298b35d5c03073915da4c8a5a36310\",\"profileSha256\":\"a8e8ea1a72b277f6b0fba2d1185515ed060da111f0606eb39680e1483c74e5e3\",\"harnessFiles\":[\"Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs 82643341b91f682e7e314270968ebd717b2cea8403a328b31b429a7688192f97\",\"Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs 7df863185735f0741d842d92982592578180f06e3fcc73ac2af95bef1a14372e\",\"Assets/PhysicsBench/Runtime/PhysicsBenchData.cs 8c12e396668bca25e0e3208045ce2024547c3f6c41080b713a862c2059d6a721\",\"Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs 2575dfd4777feb0c810f76fdc98fdbd10980cc313e60daf1d739f73f7ce818d6\",\"Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs 426af84e1e47875acd80a1042b4736848dd02f2f6d82fccef45a6fffaf659cef\",\"Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs 6d109f532dfb9fa0daf1cf2517313819f73de76de08853f27c0b59a1447193de\"],\"fixedDeltaTimeProject\":0.019999992102384568,\"runInBackgroundProject\":false,\"fullScreenModeProject\":\"FullScreenWindow\",\"builtUtc\":\"2026-10-29T15:58:24.7343250Z\"}"
+}

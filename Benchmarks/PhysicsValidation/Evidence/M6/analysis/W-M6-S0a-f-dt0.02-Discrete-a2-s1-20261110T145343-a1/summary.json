@@ -1,0 +1,70 @@
+{
+ "runDir": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Evidence/M6/windows/PhysicsBench-M6B-Results-20261110T145343/W-M6-S0a-f-dt0.02-Discrete-a2-s1-20261110T145343",
+ "runState": "completed",
+ "inputs": {
+  "trials.jsonl": "8ea13595d7340d0e11f7e3cc30c15d77e915f372ec26b47f0a00acf1c603fa95",
+  "trace.jsonl": "28d0317de23c31735b7caba403c7e429d3a303261a2418f3ad87cb6a3648a1af",
+  "thresholds": "4aca1580da61ed369b45865666f1dd60f963cddd59960a1178423e09e3f979b3"
+ },
+ "thresholds": {
+  "revision": "B1",
+  "note": "트랙 B 전용. r4에서 낙하 깊이만 0.5m(H7 캡슐 반지름 0.0094 기준 53.2r)로 바꿈: 시각면 불일치(받침판·convex 높이 차)와 지지 상실 낙하를 구분하기 위함. 결과 전 고정(2026-11-08)",
+  "fallDepthR": 53.2,
+  "supportNormalY": 0.5,
+  "supportProbeGapR": 0.5,
+  "stableSupportSec": 0.1,
+  "escapeDistR": 2.0,
+  "penetrationSignificantR": 0.25,
+  "penetrationResolvedR": 0.1,
+  "passThroughR": 3.0,
+  "inputReceiveMaxFixedSec": 0.4,
+  "preContactWindowSec": 0.06,
+  "restVerticalSpeed": 0.02
+ },
+ "planned": 28,
+ "trials": 28,
+ "missingCases": [],
+ "duplicateTrials": [],
+ "harnessErrors": 2,
+ "outcomes": {
+  "visual_fall": 9,
+  "fall": 15,
+  "harness_error:time_scale_zero": 1,
+  "pass": 2,
+  "harness_error:input_not_received": 1
+ },
+ "passEvidence": {
+  "pass_contact_or_probe": 2
+ },
+ "capabilities": null,
+ "classifierChecks": {
+  "total": 4,
+  "matched": 4,
+  "items": [
+   {
+    "caseId": "CK03_hole_walk_slow",
+    "expect": "fall",
+    "outcome": "fall",
+    "match": true
+   },
+   {
+    "caseId": "CK13_flat_hold_timescale0",
+    "expect": "harness_error:time_scale_zero",
+    "outcome": "harness_error:time_scale_zero",
+    "match": true
+   },
+   {
+    "caseId": "CK01_flat_hold",
+    "expect": "pass",
+    "outcome": "pass",
+    "match": true
+   },
+   {
+    "caseId": "CK08_flat_walk_noinput",
+    "expect": "harness_error:input_not_received",
+    "outcome": "harness_error:input_not_received",
+    "match": true
+   }
+  ]
+ }
+}

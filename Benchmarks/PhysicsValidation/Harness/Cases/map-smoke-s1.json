@@ -1,0 +1,211 @@
+{
+ "experimentId": "M4-map-precheck",
+ "caseSetRevision": "s1",
+ "cases": [
+  {
+   "id": "SM01_S2_road_hold",
+   "scenario": "hold",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -49.2,
+    -0.1,
+    52.5
+   ],
+   "yaw": 90.0,
+   "moveMode": "Move",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 3.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "road_009 도로면. H1 MeshCollider cooking 오류 목록 포함. Evidence/M4/probe-H1-points-*.json (시각 메시 기준)",
+   "wallNormal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallTopY": 0.0
+  },
+  {
+   "id": "SM02_S3_road_hold",
+   "scenario": "hold",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -55.6,
+    -0.1,
+    22.7
+   ],
+   "yaw": 270.0,
+   "moveMode": "Move",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 3.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "road_019 도로면. 오류 목록 포함. Evidence/M4/probe-H1-points-*.json (시각 메시 기준)",
+   "wallNormal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallTopY": 0.0
+  },
+  {
+   "id": "SM03_S2_side_hold",
+   "scenario": "hold",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -48.4,
+    0.0,
+    52.5
+   ],
+   "yaw": 90.0,
+   "moveMode": "Move",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 3.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": 0.0,
+   "sabotage": "",
+   "expect": "",
+   "notes": "road_009 인도 쪽 면. Evidence/M4/probe-H1-points-*.json (시각 메시 기준)",
+   "wallNormal": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wallTopY": 0.0
+  },
+  {
+   "id": "SM04_S2_curb_sprint",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -49.0,
+    -0.1,
+    52.5
+   ],
+   "yaw": 90.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "S2 연석(높이 0.2m) 정면 돌진. 기존 파일럿 S2. Evidence/M4/probe-H1-points-*.json (시각 메시 기준)",
+   "wallNormal": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -48.855,
+    -0.1,
+    52.5
+   ],
+   "wallTopY": 0.1
+  },
+  {
+   "id": "SM05_S3_curb_sprint",
+   "scenario": "curb",
+   "environment": "map",
+   "fixture": "",
+   "start": [
+    -56.0,
+    -0.1,
+    22.7
+   ],
+   "yaw": 270.0,
+   "moveMode": "Sprint",
+   "boostSpeed": 3.5,
+   "settleSec": 0.6,
+   "moveSec": 1.0,
+   "jumpAtSec": -1.0,
+   "observeSec": 1.0,
+   "approachTimeoutSec": 3.0,
+   "pushAfterContactSec": 1.0,
+   "reverseSec": 1.0,
+   "sideSec": 1.0,
+   "sideOrder": "LR",
+   "rescueJump": true,
+   "rescueRoll": true,
+   "rescueSec": 1.0,
+   "minAllowedY": -0.1,
+   "sabotage": "",
+   "expect": "",
+   "notes": "S3 연석 정면 돌진. 기존 파일럿 S3. Evidence/M4/probe-H1-points-*.json (시각 메시 기준)",
+   "wallNormal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "wallPoint": [
+    -56.145,
+    -0.1,
+    22.7
+   ],
+   "wallTopY": 0.1
+  }
+ ]
+}

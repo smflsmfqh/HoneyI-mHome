@@ -1,0 +1,22 @@
+{
+ "recordedUtc": "2026-11-09T09:35:22.485440+00:00",
+ "runtimeResultsSeen": false,
+ "source": {
+  "before": "Evidence/M5/fix/cook-audit-before.json",
+  "after": "Evidence/M5/fix/cook-audit-M5-F-COOK30-mac-01.json",
+  "afterSha256": "4b23c56de72841dac740bd77b0bd9f28e6ba987b3f54480fa53cb4ea63c29077"
+ },
+ "audit": "씬 MeshCollider 76개 중 런타임 cooking 필요 46 → 7(남은 7개는 모두 pizzeria house와 자식, 이유 nonUniformScale, cooking은 이미 30). 79개 프리팹 MeshCollider 104개(차량 포함) 필요 104 → 0",
+ "predictions": {
+  "E2_P00_prop Bus_Stop_02": "BASE 관통 → COOK30 막힘(원인 cooking만)",
+  "E2_P01_prop Trash_Can_06": "BASE 관통 → COOK30 막힘",
+  "E2_P02_prop Trash_Can_06 (1)": "BASE 관통 → COOK30 막힘",
+  "E2_P03_prop Trash_02": "BASE 관통 → COOK30 막힘",
+  "E2_P04_prop Fountain_03": "BASE 관통 → COOK30 막힘",
+  "E2_P05_prop pizzeria house": "두 빌드 모두 관통 유지(비균일 스케일, cooking 복원으로 해결 안 됨)",
+  "E2_P06_prop plants 2": "두 빌드 모두 관통 유지",
+  "E2_P07_prop table": "두 빌드 모두 관통 유지"
+ },
+ "manipulationCheck": "Windows player log Read/Write 오류: COOK30에서 pizzeria 계열 외 소품 0, 런타임 생성 차량 0",
+ "carRegressionNote": "차량 MeshCollider 104개가 빌드에서 처음으로 실제 충돌체가 됨 → c-game에서 끼임·낙하·밀림 변화 확인"
+}

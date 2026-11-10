@@ -1,0 +1,10 @@
+{
+    "buildId": "M5-H7-win-01",
+    "result": "Succeeded",
+    "totalErrors": 0,
+    "totalWarnings": 20,
+    "totalSizeBytes": 446347596,
+    "outputPath": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/builds/M5-H7-win-01/PhysicsBench.exe",
+    "durationSec": 45.82769775390625,
+    "buildInfo": "{\"buildId\":\"M5-H7-win-01\",\"versionId\":\"H7\",\"target\":\"StandaloneWindows64\",\"scriptingBackend\":\"Mono2x\",\"apiCompatibility\":\"NET_Standard_2_0\",\"managedStripping\":\"Disabled\",\"projectDefines\":\"UNITY_POST_PROCESSING_STACK_V2;DOTWEEN\",\"extraDefines\":\"PHYSICS_BENCH\",\"development\":true,\"unityVersion\":\"6000.3.15f1\",\"rootSha\":\"b8efce3526d3ef85eb0c85a580884369f3f5f48a\",\"assetSha\":\"a160f46591e2af970f47d05603d64ddad4781e59\",\"scene\":\"Assets/Scenes/AntDemoScene.unity\",\"sceneSha256\":\"9d0bb583cc4f4f0e5fe6185012204e9e2d0ac60623f3e4fec660dc390eacfddb\",\"casesSha256\":\"21c6cefb996b8c40209de6cc30c6d9dfcecfa3adea75e4198ca504bab6ea5af9\",\"profileSha256\":\"e39ac25655e41e36eda401db6ef8eb98ef63dad5bbbb222383dd99d1f5f22c02\",\"harnessFiles\":[\"Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs 0b3582f920b157c7c09699847e759631f19526b32b59f1992220e2ed00e07435\",\"Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs 29c8360c0b761f5dbe2f54df92a52c85869e6a0b815e042f88010626db3203b7\",\"Assets/PhysicsBench/Runtime/PhysicsBenchData.cs d8bfef5d66dd785d5844cfba15d37e2a2b00205368ccb15fb7f74deb8b9c9abc\",\"Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs 2575dfd4777feb0c810f76fdc98fdbd10980cc313e60daf1d739f73f7ce818d6\",\"Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs 426af84e1e47875acd80a1042b4736848dd02f2f6d82fccef45a6fffaf659cef\",\"Assets/PhysicsBench/Runtime/PhysicsBenchPlayerApi.cs bd863a02bab0c169ff798c2dc63e955566c5dfe356ec01ef34dc330f654a1fbe\",\"Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs 69902f0a93b87eb96326480274cc78faa045dbeff8ae5f9c91a37d6608f55155\"],\"fixedDeltaTimeProject\":0.00999999325722456,\"runInBackgroundProject\":false,\"fullScreenModeProject\":\"FullScreenWindow\",\"builtUtc\":\"2026-10-29T18:20:49.2977370Z\"}"
+}

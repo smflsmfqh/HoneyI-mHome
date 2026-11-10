@@ -1,0 +1,54 @@
+{
+ "experimentId": "M6-r1",
+ "generatedBy": "Tools/make_cases_m6.py",
+ "files": {
+  "m6-floor-S0a.json": {
+   "sha256": "91bf61ba7c8b0bebdb217995cd886cd92b5b7bd030d28ced214567c63712fb9a",
+   "cases": 28,
+   "source": "Harness/Cases/trackB/trackB-floor-S0a.json",
+   "sourceSha256": "db98786f91f2be877c10c1fb1e34b7d16b6d64bc05ea84eaf178e127529d3f29"
+  },
+  "m6-floor-S0b.json": {
+   "sha256": "4f15a7d69bc5ad454d85ad6806cd096cde0f178031e640ba2ab9afd3bda3f61a",
+   "cases": 28,
+   "source": "Harness/Cases/trackB/trackB-floor-S0b.json",
+   "sourceSha256": "2c40748a09cb9c05db04e8279210d505eca894df1c6e178ccecc2e61fcd9c0be"
+  },
+  "m6-floor-S0p.json": {
+   "sha256": "4d6a822f6ba56e3ad249ac87d54a3c402335ce5b0350d55bb5054351aed826af",
+   "cases": 28,
+   "source": "Harness/Cases/trackB/trackB-floor-S0p.json",
+   "sourceSha256": "b27b1490e9c83ef8410bfef58f9861985145530e8ba766fdb4995f6323687be7"
+  },
+  "m6-floor-S1.json": {
+   "sha256": "9636834ff29ae01d2596d1e78e67a0f5401b1ec539838cc285ccf345544746be",
+   "cases": 28,
+   "source": "Harness/Cases/trackB/trackB-floor-S1.json",
+   "sourceSha256": "a5949eb8a57a6d67c65f8c799f89eb0c8878e6083bc52de6f4cd329a6320ea30"
+  },
+  "m6-floor-S2.json": {
+   "sha256": "33653df6740694c960bf4a40b774c481055918624223ee4c15a2fe95e4e8c506",
+   "cases": 28,
+   "source": "Harness/Cases/trackB/trackB-floor-S2.json",
+   "sourceSha256": "ffe990e1c95fead7f673eea3a685730606a93607df46894678518e2e9089dbdc"
+  },
+  "m6-floor-S3.json": {
+   "sha256": "bc18ebd7eab6fa4e97120be0c96e93d1e2f85948ad705384984791dc190219ae",
+   "cases": 28,
+   "source": "Harness/Cases/trackB/trackB-floor-S3.json",
+   "sourceSha256": "44d25b571c567a3e37fde5a0f38a761cc0ba33cebf6c29015b3248d4740aedf8"
+  },
+  "m6-curb.json": {
+   "sha256": "9d3037e6ac9cd2b8657933d3cbde9c4e266a1739ea5e8300f9c6ac6fb7503d70",
+   "cases": 62,
+   "source": "Harness/Cases/fix1/fix1-b.json",
+   "sourceSha256": "d94e17827dcbe06d2d11948f13021f92d46f5478fd77d6b9a02ae79c1d966157"
+  },
+  "m6-H0.json": {
+   "sha256": "5b971c3fa42261be665cb9964538d2a51d167568b8a3bbc44a6539042c9b678f",
+   "cases": 28,
+   "source": "Harness/Cases/r1/repeat-r1-H0.json",
+   "sourceSha256": "4bd36a9862814ce6a05bc9c0630bb09ae52eb148fd134fd4a64c949ae1f1fc1f"
+  }
+ }
+}

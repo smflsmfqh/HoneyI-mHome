@@ -1,0 +1,33 @@
+{
+ "freezeId": "M5-trackB02-freeze",
+ "recordedUtc": "2026-11-08T11:50:05.057156+00:00",
+ "status": "Windows 실행 전 동결",
+ "purpose": "연석 관통 기전 가설 검증(실제 게임 수정 아님). 테스트용 복제 빌드 S3c = S3 + 연석 Box 820개 밑면 -0.3(윗면 유지)",
+ "build": {
+  "id": "M5-B-S3c-win-01",
+  "result": "Succeeded",
+  "variantRecord": "Evidence/M5/trackB/variant-M5-B-S3c-win-01.json",
+  "sceneSha256": "f4a1ac382bcb36201054b714747d5257e1cf4d31a5bebd260b26870f3a4f6b17",
+  "floorMeshesReadable": 0
+ },
+ "geometry": "geom-S3c.json: 윗면이 S3와 33,774점 모두 1e-4m 이내 일치(차이는 1e-6 이하 부동소수점). C07 단차 판정이 50% 경계에서 뒤집힌 것은 같은 원인",
+ "macGate": "B-S3c-curb-ccd01-mac-01: 관통 0/18(S3 9/18), 끼임 0. 9건 모두 recovered_after_penetration(연석 진입은 여전, 뒤로 밀려남). Mac 확인이며 결과로 인용 안 함",
+ "runs": "S3c × trackB-curb-S3.json × (0.01/ContinuousDynamic 주, 0.02/Discrete 보조) × seed 1,1,2 = 6 run",
+ "baseline": "같은 PC의 trackB-01 S3 연석 run(같은 case ID·설정·seed). trackB-01 다음에 실행",
+ "rules": {
+  "primaryOutcome": "rootOutcome",
+  "passThrough": "passed_curb 이면서 통과 시 bottomY < wallTopY",
+  "stuck": "escaped_by_rescue|rescue_failed",
+  "support": "주 설정(0.01/CCD)에서 S3c 관통이 S3보다 줄고 끼임이 늘지 않음",
+  "against": "관통이 줄지 않거나 끼임이 늘면: '원인 가설로 만든 수정 후보가 효과 없었다(또는 새 끼임을 만들었다)'",
+  "scopeSentence": "통제 조건(NPC 등 꺼짐, 연석 2곳 정면 직진)에서 원인을 특정하고 수정 후보의 효과를 확인. 실제 게임 적용·회귀 확인 전에는 '고쳤다'고 쓰지 않는다"
+ },
+ "files": {
+  "Harness/Editor/PhysicsBenchVariantCurbExt.cs": "3afad00714cea51ec9988837ff2e595725f5219140769740d86d31f89fc71862",
+  "Tools/build_trackB_S3c.sh": "dfe5e26f2da11de0dbf5957ce74424e78807af3bbb529c63387136f3cf9af81d",
+  "Harness/Cases/trackB/trackB-curb-S3.json": "6fcc6300f97fcc6c5d05f0949e47a3e68da663adfca31de5ab484c11e270e89a",
+  "Harness/Cases/thresholds-B1.json": "4aca1580da61ed369b45865666f1dd60f963cddd59960a1178423e09e3f979b3",
+  "Harness/Tools/analyze_physics_bench.py": "c9950f0b90f145bcaaeb8e1888fe4317897308da293c5e8d37c5533cf5103d97",
+  "Harness/Cases/profile-H7.json": "e39ac25655e41e36eda401db6ef8eb98ef63dad5bbbb222383dd99d1f5f22c02"
+ }
+}

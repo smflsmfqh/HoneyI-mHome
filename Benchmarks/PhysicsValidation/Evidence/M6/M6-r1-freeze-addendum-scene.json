@@ -1,0 +1,17 @@
+{
+ "recordedUtc": "2026-11-09T14:38:05.801879+00:00",
+ "windowsResultsSeen": false,
+ "anyM6RunExecuted": false,
+ "amends": "M6-r1-freeze.json builds_M7.rule('각 변형 씬 SHA-256이 M5 기록값과 같아야 함')",
+ "finding": "M7 빌드에서 S3·BASE·CURBFIX는 씬 SHA가 기대값과 같음. S0a·S0b·S0p·S1·S2는 다름. S0a를 같은 입력 씬(9d0bb583…)에서 두 번 더 적용하니 SHA가 매번 다름(6946a2d6…, 13ffa9c1…, c8cb93dd…)이고 변형 기록(appliedUtc 제외)은 세 번 모두 M5와 같음 → 콜라이더·받침판을 새로 추가하는 변형은 Unity가 새 객체에 무작위 fileID를 부여해 씬 바이트가 결정적이지 않음. 기존 값만 바꾸는 변형(S3 Zone 통제, CURBFIX)은 결정적",
+ "evidence": [
+  "Evidence/M6/build/variant-M6-<V>-win-01.scene.sha256",
+  "Evidence/M6/build/determinism-S0a-02.json·03.json(+log)"
+ ],
+ "newRule": {
+  "S3, BASE, CURBFIX": "씬 SHA 일치(변경 없음)",
+  "S0a, S0b, S0p, S1, S2": "변형 기록(Evidence/M6/build/variant-M6-<V>-win-01.json)이 M5 기록(Evidence/M5/trackB/variant-M5-B-<V>-win-01.json)과 appliedUtc를 제외하고 완전히 같을 것. 빌드 결과의 sceneSha256은 새 정식 값으로 기록(M5와 비교하지 않음)",
+  "S0p·S2 순서": "트랙 B와 같게 바닥 메시 Read/Write를 켠 뒤 변형을 적용(기록의 floorMeshesReadable=100이 같아지도록). 첫 시도에서 적용 뒤에 켠 S0p·S2는 기록 불일치로 무효, 빌드하지 않았음"
+ },
+ "buildToolChange": "Tools/build_m6.sh를 위 규칙대로 수정(수정 후 SHA는 M7 기록에 남김)"
+}

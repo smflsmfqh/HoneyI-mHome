@@ -1,0 +1,58 @@
+{
+ "freezeId": "M5-fix1-freeze",
+ "recordedUtc": "2026-11-09T09:28:11.602266+00:00",
+ "status": "빌드·Mac smoke·Windows 실행 전 동결. 이후 규칙·case를 바꾸면 새 revision",
+ "userApproval": "2026-11-09 사용자 \"b, c, d 순서대로 진행, d는 ... 진행하기 전에 미리 나에게 알림\"",
+ "scope": "복제 공간 project-H7B 빌드로 회귀 확인. 원본 게임 적용은 결과를 본 뒤 사용자 확인을 받아 별도 수행(원본 에디터가 열려 있음)",
+ "builds": {
+  "BASE": "원본 씬(SHA 9d0bb583…, 원본 저장소와 동일) 그대로. 테스트용 통제(Zone 트리거화 등) 없음",
+  "CURBFIX": "원본 씬 + 연석 Box 밑면 -0.3(PhysicsBenchCurbFix). 검증 curbfix-verify-02: 820개, S3c와 크기·중심 일치 820/820, 연석 외 콜라이더 변경 0, 연장 띠 겹침은 정적 콜라이더(바닥 Box 4787·맵 경계 4·기둥 캡슐 2)뿐. 130개는 PostProcessingVolume 프리팹 인스턴스 소속 → 원본 적용 시 프리팹/씬 override 선택 필요",
+  "COOK30": "원본 씬 + de8bfd48의 79개 프리팹 m_CookingOptions 26→30(빌드 후 되돌림·원본 대조)"
+ },
+ "physics": "빌드 기본값(H7 현재: dt 0.01, ContinuousDynamic). -benchDt·-benchCcd 넘기지 않음",
+ "profiles": {
+  "controlled": "profile-H7.json(NPC·고양이·차량·쓰레기·분노·숙취·튜토리얼 끔, 무적)",
+  "game": "profile-H7-game.json(분노·숙취·튜토리얼만 끔, NPC·고양이·차량·쓰레기 켬, 무적 유지: 체력 0 종료로 trial이 끊기지 않게)"
+ },
+ "cases": {
+  "fix1-b.json": "62 = CK 4 + E2_C 24(연석 오르기·내려오기·점프 착지) + 연석 34(직진 18, 정면 Roll·Move 4, 30°·60° × Sprint·BoostSprint·Roll 12)",
+  "fix1-c.json": "12 = CK 4 + e2c H7 E2_P 소품 돌진 8"
+ },
+ "runs": {
+  "b-controlled": "BASE·CURBFIX × fix1-b × profile-H7 × seed 1,1,2",
+  "b-game": "BASE·CURBFIX × fix1-b × profile-H7-game × seed 1,2,3",
+  "c-controlled": "BASE·COOK30 × fix1-c × profile-H7 × seed 1,1,2",
+  "c-game": "COOK30 × fix1-b × profile-H7-game × seed 1,2,3 (대조: b-game BASE)"
+ },
+ "rules": {
+  "primaryOutcome": "rootOutcome, 판정 analyze_physics_bench.py(c9950f0b…) + thresholds-B1",
+  "validity": "CK 4/4 아닌 run 제외, initialPenDepth·initialPenWallDepth > 0.005 trial 무효, 의도 외 하네스 오류 trial 분모 제외. PC별 분리",
+  "curbPassThrough": "rootOutcome passed_curb 이면서 passStep의 bottomY < wallTopY(0.1)",
+  "curbOver": "rootOutcome passed_curb 이면서 passStep bottomY >= 0.1(연석 위로 넘어감, 따로 보고)",
+  "stuck": "escaped_by_rescue|rescue_failed (완전 끼임 = rescue_failed)",
+  "floorFall": "E2_C rootOutcome fall",
+  "b_support": "controlled: CURBFIX 연석 관통 < BASE, 그리고 끼임·E2_C 낙하가 BASE보다 늘지 않음. game: 같은 지표를 3 run 합으로 보고. game에서 CURBFIX의 끼임+E2_C 낙하 합이 BASE보다 3 이상 많거나 rescue_failed가 CURBFIX에만 있으면 회귀 신호로 trace 조사",
+  "b_against": "관통이 줄지 않으면 '현재 설정 기본 진입 외 조건에서는 효과 없음', 끼임·낙하가 늘면 '수정 후보가 새 문제를 만들었다'. 비스듬·Roll·game 결과는 직진과 따로 보고",
+  "b_pairing": "controlled는 같은 attempt·seed·case ID끼리 대응 비교. game은 NPC 무작위성 때문에 대응 비교하지 않고 합계로만",
+  "c_measure": "E2_P 8건 rootOutcome passed_curb(소품 관통) 수 BASE vs COOK30, 소품별 결과",
+  "c_manipulation": "Windows player log의 해당 소품 Read/Write 오류: COOK30에서 cooking만이 이유였던 소품은 오류가 사라져야 함. 소품별 예측은 COOK30 빌드 때 생성되는 cook-audit로 runtime 전에 addendum으로 기록",
+  "c_regression": "c-game COOK30 vs b-game BASE: 끼임·E2_C 낙하·연석 관통. 차량 31종이 처음으로 실제 충돌체가 될 수 있어 '개선'으로만 단정하지 않음",
+  "nature": "M5 탐색(통제 조건+게임 조건). 정식 M6 수치 아님"
+ },
+ "files": {
+  "Harness/Cases/fix1/fix1-b.json": "d94e17827dcbe06d2d11948f13021f92d46f5478fd77d6b9a02ae79c1d966157",
+  "Harness/Cases/fix1/fix1-c.json": "a2169a224da5de585d3b834570b4912a22906123ef0b1c01318f996892848567",
+  "Harness/Cases/fix1/fix1-derivation.json": "04bff5a635901c56ac4926647ad48ca6c6a88bf6cf87902412c34f8a583d84b7",
+  "Harness/Cases/profile-H7.json": "e39ac25655e41e36eda401db6ef8eb98ef63dad5bbbb222383dd99d1f5f22c02",
+  "Harness/Cases/profile-H7-game.json": "58d80382832a21a3e14c83ee9531722e7db4430ed94fe3c2e6e6d3be8f6add80",
+  "Harness/Cases/thresholds-B1.json": "4aca1580da61ed369b45865666f1dd60f963cddd59960a1178423e09e3f979b3",
+  "Harness/Tools/analyze_physics_bench.py": "c9950f0b90f145bcaaeb8e1888fe4317897308da293c5e8d37c5533cf5103d97",
+  "Harness/Editor/PhysicsBenchCurbFix.cs": "d67866432a9fafabf48102dc2d13c23a6b435001e8cd1a15932ed5011925eebd",
+  "Harness/Editor/PhysicsBenchCookAudit.cs": "898c5c1451f423f48144380b6b6c8c3faaff3d881345ce2f1979adc2c8321857",
+  "Tools/make_cases_fix1.py": "9e4b8c71c52839570f8a8cf3b09ca56a11ff6062ec03166e597628389485aad3",
+  "Tools/build_fix1.sh": "93e5ef0fbe5e80977160609f8a1e8201b6ae446ac56bca37a16238c4009c9977",
+  "Evidence/M5/fix/cook79-prefabs.txt": "2f21a1b96caaa18dc2643a508c2fb6cc6af658fc656ca2a6265254b3c9608e04",
+  "Evidence/M5/fix/curbfix-verify-02.json": "92287e57e25c6c843caba6fb101b9aa4be9c13a9fc2ee9e7496cfd570dec9861",
+  "Evidence/M5/fix/cook-audit-before.json": "18dfdff42d449a6285a076fb214b86eb59cf45e58f7e275e72ca3a72066b5d18"
+ }
+}

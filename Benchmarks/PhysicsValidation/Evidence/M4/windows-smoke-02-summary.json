@@ -1,0 +1,23 @@
+{
+ "bundle": "Builds/M4-smoke-02.zip (sha256 02da12a5c4538c7c3aee2979e139ff729badd7ffbab24b53b92ac2f9f7b6b02b)",
+ "resultZip": "Evidence/PhysicsBench-Results-20261030T014743.zip (사용자 제공 원본 보존, sha256 9f8da19f20ef81254bafb8dc0b01d209119f60ba5f02205a24b8250ad703c1b3, tar 생성으로 '/' 경로, CRC 정상)",
+ "extractedTo": "Evidence/M4/windows/PhysicsBench-Results-20261030T014743",
+ "environment": "Windows 10 Education 10.0.19045 64bit, i5-12500(6코어), NVIDIA GeForce GTX 1660 SUPER 드라이버 32.0.15.6094(+Intel UHD 770), Direct3D12, 143Hz, 1280x720 창 모드, Development 빌드",
+ "runs": {
+  "W-H1-smoke-20261030T014743": {"build": "M4-H1-win-02", "status": "completed 22/22", "exitCode": 0, "runtimeHarnessErrors": "2 (의도: time_scale_zero, hang)", "analyzerHarnessErrors": "4 (의도: +no_input, partial_input)", "classifierChecks": "17/17", "focused": false, "analysis": "Evidence/M4/analysis/W-H1-smoke-20261030T014743-a1"},
+  "W-H7-smoke-20261030T014743": {"build": "M4-H7-win-02", "status": "completed 22/22", "exitCode": 0, "runtimeHarnessErrors": "2 (의도)", "analyzerHarnessErrors": "4 (의도)", "classifierChecks": "16/17 — CK12 H7 물리 차이(수평 침투 1.0r 후 회복, Mac과 동일)", "focused": true, "analysis": "Evidence/M4/analysis/W-H7-smoke-20261030T014743-a1"}
+ },
+ "windowsVsMac": "같은 빌드 코드의 Mac 사전 검증(M4-H*-mac-smoke02-01-a3)과 22건 모든 case의 판정 결과가 일치",
+ "analyzerRegression": "test_analyzer.py를 Windows H1·H7 기록에 대해 각각 6/6 통과",
+ "inputAudit": "입력 미전달은 의도한 CK08(전체)·CK16(Sprint만) 두 case에서만 검출, 정상 case 거짓 경보 없음. H1 창 포커스 없음 상태에서도 입력 수신",
+ "frames": "trial별 평균 프레임 중앙값 약 16.8ms(60fps 목표)",
+ "mapObservations": {
+  "H1": "SM01~03 숨은 Ground Box(y=0) 위 지지(minBottomY -0.02는 시각 도로면 -0.1 출발 후 Box 위로 밀려 올라간 값). S2·S3 연석은 대상 벽 접촉 없이 통과(벽면 너머 약 916r)",
+  "H7": "SM01~03 시각 도로면 -0.1/0.0에서 지지. S2 연석 막힘(수평 침투 1.66r 후 후진 이탈). S3 연석 통과(16.5r, 최대 수평 침투 2.6r, 비대상 수평 접점 107스텝)"
+ },
+ "limits": [
+  "smoke다. 원래 버그 재현·개선율·CCD/dt 효과의 근거가 아니다",
+  "실제 맵 case 5건은 시각 메시 기준 탐색용이며 wallTargets 미지정. 대상 연석 콜라이더·숨은 지지면 감사는 M5",
+  "판정 검증의 물리 의존 case 기대값은 H1 기준"
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "caseId": "CK01_flat_hold",
+  "attempt": 1,
+  "scenario": "hold",
+  "moveMode": "Move",
+  "expect": "pass",
+  "flags": [
+    "child_fall"
+  ],
+  "childFallStep": 0,
+  "minBottomY": -100.00694274902344,
+  "maxPenWallDepthR": 0.0,
+  "outcome": "visual_fall",
+  "rootOutcome": "pass"
+}

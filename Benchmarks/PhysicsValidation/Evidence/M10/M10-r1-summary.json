@@ -1,0 +1,1581 @@
+{
+ "generatedBy": "Tools/summarize_M10.py",
+ "freeze": "Evidence/M10/M10-r1-freeze.json",
+ "runCount": 6,
+ "runsExcluded": [],
+ "problems": [],
+ "runs": [
+  {
+   "run": "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+   "bundle": "PhysicsBench-M10-Results-20261110T192633",
+   "build": "BASE",
+   "attempt": 1,
+   "seed": 1,
+   "buildId": "M6-BASE-win-01",
+   "sceneSha256": "9d0bb583cc4f4f0e5fe6185012204e9e2d0ac60623f3e4fec660dc390eacfddb",
+   "experimentId": "M10-r1",
+   "casesSha256": "f8210a3ebc6fdd4120daa146d098ef9d83b18551ac59cef6b2a4df20dec53444",
+   "dt": -1.0,
+   "ckOk": true,
+   "ck": {
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass",
+    "CK08_flat_walk_noinput": "harness_error:input_not_received"
+   }
+  },
+  {
+   "run": "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+   "bundle": "PhysicsBench-M10-Results-20261110T192633",
+   "build": "BASE",
+   "attempt": 2,
+   "seed": 1,
+   "buildId": "M6-BASE-win-01",
+   "sceneSha256": "9d0bb583cc4f4f0e5fe6185012204e9e2d0ac60623f3e4fec660dc390eacfddb",
+   "experimentId": "M10-r1",
+   "casesSha256": "f8210a3ebc6fdd4120daa146d098ef9d83b18551ac59cef6b2a4df20dec53444",
+   "dt": -1.0,
+   "ckOk": true,
+   "ck": {
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass",
+    "CK08_flat_walk_noinput": "harness_error:input_not_received"
+   }
+  },
+  {
+   "run": "W-M10-BASE-ctl-def-a3-s2-20261110T192633",
+   "bundle": "PhysicsBench-M10-Results-20261110T192633",
+   "build": "BASE",
+   "attempt": 3,
+   "seed": 2,
+   "buildId": "M6-BASE-win-01",
+   "sceneSha256": "9d0bb583cc4f4f0e5fe6185012204e9e2d0ac60623f3e4fec660dc390eacfddb",
+   "experimentId": "M10-r1",
+   "casesSha256": "f8210a3ebc6fdd4120daa146d098ef9d83b18551ac59cef6b2a4df20dec53444",
+   "dt": -1.0,
+   "ckOk": true,
+   "ck": {
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass"
+   }
+  },
+  {
+   "run": "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+   "bundle": "PhysicsBench-M10-Results-20261110T192633",
+   "build": "CURBFIX",
+   "attempt": 1,
+   "seed": 1,
+   "buildId": "M6-CURBFIX-win-01",
+   "sceneSha256": "12ba8273bf267fd773693cab49d70ae6eaaaa6bfb1d55f0315998dbf0807d043",
+   "experimentId": "M10-r1",
+   "casesSha256": "f8210a3ebc6fdd4120daa146d098ef9d83b18551ac59cef6b2a4df20dec53444",
+   "dt": -1.0,
+   "ckOk": true,
+   "ck": {
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass",
+    "CK08_flat_walk_noinput": "harness_error:input_not_received"
+   }
+  },
+  {
+   "run": "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+   "bundle": "PhysicsBench-M10-Results-20261110T192633",
+   "build": "CURBFIX",
+   "attempt": 2,
+   "seed": 1,
+   "buildId": "M6-CURBFIX-win-01",
+   "sceneSha256": "12ba8273bf267fd773693cab49d70ae6eaaaa6bfb1d55f0315998dbf0807d043",
+   "experimentId": "M10-r1",
+   "casesSha256": "f8210a3ebc6fdd4120daa146d098ef9d83b18551ac59cef6b2a4df20dec53444",
+   "dt": -1.0,
+   "ckOk": true,
+   "ck": {
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK01_flat_hold": "pass",
+    "CK08_flat_walk_noinput": "harness_error:input_not_received"
+   }
+  },
+  {
+   "run": "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633",
+   "bundle": "PhysicsBench-M10-Results-20261110T192633",
+   "build": "CURBFIX",
+   "attempt": 3,
+   "seed": 2,
+   "buildId": "M6-CURBFIX-win-01",
+   "sceneSha256": "12ba8273bf267fd773693cab49d70ae6eaaaa6bfb1d55f0315998dbf0807d043",
+   "experimentId": "M10-r1",
+   "casesSha256": "f8210a3ebc6fdd4120daa146d098ef9d83b18551ac59cef6b2a4df20dec53444",
+   "dt": -1.0,
+   "ckOk": true,
+   "ck": {
+    "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+    "CK03_hole_walk_slow": "fall",
+    "CK08_flat_walk_noinput": "harness_error:input_not_received",
+    "CK01_flat_hold": "pass"
+   }
+  }
+ ],
+ "overall": {
+  "BASE": {
+   "runs": [
+    "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+    "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+    "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+   ],
+   "trials": {
+    "n": 237,
+    "recovered_after_penetration": 156,
+    "fail": 57,
+    "blocked_escaped": 24,
+    "passThrough": 42,
+    "rescue_failed": 12,
+    "passed_off_face": 3,
+    "escaped_by_rescue": 3
+   },
+   "conditions": 79,
+   "failConditions": 19,
+   "offFaceTrials": [
+    "B_G04_Sprint_a30x3"
+   ],
+   "failConditionIds": [
+    "B_G01_BoostSprint_a30",
+    "B_G01_Boost_a30",
+    "B_G03_BoostSprint_a30",
+    "B_G03_Boost_a30",
+    "B_G04_BoostSprint_a30",
+    "B_G04_Boost_a30",
+    "B_G05_BoostSprint_a30",
+    "B_G05_Boost_a30",
+    "B_G06_Boost_a30",
+    "B_G07_BoostSprint_a30",
+    "B_G07_Boost_a30",
+    "B_G07_Boost_c00",
+    "B_G07_Sprint_a30",
+    "B_G07_Sprint_c00",
+    "B_G08_BoostSprint_a30",
+    "B_G08_Boost_a30",
+    "B_G08_Boost_c00",
+    "B_G08_Sprint_a30",
+    "B_G08_Sprint_c00"
+   ],
+   "perCondition": {
+    "B_G01_BoostSprint_a30": [
+     "rescue_failed",
+     "rescue_failed",
+     "rescue_failed"
+    ],
+    "B_G01_Boost_a30": [
+     "rescue_failed",
+     "rescue_failed",
+     "rescue_failed"
+    ],
+    "B_G01_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G01_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_BoostSprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G02_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_BoostSprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G03_Boost_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G03_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G03_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_BoostSprint_a30": [
+     "rescue_failed",
+     "rescue_failed",
+     "rescue_failed"
+    ],
+    "B_G04_Boost_a30": [
+     "rescue_failed",
+     "rescue_failed",
+     "rescue_failed"
+    ],
+    "B_G04_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G04_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_BoostSprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G05_Boost_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G05_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G05_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_BoostSprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Boost_a30": [
+     "escaped_by_rescue",
+     "escaped_by_rescue",
+     "escaped_by_rescue"
+    ],
+    "B_G06_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G06_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_BoostSprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Boost_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Boost_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G07_Sprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Sprint_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_BoostSprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Boost_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Boost_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G08_Sprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Sprint_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ]
+   }
+  },
+  "CURBFIX": {
+   "runs": [
+    "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+    "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+    "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+   ],
+   "trials": {
+    "n": 228,
+    "recovered_after_penetration": 174,
+    "fail": 30,
+    "blocked_escaped": 24,
+    "passThrough": 30,
+    "passed_off_face": 12
+   },
+   "conditions": 76,
+   "failConditions": 10,
+   "offFaceTrials": [
+    "B_G04_BoostSprint_a30x3",
+    "B_G04_Sprint_a30x3",
+    "B_G06_BoostSprint_a30x3",
+    "B_G06_Boost_a30x3"
+   ],
+   "failConditionIds": [
+    "B_G07_BoostSprint_a30",
+    "B_G07_Boost_a30",
+    "B_G07_Boost_c00",
+    "B_G07_Sprint_a30",
+    "B_G07_Sprint_c00",
+    "B_G08_BoostSprint_a30",
+    "B_G08_Boost_a30",
+    "B_G08_Boost_c00",
+    "B_G08_Sprint_a30",
+    "B_G08_Sprint_c00"
+   ],
+   "perCondition": {
+    "B_G01_BoostSprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Boost_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G01_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G01_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_BoostSprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G02_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G02_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_BoostSprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Boost_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G03_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G03_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Boost_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G04_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G04_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_BoostSprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Boost_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G05_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G05_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Boost_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G06_Sprint_a30": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Sprint_c00": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G06_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_BoostSprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Boost_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Boost_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G07_Sprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Sprint_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G07_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G07_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_BoostSprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Boost_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Boost_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Boost_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_Boost_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_Move_c00": [
+     "blocked_escaped",
+     "blocked_escaped",
+     "blocked_escaped"
+    ],
+    "B_G08_Sprint_a30": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Sprint_c00": [
+     "passThrough",
+     "passThrough",
+     "passThrough"
+    ],
+    "B_G08_Sprint_m02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ],
+    "B_G08_Sprint_p02": [
+     "recovered_after_penetration",
+     "recovered_after_penetration",
+     "recovered_after_penetration"
+    ]
+   }
+  }
+ },
+ "bySite": {
+  "G01": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 21,
+     "fail": 6,
+     "blocked_escaped": 3,
+     "rescue_failed": 6
+    },
+    "conditions": 10,
+    "failConditions": 2,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G01_BoostSprint_a30",
+     "B_G01_Boost_a30"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 27,
+     "fail": 0,
+     "blocked_escaped": 3
+    },
+    "conditions": 10,
+    "failConditions": 0,
+    "offFaceTrials": [],
+    "failConditionIds": []
+   },
+   "stratum": "A",
+   "kind": "mid",
+   "road": "road_001"
+  },
+  "G02": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 27,
+     "fail": 0,
+     "blocked_escaped": 3
+    },
+    "conditions": 10,
+    "failConditions": 0,
+    "offFaceTrials": [],
+    "failConditionIds": []
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 27,
+     "fail": 0,
+     "blocked_escaped": 3
+    },
+    "conditions": 10,
+    "failConditions": 0,
+    "offFaceTrials": [],
+    "failConditionIds": []
+   },
+   "stratum": "A",
+   "kind": "mid",
+   "road": "road_020"
+  },
+  "G03": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 21,
+     "fail": 6,
+     "blocked_escaped": 3,
+     "passThrough": 6
+    },
+    "conditions": 10,
+    "failConditions": 2,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G03_BoostSprint_a30",
+     "B_G03_Boost_a30"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 27,
+     "fail": 0,
+     "blocked_escaped": 3
+    },
+    "conditions": 10,
+    "failConditions": 0,
+    "offFaceTrials": [],
+    "failConditionIds": []
+   },
+   "stratum": "A",
+   "kind": "mid",
+   "road": "road_022"
+  },
+  "G04": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 27,
+     "recovered_after_penetration": 18,
+     "fail": 6,
+     "blocked_escaped": 3,
+     "rescue_failed": 6,
+     "passed_off_face": 3
+    },
+    "conditions": 9,
+    "failConditions": 2,
+    "offFaceTrials": [
+     "B_G04_Sprint_a30x3"
+    ],
+    "failConditionIds": [
+     "B_G04_BoostSprint_a30",
+     "B_G04_Boost_a30"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 24,
+     "recovered_after_penetration": 21,
+     "fail": 0,
+     "blocked_escaped": 3,
+     "passed_off_face": 6
+    },
+    "conditions": 8,
+    "failConditions": 0,
+    "offFaceTrials": [
+     "B_G04_BoostSprint_a30x3",
+     "B_G04_Sprint_a30x3"
+    ],
+    "failConditionIds": []
+   },
+   "stratum": "B",
+   "kind": "mid",
+   "road": "road_013"
+  },
+  "G05": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 21,
+     "fail": 6,
+     "blocked_escaped": 3,
+     "passThrough": 6
+    },
+    "conditions": 10,
+    "failConditions": 2,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G05_BoostSprint_a30",
+     "B_G05_Boost_a30"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 27,
+     "fail": 0,
+     "blocked_escaped": 3
+    },
+    "conditions": 10,
+    "failConditions": 0,
+    "offFaceTrials": [],
+    "failConditionIds": []
+   },
+   "stratum": "B",
+   "kind": "mid",
+   "road": "road_013"
+  },
+  "G06": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 24,
+     "fail": 3,
+     "blocked_escaped": 3,
+     "escaped_by_rescue": 3
+    },
+    "conditions": 10,
+    "failConditions": 1,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G06_Boost_a30"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 24,
+     "recovered_after_penetration": 21,
+     "fail": 0,
+     "blocked_escaped": 3,
+     "passed_off_face": 6
+    },
+    "conditions": 8,
+    "failConditions": 0,
+    "offFaceTrials": [
+     "B_G06_BoostSprint_a30x3",
+     "B_G06_Boost_a30x3"
+    ],
+    "failConditionIds": []
+   },
+   "stratum": "B",
+   "kind": "mid",
+   "road": "road_003"
+  },
+  "G07": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "passThrough": 15,
+     "fail": 15,
+     "blocked_escaped": 3,
+     "recovered_after_penetration": 12
+    },
+    "conditions": 10,
+    "failConditions": 5,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G07_BoostSprint_a30",
+     "B_G07_Boost_a30",
+     "B_G07_Boost_c00",
+     "B_G07_Sprint_a30",
+     "B_G07_Sprint_c00"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "passThrough": 15,
+     "fail": 15,
+     "blocked_escaped": 3,
+     "recovered_after_penetration": 12
+    },
+    "conditions": 10,
+    "failConditions": 5,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G07_BoostSprint_a30",
+     "B_G07_Boost_a30",
+     "B_G07_Boost_c00",
+     "B_G07_Sprint_a30",
+     "B_G07_Sprint_c00"
+    ]
+   },
+   "stratum": "C",
+   "kind": "joint",
+   "road": "road_020"
+  },
+  "G08": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 12,
+     "fail": 15,
+     "blocked_escaped": 3,
+     "passThrough": 15
+    },
+    "conditions": 10,
+    "failConditions": 5,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G08_BoostSprint_a30",
+     "B_G08_Boost_a30",
+     "B_G08_Boost_c00",
+     "B_G08_Sprint_a30",
+     "B_G08_Sprint_c00"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 30,
+     "recovered_after_penetration": 12,
+     "fail": 15,
+     "blocked_escaped": 3,
+     "passThrough": 15
+    },
+    "conditions": 10,
+    "failConditions": 5,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G08_BoostSprint_a30",
+     "B_G08_Boost_a30",
+     "B_G08_Boost_c00",
+     "B_G08_Sprint_a30",
+     "B_G08_Sprint_c00"
+    ]
+   },
+   "stratum": "C",
+   "kind": "joint",
+   "road": "road_020"
+  }
+ },
+ "byStratum": {
+  "A": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 90,
+     "recovered_after_penetration": 69,
+     "fail": 12,
+     "blocked_escaped": 9,
+     "passThrough": 6,
+     "rescue_failed": 6
+    },
+    "conditions": 30,
+    "failConditions": 4,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G01_BoostSprint_a30",
+     "B_G01_Boost_a30",
+     "B_G03_BoostSprint_a30",
+     "B_G03_Boost_a30"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 90,
+     "recovered_after_penetration": 81,
+     "fail": 0,
+     "blocked_escaped": 9
+    },
+    "conditions": 30,
+    "failConditions": 0,
+    "offFaceTrials": [],
+    "failConditionIds": []
+   }
+  },
+  "B": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 87,
+     "recovered_after_penetration": 63,
+     "fail": 15,
+     "blocked_escaped": 9,
+     "passThrough": 6,
+     "rescue_failed": 6,
+     "passed_off_face": 3,
+     "escaped_by_rescue": 3
+    },
+    "conditions": 29,
+    "failConditions": 5,
+    "offFaceTrials": [
+     "B_G04_Sprint_a30x3"
+    ],
+    "failConditionIds": [
+     "B_G04_BoostSprint_a30",
+     "B_G04_Boost_a30",
+     "B_G05_BoostSprint_a30",
+     "B_G05_Boost_a30",
+     "B_G06_Boost_a30"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 78,
+     "recovered_after_penetration": 69,
+     "fail": 0,
+     "blocked_escaped": 9,
+     "passed_off_face": 12
+    },
+    "conditions": 26,
+    "failConditions": 0,
+    "offFaceTrials": [
+     "B_G04_BoostSprint_a30x3",
+     "B_G04_Sprint_a30x3",
+     "B_G06_BoostSprint_a30x3",
+     "B_G06_Boost_a30x3"
+    ],
+    "failConditionIds": []
+   }
+  },
+  "C": {
+   "BASE": {
+    "runs": [
+     "W-M10-BASE-ctl-def-a1-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a2-s1-20261110T192633",
+     "W-M10-BASE-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 60,
+     "recovered_after_penetration": 24,
+     "fail": 30,
+     "blocked_escaped": 6,
+     "passThrough": 30
+    },
+    "conditions": 20,
+    "failConditions": 10,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G07_BoostSprint_a30",
+     "B_G07_Boost_a30",
+     "B_G07_Boost_c00",
+     "B_G07_Sprint_a30",
+     "B_G07_Sprint_c00",
+     "B_G08_BoostSprint_a30",
+     "B_G08_Boost_a30",
+     "B_G08_Boost_c00",
+     "B_G08_Sprint_a30",
+     "B_G08_Sprint_c00"
+    ]
+   },
+   "CURBFIX": {
+    "runs": [
+     "W-M10-CURBFIX-ctl-def-a1-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a2-s1-20261110T192633",
+     "W-M10-CURBFIX-ctl-def-a3-s2-20261110T192633"
+    ],
+    "trials": {
+     "n": 60,
+     "recovered_after_penetration": 24,
+     "fail": 30,
+     "blocked_escaped": 6,
+     "passThrough": 30
+    },
+    "conditions": 20,
+    "failConditions": 10,
+    "offFaceTrials": [],
+    "failConditionIds": [
+     "B_G07_BoostSprint_a30",
+     "B_G07_Boost_a30",
+     "B_G07_Boost_c00",
+     "B_G07_Sprint_a30",
+     "B_G07_Sprint_c00",
+     "B_G08_BoostSprint_a30",
+     "B_G08_Boost_a30",
+     "B_G08_Boost_c00",
+     "B_G08_Sprint_a30",
+     "B_G08_Sprint_c00"
+    ]
+   }
+  }
+ },
+ "paired": {
+  "transition": {
+   "blocked_escaped → blocked_escaped": 24,
+   "passThrough → passThrough": 30,
+   "passThrough → recovered_after_penetration": 12,
+   "recovered_after_penetration → recovered_after_penetration": 153,
+   "rescue_failed → recovered_after_penetration": 9
+  },
+  "improved": 21,
+  "worsened": 0,
+  "changedSameFailState": 0,
+  "improvedCases": [
+   "B_G03_BoostSprint_a30@a1",
+   "B_G03_Boost_a30@a1",
+   "B_G01_Boost_a30@a1",
+   "B_G05_Boost_a30@a1",
+   "B_G01_BoostSprint_a30@a1",
+   "B_G04_Boost_a30@a1",
+   "B_G05_BoostSprint_a30@a1",
+   "B_G03_BoostSprint_a30@a2",
+   "B_G03_Boost_a30@a2",
+   "B_G01_Boost_a30@a2",
+   "B_G05_Boost_a30@a2",
+   "B_G01_BoostSprint_a30@a2",
+   "B_G04_Boost_a30@a2",
+   "B_G05_BoostSprint_a30@a2",
+   "B_G01_BoostSprint_a30@a3",
+   "B_G01_Boost_a30@a3",
+   "B_G03_Boost_a30@a3",
+   "B_G03_BoostSprint_a30@a3",
+   "B_G04_Boost_a30@a3",
+   "B_G05_Boost_a30@a3",
+   "B_G05_BoostSprint_a30@a3"
+  ],
+  "worsenedCases": [],
+  "changedCases": []
+ },
+ "auxPenetrationCURBFIX": {
+  "n": 174,
+  "medianR": 1.597,
+  "maxR": 3.475,
+  "maxCm": 3.27
+ },
+ "verdict": {
+  "verdict": "partial",
+  "BASE_failConditions": "19/79",
+  "CURBFIX_failConditions": "10/76",
+  "CURBFIX_failTrials": "30/228",
+  "failOnlyInCURBFIX": [],
+  "auxSentence": true,
+  "offFace": {
+   "BASE": [
+    "B_G04_Sprint_a30x3"
+   ],
+   "CURBFIX": [
+    "B_G04_BoostSprint_a30x3",
+    "B_G04_Sprint_a30x3",
+    "B_G06_BoostSprint_a30x3",
+    "B_G06_Boost_a30x3"
+   ]
+  },
+  "strataNamedInSentence": [
+   "A",
+   "B",
+   "C"
+  ],
+  "strataNoRegressionOnly": []
+ }
+}

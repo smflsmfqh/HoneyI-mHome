@@ -1,0 +1,23 @@
+{
+ "recordedUtc": "2026-11-10T09:16:50.633538+00:00",
+ "windowsResultsSeen": false,
+ "freeze": {
+  "file": "Evidence/M10/M10-r1-freeze.json",
+  "sha256": "851959eaac6d0fada33cb30a47f7fa7b132db30acc7c64cbb5c72a20dc6a3f60"
+ },
+ "bundle": {
+  "file": "Builds/M10-r1.zip",
+  "bytes": 340713743,
+  "sha256": "70cccb1652927526122e89835ed1adf95b616b59d5572d69c5be62597d7a090d"
+ },
+ "tools": {
+  "Tools/make_cases_m10.py": "822ebfcb84ae4c66820e0ef0c473ce99e02f65e28044629841cb9ba4177df78b",
+  "Tools/summarize_M10.py": "98f3dfe86e0e80e9c963191e14d213b48cb2e581b31fb857af4e98394ddac995",
+  "Tools/make_bundle_m10.py": "f064179f7aa4181111ffbe9e8b87297da6d4b5ed9c4b4884d69e7f496b5345d6",
+  "Harness/Windows/RunM10.cmd": "b3771cb2d17c202e8f3e8335356284e58dbaeeb9bf9f7bca58da90cce315bfd9",
+  "Harness/Windows/README-Windows-M10.txt": "b64e31b38bc0faabe09c64162d82cc95dd04f65467855c0fc48f9e6fa1ef89e1",
+  "../.physics-work/project-H7B/Assets/PhysicsBench/Editor/PhysicsBenchM10Sites.cs": "b34b035ce7541ca3f6578de147b51a30d20942d82be46223899c99ccd2669de7",
+  "../.physics-work/project-H7B/Assets/PhysicsBench/Editor/PhysicsBenchZoneDump.cs": "9b997567374e168693b2b3be9c44b691dd6f0a866f469f4fb2ff99f8f1f90525"
+ },
+ "analysisPlan": "analyze_physics_bench.py <run> --thresholds Harness/Cases/thresholds-B1.json --out Evidence/M10/analysis/<run>-a1 → python3 -I Tools/summarize_M10.py <루트> Evidence/M10/M10-r1-summary.json"
+}

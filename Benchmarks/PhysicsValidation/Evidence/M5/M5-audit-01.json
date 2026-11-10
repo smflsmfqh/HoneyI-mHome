@@ -1,0 +1,33 @@
+{
+ "milestone": "M5",
+ "state": "IN_PROGRESS",
+ "recordedAt": "2026-10-30 (Asia/Seoul)",
+ "findings": {
+  "H1_hidden_ground": {
+   "fact": "Assets/Prefabs/PostProcessingVolume.prefab의 Ground 오브젝트에 맵 전체를 덮는 BoxCollider가 있다(scale 203x1.7x171, 윗면 월드 y=0, layer Ground, tag Ground, 비트리거, MeshRenderer 포함).",
+   "history": "5859367(2026-05-22 07:21, '[Add] Game UI')에서 추가. H0(1a44741, 05-18)에는 없음. H1(9b83a24, 05-29 10:35, '[2nd Build]')에 존재. 2dd8695(05-29, '땅에 박스 콜라이더 까는 중')부터 같은 이름의 빈 부모(Default 레이어, Box 없음)로 바뀌어 H2~H7에는 받침판 없음.",
+   "implication": "H1은 순수 Mesh 바닥이 아니라 맵 전체 받침판이 도로 MeshCollider 실패를 가리는 구성이다. 실험 A의 Mesh 기준선으로는 받침판이 없는 H0가 더 적합하다. H1 smoke에서 개미가 y=0에 서고 연석을 접촉 없이 통과한 이유와 일치한다.",
+   "evidence": "git show 비교(이 파일 작성 시점), Evidence/M4/probe-H1-support.json, Evidence/M4/windows-smoke-0*-summary.json"
+  },
+  "H0_asset_resolution": {
+   "fact": "H0 루트 커밋에는 에셋 gitlink가 없다(폴더 .meta만). H0 이전 에셋 커밋은 9c220857(05-15)뿐이지만 H0는 그 뒤 커밋된 에셋(Playground 등) GUID 60개를 참조한다.",
+   "candidate": "23de6f3c (05-18 20:06 'Add playground Assets', H0 다음 루트 커밋 31beed1이 처음 gitlink로 가리킴). H0 참조 비패키지 GUID 195개 중 184개 포함, 누락 11개는 PC_Renderer·DefaultVolumeProfile의 URP 렌더러 기능 스크립트 참조(물리 무관).",
+   "label": "추정 에셋(H0 커밋 +2시간). 당시 로컬 미커밋 상태를 완전히 재현했다고 주장하지 않는다",
+   "packages": "Unity 6000.3.15f1, URP 17.3.0, InputSystem 1.19.0 — H1과 동일"
+  },
+  "H7_support_and_S3_curb": {
+   "fact": "S3(x≈-56.1, z=22.7)의 대상 연석은 CurbColliders/Curb_18(Obstacle 레이어, x -56.466~-56.034, y -0.1~0.1)와 BasicSettingsMap/road_019 Box(x -56.365~-56.135, y -0.1~0.1)가 겹친 구성이다. Curb_18의 도로 쪽 면은 시각 연석면(-56.145)보다 0.111m(약 11.8r) 앞에 있다. 도로 지지는 FloorColliders/road_009_road(윗면 -0.1)와 두께 0의 비트리거 CarDrivingZone/Zone3(y=-0.1)가 같이 맡는다. NPCMovementZone 박스들은 두께 0, y=0.427(에디터 정적 상태 기준; 런타임 트리거 전환 여부는 미확인).",
+   "smokeTrajectory": "Windows·Mac 공통: Sprint 2.5m/s로 Curb_18 접촉(66) 후 road_019 접촉(67) 순간 주 캡슐이 도로면 아래로 약 1.5cm 내려가 연석 Box 아래로 미끄러져 x -56.275에서 인도 바닥 Box 옆면에 막힘. 후진 단계에서 연석 아래를 빠져나와 이탈(escapeStep 189). 분석 결과 passed_curb.",
+   "implication": "H7(현재) 구성에서 고속 연석 접근 시 바닥 Box 안으로 파고들어 연석 아래로 끼어드는 경로가 재현된다. 원래 '연석 끼임'의 후보 기전으로 M5 예비 탐색 대상. 실제 맵 case의 기준 벽면은 시각 메시가 아니라 대상 콜라이더(Curb_18) 기준으로도 함께 기록해야 한다.",
+   "evidence": "Evidence/M5/probe-H7-S2S3-columns.json, Evidence/M4/windows/PhysicsBench-Results-20261030T014743/W-H7-smoke-20261030T014743 (SM05)"
+  },
+  "H7_meshcolliders": "H7 MeshCollider 76개 중 46개(활성)가 Read/Write 없이 런타임 cooking 필요(bakeCollisionMeshes=false). Windows H7 Player 로그 Read/Write 오류 913줄. 바닥은 Box로 바뀌었으나 소품 등 MeshCollider 실패 가능성은 남음 — 대상 목록화 필요"
+ },
+ "next": [
+  "H0 복원(에셋 23de6f3c 추정) — prepare_snapshot.py에 H0(MiniGameProject/ 하위 경로) 지원 추가 필요, 디스크 결정 필요",
+  "H0/H1 Windows에서 바닥 수직 낙하 위치 탐색(받침판 유무 대비)",
+  "H7 연석 끼임 후보: S3 유사 연석(대상 콜라이더가 시각면보다 돌출) 목록화와 위치군 탐색",
+  "H7 MeshCollider 46개 중 개미 접촉 가능 대상 목록화",
+  "NPCMovementZone/CarDrivingZone의 런타임 isTrigger 상태 확인"
+ ]
+}

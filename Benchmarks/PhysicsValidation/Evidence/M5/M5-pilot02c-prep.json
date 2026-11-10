@@ -1,0 +1,60 @@
+{
+ "bundle": {
+  "path": "Builds/M5-pilot-02c.zip",
+  "bytes": 445606099,
+  "sha256": "e388092a8bc72478ec8d6f007a56aee29d0b785eb101b29af4ebf18178370833",
+  "files": 1246,
+  "builds": {
+   "Hm1": "M5-Hm1-win-03",
+   "H0": "M5-H0-win-01",
+   "H1": "M5-H1-win-01",
+   "H7": "M5-H7-win-01"
+  },
+  "note": "02b와 같은 빌드 재사용(재빌드 없음). case·profile은 -benchCases/-benchProfile 외부 파일로 넘긴다. H0·H1·H7 빌드는 이전 하네스 revision(win-01)이다",
+  "runs": [
+   "Hm1 base",
+   "Hm1 unfreezeY(80)",
+   "Hm1 unfreezePosY(112)",
+   "H0 base",
+   "H1 base",
+   "H7 base"
+  ],
+  "runIdPattern": "W-<V>-<variant>-p02c-<시각>",
+  "verified": "압축 해제 후 SHA256SUMS 1245개 일치, Hm1 120건 jump 0, H0 curb Move, H1 case가 e2b와 바이트 동일, CRLF·BOM 유지"
+ },
+ "supersedes": "Builds/M5-pilot-02b.zip(보존, 전달하지 않음)",
+ "reviewItems": {
+  "P2-unsupported-actions": "e2c: Hm1 jump 26건 제외, Hm1 curb 4건 Sprint→Move·구제 점프 끔, H0 curb 4건 Sprint→Move. H1·H7은 e2b 바이트 복사. case ID 유지. 생성 Tools/make_cases_e2c.py, 기록 Harness/Cases/e2c/e2c-derivation.json",
+  "P2-rest-inferred-pass": "판정 규칙(thresholds-r4·분석기) 변경 없음. 분석기 passEvidence로만 분리. Hm1 base의 정지 pass는 pass_rest_inferred_y_frozen으로 집계되는 것이 정상",
+  "constraints-116-80": "profile-Hm1-unfreezePosY.json(112 = 116에서 FreezePositionY만 해제) 추가. 116/112/80으로 Y 위치 해제와 Y 회전 해제를 나눠 본다. 84(Y 위치 고정·Y 회전 해제)는 Y 위치가 고정돼 구조적으로 낙하 불가라 낙하 지표에서는 넣지 않음"
+ },
+ "freezeRecord": "Evidence/M5/M5-pilot02c-freeze.json(Mac 112 실행 전 기록)",
+ "macChecks": {
+  "M5-Hm1-base-mac-e2c-E2_B-01": {
+   "cases": 4,
+   "result": "4/4 completed, 요청 동작 Move만, unsupportedTrials 없음. passed_curb(no_wall_contact)=Hm1에 Box 없는 대조군의 정상 결과. e2b Mac(M5-Hm1-base-mac-e2-02)에서는 같은 4건이 Sprint 미수신 harness_error였다"
+  },
+  "M5-Hm1-unfreezePosY-mac-e2c-01": {
+   "cases": 120,
+   "minutes": 11.9,
+   "controls": "override:constraints=116->112",
+   "classifierChecks": "4/4(CK03 fall, y_position_frozen 플래그 없음)",
+   "unsupportedTrials": {},
+   "outcomes": {
+    "pass": 80,
+    "fall": 27,
+    "passed_curb": 4,
+    "harness_error:input_not_received": 1,
+    "harness_error:time_scale_zero": 1,
+    "harness_error:yaw_align_failed": 7
+   },
+   "passEvidence": {
+    "pass_rest_inferred": 63,
+    "pass_contact_or_probe": 17
+   },
+   "yawAlignFailed": "order 111~118 중 7건이 약 4초(실시간 707~712s) 안에 몰려 발생 후 자동 회복. 같은 빌드의 이전 Mac run 2개에는 없음. Hm1은 legacy 마우스 입력으로 카메라가 돈다. 원인 미확정(실행 중 실제 마우스 움직임 가능성). 하네스 오류로 분리돼 판정 수치에 들어가지 않음",
+   "interpretation": "Mac 진단, Windows 결과 아님. 낙하 수치는 결과 확인용이며 정식 비교 근거로 쓰지 않음"
+  }
+ },
+ "notVerifiedOnMac": "H0 curb Move 변환은 H0 Mac 빌드가 없어 런타임 확인 못 함(정적 확인만). Windows 결과에서 --capabilities로 확인"
+}

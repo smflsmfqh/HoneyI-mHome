@@ -1,0 +1,10 @@
+{
+    "buildId": "M5-H7-mac-02",
+    "result": "Succeeded",
+    "totalErrors": 0,
+    "totalWarnings": 4,
+    "totalSizeBytes": 608631147,
+    "outputPath": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/builds/M5-H7-mac-02/PhysicsBench.app",
+    "durationSec": 61.97943115234375,
+    "buildInfo": "{\"buildId\":\"M5-H7-mac-02\",\"versionId\":\"H7\",\"target\":\"StandaloneOSX\",\"scriptingBackend\":\"Mono2x\",\"apiCompatibility\":\"NET_Standard_2_0\",\"managedStripping\":\"Disabled\",\"projectDefines\":\"UNITY_POST_PROCESSING_STACK_V2;DOTWEEN\",\"extraDefines\":\"PHYSICS_BENCH\",\"development\":true,\"unityVersion\":\"6000.3.15f1\",\"rootSha\":\"b8efce3526d3ef85eb0c85a580884369f3f5f48a\",\"assetSha\":\"a160f46591e2af970f47d05603d64ddad4781e59\",\"scene\":\"Assets/Scenes/AntDemoScene.unity\",\"sceneSha256\":\"9d0bb583cc4f4f0e5fe6185012204e9e2d0ac60623f3e4fec660dc390eacfddb\",\"casesSha256\":\"d3278ef17170cdc29ae455699f25f99740368ee5a164fbcac7f63d36e375364f\",\"profileSha256\":\"e39ac25655e41e36eda401db6ef8eb98ef63dad5bbbb222383dd99d1f5f22c02\",\"harnessFiles\":[\"Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs 69f5e1e7afeb6ec1e74ac7f6e602d91c1ab0a45a4c87ad6b23511995c9d99695\",\"Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs ac64d3ba1bca866f3efce35d88a0f9fb9906617d8a1fdaac4efca75aa1f83144\",\"Assets/PhysicsBench/Runtime/PhysicsBenchData.cs d8bfef5d66dd785d5844cfba15d37e2a2b00205368ccb15fb7f74deb8b9c9abc\",\"Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs 2575dfd4777feb0c810f76fdc98fdbd10980cc313e60daf1d739f73f7ce818d6\",\"Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs 426af84e1e47875acd80a1042b4736848dd02f2f6d82fccef45a6fffaf659cef\",\"Assets/PhysicsBench/Runtime/PhysicsBenchPlayerApi.cs 14e0a2d4e82f68a07198eb60688330f0647ef3dafa2285daeee419cdf5297465\",\"Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs 1f8efb361ee62be13e772c923d538a06d9c148108e6fac66c12d18ec3d9fb6bd\"],\"fixedDeltaTimeProject\":0.00999999325722456,\"runInBackgroundProject\":false,\"fullScreenModeProject\":\"FullScreenWindow\",\"builtUtc\":\"2026-10-30T13:07:43.9225030Z\"}"
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "case": "E2_S05_drop",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": 0.9004999995231628,
+    "minAllowedY": -0.10000000149011612,
+    "endGapR": 66.70000155841315,
+    "controls": []
+  },
+  {
+    "case": "E2_S01_drop",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": 0.9004999995231628,
+    "minAllowedY": -0.10000000149011612,
+    "endGapR": 66.70000155841315,
+    "controls": []
+  },
+  {
+    "case": "E2_S02_drop",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": 0.9004999995231628,
+    "minAllowedY": -0.10000000149011612,
+    "endGapR": 66.70000155841315,
+    "controls": []
+  },
+  {
+    "case": "E2_S03_drop",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": 0.9004999995231628,
+    "minAllowedY": -0.10000000149011612,
+    "endGapR": 66.70000155841315,
+    "controls": []
+  },
+  {
+    "case": "E2_S00_drop",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": 0.9004999995231628,
+    "minAllowedY": -0.10000000149011612,
+    "endGapR": 66.70000155841315,
+    "controls": []
+  },
+  {
+    "case": "E2_S06_drop",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": 0.9004999995231628,
+    "minAllowedY": -0.10000000149011612,
+    "endGapR": 66.70000155841315,
+    "controls": []
+  },
+  {
+    "case": "CK03_hole_walk_slow",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": -99.99949645996094,
+    "minAllowedY": -100.0,
+    "endGapR": 0.03356933668783314,
+    "controls": []
+  },
+  {
+    "case": "E2_S04_drop",
+    "outcome": "pass",
+    "flags": [
+      "support_inferred_from_rest"
+    ],
+    "minBottomY": 0.9004999995231628,
+    "minAllowedY": -0.10000000149011612,
+    "endGapR": 66.70000155841315,
+    "controls": []
+  }
+]

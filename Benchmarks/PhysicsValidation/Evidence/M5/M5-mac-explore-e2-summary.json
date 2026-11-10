@@ -1,0 +1,57 @@
+{
+ "summaryId": "M5-mac-explore-e2",
+ "recordedLocal": "2026-10-30 (Asia/Seoul)",
+ "kind": "Mac 진단(Windows 결과 아님). 탐색용, 정식 수치 아님",
+ "cases": {
+  "e2": "Harness/Cases/e2/explore-e2-<V>.json (Tools/make_explore_e2.py, 버전별 probe Evidence/M5/e2/probe-<V>-e2c.json, 이음매·점프 시점 기준 probe-H0-e2c.json)",
+  "e2b": "Harness/Cases/e2b/explore-e2-<V>.json = e2 + 사후 표적 E2_K01~K12(walk/hold). e2의 기존 case는 내용 동일",
+  "thresholds": "Harness/Cases/thresholds-r4.json(변경 없음)"
+ },
+ "runs": {
+  "M5-H7-base-mac-e2-E2_P-01": {
+   "build": "M5-H7-mac-02",
+   "result": "소품 8건. Read/Write 오류가 Player 로그에 있는 5개(Bus_Stop_02, Trash_Can_06, Trash_Can_06 (1) convex, Trash_02 convex, Fountain_03 convex)는 AABB 중심선을 20~165스텝 지나는 동안 접촉 0(충돌면 비어 있음). 오류 없는 pizzeria·plants 2는 접촉 113·114스텝(작동). table은 오류·접촉 없음(다리 사이 통과로 보임). analyzer 결과는 8건 모두 passed_curb이지만 pizzeria·plants는 AABB가 메시보다 커서 생긴 것"
+  },
+  "M5-H7-base-mac-e2-E2_B-01": {
+   "build": "M5-H7-mac-02",
+   "result": "도로 위 road_009_floor Box 끝 4곳 모두 recovered_after_penetration: Sprint 2.5m/s로 수평 1.0r 침투 후 막힘(넘지 못함), 후진 단계에서 이탈"
+  },
+  "M5-Hm1-base-mac-e2-01": {
+   "status": "무효(보존)",
+   "reason": "Evidence/M5/runs/M5-Hm1-base-mac-e2-01.INVALID.txt — 카메라 yaw 미설정으로 모든 case 45° 진행"
+  },
+  "M5-Hm1-base-mac-e2-02": {
+   "build": "M5-Hm1-mac-02",
+   "result": "방향 정렬 정상(yaw drift 0). 낙하 0. Rigidbody constraints 116(FreezePositionY+회전 3축)이라 Y 이동 불가: 1m 공중 시작(E2_S*_drop)이 떠 있고 CK03 구멍 case가 pass(기대 fall). 이동 5m/s(MovePosition, 기록 속도 0). Box 단차 4건은 Roll 액션 없음으로 harness_error → e2 2판에서 H0·Hm1 구제 구르기 제외"
+  },
+  "M5-Hm1-unfreezeY-mac-e2-01": {
+   "build": "M5-Hm1-mac-03 + profile-Hm1-unfreezeY.json(playerConstraints 80, 재구성 통제)",
+   "controlsVerified": "override:constraints=116->80, yaw:camera_field_set 122/122",
+   "result": "122건: pass 77, fall 34, unsupported_end 5, passed_curb 4(Box 단차 위치 대조군, 벽 없음), harness_error 2(의도된 CK08·CK13). CK03 fall(기대대로)",
+   "fallsByPath": "Evidence/M5/analysis/M5-Hm1-unfreezeY-mac-e2-01-a1/falls-by-path.json (Tools/summarize_falls_e2.py, 보조 집계)",
+   "withinPath": 22,
+   "beyondPath": 10,
+   "pointCase": 1,
+   "patterns": {
+    "a_curb_outer_edge": "연석 윗면(0.1)에서 0.1m 내려선 곳 0.2m 뒤, 같은 road_009 메시 안: C01 x=-48.3, C02 x=-56.7, C07 z=-71.7, C08 z=-63.3, C09 x=56.7, C10 x=48.3 (walk·jump 모두)",
+    "b_road_to_tile_seam": "도로 메시→인도 타일 메시 전환(같은 높이 또는 +0.1) 0.25~0.5m 뒤: C03·L06 x=0.5(road_020/road_003→Set_B_Tiles_04/06), C06 z=14.5(road_020→Set_B_Tiles_01), L05 x=-60.5(road_013→Set_B_Tiles_01, +0.1), C11 x=-74.5(Set_B_Tiles_09→04, +0.1). C04 x=-15.49는 연석 뒤 1.5m",
+    "contactsAtFall": "모든 낙하에서 낙하 스텝 접촉 0(관통)",
+    "beyondPath": "5m/s로 경로 끝을 지나 맵 끝(L01·L02·L03 z=±75.5, L04 x=60.5)에서 떨어진 것은 버그 아님. C05·M01·M02·C12는 경로 끝 직후 이음매라 경로 밖으로 분류"
+   }
+  }
+ },
+ "interpretation": [
+  "H0 커밋 메시지 '수직 낙하 수정 중'과 H-1→H0 변경(constraints 116→80, MovePosition→velocity)으로 볼 때, 원래 낙하는 두 커밋 사이 미커밋 상태(Y 고정 해제 + MovePosition)였을 가능성이 있다. 재구성 통제는 Mac에서 연석 바깥 경계와 도로→타일 경계에서 접촉 없는 수직 낙하를 재현했다",
+  "재구성 통제는 역사 버전이 아니다. H0의 다른 차이(MeshCollider 2개 convex, 플레이어 레이어 3, _groundLayerMask)는 넣지 않았다",
+  "Windows 확인은 M5-pilot-02b(Hm1 base, Hm1-unfreezeY, H0, H1, H7)로 한다. H0·H1·H7가 같은 경계에 도달하도록 사후 표적 E2_K*를 추가했다"
+ ],
+ "correction-20261030-review-r3": {
+  "constraints": "116→80은 FreezePositionY(4)와 FreezeRotationY(32)를 함께 해제한다(36). 'Y 위치 고정만 해제'가 아니라 'Hm1 + H0 constraints(80) 재구성'으로 해석한다. Y 위치만 해제(112)한 조건이 필요한지는 M6에서 정한다",
+  "unsupportedActions": "Hm1에는 Jump·Sprint·Roll 구현이 없다. Hm1-unfreezeY 낙하 34건 중 12건은 jump case인데 실제로는 보행과 같다. 'walk·jump 모두 재현'은 '보행에서 재현(점프 case는 점프 미구현이라 보행과 같음)'으로 정정",
+  "passEvidence": "재분석 a2(--capabilities capabilities-r1.json, outcome 불변): Hm1 base pass 116 = 접촉/probe 90 + Y 고정 상태 정지 추론 26. Hm1-unfreezeY pass 77 = 접촉/probe 10 + 정지 추론 67. 정지 추론 pass는 정상 지지·착지와 합치지 않는다",
+  "reanalysis": [
+   "Evidence/M5/analysis/M5-Hm1-base-mac-e2-02-a2",
+   "Evidence/M5/analysis/M5-Hm1-unfreezeY-mac-e2-01-a2"
+  ]
+ }
+}

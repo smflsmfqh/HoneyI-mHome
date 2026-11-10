@@ -1,0 +1,66 @@
+{
+  "H1": {
+    "mixedFloorWallSteps": 57,
+    "sample": [
+      {
+        "step": 35,
+        "collider": -149276,
+        "normalsYDot": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -1.0
+          ]
+        ]
+      }
+    ],
+    "fixtureGroundLogged": true
+  },
+  "H7": {
+    "mixedFloorWallSteps": 114,
+    "sample": [
+      {
+        "step": 68,
+        "collider": -48364,
+        "normalsYDot": [
+          [
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -1.0
+          ]
+        ]
+      }
+    ],
+    "fixtureGroundLogged": true
+  }
+}

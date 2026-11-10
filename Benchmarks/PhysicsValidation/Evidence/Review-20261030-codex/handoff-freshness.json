@@ -1,0 +1,16 @@
+[
+  {
+    "archive": "Docs/physics-collider-handoff.zip",
+    "progress_matches_current": true,
+    "archived_current_stage": [
+      "- **현재 단계: M4 IN_PROGRESS — smoke 묶음 제작 완료, 사용자 Windows 실행 전(전달 시 WAITING_USER_RUN).**"
+    ]
+  },
+  {
+    "archive": "Benchmarks/PhysicsValidation/physics-validation-checkpoint.zip",
+    "progress_matches_current": true,
+    "archived_current_stage": [
+      "- **현재 단계: M4 IN_PROGRESS — smoke 묶음 제작 완료, 사용자 Windows 실행 전(전달 시 WAITING_USER_RUN).**"
+    ]
+  }
+]

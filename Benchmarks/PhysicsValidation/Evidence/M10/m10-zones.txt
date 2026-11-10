@@ -1,0 +1,53 @@
+Zone/NPCMovementZone/Zone5|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/CatZone4|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone9 (2)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-0.600..-0.040|comps=Transform,BoxCollider,CarStopZone
+Zone/CarStopZone/Zone9 (1)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-0.600..-0.040|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/CatZone3|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarDrivingZone/Zone3|BoxCollider|trig=False|en=True|active=True|layer=Default|y=-0.100..-0.100|comps=Transform,BoxCollider,CarDrivingZone
+Zone/NPCMovementZone/CatZone9|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone16|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone12|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/CatZone6|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone1|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/Zone13|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/CatZone2|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone20|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/CatZone5|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone10|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone1 (1)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/CatZone7|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone1 (6)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/CarStopZone/Zone9|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-0.600..-0.040|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/Zone1|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarDrivingZone/Zone1|BoxCollider|trig=False|en=True|active=True|layer=Default|y=-20.190..-20.190|comps=Transform,BoxCollider,CarDrivingZone
+Zone/CarDrivingZone/Zone2|BoxCollider|trig=False|en=True|active=True|layer=Default|y=-0.100..-0.100|comps=Transform,BoxCollider,CarDrivingZone
+Zone/NPCMovementZone/Zone8|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone1 (7)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/Zone17|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CrossWaitZone|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..1.900|comps=Transform,BoxCollider,CrosswalkWaitZone
+Zone/NPCMovementZone/Zone19|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone22|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone1 (8)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/Zone15|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone14|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone7|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CrossWaitZone (4)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..1.900|comps=Transform,BoxCollider,CrosswalkWaitZone
+Zone/CarStopZone/Zone1 (4)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/CatZone1|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone21|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CrossWaitZone (5)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..1.900|comps=Transform,BoxCollider,CrosswalkWaitZone
+Zone/NPCMovementZone/Zone18|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone4|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone1 (5)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/Zone3|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone2|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone11|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CarStopZone/Zone1 (3)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/NPCMovementZone/Zone9|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/CatZone10|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/CatZone8|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/NPCMovementZone/Zone6|BoxCollider|trig=False|en=True|active=True|layer=Default|y=0.427..0.427|comps=Transform,BoxCollider,NPCSpawnZone
+Zone/CrossWaitZone (3)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..1.900|comps=Transform,BoxCollider,CrosswalkWaitZone
+Zone/CrossWaitZone (2)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..1.900|comps=Transform,BoxCollider,CrosswalkWaitZone
+Zone/CarStopZone/Zone1 (2)|BoxCollider|trig=True|en=True|active=True|layer=Default|y=-1.100..0.900|comps=Transform,BoxCollider,CarStopZone
+Zone/Flowerzone/SM_Flowers_02|MeshCollider|trig=True|en=True|active=True|layer=Default|y=0.000..0.060|comps=Transform,MeshFilter,MeshRenderer,MeshCollider,MissionItem,MinimapMarker

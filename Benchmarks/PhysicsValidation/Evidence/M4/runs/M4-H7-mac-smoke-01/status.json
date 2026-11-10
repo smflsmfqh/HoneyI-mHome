@@ -1,0 +1,10 @@
+{
+    "runId": "M4-H7-mac-smoke-01",
+    "state": "completed",
+    "planned": 20,
+    "finished": 20,
+    "harnessErrors": 2,
+    "currentCase": "",
+    "updatedUtc": "2026-10-29T14:54:25.8382120Z",
+    "message": ""
+}

@@ -1,0 +1,27 @@
+{
+    "seed": 1,
+    "caseIds": [
+        "B_S3_Boost_c00",
+        "B_S3_Boost_m02",
+        "B_S2_Sprint_p02",
+        "B_S2_BoostSprint_m02",
+        "B_S3_BoostSprint_m02",
+        "B_S3_Sprint_m02",
+        "B_S2_Sprint_m02",
+        "B_S3_Sprint_p02",
+        "B_S2_BoostSprint_p02",
+        "CK13_flat_hold_timescale0",
+        "B_S3_BoostSprint_c00",
+        "CK01_flat_hold",
+        "B_S2_Boost_c00",
+        "CK03_hole_walk_slow",
+        "B_S3_Boost_p02",
+        "B_S3_BoostSprint_p02",
+        "B_S2_Boost_m02",
+        "B_S2_BoostSprint_c00",
+        "B_S3_Sprint_c00",
+        "B_S2_Boost_p02",
+        "CK08_flat_walk_noinput",
+        "B_S2_Sprint_c00"
+    ]
+}

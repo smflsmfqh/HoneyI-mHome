@@ -1,0 +1,17 @@
+{
+    "seed": 1,
+    "caseIds": [
+        "E2_P03_prop",
+        "E2_P04_prop",
+        "E2_P06_prop",
+        "CK01_flat_hold",
+        "E2_P05_prop",
+        "E2_P07_prop",
+        "CK13_flat_hold_timescale0",
+        "E2_P01_prop",
+        "E2_P02_prop",
+        "E2_P00_prop",
+        "CK03_hole_walk_slow",
+        "CK08_flat_walk_noinput"
+    ]
+}

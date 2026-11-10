@@ -1,0 +1,10 @@
+{
+    "buildId": "M5-Hm1-mac-02",
+    "result": "Succeeded",
+    "totalErrors": 2,
+    "totalWarnings": 3,
+    "totalSizeBytes": 374225888,
+    "outputPath": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/builds/M5-Hm1-mac-02/PhysicsBench.app",
+    "durationSec": 22.979642868041993,
+    "buildInfo": "{\"buildId\":\"M5-Hm1-mac-02\",\"versionId\":\"Hm1\",\"target\":\"StandaloneOSX\",\"scriptingBackend\":\"Mono2x\",\"apiCompatibility\":\"NET_Standard_2_0\",\"managedStripping\":\"Disabled\",\"projectDefines\":\"\",\"extraDefines\":\"PHYSICS_BENCH;PHYSICS_BENCH_HM1\",\"development\":true,\"unityVersion\":\"6000.3.15f1\",\"rootSha\":\"d3a98563b6dae62d68f5f08c689ac144b4885886\",\"assetSha\":\"23de6f3c207d54acf193d8961e54da0ee48d68a2\",\"scene\":\"Assets/Scenes/AntDemoScene.unity\",\"sceneSha256\":\"347cbc79a575606cb51ee6543c0b49f610719e2f06e6dfc78207e8ac8f699c53\",\"casesSha256\":\"0a66e0be6f40aafea4426d9ee50c12c854405b82b5af97be1cdcc293af4fcd2c\",\"profileSha256\":\"ac0d2d66e310718517b5786fe4327e6099ac4507479fe7ab201b8d6553d0d8bc\",\"harnessFiles\":[\"Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs 69f5e1e7afeb6ec1e74ac7f6e602d91c1ab0a45a4c87ad6b23511995c9d99695\",\"Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs ac64d3ba1bca866f3efce35d88a0f9fb9906617d8a1fdaac4efca75aa1f83144\",\"Assets/PhysicsBench/Runtime/PhysicsBenchData.cs d8bfef5d66dd785d5844cfba15d37e2a2b00205368ccb15fb7f74deb8b9c9abc\",\"Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs 2575dfd4777feb0c810f76fdc98fdbd10980cc313e60daf1d739f73f7ce818d6\",\"Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs 426af84e1e47875acd80a1042b4736848dd02f2f6d82fccef45a6fffaf659cef\",\"Assets/PhysicsBench/Runtime/PhysicsBenchPlayerApi.cs 73a61ac338fdec7fda6aac03524557fd137375618bc851e02a65e23f7b3f7147\",\"Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs db6aae8e6a20150d6a796e48da5fddb11b7c86a8678b42957495e51b1df20c8a\"],\"fixedDeltaTimeProject\":0.019999992102384568,\"runInBackgroundProject\":false,\"fullScreenModeProject\":\"FullScreenWindow\",\"builtUtc\":\"2026-10-30T13:19:15.8516450Z\"}"
+}

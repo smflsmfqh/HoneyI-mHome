@@ -1,0 +1,261 @@
+{
+ "runs": [
+  "M3-H1-mac-ck-07",
+  "M3-H1-mac-ck-08"
+ ],
+ "note": "자식 Rigidbody 자세 복원(mac-07) 후 seed 7/8 실행 간 같은 case 궤적 비교",
+ "cases": {
+  "CK01_flat_hold": {
+   "steps": [
+    80,
+    80
+   ],
+   "p0Diff": 0.0016027074307203293,
+   "v0Diff": 0.06273575127124786,
+   "settleEndDiff": 0.0030814012279734015,
+   "maxDiff": 0.0051915692165493965,
+   "firstInputStep": [
+    null,
+    null
+   ],
+   "order": [
+    10,
+    3
+   ]
+  },
+  "CK02_flat_walk": {
+   "steps": [
+    105,
+    105
+   ],
+   "p0Diff": 0.00211334228515625,
+   "v0Diff": 0.010326609015464783,
+   "settleEndDiff": 0.004476875066757202,
+   "maxDiff": 0.03743913024663925,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    3,
+    4
+   ]
+  },
+  "CK03_hole_walk_slow": {
+   "steps": [
+    130,
+    130
+   ],
+   "p0Diff": 0.0010049613953924952,
+   "v0Diff": 0.1341937817633152,
+   "settleEndDiff": 0.0017442352254875004,
+   "maxDiff": 0.303680419921875,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    2,
+    12
+   ]
+  },
+  "CK04_stepdown_walk": {
+   "steps": [
+    105,
+    105
+   ],
+   "p0Diff": 0.0016937404870986938,
+   "v0Diff": 0.11181174591183662,
+   "settleEndDiff": 0.0045577287673950195,
+   "maxDiff": 0.05171664338558912,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    9,
+    7
+   ]
+  },
+  "CK05_curb_sprint": {
+   "steps": [
+    421,
+    421
+   ],
+   "p0Diff": 0.0017114877700805664,
+   "v0Diff": 0.0863874964416027,
+   "settleEndDiff": 0.0008050799951888621,
+   "maxDiff": 0.05765986442565918,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    4,
+    11
+   ]
+  },
+  "CK06_trap_move": {
+   "steps": [
+    416,
+    416
+   ],
+   "p0Diff": 1.7387792468070984e-06,
+   "v0Diff": 0.026523858308792114,
+   "settleEndDiff": 0.001783760788384825,
+   "maxDiff": 0.009728597477078438,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    13,
+    5
+   ]
+  },
+  "CK07_penetration_move": {
+   "steps": [
+    417,
+    418
+   ],
+   "p0Diff": 0.003598349168896675,
+   "v0Diff": 0.07182618975639343,
+   "settleEndDiff": 0.001618377114937175,
+   "maxDiff": 0.1758267879486084,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    8,
+    1
+   ]
+  },
+  "CK08_flat_walk_noinput": {
+   "steps": [
+    105,
+    105
+   ],
+   "p0Diff": 0.00205230712890625,
+   "v0Diff": 0.14505395479500294,
+   "settleEndDiff": 0.0034703612327575684,
+   "maxDiff": 0.011408954858779907,
+   "firstInputStep": [
+    null,
+    null
+   ],
+   "order": [
+    11,
+    6
+   ]
+  },
+  "CK09_void_hold": {
+   "steps": [
+    80,
+    80
+   ],
+   "p0Diff": 3.32266790792346e-06,
+   "v0Diff": 0.028125695884227753,
+   "settleEndDiff": 0.021722426638007164,
+   "maxDiff": 0.05981085589155555,
+   "firstInputStep": [
+    null,
+    null
+   ],
+   "order": [
+    6,
+    9
+   ]
+  },
+  "CK10_flat_jump": {
+   "steps": [
+    165,
+    165
+   ],
+   "p0Diff": 0.0010136514902114868,
+   "v0Diff": 0.09202717244625092,
+   "settleEndDiff": 0.0008268207311630249,
+   "maxDiff": 0.0063629150390625,
+   "firstInputStep": [
+    null,
+    null
+   ],
+   "order": [
+    0,
+    0
+   ]
+  },
+  "CK11_curb_trigger_sprint": {
+   "steps": [
+    415,
+    415
+   ],
+   "p0Diff": 0.0018035024404525757,
+   "v0Diff": 0.1398467682301998,
+   "settleEndDiff": 0.006798639893531799,
+   "maxDiff": 0.2659524455666542,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    7,
+    2
+   ]
+  },
+  "CK12_curb_oblique60_sprint": {
+   "steps": [
+    423,
+    423
+   ],
+   "p0Diff": 0.0023164600133895874,
+   "v0Diff": 0.02620968222618103,
+   "settleEndDiff": 0.005519360303878784,
+   "maxDiff": 0.07661604881286621,
+   "firstInputStep": [
+    30,
+    30
+   ],
+   "order": [
+    12,
+    8
+   ]
+  },
+  "CK13_flat_hold_timescale0": {
+   "steps": [
+    30,
+    30
+   ],
+   "p0Diff": 0.0008714497089385986,
+   "v0Diff": 0.14146868139505386,
+   "settleEndDiff": 0.0016670865006744862,
+   "maxDiff": 0.0016670865006744862,
+   "firstInputStep": [
+    null,
+    null
+   ],
+   "order": [
+    1,
+    13
+   ]
+  },
+  "CK14_flat_hold_hang": {
+   "steps": [
+    30,
+    30
+   ],
+   "p0Diff": 0.00162506103515625,
+   "v0Diff": 0.10314242541790009,
+   "settleEndDiff": 0.005070865154266357,
+   "maxDiff": 0.005070865154266357,
+   "firstInputStep": [
+    null,
+    null
+   ],
+   "order": [
+    5,
+    10
+   ]
+  }
+ }
+}

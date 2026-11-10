@@ -1,0 +1,31 @@
+{
+  "milestone": "M2",
+  "status": "DONE",
+  "scope": "H1 source restoration/import/compile/editor-resolved audit; all H1-H7 source objects and dependency manifests verified",
+  "historical_runtime_awake_audits": "not_started",
+  "windows_tests": "not_started",
+  "physics_tests_run": false,
+  "primary_body": {
+    "path": "Player",
+    "mode": "Continuous",
+    "interpolation": "Interpolate",
+    "constraints": "FreezeRotation",
+    "mass": 1.0,
+    "linearDamping": 0.0,
+    "angularDamping": 0.05000000074505806,
+    "isKinematic": false,
+    "useGravity": true
+  },
+  "standalone_backend_resolved": "Mono2x",
+  "fixed_delta_time": 0.019999992102384567,
+  "scene_colliders": {
+    "mesh": 312,
+    "box": 118,
+    "capsule": 15
+  },
+  "historical_original_files_verified": 5889,
+  "historical_original_files_changed": [],
+  "source_repositories_tracked_diff_empty": true,
+  "free_bytes": 15456165888,
+  "next_milestone": "M3"
+}

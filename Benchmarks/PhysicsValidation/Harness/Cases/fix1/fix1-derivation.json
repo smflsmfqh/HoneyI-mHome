@@ -1,0 +1,13 @@
+{
+ "generatedBy": "Tools/make_cases_fix1.py",
+ "files": {
+  "fix1-b.json": {
+   "sha256": "d94e17827dcbe06d2d11948f13021f92d46f5478fd77d6b9a02ae79c1d966157",
+   "cases": 62
+  },
+  "fix1-c.json": {
+   "sha256": "a2169a224da5de585d3b834570b4912a22906123ef0b1c01318f996892848567",
+   "cases": 12
+  }
+ }
+}

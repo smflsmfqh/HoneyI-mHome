@@ -1,0 +1,25 @@
+{
+ "recordedUtc": "2026-11-09T14:46:59.156019+00:00",
+ "windowsResultsSeen": false,
+ "bundleShaGivenToUser": false,
+ "summarizer": {
+  "file": "Tools/summarize_M6.py",
+  "sha256": "185241a05baf05b4f108979bf06314fca42c0b803654c4e8ba3f4965320d9d4a"
+ },
+ "selfTest": "M5 결과(trackB-01 바닥·연석, fix1 b-ctl·b-game, repeat-01 H0 full)를 M6 run ID로 심볼릭 링크한 시험 폴더(scratchpad, 인용 안 함)에서 실행: 48 run 파싱, 문제 0, 바닥 낙하 S0a 42·S0b 72·S0p 42·S1 0·S2 12·S3 0, 연석 2×2 관통 54·36·28·27, ⑤ 통제 21·18→0·0 등 M5 집계와 일치",
+ "notes": [
+  "H0 run은 repeat-01과 같게 프로필 없음·-benchFps 60으로 실행(RunM6B.cmd)",
+  "판정용 분석기 실행: analyze_physics_bench.py <run> --thresholds Harness/Cases/thresholds-B1.json --out Evidence/M6/analysis/<run>-a1 (모든 run 동일, --capabilities 없음)"
+ ],
+ "geometry": {
+  "file": "Evidence/M6/geom/geom-analysis-m6.json",
+  "sha256": "ff53559ae3b6c59449007cc97dc525290c6d96656899b1ddec32fc8fa56e623b",
+  "vsM5": "geom-analysis-a1과 결과 값 전부 동일(입력 파일 경로만 다름)"
+ },
+ "tools": {
+  "Tools/build_m6.sh": "df13fb1133a879c4baa81f7757a1df6e0c85cad17f3b076e50ad9d2c0ce1caa3",
+  "Tools/make_bundle_m6.py": "feef23518502b0aa754cd8360a0f73077baed4e5f5fe62264a6bf64217066e66",
+  "Harness/Windows/RunM6A.cmd": "39f761400c838030ac76c5209c91486e5930b85430e1c77204a6723f5628b11e",
+  "Harness/Windows/RunM6B.cmd": "966bb5b965660f7a27e4716d4cc869de97ea9337be83ace3fb46b8f700d9052c"
+ }
+}

@@ -1,0 +1,25 @@
+{
+    "seed": 1,
+    "caseIds": [
+        "CK10_flat_jump",
+        "SM01_S2_road_hold",
+        "CK06_trap_move",
+        "CK12_curb_oblique60_sprint",
+        "CK04_stepdown_walk",
+        "SM02_S3_road_hold",
+        "CK15_flat_hold_slowload",
+        "SM03_S2_side_hold",
+        "SM04_S2_curb_sprint",
+        "CK01_flat_hold",
+        "CK08_flat_walk_noinput",
+        "CK02_flat_walk",
+        "CK13_flat_hold_timescale0",
+        "SM05_S3_curb_sprint",
+        "CK07_penetration_move",
+        "CK11_curb_trigger_sprint",
+        "CK14_flat_hold_hang",
+        "CK09_void_hold",
+        "CK03_hole_walk_slow",
+        "CK05_curb_sprint"
+    ]
+}

@@ -1,0 +1,300 @@
+[
+  {
+    "run": "M4-H1-mac-map-01",
+    "case": "SM04_S2_curb_sprint",
+    "first_wall_contacts": [],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 0,
+        "count": 537
+      },
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 1,
+        "count": 55
+      },
+      {
+        "path": "Zone/NPCMovementZone/CatZone3",
+        "body": 1,
+        "count": 2
+      },
+      {
+        "path": "Zone/NPCMovementZone/Zone12",
+        "body": 1,
+        "count": 2
+      },
+      {
+        "path": "Zone/NPCMovementZone/Zone10",
+        "body": 1,
+        "count": 2
+      }
+    ]
+  },
+  {
+    "run": "M4-H1-mac-map-01",
+    "case": "SM03_S2_side_hold",
+    "first_wall_contacts": [],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 0,
+        "count": 179
+      },
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 1,
+        "count": 8
+      }
+    ]
+  },
+  {
+    "run": "M4-H1-mac-map-01",
+    "case": "SM05_S3_curb_sprint",
+    "first_wall_contacts": [
+      {
+        "path": "Surface/NotWalkableSurface/V_surface2",
+        "normalY": 0.18597941100597382,
+        "dotForward": -0.9825536012649536
+      }
+    ],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 0,
+        "count": 481
+      },
+      {
+        "path": "Surface/NotWalkableSurface/V_surface2",
+        "body": 0,
+        "count": 286
+      },
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 1,
+        "count": 39
+      },
+      {
+        "path": "Surface/NotWalkableSurface/V_surface2",
+        "body": 1,
+        "count": 9
+      }
+    ]
+  },
+  {
+    "run": "M4-H1-mac-map-01",
+    "case": "SM01_S2_road_hold",
+    "first_wall_contacts": [],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 0,
+        "count": 180
+      },
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 1,
+        "count": 28
+      }
+    ]
+  },
+  {
+    "run": "M4-H1-mac-map-01",
+    "case": "SM02_S3_road_hold",
+    "first_wall_contacts": [],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 0,
+        "count": 180
+      },
+      {
+        "path": "PostProcessingVolume/Ground",
+        "body": 1,
+        "count": 28
+      }
+    ]
+  },
+  {
+    "run": "M4-H7-mac-smoke-01",
+    "case": "SM01_S2_road_hold",
+    "first_wall_contacts": [],
+    "upward_contacts": [
+      {
+        "path": "Zone/CarDrivingZone/Zone3",
+        "body": 1,
+        "count": 466
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 1,
+        "count": 466
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 0,
+        "count": 359
+      },
+      {
+        "path": "Zone/CarDrivingZone/Zone3",
+        "body": 0,
+        "count": 359
+      }
+    ]
+  },
+  {
+    "run": "M4-H7-mac-smoke-01",
+    "case": "SM02_S3_road_hold",
+    "first_wall_contacts": [],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_019_floor",
+        "body": 1,
+        "count": 437
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 1,
+        "count": 437
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 0,
+        "count": 359
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_019_floor",
+        "body": 0,
+        "count": 359
+      }
+    ]
+  },
+  {
+    "run": "M4-H7-mac-smoke-01",
+    "case": "SM03_S2_side_hold",
+    "first_wall_contacts": [],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/Set_B_Tiles_04_floor (24)",
+        "body": 1,
+        "count": 430
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/Set_B_Tiles_04_floor (24)",
+        "body": 0,
+        "count": 359
+      }
+    ]
+  },
+  {
+    "run": "M4-H7-mac-smoke-01",
+    "case": "SM04_S2_curb_sprint",
+    "first_wall_contacts": [
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_009",
+        "normalY": -6.705187729494355e-07,
+        "dotForward": -0.9999999403953552
+      }
+    ],
+    "upward_contacts": [
+      {
+        "path": "Zone/CarDrivingZone/Zone3",
+        "body": 0,
+        "count": 787
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 0,
+        "count": 786
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 1,
+        "count": 617
+      },
+      {
+        "path": "Zone/CarDrivingZone/Zone3",
+        "body": 1,
+        "count": 609
+      }
+    ]
+  },
+  {
+    "run": "M4-H7-mac-smoke-01",
+    "case": "SM05_S3_curb_sprint",
+    "first_wall_contacts": [
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",
+        "normalY": 0.0,
+        "dotForward": -0.9999999403953552
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",
+        "normalY": 0.0,
+        "dotForward": -0.9999999403953552
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",
+        "normalY": 0.0,
+        "dotForward": -0.9999999403953552
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",
+        "normalY": 0.0,
+        "dotForward": -0.9999999403953552
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",
+        "normalY": 0.0,
+        "dotForward": -0.9999999403953552
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019",
+        "normalY": -6.705187729494355e-07,
+        "dotForward": -0.9999999403953552
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18",
+        "normalY": -5.827679450121082e-10,
+        "dotForward": -0.9999110698699951
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18",
+        "normalY": -5.827679450121082e-10,
+        "dotForward": -0.9999110698699951
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18",
+        "normalY": -5.827679450121082e-10,
+        "dotForward": -0.9999110698699951
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_019/CurbColliders/Curb_18",
+        "normalY": -6.711014748361777e-07,
+        "dotForward": -0.9999110698699951
+      }
+    ],
+    "upward_contacts": [
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 1,
+        "count": 1842
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_019_floor",
+        "body": 1,
+        "count": 1842
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_009_road",
+        "body": 0,
+        "count": 786
+      },
+      {
+        "path": "PostProcessingVolume/Demonstration/FloorColliders/road_019_floor",
+        "body": 0,
+        "count": 786
+      }
+    ]
+  }
+]

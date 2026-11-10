@@ -1,0 +1,76 @@
+{
+ "experimentId": "M10-r1",
+ "recordedUtc": "2026-11-10T12:30:00+00:00",
+ "inputs": {
+  "resultsZip": "Evidence/PhysicsBench-M10-Results-20261110T192633.zip",
+  "resultsZipSha256": "11eff87f246433e72389c402f1564933a2728c0357408a9446ed768ccea76b39",
+  "extracted": "Evidence/M10/windows/PhysicsBench-M10-Results-20261110T192633/ (원시 파일 수정 없음)",
+  "analysis": "Evidence/M10/analysis/<run>-a1 (analyze_physics_bench.py c9950f0b… + thresholds-B1 4aca1580…, 실행 전 SHA 확인)",
+  "summary": "Evidence/M10/M10-r1-summary.json",
+  "summarySha256": "8fd20ce1c6727598b44af3d9e09f82fc105956d62ae4f4f3065aba799226e8f6",
+  "freeze": "Evidence/M10/M10-r1-freeze.json (revision 2, 851959ea…, 변경 없음)",
+  "toolShaCheck": "analyzer·thresholds·summarize_M10·case 파일(f8210a3e…) SHA 모두 freeze 기록과 같음"
+ },
+ "validity": {
+  "runs": "6/6 state completed, exit 0, planned=finished=84, harnessErrors 1/run(의도된 CK)",
+  "provenance": "BASE 3 run = M6-BASE-win-01·씬 9d0bb583, CURBFIX 3 run = M6-CURBFIX-win-01·씬 12ba8273, experimentId M10-r1, casesSha256 f8210a3e 전부 일치. CK 4/4 전 run, 제외 0, problems []",
+  "pc": "같은 i5-12500(Windows 10 Education 19045, GTX 1660 SUPER)",
+  "physics": "기본 설정 0.01/ContinuousDynamic(trial 기록 fixedDeltaTime 0.01)"
+ },
+ "frozenVerdict": {
+  "verdict": "partial",
+  "BASE_failConditions": "19/79",
+  "CURBFIX_failConditions": "10/76",
+  "CURBFIX_failTrials": "30/228",
+  "BASE_failTrials": "57/237",
+  "failOnlyInCURBFIX": [],
+  "paired": "대응 trial 228쌍: 개선 21(passThrough→recovered 12, rescue_failed→recovered 9), 악화 0, 범주 변화 0",
+  "frozenSentenceTemplate": "다른 지점에서 관통·끼임을 줄였지만 없애지는 못했다(k/80 → k/80, 남은 지점 명시)."
+ },
+ "matchedComparison": {
+  "why": "off-face 제외가 빌드마다 다름(BASE 1조건, CURBFIX 4조건). BASE에서 실패였던 B_G04_BoostSprint_a30(rescue_failed)·B_G06_Boost_a30(escaped_by_rescue)이 CURBFIX에서 off-face가 되어 CURBFIX 분모에서만 빠짐 → 19→10은 개선을 2조건 부풀림. 두 빌드 모두 유효한 76조건으로 다시 셈(동결 규칙에서 바로 나오는 값, 새 판정 아님)",
+  "all": "17/76 → 10/76",
+  "byStratum": {"A 직선": "4/30 → 0/30", "B 곡선·사선": "3/26 → 0/26", "C 접합부": "10/20 → 10/20"},
+  "bySite": {"G01": "2/10 → 0/10", "G02": "0/10 → 0/10", "G03": "2/10 → 0/10", "G04": "1/8 → 0/8", "G05": "2/10 → 0/10", "G06": "0/8 → 0/8", "G07": "5/10 → 5/10", "G08": "5/10 → 5/10"},
+  "frozenBySite": {"G01": "2/10 → 0/10", "G02": "0/10 → 0/10", "G03": "2/10 → 0/10", "G04": "2/9 → 0/8", "G05": "2/10 → 0/10", "G06": "1/10 → 0/8", "G07": "5/10 → 5/10", "G08": "5/10 → 5/10"},
+  "note": "G06의 동결 표 1→0은 측정된 성공이 아님(유일한 BASE 실패 조건이 CURBFIX에서 off-face로 빠짐)"
+ },
+ "offFace": {
+  "BASE": ["B_G04_Sprint_a30 ×3"],
+  "CURBFIX": ["B_G04_BoostSprint_a30 ×3", "B_G04_Sprint_a30 ×3", "B_G06_Boost_a30 ×3", "B_G06_BoostSprint_a30 ×3"],
+  "whyNotCounted": "분석기 통과 판정은 끝없는 평면 기준. 통과 순간 위치가 대상 면 끝(곡선·사선 연석의 짧은 면)을 지나 있어 대상 연석 관통으로 셀 수 없음(freeze faceRangeGuard)",
+  "postHocProbe": "결과를 본 뒤 진단(BASE 씬 기하, 아래 postHoc 참고): G04 off-face 통과 위치는 이웃 Curb_13 안 1.1~1.7cm, G06은 어떤 연석 안도 아닌 도로 위. CURBFIX off-face 12 trial은 모두 첫 후진 단계에서 이탈. BASE B_G04_Sprint_a30은 같은 위치(Curb_13 안)에 끝까지 머묾 = 실제로는 BASE 쪽 끼임이 제외된 것. 즉 off-face 제외는 CURBFIX 실패를 숨기지 않았고, BASE 실패 일부를 숨겼음(보수적 방향)"
+ },
+ "strataRule": {
+  "named": ["A", "B", "C"],
+  "C": "접합부는 이름을 넣되 결과는 '수정 전후 동일(G07·G08 각 5/10)'로 쓴다. 효과는 A·B(mid)에서만"
+ },
+ "failurePattern": {
+  "mid(A·B)": "BASE 실패는 모두 Boost·BoostSprint a30(G01·G04는 끼임 rescue_failed, G03·G05는 passThrough, G06 escaped_by_rescue). c00·p02·m02·Sprint·Move는 mid 6지점 BASE에서도 실패 0 — M6의 S2 정면 끼임과 다른 양상",
+  "joint(C)": "G07·G08 모두 Sprint·Boost c00, Sprint·Boost a30, BoostSprint a30만 실패(각 3/3, 두 빌드 동일). ±2cm 옆(p02·m02)은 통과하지 않음. 실패 조건은 모두 wallPoint = 두 road_020 박스 끝면이 맞닿는 이음매를 정확히 겨눔. 면 평면 너머 5.9~10.7r 들어간 뒤 모두 reverse 단계에서 이탈(trapped 아님). 동결 범주로는 passThrough(실패) 유지"
+ },
+ "aux": {
+  "CURBFIX_recoveredMaxPen": "3.47r = 3.27cm (B_G05_Boost_m02), 중앙 1.6r, n=174",
+  "note": "M6 S2·S3의 최대 2.6cm보다 큼. ⑤ 보조 문장은 '최대 3.3cm(10지점 기준)' 또는 범위별로 둘 다 쓴다"
+ },
+ "postHoc": {
+  "status": "결과를 본 뒤 만든 진단. freeze 밖, 판정에 쓰지 않음, 가설 수준",
+  "tools": {
+   "../.physics-work/project-H7B/Assets/PhysicsBench/Editor/PhysicsBenchJointDump.cs": "f00a62123029c1cbc6607f6f65e0b227fcd4141e1f47483f3d6c1c38ed2408c0",
+   "../.physics-work/project-H7B/Assets/PhysicsBench/Editor/PhysicsBenchPointProbe.cs": "8f490f9435fdf4fa613d3f248402f8e829a0317b340dc4df7b9e899c80b29c52"
+  },
+  "outputs": {
+   "Evidence/M10/post/m10-joint-geometry.txt": "9b39a53081ecb477326f5edfdfb6ffe5c8ba385745b6887320e1a6b1cff57240",
+   "Evidence/M10/post/m10-probe-points.txt": "e63cc52c0e2155dcc1d2504e03e2e9432466442da3938b6c08bb639fb2aef74a",
+   "Evidence/M10/post/m10-probe.txt": "3dec0eb33a771fdb4d7f84d2cb2485bf395bc59bba1b26b80b55eb95638cf020"
+  },
+  "scene": "복제 프로젝트 씬 = 9d0bb583(BASE). CURBFIX는 밑면만 -0.3으로 연장하고 x·z 배치는 같으므로 이음매 배치·y -0.09 높이의 포함 판정은 두 빌드가 같다. CURBFIX y 깊이는 이 진단으로 인용하지 않는다",
+  "jointGeometry": "G07: road_020 박스 x[-45,-30]·x[-30,-15]가 x=-30에서 틈 없이 맞닿음(도로 쪽 면 z 28.6339 vs 28.6348, 0.9mm 차). G08: z[30,45]·z[45,60]이 z=45에서 맞닿음(면 x -13.6339 vs -13.6348). 두 박스 두께 0.23m",
+  "jointHypothesis": "G07 가장 깊은 위치(-29.9906, 28.6925)에서 개미 중심은 한 박스 안, 도로 쪽 면에서 5.8cm·이음매 끝면에서 0.94cm(=r). 가장 가까운 면이 도로 쪽이 아니라 이음매 끝면이라 침투 해소가 옆 박스 쪽으로 밀고, 옆 박스 끝면이 되밀어 도로 쪽으로 빠져나오지 못한 채 이음매를 따라 들어간 것으로 보임(끝면 기전). 밑면 연장은 이 기전을 바꾸지 않음 → 두 빌드 결과 동일과 맞음. 미검증: 이음매 겹침·박스 병합 수정은 별도 freeze가 필요"
+ },
+ "portfolioGuidance": {
+  "frozenSentence": "설계에 쓰지 않은 연석 8지점에서 관통·끼임 실패 조건을 19/79 → 10/76으로 줄였지만 없애지는 못했다(두 빌드 공통 76조건 기준 17 → 10). 직선(A)·곡선/사선(B) 6지점은 7 → 0이고, 남은 10조건은 모두 접합부(C) 2지점이며 수정 전후 동일(각 5/10)",
+  "mustAccompany": ["지점별 k→k 표(matchedComparison.bySite와 frozenBySite)", "off-face 4조건 ID와 제외 이유", "3회 반복은 거의 결정적 재현(독립 표본 아님)", "PC 1대, 기본 물리 0.01/CCD, 통제 조건"],
+  "doNotWrite": ["연석 수정이 맵 전체 연석에 일반화됐다", "접합부 원인이 확인됐다(가설 수준)", "최대 침투 2.6cm(10지점 기준 3.3cm)"]
+ }
+}

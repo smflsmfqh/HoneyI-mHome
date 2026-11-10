@@ -1,0 +1,10 @@
+{
+    "buildId": "M4-H1-win-01",
+    "result": "Succeeded",
+    "totalErrors": 0,
+    "totalWarnings": 21,
+    "totalSizeBytes": 306946321,
+    "outputPath": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/builds/M4-H1-win-01/PhysicsBench.exe",
+    "durationSec": 482.0348205566406,
+    "buildInfo": "{\"buildId\":\"M4-H1-win-01\",\"versionId\":\"H1\",\"target\":\"StandaloneWindows64\",\"scriptingBackend\":\"Mono2x\",\"apiCompatibility\":\"NET_Standard_2_0\",\"managedStripping\":\"Disabled\",\"projectDefines\":\"UNITY_POST_PROCESSING_STACK_V2;DOTWEEN\",\"extraDefines\":\"PHYSICS_BENCH\",\"development\":true,\"unityVersion\":\"6000.3.15f1\",\"rootSha\":\"9b83a248d281173446c0640ae1d6740506150c4d\",\"assetSha\":\"ffd2c2e0be38f63f7ff4ad6d88514f8ffb3d93aa\",\"scene\":\"Assets/Scenes/AntDemoScene.unity\",\"sceneSha256\":\"2b0bafa8ca29cf7630a49458138e26182ece8f569f210d07a8ab661793358c66\",\"casesSha256\":\"01418a268926f2423535cb8693fbc435be0017c2260c9120e73d95567505b0c1\",\"profileSha256\":\"a8e8ea1a72b277f6b0fba2d1185515ed060da111f0606eb39680e1483c74e5e3\",\"harnessFiles\":[\"Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs 82643341b91f682e7e314270968ebd717b2cea8403a328b31b429a7688192f97\",\"Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs 7df863185735f0741d842d92982592578180f06e3fcc73ac2af95bef1a14372e\",\"Assets/PhysicsBench/Runtime/PhysicsBenchData.cs f4ce03b11ef2217399563c76cb8a58e0ae81389aa2a6a49dec4d6e068e21c67e\",\"Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs 0f87704e737191944d83fec35e821b31cbc946d15558ada2eb7230e8c8e3305c\",\"Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs fce1c07d47700b291d3ffa2621650ad4949545bd5c608c4c778484d6e61a82dd\",\"Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs 83ca42e56105ad65cf900928b9bbc03d4f238fd9856dcbc1d1f385a8196cea5c\"],\"fixedDeltaTimeProject\":0.019999992102384568,\"runInBackgroundProject\":false,\"fullScreenModeProject\":\"FullScreenWindow\",\"builtUtc\":\"2026-10-29T13:08:33.6417020Z\"}"
+}

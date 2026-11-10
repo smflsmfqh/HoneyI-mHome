@@ -1,0 +1,77 @@
+{
+ "generatedBy": "Tools/make_cases_e2c.py",
+ "source": "Harness/Cases/e2b",
+ "capabilities": "Harness/Cases/capabilities-r1.json",
+ "capabilitiesSha256": "7b06581feccc77bbe7abfecc50e26939b3cf40670e728f9c591f9931255b42ac",
+ "versions": {
+  "Hm1": {
+   "mode": "derived",
+   "sourceSha256": "482c1e0759e0469b1bffa17a0661f4268fecb3e827560f7600ce081c6ab0e08a",
+   "outSha256": "a77a34c75ad004cd51a80f02f24db637bf885b8ee6e9a17db67eb14e27e976bd",
+   "cases": 120,
+   "droppedJump": [
+    "E1_W00R_jump",
+    "E1_W01R_jump",
+    "E1_W02R_jump",
+    "E1_W03R_jump",
+    "E1_W04R_jump",
+    "E1_W05R_jump",
+    "E1_W06R_jump",
+    "E1_W07R_jump",
+    "E1_W08T_jump",
+    "E1_W09T_jump",
+    "E1_W10T_jump",
+    "E1_W11T_jump",
+    "E1_W12T_jump",
+    "E1_W13T_jump",
+    "E2_C01_jump",
+    "E2_C02_jump",
+    "E2_C03_jump",
+    "E2_C04_jump",
+    "E2_C05_jump",
+    "E2_C06_jump",
+    "E2_C07_jump",
+    "E2_C08_jump",
+    "E2_C09_jump",
+    "E2_C10_jump",
+    "E2_C11_jump",
+    "E2_C12_jump"
+   ],
+   "changed": [
+    "E2_B01_edge",
+    "E2_B02_edge",
+    "E2_B03_edge",
+    "E2_B04_edge"
+   ]
+  },
+  "H0": {
+   "mode": "derived",
+   "sourceSha256": "01ebd00958741124df42e9a8495008508db8339eea50e719709830c19a2869b5",
+   "outSha256": "e345e736fff14cf0c7c22b949e8dc62309430d36bd926bbb824957eeead3636c",
+   "cases": 146,
+   "droppedJump": [],
+   "changed": [
+    "E2_B01_edge",
+    "E2_B02_edge",
+    "E2_B03_edge",
+    "E2_B04_edge"
+   ]
+  },
+  "H1": {
+   "mode": "byte_copy",
+   "sourceSha256": "3a91d809bda7c957982dbe5b62129df614059d43a4f95a3630c59a382421580c",
+   "outSha256": "3a91d809bda7c957982dbe5b62129df614059d43a4f95a3630c59a382421580c",
+   "cases": 146,
+   "droppedJump": [],
+   "changed": []
+  },
+  "H7": {
+   "mode": "byte_copy",
+   "sourceSha256": "42732af728e41a5c2a0cf975a6300938f3abee2fccf18614bdbd95b7fdf976ce",
+   "outSha256": "42732af728e41a5c2a0cf975a6300938f3abee2fccf18614bdbd95b7fdf976ce",
+   "cases": 154,
+   "droppedJump": [],
+   "changed": []
+  }
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "run": "Evidence/M5/windows/PhysicsBench-Pilot02c-Results-20261108T163441/W-H7-base-p02c-20261108T163441",
+ "classified": "Evidence/M5/analysis/W-H7-base-p02c-20261108T163441-a1/classified.jsonl",
+ "probe": "probe-H7-e2c.json",
+ "counts": {
+  "point_case": 1
+ },
+ "falls": [
+  {
+   "caseId": "E1_P24T_hold",
+   "fallPos": [
+    -86.0,
+    0.392,
+    65.0
+   ],
+   "phase": "settle",
+   "t": 114.31,
+   "contactsAtFall": [
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646,
+    296646
+   ],
+   "start": [
+    -86.0,
+    0.41999998688697815,
+    65.0
+   ],
+   "category": "point_case"
+  }
+ ]
+}

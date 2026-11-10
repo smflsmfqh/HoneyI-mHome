@@ -1,0 +1,99 @@
+{
+ "freezeId": "M5-trackB-freeze",
+ "recordedUtc": "2026-11-08T11:23:49.137199+00:00",
+ "status": "Windows 실행 전 동결. 이후 판정 규칙·case·빌드를 바꾸면 새 revision",
+ "nature": "트랙 B: H7 코드 고정, 바닥 구성·물리 설정만 변경한 구성 효과 실험(M5 통제 탐색). 역사 재현 아님. 트랙 A와 섞지 않음",
+ "plan": "Docs/physics-collider-trackB-plan.md",
+ "workspace": "Benchmarks/.physics-work/project-H7B, harness-sync-H7B-02. 씬 원본 백업 .physics-work/H7B-AntDemoScene.unity.orig (SHA 9d0bb583…). Read/Write: S0p·S2 빌드만 true(readable-true-01.json), 이후 false로 복원(readable-false-01.json)",
+ "builds": {
+  "M5-B-S0a-win-01": {
+   "result": "Succeeded",
+   "errors": 0,
+   "variantRecord": "Evidence/M5/trackB/variant-M5-B-S0a-win-01.json",
+   "sceneSha256": "5ad9d7afeac72560af7a1ea8639b6308ea8456d930b41e65a38dfba63c36fd13",
+   "floorMeshesReadable": 0,
+   "cases": "Harness/Cases/trackB/trackB-floor-S0a.json"
+  },
+  "M5-B-S0b-win-01": {
+   "result": "Succeeded",
+   "errors": 0,
+   "variantRecord": "Evidence/M5/trackB/variant-M5-B-S0b-win-01.json",
+   "sceneSha256": "1533788eb63164f3e4c025e0968c075df9846cbe26b74e16401350bc0bd94337",
+   "floorMeshesReadable": 0,
+   "cases": "Harness/Cases/trackB/trackB-floor-S0b.json"
+  },
+  "M5-B-S0p-win-01": {
+   "result": "Succeeded",
+   "errors": 0,
+   "variantRecord": "Evidence/M5/trackB/variant-M5-B-S0p-win-01.json",
+   "sceneSha256": "93bf05068781e071c9b4361e55189aab7b6eb517ce8ec119c0fa5a3a0234a0a3",
+   "floorMeshesReadable": 100,
+   "cases": "Harness/Cases/trackB/trackB-floor-S0p.json"
+  },
+  "M5-B-S1-win-01": {
+   "result": "Succeeded",
+   "errors": 0,
+   "variantRecord": "Evidence/M5/trackB/variant-M5-B-S1-win-01.json",
+   "sceneSha256": "9ab89b887f0054b2b5749ca270c141738164fc27f749d789f8a0f2952ce020eb",
+   "floorMeshesReadable": 0,
+   "cases": "Harness/Cases/trackB/trackB-floor-S1.json"
+  },
+  "M5-B-S2-win-01": {
+   "result": "Succeeded",
+   "errors": 0,
+   "variantRecord": "Evidence/M5/trackB/variant-M5-B-S2-win-01.json",
+   "sceneSha256": "26c82f5762d2a7939183349281b955554919aa50793d1606cbe397c937fd6337",
+   "floorMeshesReadable": 100,
+   "cases": "Harness/Cases/trackB/trackB-floor-S2.json"
+  },
+  "M5-B-S3-win-01": {
+   "result": "Succeeded",
+   "errors": 0,
+   "variantRecord": "Evidence/M5/trackB/variant-M5-B-S3-win-01.json",
+   "sceneSha256": "2bee09ccb698467377bd12c08ea1fd51e036482f706882bff95d205c741f4575",
+   "floorMeshesReadable": 0,
+   "cases": "Harness/Cases/trackB/trackB-floor-S3.json"
+  }
+ },
+ "runs": {
+  "floor": "6 변형 × seed 1,1,2 = 18 run. cases trackB-floor-<V>.json(28건 = E2_C 24 + CK 4), -benchDt 0.02 -benchCcd Discrete(수정 전 시기 물리 설정)",
+  "curb": "S3 빌드 × (dt 0.02|0.01) × (Discrete|ContinuousDynamic) × seed 1,1,2 = 12 run. cases trackB-curb-S3.json(22건 = 연석 돌진 18 + CK 4)"
+ },
+ "rules": {
+  "primaryOutcome": "rootOutcome(주 캡슐). 이유: Mac smoke에서 현재 코드는 dt 0.02에서 자식 body가 스텝당 3.9mm씩 가라앉음(CK01 고정 바닥 포함, dt 0.01이면 0, CCD 무관: B-S3-ck01-dt02ccd/dt01disc). 자식 body 현상은 별도 관찰로만 보고",
+  "fall": "thresholds-B1: minAllowedY(선의 시각 최저) 아래 0.5m(53.2r) 하강",
+  "curbPassThrough": "rootOutcome passed_curb 이면서 통과 시점 주 캡슐 bottomY < wallTopY(0.1). Mac smoke(0.01/CCD) 9/18이 모두 bottomY -0.115~-0.119(도로면 아래로 파고든 뒤 연석 Box 아래로 미끄러짐)로 이 정의에 해당",
+  "curbStuck": "방향 탈출 실패 = rootOutcome escaped_by_rescue 또는 rescue_failed. 완전 끼임 = rescue_failed",
+  "manipulationChecks": "Windows player log 기준. S0b: 바닥(road_/Set_B_Tiles) MeshCollider Read/Write 오류 > 0. S0a·S0p·S2: 바닥 오류 0. 미충족 변형은 무효",
+  "validity": "initialPenDepth > 0.005m trial 무효. CK 판정 검증 4/4 아닌 run 제외. 하네스 오류 trial 분모 제외. PC별 분리",
+  "claim1": "지지: S0a 또는 S0b의 E2_C 경로에서 root 낙하 ≥1 이고 S3는 0. S0p에서도 낙하가 남으면 '설정만으로는 해결되지 않았다'. S0p에서 0이면 대체 문장(설정 의존)",
+  "claim3": "S3 root 낙하 0, 기하 결과(geom-summary)와 함께 보고",
+  "claim4": "같은 case 대응으로 관통·끼임 수를 4 설정 비교. 0.01/CCD에서 관통이 0.02/Discrete보다 줄면 지지. 관통 차이 없거나 늘면 대체 문장(plan 1절)"
+ },
+ "macSmokeNotUsedAsResult": [
+  "B-S3-floor-mac-01",
+  "B-S3-curb-ccd01-mac-01",
+  "B-S0b-floor-mac-01",
+  "B-S0p-floor-mac-01",
+  "B-S3-ck01-dt02ccd-mac-01",
+  "B-S3-ck01-dt01disc-mac-01"
+ ],
+ "files": {
+  "Harness/Cases/thresholds-B1.json": "4aca1580da61ed369b45865666f1dd60f963cddd59960a1178423e09e3f979b3",
+  "Harness/Tools/analyze_physics_bench.py": "c9950f0b90f145bcaaeb8e1888fe4317897308da293c5e8d37c5533cf5103d97",
+  "Tools/make_cases_trackB.py": "a4ab89c3576c9d87d681f197dc601f034634c83001b0c3b43ee01f99a0b437af",
+  "Harness/Editor/PhysicsBenchVariants.cs": "ae7db86d1961f2efbc073b11116b5d3a479c89e5aec46328f8474559c7334a6b",
+  "Harness/Editor/PhysicsBenchGeom.cs": "75f11b24b1109a23aa41210c3144ccfa15153e78fd3fdac34f18ad36305d3fbc",
+  "Harness/Cases/profile-H7.json": "e39ac25655e41e36eda401db6ef8eb98ef63dad5bbbb222383dd99d1f5f22c02",
+  "Tools/analyze_trackB_geom.py": "4d93b60f9a718f3bacf490849ceea363079aa84379c35c7454e2487bdcb13dd5",
+  "Harness/Cases/trackB-geom-lines.txt": "ee755cce6a319d1fef469f91c437bcb4fc572fb48b01dc85ae1be073d6ebdfa3",
+  "Harness/Cases/trackB/trackB-cases-derivation.json": "10fd77d88bab7aa2d17a36cc71b55588c5cbd27737cf45fd4518ff8ce17e6b14",
+  "Harness/Cases/trackB/trackB-curb-S3.json": "6fcc6300f97fcc6c5d05f0949e47a3e68da663adfca31de5ab484c11e270e89a",
+  "Harness/Cases/trackB/trackB-floor-S0a.json": "db98786f91f2be877c10c1fb1e34b7d16b6d64bc05ea84eaf178e127529d3f29",
+  "Harness/Cases/trackB/trackB-floor-S0b.json": "2c40748a09cb9c05db04e8279210d505eca894df1c6e178ccecc2e61fcd9c0be",
+  "Harness/Cases/trackB/trackB-floor-S0p.json": "b27b1490e9c83ef8410bfef58f9861985145530e8ba766fdb4995f6323687be7",
+  "Harness/Cases/trackB/trackB-floor-S1.json": "a5949eb8a57a6d67c65f8c799f89eb0c8878e6083bc52de6f4cd329a6320ea30",
+  "Harness/Cases/trackB/trackB-floor-S2.json": "ffe990e1c95fead7f673eea3a685730606a93607df46894678518e2e9089dbdc",
+  "Harness/Cases/trackB/trackB-floor-S3.json": "44d25b571c567a3e37fde5a0f38a761cc0ba33cebf6c29015b3248d4740aedf8"
+ }
+}

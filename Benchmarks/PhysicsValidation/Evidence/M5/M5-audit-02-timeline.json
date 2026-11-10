@@ -1,0 +1,17 @@
+{
+ "recordedAt": "2026-10-30 (Asia/Seoul)",
+ "title": "바닥 충돌 구성 변경 연표(Git 근거)",
+ "timeline": [
+  {"when": "2026-05-18 18:05", "ref": "root 1a44741 (H0)", "fact": "첫 수직 낙하 기록 커밋. 도시 맵 MeshCollider 343개 모두 기본 cooking(30=CookForFasterSimulation|EnableMeshCleaning|Weld|FastMidphase), 균일 스케일 → 빌드에서 런타임 cooking 불필요. 받침판 없음. 플레이어 Discrete·보간 없음·dt 0.02·moveSpeed 3", "evidence": "Evidence/M5/probe-H0-colliders.json, Evidence/H0/*"},
+  {"when": "2026-05-22 07:20", "ref": "asset de8bfd48 '[correct]'", "fact": "Cartoon City 프리팹 79개의 m_CookingOptions 30 → 26(EnableMeshCleaning 제거). 도로·타일 12개 포함", "evidence": "git show de8bfd48 (에셋 저장소)"},
+  {"when": "2026-05-22 07:21", "ref": "root 5859367 '[Add] Game UI'", "fact": "PostProcessingVolume.prefab에 맵 전체 Ground BoxCollider(윗면 y=0) 추가", "evidence": "git show 5859367 (루트)"},
+  {"when": "2026-05-29 10:35", "ref": "root 9b83a24 (H1) '[2nd Build]'", "fact": "비기본 cooking + Read/Write 꺼짐 → 빌드에서 MeshCollider 런타임 cooking 오류(Mac·Windows Player 로그). 개미는 받침판 위(y=0)에 서고 도로 메시와 접촉하지 않음", "evidence": "Evidence/M3/H1-mac-player-meshcollider-readwrite-errors.txt, Evidence/M4/windows-smoke-0*-summary.json"},
+  {"when": "2026-05-29 이후", "ref": "root 2dd8695 → 442b99c (H2)", "fact": "Ground가 빈 부모로 바뀌고 Box 바닥 콜라이더로 전환"}
+ ],
+ "interpretation_limits": [
+  "05-22 변경이 낙하 대응 목적이었다는 것은 커밋 시각 근접성에서 나온 추정이다. 커밋 메시지에 목적이 적혀 있지 않다",
+  "H1 빌드에서 MeshCollider가 실제로 비어 있는지는 '접촉 기록 없음 + 받침판 위 지지 + 연석 통과'로 간접 확인했다. 받침판 없는 구성(예: H1에서 받침판만 끈 통제 조건)으로 직접 확인하지 않았다",
+  "H0에서 원래 수직 낙하가 Windows에서 재현되는지는 아직 확인하지 않았다. H0는 Read/Write 가설이 적용되지 않으므로 다른 원인(터널링·틈·메시 결함·초기 배치)을 따로 검토해야 한다"
+ ],
+ "implication_for_experiment_A": "Mesh 기준선은 H0(기본 cooking, 받침판 없음)가 적합하다. H1은 '비기본 cooking으로 빌드 충돌면 실패 + 받침판' 구성이라 Mesh 바닥 안정성의 기준선으로 쓸 수 없다. 포트폴리오의 '수직 낙하→Box 전환' 서술은 05-22의 cooking 변경과 받침판 추가 단계를 빠뜨리면 부정확하다"
+}

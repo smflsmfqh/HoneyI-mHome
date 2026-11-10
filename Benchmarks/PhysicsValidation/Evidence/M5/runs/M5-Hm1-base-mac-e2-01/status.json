@@ -1,0 +1,10 @@
+{
+    "runId": "M5-Hm1-base-mac-e2-01",
+    "state": "running",
+    "planned": 122,
+    "finished": 10,
+    "harnessErrors": 0,
+    "currentCase": "E1_P11R_hold",
+    "updatedUtc": "2026-10-30T13:18:18.8182000Z",
+    "message": ""
+}

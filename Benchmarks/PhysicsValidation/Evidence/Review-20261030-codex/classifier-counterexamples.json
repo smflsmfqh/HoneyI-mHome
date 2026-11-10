@@ -1,0 +1,45 @@
+{
+  "kind": "analysis_level_counterexamples_not_unity_physics_runs",
+  "child_fall_while_root_supported": {
+    "input": "Existing CK01 root/support trace retained; child body Y changed in memory below fall threshold for entire trial",
+    "outcome": "pass",
+    "flags": [
+      "child_fall"
+    ],
+    "shows": "Sustained child_fall does not prevent pass"
+  },
+  "composite_input": {
+    "source_path": "Harness/Runtime/PhysicsBenchInput.cs:111-132",
+    "event": {
+      "action": "Move+Sprint",
+      "value": "W+LeftShift",
+      "requestFixedTime": 0.0,
+      "requestRealtime": 0.0,
+      "receivedFixedTime": 0.02,
+      "receivedRealtime": 0.02
+    },
+    "analyzer_missing_inputs": [],
+    "shows": "Only one receipt flag for Move+Sprint; MarkReceived(Move) satisfies it without evidence of Sprint callback"
+  },
+  "mixed_contact_normals": {
+    "contact_normals": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "recorded_normal": [
+      0.7071067811865475,
+      0.7071067811865475,
+      0
+    ],
+    "wall_rejected_by_abs_normal_y_ge_0_7": true,
+    "each_contact_individually_contains_wall": true
+  }
+}

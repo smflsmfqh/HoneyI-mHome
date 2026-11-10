@@ -1,0 +1,7 @@
+{
+  "check": "prepare_snapshot_existing_destination_guard",
+  "passed": true,
+  "destination": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/project",
+  "effect": "existing workspace untouched",
+  "exit_code": 1
+}

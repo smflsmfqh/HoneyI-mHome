@@ -1,0 +1,52 @@
+{
+ "milestone": "M4",
+ "state": "DONE",
+ "recordedAt": "2026-10-30 (Asia/Seoul)",
+ "windowsModule": "이미 설치됨(2026-05-11, 968M). 추가 설치 없음",
+ "builds": {
+  "M4-H1-win-01": "Evidence/M4/M4-H1-win-01.build-result.json (StandaloneWindows64, Mono2x, errors 0)",
+  "M4-H7-win-01": "Evidence/M4/M4-H7-win-01.build-result.json (StandaloneWindows64, Mono2x, errors 0, dt 0.01)",
+  "M4-H7-mac-01": "Evidence/M4/M4-H7-mac-01.build-result.json (Mac 사전 점검용)"
+ },
+ "bundle": {
+  "path": "Builds/M4-smoke-01.zip",
+  "bytes": 279235113,
+  "sha256": "7c901435f43a5ce7a5025bb9fd94a9970ee4d19f4e75f9485240297b60eacc59",
+  "cases": "Harness/Cases/smoke-s1.json (20)",
+  "delivery": "사용자가 Google Drive에 직접 업로드(2026-10-30)"
+ },
+ "macPrechecks": {
+  "M4-H1-mac-map-01": "H1 실제 맵 5건. 숨은 PostProcessingVolume/Ground Box(윗면 y=0)에 지지, road_009 MeshCollider 접촉 없음, 0.2m 연석 통과",
+  "M4-H7-mac-smoke-01": "H7 20건. 하네스 경로 검증 모두 기대대로, CK12만 H7 물리 차이(침투 1.0r 후 회복). 실제 맵: 도로면 -0.1 지지, S2 연석 차단, S3 연석 통과"
+ },
+ "sourceIntegrity": {
+  "H1": "Evidence/M4/H1-source-after-win-01.json (5,889 일치)",
+  "H7": "Evidence/H7/H7-source-after-import.json (16,766 일치)"
+ },
+ "completionCondition": "smoke-02 Windows 결과 회수, 하네스 경로 검증 case(CK08·CK09·CK13~CK16) 기대 일치, exit code·status 확인",
+ "notWindowsEvidence": "Mac 결과는 진단이며 Windows 결과로 쓰지 않음",
+ "smoke01Windows": "Evidence/M4/windows-smoke-01-summary.json (실행 경로 검증, R1~R5 결함 있는 하네스)",
+ "bundle02": {
+  "path": "Builds/M4-smoke-02.zip",
+  "bytes": 279241318,
+  "sha256": "02da12a5c4538c7c3aee2979e139ff729badd7ffbab24b53b92ac2f9f7b6b02b",
+  "builds": [
+   "M4-H1-win-02",
+   "M4-H7-win-02"
+  ],
+  "cases": "Harness/Cases/smoke-s2.json (22)",
+  "review": "Evidence/Review-20261030-codex/review.md R1~R5 반영",
+  "macPrecheck": {
+   "H1": "Evidence/M4/analysis/M4-H1-mac-smoke02-01-a3 17/17",
+   "H7": "Evidence/M4/analysis/M4-H7-mac-smoke02-01-a3 16/17 (CK12 H7 물리 차이)"
+  },
+  "thresholds": "Harness/Cases/thresholds-r3.json"
+ },
+ "analyzerRegression": "Evidence/M4/analyzer-regression-r3.txt (Harness/Tools/test_analyzer.py 6/6)",
+ "reviews": [
+  "Evidence/Review-20261030-codex/review.md (R1~R6 반영)",
+  "Evidence/Review-20261030-codex-r2/review.md (escapeStep 기준·문서 모순 반영)"
+ ],
+ "smoke02Windows": "Evidence/M4/windows-smoke-02-summary.json",
+ "completionEvidence": "smoke-02 Windows 결과 회수(H1·H7 22/22, exit 0), 하네스 경로 검증 case 기대 일치(CK08·CK09·CK13·CK14·CK15·CK16), Windows·Mac 판정 일치, 환경 기록(UTF-8) 확인"
+}

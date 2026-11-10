@@ -1,0 +1,118 @@
+{
+ "version": "H0",
+ "root_sha": "1a4474108e7430e6ed854bb914d36e598c57ea66",
+ "asset_sha": "23de6f3c207d54acf193d8961e54da0ee48d68a2",
+ "workspace": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/.physics-work/project-H0",
+ "checkedUtc": "2026-10-29T18:23:00.624093+00:00",
+ "original_files_checked": 2429,
+ "changed": [
+  "Assets/Settings/DefaultVolumeProfile.asset",
+  "Assets/Settings/PC_RPAsset.asset",
+  "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+  "ProjectSettings/ProjectSettings.asset",
+  "ProjectSettings/UnityConnectSettings.asset"
+ ],
+ "missing": [],
+ "extra_files": [
+  {
+   "path": "Assets/PhysicsBench.meta",
+   "sha256": "bf22b873029b1a70c7a2bea24778f92f2bbe2caa253a0f03b84b0a4e4d5f0906"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor.meta",
+   "sha256": "e96c9e791d8a0aaf67eeb847658bac52ec6a98cc3b2d6c27eab39f6824edd3b0"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs",
+   "sha256": "0b3582f920b157c7c09699847e759631f19526b32b59f1992220e2ed00e07435"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchBuild.cs.meta",
+   "sha256": "196a0cbcb58d8f4a8187d3830822695a38feb89fa3b6756244e913624fbe5c34"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs",
+   "sha256": "29c8360c0b761f5dbe2f54df92a52c85869e6a0b815e042f88010626db3203b7"
+  },
+  {
+   "path": "Assets/PhysicsBench/Editor/PhysicsBenchProbe.cs.meta",
+   "sha256": "6ae920eba81f1c2f413ed6f03fe802cfcb57454ad0f1adfb54098e390dc127b3"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime.meta",
+   "sha256": "1398be7c77e9e4e4940eeeda5b01a08abd82fe3c5731010e0ea5feaeb060f043"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchData.cs",
+   "sha256": "d8bfef5d66dd785d5844cfba15d37e2a2b00205368ccb15fb7f74deb8b9c9abc"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchData.cs.meta",
+   "sha256": "95fee107fe78458c21905ef9234164d0f25a3440b94b6d0d8d4e1100fa4e25f9"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs",
+   "sha256": "2575dfd4777feb0c810f76fdc98fdbd10980cc313e60daf1d739f73f7ce818d6"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchFixtures.cs.meta",
+   "sha256": "186c0e33a105f922d14c95033ea19bac4419ae6f1648903c6e1918111d435d77"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs",
+   "sha256": "426af84e1e47875acd80a1042b4736848dd02f2f6d82fccef45a6fffaf659cef"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchInput.cs.meta",
+   "sha256": "9779318dffe6ac1a32c1751fdcd6ab3c09ecc7c8e5fb53b475b4c693996f33de"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchPlayerApi.cs",
+   "sha256": "bd863a02bab0c169ff798c2dc63e955566c5dfe356ec01ef34dc330f654a1fbe"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchPlayerApi.cs.meta",
+   "sha256": "d768d5ec2071872691f2d78c3811a1991c99e56e996f5effdfbdb78211372d95"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs",
+   "sha256": "69902f0a93b87eb96326480274cc78faa045dbeff8ae5f9c91a37d6608f55155"
+  },
+  {
+   "path": "Assets/PhysicsBench/Runtime/PhysicsBenchRunner.cs.meta",
+   "sha256": "c602f6b6cdc3e459e901e13cc87a36e1adaab84aff9e367c9f235a463d843df5"
+  },
+  {
+   "path": "Assets/StreamingAssets.meta",
+   "sha256": "ac038c2dd688a0d4e95eabf113d8a85a3205361f79a146dfe65e2d96e45494e5"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench.meta",
+   "sha256": "f0ccfbaddccfb86684c3125688bc545ffc629d08a98b4ba13c5e068b38810e83"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/build-info.json",
+   "sha256": "ef2fa26052f1eb802bf147cf2d80bf7c95f8783cdd049b6d98ec72996a79a1a3"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/build-info.json.meta",
+   "sha256": "bec98c33470a6ee958a426cd68f027ad50f453e2a66db3a19e976009cf4a362e"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/cases.json",
+   "sha256": "21c6cefb996b8c40209de6cc30c6d9dfcecfa3adea75e4198ca504bab6ea5af9"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/cases.json.meta",
+   "sha256": "9f26bdf0c99914144d553a8ebee95a70fff2f5eb8c5ffa27b5c286b378e5a1a4"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/profile.json",
+   "sha256": "0f128c89d86c993ca15418a370dbeb452b412a4dee0672156b5674a542001b40"
+  },
+  {
+   "path": "Assets/StreamingAssets/PhysicsBench/profile.json.meta",
+   "sha256": "80d1e285ac31b88ad021f86569454ae27accc16d676163810d90a2c312738723"
+  }
+ ]
+}

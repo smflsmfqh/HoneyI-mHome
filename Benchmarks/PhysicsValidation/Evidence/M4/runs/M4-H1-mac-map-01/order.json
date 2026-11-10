@@ -1,0 +1,10 @@
+{
+    "seed": 1,
+    "caseIds": [
+        "SM04_S2_curb_sprint",
+        "SM03_S2_side_hold",
+        "SM05_S3_curb_sprint",
+        "SM01_S2_road_hold",
+        "SM02_S3_road_hold"
+    ]
+}

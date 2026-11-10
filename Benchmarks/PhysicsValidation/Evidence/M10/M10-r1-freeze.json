@@ -1,0 +1,232 @@
+{
+ "freezeId": "M10-r1",
+ "status": "FROZEN_BEFORE_RESULTS",
+ "recordedUtc": "2026-11-10T09:15:22.253451+00:00",
+ "approval": "사용자 'M10 진행'(2026-11-10). 범위는 대화에서 합의한 축소판: ⑤ 연석 수정만, 설계에 쓰지 않은 연석 지점",
+ "question": "연석 BoxCollider 밑면 연장(CURBFIX)이 설계·확인에 쓴 S2(road_009)·S3(road_019) 밖의 연석에서도 관통·끼임을 없애는가, 또는 회귀를 만드는가",
+ "builds": {
+  "BASE": {
+   "buildId": "M6-BASE-win-01",
+   "sceneSha256": "9d0bb583cc4f4f0e5fe6185012204e9e2d0ac60623f3e4fec660dc390eacfddb"
+  },
+  "CURBFIX": {
+   "buildId": "M6-CURBFIX-win-01",
+   "sceneSha256": "12ba8273bf267fd773693cab49d70ae6eaaaa6bfb1d55f0315998dbf0807d043"
+  },
+  "note": "M6-r1과 같은 빌드 재사용. case 파일만 -benchCases로 바꿔 넘김"
+ },
+ "siteSelection": {
+  "tool": "project-H7B Assets/PhysicsBench/Editor/PhysicsBenchM10Sites.cs(원본 씬 9d0bb583…, 기하 질의만, 물리 시뮬레이션·씬 저장 없음). 개미 레이어(3 Player)와 충돌하는 레이어만, 런타임 트리거 구역(NPCSpawnZone·CarStopZone·CrosswalkWaitZone)은 트리거로 취급",
+  "toolSha256": "b34b035ce7541ca3f6578de147b51a30d20942d82be46223899c99ccd2669de7",
+  "raw": "Evidence/M10/m10-sites-raw.json",
+  "rawSha256": "0c1cee8655a2a428ef9de145e8e0eec5e7c0508970e45250b2cfb6a2431b0c9e",
+  "rawStats": "연석 Box 820, 도로 쪽 면 후보 225(mid 190, joint 35)",
+  "generator": "Tools/make_cases_m10.py",
+  "generatorSha256": "822ebfcb84ae4c66820e0ef0c473ce99e02f65e28044629841cb9ba4177df78b",
+  "eligibility": "출발점 바닥 -0.1±0.01, 연석 윗면 0.1±0.01, c00·p02·m02·a30(±30°) 경로 첫 충돌이 대상 연석, 출발 캡슐 겹침 없음, 면 길이 ≥ 0.3m, road_009·road_019 제외(joint 이웃 포함) → 83 적격",
+  "strata": "seed 20261110. A 도로 직속 직선 mid: road_001·020·022 각 1 / B 곡선·사선 CurbColliders mid: road_013 2·road_003 1 / C 접합부 joint: road_020 2. 같은 층·도로 안에서 3m 이상",
+  "revisionsBeforeFreeze": [
+   "Zone 콜라이더 처리 2회 수정(레이어 마스크, 런타임 트리거) — 기하 질의 정확도 문제, 결과와 무관",
+   "joint 이웃이 road_019인 후보 제외 규칙 추가로 C층을 road_022 1+road_020 1 → road_020 2로 변경(적격 joint가 road_020에만 3개)"
+  ],
+  "selected": [
+   {
+    "site": "G01",
+    "stratum": "A",
+    "kind": "mid",
+    "road": "road_001",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_001",
+    "neighbor": "",
+    "point": [
+     -13.6324,
+     -6.7178
+    ],
+    "normal": [
+     1.0,
+     -0.0
+    ],
+    "faceLength": 19.775
+   },
+   {
+    "site": "G02",
+    "stratum": "A",
+    "kind": "mid",
+    "road": "road_020",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+    "neighbor": "",
+    "point": [
+     -22.5,
+     28.6348
+    ],
+    "normal": [
+     1e-06,
+     -1.0
+    ],
+    "faceLength": 15.0
+   },
+   {
+    "site": "G03",
+    "stratum": "A",
+    "kind": "mid",
+    "road": "road_022",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_022",
+    "neighbor": "",
+    "point": [
+     7.5,
+     -63.8661
+    ],
+    "normal": [
+     -0.0,
+     -1.0
+    ],
+    "faceLength": 15.0
+   },
+   {
+    "site": "G04",
+    "stratum": "B",
+    "kind": "mid",
+    "road": "road_013",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_15",
+    "neighbor": "",
+    "point": [
+     -50.4692,
+     -69.5735
+    ],
+    "normal": [
+     0.483233,
+     0.875492
+    ],
+    "faceLength": 1.586
+   },
+   {
+    "site": "G05",
+    "stratum": "B",
+    "kind": "mid",
+    "road": "road_013",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_013/CurbColliders/Curb_15",
+    "neighbor": "",
+    "point": [
+     54.6024,
+     -65.4829
+    ],
+    "normal": [
+     -0.882644,
+     0.470042
+    ],
+    "faceLength": 1.599
+   },
+   {
+    "site": "G06",
+    "stratum": "B",
+    "kind": "mid",
+    "road": "road_003",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_003/CurbColliders/Curb_0 (15)",
+    "neighbor": "",
+    "point": [
+     -13.6974,
+     15.2428
+    ],
+    "normal": [
+     0.984625,
+     0.174679
+    ],
+    "faceLength": 0.552
+   },
+   {
+    "site": "G07",
+    "stratum": "C",
+    "kind": "joint",
+    "road": "road_020",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+    "neighbor": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+    "point": [
+     -30.0,
+     28.6348
+    ],
+    "normal": [
+     1e-06,
+     -1.0
+    ],
+    "faceLength": 15.0
+   },
+   {
+    "site": "G08",
+    "stratum": "C",
+    "kind": "joint",
+    "road": "road_020",
+    "box": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+    "neighbor": "PostProcessingVolume/Demonstration/BasicSettingsMap/road_020",
+    "point": [
+     -13.6338,
+     45.0
+    ],
+    "normal": [
+     1.0,
+     -1e-06
+    ],
+    "faceLength": 15.0
+   }
+  ],
+  "caveat": "면 위치는 연석 콜라이더 면 기준(기존 S2 case는 시각 연석면 기준, S2에서 두 면 차이 6mm)",
+  "curbFixCoverage": "지점 선정의 연석 Box 필터가 PhysicsBenchCurbFix.Targets()와 같은 규칙(경로·윗면 0.1·높이 0.2·축 정렬)이므로 선정된 Box는 모두 CURBFIX 연장 대상"
+ },
+ "cases": {
+  "file": "Harness/Cases/M10-r1/m10-curb.json",
+  "sha256": "f8210a3ebc6fdd4120daa146d098ef9d83b18551ac59cef6b2a4df20dec53444",
+  "count": "84 = CK 4(M6-r1과 같음) + 8지점 × 10조건",
+  "conditions": "Sprint·Boost × c00·p02·m02·a30(+30°), BoostSprint a30, Move c00. 출발 = 접점에서 면 수직거리 0.16m+r, y -0.05. 나머지 필드는 M6 B_S2_Sprint_c00과 같음(boostSpeed 3.5, push 1s, reverse·side·rescue)",
+  "geometryCheck": "case 80개: 진행선과 면 평면 교점이 wallPoint와 1mm 안, 진행 방향·-법선 내적 = cos0°/cos30°, 면 수직 출발거리 0.1694m. 필수 필드 BenchCaseFile(experimentId, caseSetRevision, cases)과 일치"
+ },
+ "runs": {
+  "runner": "Harness/Windows/RunM10.cmd",
+  "runnerSha256": "b3771cb2d17c202e8f3e8335356284e58dbaeeb9bf9f7bca58da90cce315bfd9",
+  "list": "BASE·CURBFIX × (a1 s1, a2 s1, a3 s2), profile-H7(ctl), 기본 물리 설정(0.01/CCD), 60 FPS 기본. 6 run, 약 1시간",
+  "pc": "M6와 같은 i5-12500 PC"
+ },
+ "rules": {
+  "analyzer": "Harness/Tools/analyze_physics_bench.py c9950f0b… + thresholds-B1 4aca1580… → Evidence/M10/analysis/<run>-a1",
+  "summarizer": "Tools/summarize_M10.py",
+  "summarizerSha256": "98f3dfe86e0e80e9c963191e14d213b48cb2e581b31fb857af4e98394ddac995",
+  "summarizerSelfTest": "M6 p5c 6 run의 case ID를 G01·G02로 바꾼 시험 폴더(scratchpad, 인용 안 함): BASE 실패 조건 13/28·CURBFIX 0/28, 관통 21·끼임 18 → 0, 최대 2.63cm로 M6와 일치 / 면 범위 확인 추가 후 같은 결과(off-face 0)",
+  "categories": "rootOutcome, passed_curb는 passStep bottomY로 passThrough/passedOver/passed_unclassified(M6와 같음). 실패 = passThrough·rescue_failed·escaped_by_rescue·fall·passed_unclassified·그 밖의 비정상",
+  "validity": "run: CK 4/4 아니면 제외. 빌드 ID·씬 SHA·experimentId 불일치는 problems. trial: initialPen > 0.005 또는 의도 외 harness_error 무효(분모 제외, 수 보고)",
+  "unit": "조건 단위(3 attempt 중 하나라도 실패면 실패 조건)를 주 지표로, trial 수는 함께 보고",
+  "pairing": "같은 attempt·seed·case 대응표, 개선/악화/범주 변화",
+  "faceRangeGuard": "분석기 passed_curb·passStep은 wallPoint/wallNormal 끝없는 평면 기준. summarize_M10은 passStep 위치를 면 방향 축에 투영해 면 범위(mid ±L/2, joint ±L, r 여유) 밖이면 passed_off_face로 분류: 실패·성공 어느 쪽도 아님, 분모 제외, 빌드별 ID와 수를 보고. 대응표에서도 제외. 시험: S2·S3 실제 면(15m)에서 off-face 0, 면을 0.04m로 줄인 인위 시험에서 15 trial off-face로 분류됨"
+ },
+ "verdicts": {
+  "generalize": {
+   "when": "CURBFIX 실패 trial 0이고 BASE 실패 조건 ≥ 1",
+   "sentence": "설계에 쓰지 않은 연석 8지점에서도 연석 관통·끼임이 실패 조건 k/n → 0/n이 됐다(3회 반복, 층: BASE 실패가 있던 유형만 명시)."
+  },
+  "no_regression_only": {
+   "when": "CURBFIX 0이고 BASE도 0",
+   "sentence": "다른 연석 8지점은 수정 전에도 같은 진입 조건에서 관통·끼임이 없었고, 수정 후에도 회귀가 없었다. 수정 효과의 일반화는 이 측정으로 보이지 못했다(효과 근거는 S2·S3 2지점)."
+  },
+  "partial": {
+   "when": "CURBFIX 실패 조건 > 0이고 BASE보다 적으며 CURBFIX에만 실패한 조건 없음",
+   "sentence": "다른 지점에서 관통·끼임을 줄였지만 없애지는 못했다(k/80 → k/80, 남은 지점 명시)."
+  },
+  "against": {
+   "when": "CURBFIX 실패 조건 ≥ BASE이거나 CURBFIX에서만 실패한 조건이 있음",
+   "action": "⑤ 문장을 '측정한 2지점에서'로 한정하고 해당 조건 trace 조사"
+  },
+  "aux": "CURBFIX recovered maxPenWallDepthR 최대 ≥ 1r이면 '최대 X cm 파고든 뒤 밀려난다' 함께 보고",
+  "invalid": "run 6개 중 제외·불일치가 있으면 판정하지 않고 같은 묶음 재실행(새 attempt 번호)",
+  "strataRule": "문장에는 BASE 실패 조건 ≥1인 층(A 직선·B 곡선/사선·C 접합부)만 이름을 넣는다. BASE 0인 층은 '회귀 없음'으로만. 지점별 BASE→CURBFIX 실패 조건 k→k 표는 항상 함께 낸다",
+  "offFaceReport": "passed_off_face가 있으면 수와 조건 ID를 문장 옆에 함께 보고(관통으로 세지 않은 이유 포함)"
+ },
+ "outOfScope": [
+  "게임 조건(NPC·차량) 프로필",
+  "물리 설정 2×2",
+  "다른 PC",
+  "Roll 진입",
+  "a60·BoostSprint 정면",
+  "바닥 ①②③"
+ ],
+ "revision": 2,
+ "supersedes": {
+  "file": "Evidence/M10/M10-r1-freeze-draft.json",
+  "sha256": "03504346ef863858135104d1144386e3eccfa8099d715133cbf5c1487293dd68"
+ }
+}

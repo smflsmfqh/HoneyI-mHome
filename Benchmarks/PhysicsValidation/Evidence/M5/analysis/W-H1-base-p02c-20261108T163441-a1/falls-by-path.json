@@ -1,0 +1,32 @@
+{
+ "run": "Evidence/M5/windows/PhysicsBench-Pilot02c-Results-20261108T163441/W-H1-base-p02c-20261108T163441",
+ "classified": "Evidence/M5/analysis/W-H1-base-p02c-20261108T163441-a1/classified.jsonl",
+ "probe": "probe-H1-e2c.json",
+ "counts": {
+  "within_probed_path": 1
+ },
+ "falls": [
+  {
+   "caseId": "E2_C11_jump",
+   "fallPos": [
+    -79.986,
+    -0.041,
+    39.001
+   ],
+   "phase": "move",
+   "t": 271.74,
+   "contactsAtFall": [],
+   "start": [
+    -81.5,
+    0.0,
+    39.0
+   ],
+   "alongPath": 1.514,
+   "probedPathLength": 21.5,
+   "category": "within_probed_path",
+   "lastMeshSwitchBefore": null,
+   "nearestStepAlong": null,
+   "stepDyThere": null
+  }
+ ]
+}

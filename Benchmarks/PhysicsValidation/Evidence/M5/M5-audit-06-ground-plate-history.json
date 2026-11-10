@@ -1,0 +1,74 @@
+{
+ "auditId": "M5-audit-06-ground-plate-history",
+ "createdLocal": "2026-11-08 (Asia/Seoul)",
+ "method": "git show 정적 대조(읽기 전용). 런타임 확인 아님",
+ "userTestimony": "2026-11-08 사용자: 받침판(PostProcessingVolume.prefab/Ground BoxCollider)은 사용자가 직접 깐 박스 콜라이더. 낙하 대응 목적으로 해석(커밋 메시지에는 목적 기록 없음)",
+ "plate": {
+  "object": "Assets/Prefabs/PostProcessingVolume.prefab / Ground (GameObject 1192885704982868387, Transform 7301534444566631659, guid d7ecfdee371ab48dc8e275bb2b79805c)",
+  "shape": "BoxCollider size 1, scale 203x1.7x171, layer 10 Ground, tag Ground, 비트리거",
+  "prefabLocalY": -14.789216
+ },
+ "timeline": [
+  {
+   "commit": "1a44741",
+   "date": "05-18 18:05",
+   "msg": "플레이어 특정 맵 구간에서 수직 낙하 수정 중 (H0)",
+   "plate": "없음"
+  },
+  {
+   "commit": "5859367",
+   "date": "05-22 07:21",
+   "msg": "[Add] Game UI (75개 파일)",
+   "plate": "추가. 씬 override 없음 → 로컬 y -14.789216, 윗면 월드 y≈0"
+  },
+  {
+   "commit": "e4b5c50",
+   "date": "05-26 15:11",
+   "msg": "[Fix] road 타일에서 공중에 뜨는 버그 및 바닥 타일 결계 버그",
+   "plate": "씬 override m_LocalPosition.y = -14.889215 (0.1m 하강) → 윗면 y≈-0.1, 시각 도로면(-0.1)과 같은 높이",
+   "sameCommit": "PlayerMovement 접지 판정을 레이캐스트 5개(0.05m)에서 Ground/Road 태그·법선 y>0.7 충돌 접촉 방식으로 교체. 씬 태그 override 102개(Ground 58, Road 42, ItemStore 2), MeshCollider m_Convex=0 override 43개 명시(실효 변화 최대 2개 추정, correction 참고), m_LocalPosition.y override 17개(-0.1 9개, 0 5개 등)"
+  },
+  {
+   "commit": "982cf03·98f598f·eabbb71",
+   "date": "05-27",
+   "plate": "override 없음(윗면 y≈0으로 복귀)"
+  },
+  {
+   "commit": "4ba86be ~ b21a37c",
+   "date": "05-27 18:14 ~ 05-29 04:17",
+   "plate": "-14.889215 (윗면 y≈-0.1)"
+  },
+  {
+   "commit": "9b83a24",
+   "date": "05-29 10:35",
+   "msg": "[2nd Build] (H1)",
+   "plate": "override -14.78922 → 윗면 y≈0으로 복귀. H1 실측(Evidence/M4/probe-H1-support.json, 윗면 y=0)과 일치"
+  },
+  {
+   "commit": "2dd8695",
+   "date": "05-29 17:59",
+   "msg": "[Fix] 땅에 박스 콜라이더 까는 중",
+   "plate": "BoxCollider 제거(같은 이름의 빈 부모로 변경), 타일별 Box 재구성 시작"
+  }
+ ],
+ "worldHeightNote": "윗면 월드 높이는 H1 실측(override -14.78922 → y=0)을 기준으로 로컬 y 차이만큼 환산했다. 부모 Transform이 이 기간 동안 바뀌지 않았다고 가정한다(별도 확인 안 함)",
+ "hypothesisCheck": {
+  "question": "05-26 '공중에 뜨는 버그'가 받침판 때문이었나",
+  "result": "부분적으로 뒷받침됨. 같은 커밋에서 받침판을 정확히 0.1m 내려 시각 도로면과 맞췄다. 다만 같은 커밋에서 접지 판정 코드 교체, convex override 명시(실효 변화는 최대 2개로 추정, correction 참고. convex hull은 실제 면보다 높은 충돌면을 만든다), 도로 높이 조정도 함께 했으므로 공중 뜸의 원인을 받침판 하나로 특정할 수 없다",
+  "consequence": "H1 [2nd Build]에서 받침판이 다시 윗면 y=0으로 돌아가, H1 빌드의 개미는 시각 도로(-0.1)보다 10cm 위에 선다(M4 smoke 진단과 일치). 되돌림이 의도였는지는 기록이 없다"
+ },
+ "relatedToH0": "H0의 E1_P11R_hold가 convex road_001 안에서 시작해 갈린 결과(pilot-01 pass, 02c 낙하)는 e4b5c50에서 convex를 해제하기 전 상태의 관측이다",
+ "notAConclusion": "정적 기록 대조다. 05-26 당시 실제로 공중에 뜨던 위치·원인은 런타임으로 확인하지 않았다",
+ "correction": {
+  "recordedLocal": "2026-11-08 같은 세션",
+  "about": "e4b5c50의 'MeshCollider 43개 convex 해제' 표현 정정",
+  "fact": "e4b5c50 직전(e4b5c50^) 씬에는 m_Convex override가 0개, PostProcessingVolume.prefab 안에는 convex=1 override 2개. H0 실효 convex는 road_001·Set_B_Tiles_06 2개(Evidence/M5/probe-H0-colliders.json). H1은 에디터 감사·런타임 접촉 기록에서 convex 0",
+  "corrected": "e4b5c50은 씬에 m_Convex=0 override 43개를 명시했다. 실제로 값이 바뀐 것은 최대 2개(H0의 convex 2개)로 추정하고, 나머지는 원래 값 재명시로 본다. 어느 커밋에서 2개가 실제로 꺼졌는지는 nested prefab fileID 대조를 하지 않아 미확정"
+ },
+ "userTestimonyConvex": {
+  "recordedLocal": "2026-11-08",
+  "statement": "에디터에서 콜라이더 동작을 보려고 일부 MeshCollider의 convex를 켰다가 끄고 커밋했을 수 있음",
+  "fit": "값을 되돌려도 Revert 전까지 prefab override 항목이 남는 Unity 동작과, e4b5c50의 값 0 override 43개·H0 실효 convex 2개가 모두 맞는다",
+  "interpretation": "H0 convex 2개(road_001·Set_B_Tiles_06)는 의도한 설정이 아닌 잔여로 추정. P11R은 포트폴리오에서 제외. 'Convex 시도'는 빌드 구성이 아니라 에디터 검토로 정리"
+ }
+}

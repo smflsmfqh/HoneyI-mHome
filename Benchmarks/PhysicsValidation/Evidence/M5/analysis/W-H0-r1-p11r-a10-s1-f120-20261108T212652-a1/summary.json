@@ -1,0 +1,43 @@
+{
+ "runDir": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Evidence/M5/windows/PhysicsBench-Repeat01-Results-20261108T212652/W-H0-r1-p11r-a10-s1-f120-20261108T212652",
+ "runState": "completed",
+ "inputs": {
+  "trials.jsonl": "09b03dcbbb97b05bb6be5c13b7a24b379eead7e9b084edb7b63fd08c4c9938b0",
+  "trace.jsonl": "8af2a665ddc84654e7abbea24e75ef5639bb07265cb585af9183b0688f697256",
+  "thresholds": "1fcdffdd2abb013178be48b82ac12b2c40cc794700cdd7c29af9bbd9257aecb1"
+ },
+ "thresholds": {
+  "revision": "r4-provisional",
+  "note": "M3 판정기 검증용 잠정값. r=캡슐 월드 반지름. 입력 수신은 물리 시간 기준. M5 예비 실행 후 M6에서 동결한다.",
+  "fallDepthR": 3.0,
+  "supportNormalY": 0.5,
+  "supportProbeGapR": 0.5,
+  "stableSupportSec": 0.1,
+  "escapeDistR": 2.0,
+  "penetrationSignificantR": 0.25,
+  "penetrationResolvedR": 0.1,
+  "passThroughR": 3.0,
+  "inputReceiveMaxFixedSec": 0.4,
+  "preContactWindowSec": 0.06,
+  "restVerticalSpeed": 0.02
+ },
+ "planned": 1,
+ "trials": 1,
+ "missingCases": [],
+ "duplicateTrials": [],
+ "harnessErrors": 0,
+ "outcomes": {
+  "fall": 1
+ },
+ "passEvidence": {},
+ "capabilities": {
+  "file": "/Users/ihaneul/unityProject/HoneyI-mHome/Benchmarks/PhysicsValidation/Harness/Cases/capabilities-r1.json",
+  "sha256": "7b06581feccc77bbe7abfecc50e26939b3cf40670e728f9c591f9931255b42ac",
+  "unsupportedTrials": {}
+ },
+ "classifierChecks": {
+  "total": 0,
+  "matched": 0,
+  "items": []
+ }
+}

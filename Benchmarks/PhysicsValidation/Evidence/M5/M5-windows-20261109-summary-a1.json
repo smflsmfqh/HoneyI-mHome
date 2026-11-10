@@ -1,0 +1,2143 @@
+{
+ "generatedBy": "Tools/summarize_M5_20261109.py",
+ "analysisRevision": "a1",
+ "repeat01": {
+  "bundle": "PhysicsBench-Repeat01-Results-20261108T212652",
+  "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+  "full": {
+   "W-H0-r1-full-a1-s1-f60-20261108T212652": {
+    "attempt": 1,
+    "seed": 1,
+    "ckOk": true,
+    "ck": {
+     "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+     "CK01_flat_hold": "pass",
+     "CK08_flat_walk_noinput": "harness_error:input_not_received",
+     "CK03_hole_walk_slow": "fall"
+    },
+    "outcomes": {
+     "pass": 37,
+     "fall": 14,
+     "harness_error:time_scale_zero": 1,
+     "harness_error:input_not_received": 1
+    }
+   },
+   "W-H0-r1-full-a2-s1-f60-20261108T212652": {
+    "attempt": 2,
+    "seed": 1,
+    "ckOk": true,
+    "ck": {
+     "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+     "CK01_flat_hold": "pass",
+     "CK08_flat_walk_noinput": "harness_error:input_not_received",
+     "CK03_hole_walk_slow": "fall"
+    },
+    "outcomes": {
+     "pass": 37,
+     "fall": 14,
+     "harness_error:time_scale_zero": 1,
+     "harness_error:input_not_received": 1
+    }
+   },
+   "W-H0-r1-full-a3-s2-f60-20261108T212652": {
+    "attempt": 3,
+    "seed": 2,
+    "ckOk": true,
+    "ck": {
+     "CK08_flat_walk_noinput": "harness_error:input_not_received",
+     "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+     "CK03_hole_walk_slow": "fall",
+     "CK01_flat_hold": "pass"
+    },
+    "outcomes": {
+     "pass": 36,
+     "fall": 15,
+     "harness_error:input_not_received": 1,
+     "harness_error:time_scale_zero": 1
+    }
+   },
+   "W-H0-r1-full-a4-s3-f60-20261108T212652": {
+    "attempt": 4,
+    "seed": 3,
+    "ckOk": true,
+    "ck": {
+     "CK01_flat_hold": "pass",
+     "CK08_flat_walk_noinput": "harness_error:input_not_received",
+     "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+     "CK03_hole_walk_slow": "fall"
+    },
+    "outcomes": {
+     "fall": 15,
+     "pass": 36,
+     "harness_error:input_not_received": 1,
+     "harness_error:time_scale_zero": 1
+    }
+   },
+   "W-H0-r1-full-a5-s4-f60-20261108T212652": {
+    "attempt": 5,
+    "seed": 4,
+    "ckOk": true,
+    "ck": {
+     "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+     "CK03_hole_walk_slow": "fall",
+     "CK08_flat_walk_noinput": "harness_error:input_not_received",
+     "CK01_flat_hold": "pass"
+    },
+    "outcomes": {
+     "pass": 36,
+     "fall": 15,
+     "harness_error:time_scale_zero": 1,
+     "harness_error:input_not_received": 1
+    }
+   },
+   "W-H0-r1-full-a6-s5-f60-20261108T212652": {
+    "attempt": 6,
+    "seed": 5,
+    "ckOk": true,
+    "ck": {
+     "CK03_hole_walk_slow": "fall",
+     "CK01_flat_hold": "pass",
+     "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+     "CK08_flat_walk_noinput": "harness_error:input_not_received"
+    },
+    "outcomes": {
+     "pass": 36,
+     "fall": 15,
+     "harness_error:time_scale_zero": 1,
+     "harness_error:input_not_received": 1
+    }
+   }
+  },
+  "p11r": [
+   {
+    "run": "W-H0-r1-p11r-a1-s1-f60-20261108T212652",
+    "fps": 60,
+    "rootOutcome": "pass",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0479,
+      "penDepth": 0.0821,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0263,
+      "penDepth": 0.1037,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01766,
+      "penDepth": 0.11234,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01593,
+      "penDepth": 0.11407,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a2-s1-f60-20261108T212652",
+    "fps": 60,
+    "rootOutcome": "fall",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0815,
+      "penDepth": 0.0485,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0935,
+      "penDepth": 0.0365,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1055,
+      "penDepth": 0.0245,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1199,
+      "penDepth": 0.0101,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a3-s1-f60-20261108T212652",
+    "fps": 60,
+    "rootOutcome": "pass",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0479,
+      "penDepth": 0.0821,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0263,
+      "penDepth": 0.1037,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01766,
+      "penDepth": 0.11234,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01593,
+      "penDepth": 0.11407,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a4-s1-f60-20261108T212652",
+    "fps": 60,
+    "rootOutcome": "fall",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0815,
+      "penDepth": 0.0485,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0935,
+      "penDepth": 0.0365,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1055,
+      "penDepth": 0.0245,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1199,
+      "penDepth": 0.0101,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a5-s1-f60-20261108T212652",
+    "fps": 60,
+    "rootOutcome": "fall",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0815,
+      "penDepth": 0.0485,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0935,
+      "penDepth": 0.0365,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1055,
+      "penDepth": 0.0245,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1199,
+      "penDepth": 0.0101,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a6-s1-f60-20261108T212652",
+    "fps": 60,
+    "rootOutcome": "pass",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0479,
+      "penDepth": 0.0821,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0263,
+      "penDepth": 0.1037,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01766,
+      "penDepth": 0.11234,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01593,
+      "penDepth": 0.11407,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a7-s1-f30-20261108T212652",
+    "fps": 30,
+    "rootOutcome": "fall",
+    "initialPenDepth": 0.06050015985965729,
+    "step0to3": [
+     {
+      "py": -0.0815,
+      "penDepth": 0.0485,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0935,
+      "penDepth": 0.0365,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1055,
+      "penDepth": 0.0245,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1199,
+      "penDepth": 0.0101,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a8-s1-f30-20261108T212652",
+    "fps": 30,
+    "rootOutcome": "pass",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0479,
+      "penDepth": 0.0821,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0263,
+      "penDepth": 0.1037,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01766,
+      "penDepth": 0.11234,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.01593,
+      "penDepth": 0.11407,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a9-s1-f120-20261108T212652",
+    "fps": 120,
+    "rootOutcome": "fall",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0815,
+      "penDepth": 0.0485,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0935,
+      "penDepth": 0.0365,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1055,
+      "penDepth": 0.0245,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1199,
+      "penDepth": 0.0101,
+      "penDirY": -1.0
+     }
+    ]
+   },
+   {
+    "run": "W-H0-r1-p11r-a10-s1-f120-20261108T212652",
+    "fps": 120,
+    "rootOutcome": "fall",
+    "initialPenDepth": 0.060500167310237885,
+    "step0to3": [
+     {
+      "py": -0.0815,
+      "penDepth": 0.0485,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.0935,
+      "penDepth": 0.0365,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1055,
+      "penDepth": 0.0245,
+      "penDirY": -1.0
+     },
+     {
+      "py": -0.1199,
+      "penDepth": 0.0101,
+      "penDirY": -1.0
+     }
+    ]
+   }
+  ],
+  "E2_C": {
+   "cases": {
+    "E2_C01_jump": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_C01_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C02_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C02_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C03_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C03_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C04_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C04_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C05_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C05_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C06_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C06_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_C07_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C07_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C08_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C08_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_C09_jump": {
+     "k": 2,
+     "n": 6,
+     "label": "간헐",
+     "fallAttempts": [
+      4,
+      6
+     ]
+    },
+    "E2_C09_walk": {
+     "k": 2,
+     "n": 6,
+     "label": "간헐",
+     "fallAttempts": [
+      3,
+      5
+     ]
+    },
+    "E2_C10_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C10_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C11_jump": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_C11_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_C12_jump": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_C12_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    }
+   },
+   "anyFall": 7,
+   "stable": 5,
+   "intermittent": 2,
+   "none": 17,
+   "totalFalls": 34,
+   "totalTrials": 144
+  },
+  "E2_K": {
+   "cases": {
+    "E2_K01_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K01_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_K02_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K02_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_K03_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K03_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K04_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K04_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_K05_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K05_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_K06_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K06_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_K07_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K07_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K08_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K08_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K09_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K09_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K10_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K10_walk": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K11_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K11_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "E2_K12_hold": {
+     "k": 0,
+     "n": 6,
+     "label": "미재현",
+     "fallAttempts": []
+    },
+    "E2_K12_walk": {
+     "k": 6,
+     "n": 6,
+     "label": "안정 재현",
+     "fallAttempts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    }
+   },
+   "anyFall": 7,
+   "stable": 7,
+   "intermittent": 0,
+   "none": 17,
+   "totalFalls": 42,
+   "totalTrials": 144
+  },
+  "excludedRuns": [],
+  "sameSeedDiff(a1 vs a2)": {},
+  "p11rByFps": {
+   "30fps": "1/2 fall",
+   "60fps": "3/6 fall",
+   "120fps": "2/2 fall"
+  }
+ },
+ "trackB01_floor": {
+  "bundle": "PhysicsBench-TrackB01-Results-20261109T122558",
+  "pc": "12th Gen Intel(R) Core(TM) i5-12500 / NVIDIA GeForce GTX 1660 SUPER",
+  "variants": {
+   "S0a": {
+    "runs": {
+     "W-B-S0a-floor-dt0.02-Discrete-a1-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 11,
+       "fall": 15,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S0a-floor-dt0.02-Discrete-a2-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 11,
+       "fall": 15,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S0a-floor-dt0.02-Discrete-a3-s2-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 11,
+       "fall": 15,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     }
+    },
+    "E2C_fall": 42,
+    "E2C_n": 72,
+    "fallCases": {
+     "E2_C01_jump": 3,
+     "E2_C02_jump": 3,
+     "E2_C02_walk": 3,
+     "E2_C03_jump": 3,
+     "E2_C04_jump": 3,
+     "E2_C05_jump": 3,
+     "E2_C06_jump": 3,
+     "E2_C06_walk": 3,
+     "E2_C07_jump": 3,
+     "E2_C08_jump": 3,
+     "E2_C09_jump": 3,
+     "E2_C10_jump": 3,
+     "E2_C11_jump": 3,
+     "E2_C12_jump": 3
+    },
+    "invalidInitialPen": 0,
+    "harnessErr": 0,
+    "childOnlyFall": 0
+   },
+   "S0b": {
+    "runs": {
+     "W-B-S0b-floor-dt0.02-Discrete-a1-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 12,
+      "floorReadWriteErrorLines": 2900,
+      "rootOutcomes": {
+       "fall": 25,
+       "harness_error:time_scale_zero": 1,
+       "pass": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S0b-floor-dt0.02-Discrete-a2-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 12,
+      "floorReadWriteErrorLines": 2900,
+      "rootOutcomes": {
+       "fall": 25,
+       "harness_error:time_scale_zero": 1,
+       "pass": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S0b-floor-dt0.02-Discrete-a3-s2-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 12,
+      "floorReadWriteErrorLines": 2900,
+      "rootOutcomes": {
+       "fall": 25,
+       "harness_error:time_scale_zero": 1,
+       "pass": 1,
+       "harness_error:input_not_received": 1
+      }
+     }
+    },
+    "E2C_fall": 72,
+    "E2C_n": 72,
+    "fallCases": {
+     "E2_C01_jump": 3,
+     "E2_C01_walk": 3,
+     "E2_C02_jump": 3,
+     "E2_C02_walk": 3,
+     "E2_C03_jump": 3,
+     "E2_C03_walk": 3,
+     "E2_C04_jump": 3,
+     "E2_C04_walk": 3,
+     "E2_C05_jump": 3,
+     "E2_C05_walk": 3,
+     "E2_C06_jump": 3,
+     "E2_C06_walk": 3,
+     "E2_C07_jump": 3,
+     "E2_C07_walk": 3,
+     "E2_C08_jump": 3,
+     "E2_C08_walk": 3,
+     "E2_C09_jump": 3,
+     "E2_C09_walk": 3,
+     "E2_C10_jump": 3,
+     "E2_C10_walk": 3,
+     "E2_C11_jump": 3,
+     "E2_C11_walk": 3,
+     "E2_C12_jump": 3,
+     "E2_C12_walk": 3
+    },
+    "invalidInitialPen": 0,
+    "harnessErr": 0,
+    "childOnlyFall": 0
+   },
+   "S0p": {
+    "runs": {
+     "W-B-S0p-floor-dt0.02-Discrete-a1-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 11,
+       "fall": 15,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S0p-floor-dt0.02-Discrete-a2-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 11,
+       "fall": 15,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S0p-floor-dt0.02-Discrete-a3-s2-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 11,
+       "fall": 15,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     }
+    },
+    "E2C_fall": 42,
+    "E2C_n": 72,
+    "fallCases": {
+     "E2_C01_jump": 3,
+     "E2_C02_jump": 3,
+     "E2_C02_walk": 3,
+     "E2_C03_jump": 3,
+     "E2_C04_jump": 3,
+     "E2_C05_jump": 3,
+     "E2_C06_jump": 3,
+     "E2_C06_walk": 3,
+     "E2_C07_jump": 3,
+     "E2_C08_jump": 3,
+     "E2_C09_jump": 3,
+     "E2_C10_jump": 3,
+     "E2_C11_jump": 3,
+     "E2_C12_jump": 3
+    },
+    "invalidInitialPen": 0,
+    "harnessErr": 0,
+    "childOnlyFall": 0
+   },
+   "S1": {
+    "runs": {
+     "W-B-S1-floor-dt0.02-Discrete-a1-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 25,
+       "fall": 1,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S1-floor-dt0.02-Discrete-a2-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 25,
+       "fall": 1,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S1-floor-dt0.02-Discrete-a3-s2-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 25,
+       "fall": 1,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     }
+    },
+    "E2C_fall": 0,
+    "E2C_n": 72,
+    "fallCases": {},
+    "invalidInitialPen": 0,
+    "harnessErr": 0,
+    "childOnlyFall": 0
+   },
+   "S2": {
+    "runs": {
+     "W-B-S2-floor-dt0.02-Discrete-a1-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 21,
+       "fall": 5,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S2-floor-dt0.02-Discrete-a2-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 21,
+       "fall": 5,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S2-floor-dt0.02-Discrete-a3-s2-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 21,
+       "fall": 5,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     }
+    },
+    "E2C_fall": 12,
+    "E2C_n": 72,
+    "fallCases": {
+     "E2_C01_jump": 3,
+     "E2_C01_walk": 3,
+     "E2_C07_jump": 3,
+     "E2_C07_walk": 3
+    },
+    "invalidInitialPen": 0,
+    "harnessErr": 0,
+    "childOnlyFall": 0
+   },
+   "S3": {
+    "runs": {
+     "W-B-S3-floor-dt0.02-Discrete-a1-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 25,
+       "fall": 1,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S3-floor-dt0.02-Discrete-a2-s1-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 25,
+       "fall": 1,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     },
+     "W-B-S3-floor-dt0.02-Discrete-a3-s2-20261109T122558": {
+      "ckOk": true,
+      "ck": {
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "floorReadWriteErrorObjects": 0,
+      "floorReadWriteErrorLines": 0,
+      "rootOutcomes": {
+       "pass": 25,
+       "fall": 1,
+       "harness_error:time_scale_zero": 1,
+       "harness_error:input_not_received": 1
+      }
+     }
+    },
+    "E2C_fall": 0,
+    "E2C_n": 72,
+    "fallCases": {},
+    "invalidInitialPen": 0,
+    "harnessErr": 0,
+    "childOnlyFall": 0
+   }
+  },
+  "manipulationChecks": {
+   "S0a": {
+    "rule": "바닥 Read/Write 오류 0",
+    "rwObjects": [
+     0,
+     0,
+     0
+    ],
+    "ok": true
+   },
+   "S0b": {
+    "rule": "바닥 Read/Write 오류 > 0, E2_C 전부 root 낙하",
+    "rwObjects": [
+     12,
+     12,
+     12
+    ],
+    "ok": true
+   },
+   "S0p": {
+    "rule": "바닥 Read/Write 오류 0",
+    "rwObjects": [
+     0,
+     0,
+     0
+    ],
+    "ok": true
+   },
+   "S1": {
+    "rule": "(조작 확인 대상 아님)",
+    "rwObjects": [
+     0,
+     0,
+     0
+    ]
+   },
+   "S2": {
+    "rule": "바닥 Read/Write 오류 0",
+    "rwObjects": [
+     0,
+     0,
+     0
+    ],
+    "ok": true
+   },
+   "S3": {
+    "rule": "(조작 확인 대상 아님)",
+    "rwObjects": [
+     0,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "curb": {
+  "S3": {
+   "0.01/ContinuousDynamic": {
+    "tally": {
+     "n": 54,
+     "passThrough": 27,
+     "passedOver": 0,
+     "directionalStuck": 0,
+     "fullStuck": 0,
+     "byOutcome": {
+      "recovered_after_penetration": 9,
+      "passThrough": 27,
+      "blocked_escaped": 18,
+      "escaped_by_rescue": 0,
+      "rescue_failed": 0,
+      "passedOver": 0
+     }
+    },
+    "runs": [
+     {
+      "run": "W-B-S3-curb-dt0.01-ContinuousDynamic-a1-s1-20261109T122558",
+      "attempt": 1,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_m02": "recovered_after_penetration",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.01-ContinuousDynamic-a2-s1-20261109T122558",
+      "attempt": 2,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_m02": "recovered_after_penetration",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.01-ContinuousDynamic-a3-s2-20261109T122558",
+      "attempt": 3,
+      "seed": 2,
+      "ckOk": true,
+      "ck": {
+       "CK08_flat_walk_noinput": "harness_error:input_not_received",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero"
+      },
+      "cases": {
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Sprint_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "recovered_after_penetration"
+      }
+     }
+    ]
+   },
+   "0.01/Discrete": {
+    "tally": {
+     "n": 54,
+     "passThrough": 28,
+     "passedOver": 0,
+     "directionalStuck": 0,
+     "fullStuck": 0,
+     "byOutcome": {
+      "recovered_after_penetration": 8,
+      "passThrough": 28,
+      "blocked_escaped": 18,
+      "escaped_by_rescue": 0,
+      "rescue_failed": 0,
+      "passedOver": 0
+     }
+    },
+    "runs": [
+     {
+      "run": "W-B-S3-curb-dt0.01-Discrete-a1-s1-20261109T122558",
+      "attempt": 1,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_m02": "recovered_after_penetration",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.01-Discrete-a2-s1-20261109T122558",
+      "attempt": 2,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_m02": "recovered_after_penetration",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.01-Discrete-a3-s2-20261109T122558",
+      "attempt": 3,
+      "seed": 2,
+      "ckOk": true,
+      "ck": {
+       "CK08_flat_walk_noinput": "harness_error:input_not_received",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero"
+      },
+      "cases": {
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Sprint_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough"
+      }
+     }
+    ]
+   },
+   "0.02/ContinuousDynamic": {
+    "tally": {
+     "n": 54,
+     "passThrough": 36,
+     "passedOver": 0,
+     "directionalStuck": 0,
+     "fullStuck": 0,
+     "byOutcome": {
+      "passThrough": 36,
+      "blocked_escaped": 18,
+      "escaped_by_rescue": 0,
+      "rescue_failed": 0,
+      "passedOver": 0
+     }
+    },
+    "runs": [
+     {
+      "run": "W-B-S3-curb-dt0.02-ContinuousDynamic-a1-s1-20261109T122558",
+      "attempt": 1,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.02-ContinuousDynamic-a2-s1-20261109T122558",
+      "attempt": 2,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.02-ContinuousDynamic-a3-s2-20261109T122558",
+      "attempt": 3,
+      "seed": 2,
+      "ckOk": true,
+      "ck": {
+       "CK08_flat_walk_noinput": "harness_error:input_not_received",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero"
+      },
+      "cases": {
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Sprint_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough"
+      }
+     }
+    ]
+   },
+   "0.02/Discrete": {
+    "tally": {
+     "n": 54,
+     "passThrough": 54,
+     "passedOver": 0,
+     "directionalStuck": 0,
+     "fullStuck": 0,
+     "byOutcome": {
+      "passThrough": 54,
+      "escaped_by_rescue": 0,
+      "rescue_failed": 0,
+      "passedOver": 0
+     }
+    },
+    "runs": [
+     {
+      "run": "W-B-S3-curb-dt0.02-Discrete-a1-s1-20261109T122558",
+      "attempt": 1,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "passThrough",
+       "B_S3_BoostSprint_m02": "passThrough",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "passThrough",
+       "B_S3_BoostSprint_c00": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "passThrough",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "passThrough",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.02-Discrete-a2-s1-20261109T122558",
+      "attempt": 2,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "passThrough",
+       "B_S3_BoostSprint_m02": "passThrough",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "passThrough",
+       "B_S3_BoostSprint_c00": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "passThrough",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "passThrough",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3-curb-dt0.02-Discrete-a3-s2-20261109T122558",
+      "attempt": 3,
+      "seed": 2,
+      "ckOk": true,
+      "ck": {
+       "CK08_flat_walk_noinput": "harness_error:input_not_received",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero"
+      },
+      "cases": {
+       "B_S3_BoostSprint_p02": "passThrough",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "passThrough",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S3_BoostSprint_c00": "passThrough",
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S2_BoostSprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough"
+      }
+     }
+    ]
+   }
+  },
+  "S3c": {
+   "0.01/ContinuousDynamic": {
+    "tally": {
+     "n": 54,
+     "passThrough": 0,
+     "passedOver": 0,
+     "directionalStuck": 0,
+     "fullStuck": 0,
+     "byOutcome": {
+      "recovered_after_penetration": 36,
+      "blocked_escaped": 18,
+      "escaped_by_rescue": 0,
+      "rescue_failed": 0,
+      "passThrough": 0,
+      "passedOver": 0
+     }
+    },
+    "runs": [
+     {
+      "run": "W-B-S3c-curb-dt0.01-ContinuousDynamic-a1-s1-20261109T144637",
+      "attempt": 1,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_m02": "recovered_after_penetration",
+       "B_S2_Sprint_p02": "recovered_after_penetration",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "recovered_after_penetration",
+       "B_S2_Sprint_m02": "recovered_after_penetration",
+       "B_S3_Sprint_p02": "recovered_after_penetration",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_p02": "recovered_after_penetration",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "recovered_after_penetration",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S2_Boost_p02": "recovered_after_penetration",
+       "B_S2_Sprint_c00": "recovered_after_penetration"
+      }
+     },
+     {
+      "run": "W-B-S3c-curb-dt0.01-ContinuousDynamic-a2-s1-20261109T144637",
+      "attempt": 2,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_m02": "recovered_after_penetration",
+       "B_S2_Sprint_p02": "recovered_after_penetration",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_m02": "recovered_after_penetration",
+       "B_S2_Sprint_m02": "recovered_after_penetration",
+       "B_S3_Sprint_p02": "recovered_after_penetration",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S2_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_p02": "recovered_after_penetration",
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "recovered_after_penetration",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S2_Boost_p02": "recovered_after_penetration",
+       "B_S2_Sprint_c00": "recovered_after_penetration"
+      }
+     },
+     {
+      "run": "W-B-S3c-curb-dt0.01-ContinuousDynamic-a3-s2-20261109T144637",
+      "attempt": 3,
+      "seed": 2,
+      "ckOk": true,
+      "ck": {
+       "CK08_flat_walk_noinput": "harness_error:input_not_received",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero"
+      },
+      "cases": {
+       "B_S3_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Boost_m02": "recovered_after_penetration",
+       "B_S2_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Sprint_c00": "recovered_after_penetration",
+       "B_S3_BoostSprint_c00": "blocked_escaped",
+       "B_S3_Boost_c00": "recovered_after_penetration",
+       "B_S3_Sprint_m02": "recovered_after_penetration",
+       "B_S2_Sprint_m02": "recovered_after_penetration",
+       "B_S2_BoostSprint_m02": "blocked_escaped",
+       "B_S3_Sprint_p02": "recovered_after_penetration",
+       "B_S2_Boost_p02": "recovered_after_penetration",
+       "B_S3_BoostSprint_m02": "blocked_escaped",
+       "B_S2_Sprint_p02": "recovered_after_penetration",
+       "B_S2_BoostSprint_p02": "blocked_escaped",
+       "B_S2_Sprint_c00": "recovered_after_penetration",
+       "B_S3_Boost_p02": "recovered_after_penetration",
+       "B_S2_Boost_c00": "recovered_after_penetration",
+       "B_S3_Boost_m02": "recovered_after_penetration"
+      }
+     }
+    ]
+   },
+   "0.02/Discrete": {
+    "tally": {
+     "n": 54,
+     "passThrough": 54,
+     "passedOver": 0,
+     "directionalStuck": 0,
+     "fullStuck": 0,
+     "byOutcome": {
+      "passThrough": 54,
+      "escaped_by_rescue": 0,
+      "rescue_failed": 0,
+      "passedOver": 0
+     }
+    },
+    "runs": [
+     {
+      "run": "W-B-S3c-curb-dt0.02-Discrete-a1-s1-20261109T144637",
+      "attempt": 1,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "passThrough",
+       "B_S3_BoostSprint_m02": "passThrough",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "passThrough",
+       "B_S3_BoostSprint_c00": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "passThrough",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "passThrough",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3c-curb-dt0.02-Discrete-a2-s1-20261109T144637",
+      "attempt": 2,
+      "seed": 1,
+      "ckOk": true,
+      "ck": {
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK08_flat_walk_noinput": "harness_error:input_not_received"
+      },
+      "cases": {
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_m02": "passThrough",
+       "B_S3_BoostSprint_m02": "passThrough",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "passThrough",
+       "B_S3_BoostSprint_c00": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_p02": "passThrough",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "passThrough",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough"
+      }
+     },
+     {
+      "run": "W-B-S3c-curb-dt0.02-Discrete-a3-s2-20261109T144637",
+      "attempt": 3,
+      "seed": 2,
+      "ckOk": true,
+      "ck": {
+       "CK08_flat_walk_noinput": "harness_error:input_not_received",
+       "CK01_flat_hold": "pass",
+       "CK03_hole_walk_slow": "fall",
+       "CK13_flat_hold_timescale0": "harness_error:time_scale_zero"
+      },
+      "cases": {
+       "B_S3_BoostSprint_p02": "passThrough",
+       "B_S2_Boost_m02": "passThrough",
+       "B_S2_BoostSprint_c00": "passThrough",
+       "B_S3_Sprint_c00": "passThrough",
+       "B_S3_BoostSprint_c00": "passThrough",
+       "B_S3_Boost_c00": "passThrough",
+       "B_S3_Sprint_m02": "passThrough",
+       "B_S2_Sprint_m02": "passThrough",
+       "B_S2_BoostSprint_m02": "passThrough",
+       "B_S3_Sprint_p02": "passThrough",
+       "B_S2_Boost_p02": "passThrough",
+       "B_S3_BoostSprint_m02": "passThrough",
+       "B_S2_Sprint_p02": "passThrough",
+       "B_S2_BoostSprint_p02": "passThrough",
+       "B_S2_Sprint_c00": "passThrough",
+       "B_S3_Boost_p02": "passThrough",
+       "B_S2_Boost_c00": "passThrough",
+       "B_S3_Boost_m02": "passThrough"
+      }
+     }
+    ]
+   }
+  },
+  "pairedDiffS3vsS3c": {
+   "0.01/ContinuousDynamic": [
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Sprint_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_c00",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S3_Boost_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Boost_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 1,
+     "case": "B_S2_Sprint_c00",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Sprint_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_c00",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S3_Boost_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Boost_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 2,
+     "case": "B_S2_Sprint_c00",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_m02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Sprint_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Sprint_c00",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S3_Boost_p02",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    },
+    {
+     "attempt": 3,
+     "case": "B_S2_Boost_c00",
+     "S3": "passThrough",
+     "S3c": "recovered_after_penetration"
+    }
+   ],
+   "0.02/Discrete": []
+  }
+ }
+}

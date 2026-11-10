@@ -1,0 +1,1 @@
+{"caseId": "E1_P11R_hold", "attempt": 4, "scenario": "hold", "moveMode": "Move", "expect": "", "flags": [], "minBottomY": -61.960819244384766, "maxPenWallDepthR": 0.0, "fallStep": 3, "fallPhase": "settle", "fallPrevSupported": false, "outcome": "fall", "rootOutcome": "fall"}

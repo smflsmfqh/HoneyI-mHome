@@ -1,0 +1,19 @@
+{
+ "versionId": "Hm1",
+ "sceneName": "AntDemoScene",
+ "controlScheme": "Keyboard&Mouse",
+ "actionMap": "Player",
+ "keyForward": "W",
+ "keyBack": "S",
+ "keyLeft": "A",
+ "keyRight": "D",
+ "keySprint": "LeftShift",
+ "keyJump": "Space",
+ "keyRoll": "R",
+ "disableComponents": [],
+ "deactivateObjectsWith": [
+  "PatrolCharacter"
+ ],
+ "invincibleSec": 100000.0,
+ "deactivatePaths": []
+}

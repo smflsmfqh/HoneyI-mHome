@@ -1,0 +1,17 @@
+{
+ "recordedUtc": "2026-11-09T10:15:04.814756+00:00",
+ "nature": "Mac 점검(결과로 인용 안 함). Windows 묶음 제작 판단용. 동결 규칙은 바꾸지 않음",
+ "runs": [
+  "F-BASE-b-ctl-mac-01",
+  "F-CURBFIX-b-ctl-mac-01",
+  "F-BASE-b-game-mac-01",
+  "F-CURBFIX-b-game-mac-01"
+ ],
+ "observation": {
+  "BASE": "연석 34건 중 S2 Sprint·Boost 직진 6건 rescue_failed(완전 끼임)가 통제·게임 두 profile 모두에서 같은 case로 발생. 관통 7(통제)/6(게임)",
+  "CURBFIX": "두 profile 모두 관통 0·끼임 0. 바뀐 case는 모두 recovered_after_penetration(진입 후 뒤로 밀려남)",
+  "E2_C": "4 run 모두 같은 outcome(낙하·끼임 변화 없음)"
+ },
+ "interpretation": "끼임은 NPC 유무와 무관하고 원본 씬 구성에서 생긴다. 트랙 B는 공통 통제로 Zone/CarDrivingZone 비트리거 콜라이더와 NPCSpawnZone 등을 트리거로 바꿨는데, 그 조건에서는 같은 S2 case가 끼임 대신 관통으로 나왔다(trackB-01 S3 0.01/CCD). 따라서 trackB의 '끼임 재현 안 됨'은 통제가 끼임 조건을 없앤 결과로 보이며, 10/23 에디터의 S2 끼임 6/9와 맞는 방향(가설: 연석 밑으로 밀려 내려간 개미가 CarDrivingZone 지지면 사이에 낌, 접촉 대상 이름은 미확인)",
+ "next": "Windows fix1 결과로 확인 후 trackB 해석(④ 끼임 인용 불가)을 정정할지 결정"
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "Windows 결과 회수 전 판정 규칙 보충. 원 동결 기록·묶음·case 변경 없음",
+ "recordedUtc": "2026-11-08T11:29:47.772879+00:00",
+ "resultsReceived": false,
+ "bundleUnchanged": "Builds/M5-trackB-01.zip (SHA-256 11f8422d…6308)",
+ "claim1Revised": {
+  "reason": "원 규칙 'S0a 또는 S0b 낙하 ≥1'은 S0b가 조작상 비게 만든 구성이라 반증 불가. S0b는 조작 확인으로 돌린다",
+  "discriminating": "S0a(H0식 기본 cooking 30, Read/Write 꺼짐, 빌드 시 미리 구움)",
+  "manipulationCheck": "S0b: E2_C 24건 전부 root 낙하가 아니면 S0b 무효·원인 조사",
+  "S0pNote": "S0p는 Read/Write만 켜고 cooking은 H1식 26 그대로. '설정을 모두 고친 Mesh'가 아님",
+  "sentences": {
+   "S0a낙하>=1": "① 지지: 기본 설정 Mesh 바닥도 빌드에서 경계 낙하(트랙 A H0 관측과 같은 방향)",
+   "S0a=0,S0p>0": "기본 Mesh는 버텼지만 05-22 cooking 변경(EnableMeshCleaning 제거)은 Read/Write를 켜도 낙하를 냈다",
+   "S0a=0,S0p=0": "설정 의존: Read/Write 꺼짐 + cooking 변경 조합 때문에 바닥이 비었다"
+  }
+ },
+ "claim4Limits": "2×2에는 H1~H3 시기의 Continuous 단계가 없다. 사전 신호(결과 아님): Mac smoke 0.01/CCD 연석 관통 9/18, 10/23 에디터 CCD 끼임 증가"
+}
